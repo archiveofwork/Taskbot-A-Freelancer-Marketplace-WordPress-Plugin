@@ -1,5 +1,10 @@
 # Taskbot-A-Freelancer-Marketplace-WordPress-Plugin
 Taskbot - A Freelancer Marketplace WordPress Plugin 
+--
+
+
+
+
 Taskbot is a WordPress plugin designed for the Freelancer marketplace, enabling users to offer and purchase services or gigs online. With an intuitive registration process, both buyers and sellers can effortlessly set up their profiles. Sellers have the convenience of listing tasks and receiving orders for their advertised services. Created after in-depth analysis, Taskbot is tailored to meet the needs of those keen on establishing a seller-focused marketplace or similar ventures.
 
 1. Safety and Originality: All the code contained in this repository is original (outside of the note in section 2 below) and is believed to be safe for use. We have ensured that any dependencies, modules, or packages used within are from trusted sources. However, users are advised to exercise their own judgment and discretion.
