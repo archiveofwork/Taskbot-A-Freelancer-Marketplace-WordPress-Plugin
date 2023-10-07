@@ -1,0 +1,23 @@
+/** ====== Billing Information components ====== **/
+.tb-billinginfo{
+    fieldset{
+        padding: 30px;
+    }
+    .tb-additonoltitle{
+        border-top: 0;
+        border-right: 0;
+        border-left: 0;
+    }
+    .form-group-half,
+    .form-group{
+        margin-bottom: 0;
+    }
+    .tb-billinginfobtn{
+        margin-bottom: 0;
+        padding-top: 6px;
+        justify-content: flex-end;
+    }
+}
+.tb-profileform__detail.tb-billinginfo{
+    margin: -10px;
+}

@@ -1,0 +1,760 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+ .tb-pricingcontainer *{box-sizing: border-box;}
+ .tb-pricingcontainer {
+    display: flex;
+    width: 100%;
+}
+.tb-serviceformwrap{width: 100%;}
+.tb-pricing-items {
+    width: 100%;
+    overflow: auto;
+    padding: 0 10px;
+}
+.tb-pricingitems {
+    display: block;
+    white-space: nowrap;
+    overflow: auto;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    width: 100%;
+    min-width: 900px;
+    background: #fff;
+}
+.tb-pricingitems li {
+    list-style-type: none;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: auto;
+    margin: 0;
+}
+.tb-pricingitems > li + li{
+    border-top: 1px solid #eee;
+}
+.tb-pricingitems__content{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.tb-pricingtitle {
+    padding: 12.5px 20px;
+    width: 100%;
+    justify-content: space-between;
+}
+.tb-pricingitems li ~ li .tb-pricingtitle {
+    min-height: 50px;
+}
+.tb-pricingtitle > h6 {
+    color: #353648;
+    margin: 0;
+    font: 400 0.875rem/1.6428571429em "Urbanist", sans-serif;
+    padding-top: 1px;
+}
+.tb-pricingitems li ~ li .tb-pricingtitle ~ .tb-pricingtitle {
+    padding-top: 13.5px;
+    padding-bottom: 13.5px;
+}
+.tb-pricingitems li ~ li .tb-pricingtitle > h6:first-child {
+    display: block;
+}
+.tb-pricingitems li ~ li .tb-pricingtitle.tb-pricing-input {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    vertical-align: middle;
+    min-height: 50px;
+}
+.tb-pricingitems__content > div{display: inline-flex;}
+.tb-pricingitems__content > div ~ div {
+    border-left: 1px solid #eee;
+}
+.tb-pricingtitle h6{
+	line-height: 1.6428571429em;
+    font-weight: 400;
+    margin: 0;
+    font-size: 15px;
+}
+.tb-serviceformwrap .tb-pricingtitle {
+    width: auto;
+    margin: 0;
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+}
+.tb-pricingitems li:first-child .tb-serviceformwrap .tb-pricingtitle ~ .tb-pricingtitle{padding-top: 15px;}
+.tb-serviceformwrap .tb-pricingtitle select,
+.tb-serviceformwrap .tb-pricingtitle .form-control {
+    padding: 0 20px;
+    height: 50px;
+    color: #676767;
+    font: 400 15px "Open Sans", sans-serif;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    background-clip: unset;
+    caret-color: #353648;
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    float: none;
+    max-width: initial;
+}
+.tb-serviceformwrap .tb-pricingtitle .form-control::placeholder{color: #999;}
+.tb-serviceformwrap .tb-pricingtitle textarea.form-control{
+    resize: none;
+    height: 200px;
+    line-height: 24px;
+    padding-top: 14px;
+}
+.woocommerce_options_panel .tb-pricingcontainer label,
+.woocommerce_options_panel .tb-pricingcontainer legend,
+.tb-serviceformwrap label {
+    display: block;
+    color: #353648;
+    font: 700 0.9375rem/1.6666666667em "Urbanist", sans-serif;
+    margin: 0 0 1px;
+    float: initial;
+    width: auto;
+}
+.woocommerce_options_panel .tb-pricingcontainer input[type=email],
+.woocommerce_options_panel .tb-pricingcontainer input[type=number],
+.woocommerce_options_panel .tb-pricingcontainer input[type=password],
+.woocommerce_options_panel .tb-pricingcontainer input[type=text],
+.tb-serviceformwrap label + input{
+	width: 100%;
+}
+.woocommerce_options_panel .tb-pricingitems .tb-serviceformwrap fieldset.form-field,
+.woocommerce_options_panel .tb-pricingitems .tb-serviceformwrap p.form-field{
+	flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 13px;
+    padding: 0 !important;
+}
+.woocommerce_options_panel .tb-pricingitems fieldset.form-field:last-child,
+.woocommerce_options_panel .tb-pricingitems p.form-field:last-child{
+	margin: 0;
+}
+.tb-pricingtitle .tb-onoff {
+    width: 100%;
+    padding-left: 10px;
+}
+.tb-pricingtitle .tb-onoff label {
+    justify-content: space-between;
+}
+.tb-pricingcontainer .tb-onoff label{
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 0;
+    cursor: pointer;
+    font-weight: 400;
+    color: #666;
+}
+.tb-onoff label .tb-enable {
+    display: none;
+}
+.tb-pricingtitle .tb-onoff label span {
+    font: 400 0.875rem/0.1026785714em "Open Sans", sans-serif;
+    color: #353648;
+    padding: 0;
+    min-width: 56px;
+}
+.tb-onoff label .tb-disable {
+    display: block;
+}
+.tb-onoff input {
+    display: none;
+}
+.tb-onoff label em {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    position: relative;
+    align-items: center;
+    margin: 0;
+    width: 35px;
+    height: 21px;
+    border: 1px solid #eee;
+    background-color: #fff;
+    border-radius: 10.5px 10.5px 10.5px 10.5px;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    vertical-align: middle;
+}
+.tb-onoff label em i {
+    position: absolute;
+    left: 0;
+    width: 21px;
+    height: 21px;
+    background: #fff;
+    display: inline-block;
+    pointer-events: none;
+    transition: all 0.3s ease 0s;
+    border: 1px solid #d8d8d8;
+    border-radius: 9.5px 9.5px 9.5px 9.5px;
+    -webkit-box-shadow: 0 1px 2px 0 rgb(0 0 0 / 40%);
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 40%);
+}
+.tb-onoff input:checked + label em {
+    border-color: #26de81;
+    background-color: #26de81;
+}
+.tb-onoff input:checked + label .tb-enable {
+    display: block;
+}
+.tb-onoff input:checked + label .tb-disable {
+    display: none;
+}
+.tb-onoff input:checked + label em > i {
+    box-shadow: none;
+    left: 100%;
+    margin-left: -21px;
+    border-color: #26de81;
+}
+.tb-pricingtitle .form-control,
+.tb-pricingtitle input[type=text],
+.tb-pricingtitle input[type=password],
+.tb-pricingtitle input[type=datetime],
+.tb-pricingtitle input[type=datetime-local],
+.tb-pricingtitle input[type=date],
+.tb-pricingtitle input[type=month],
+.tb-pricingtitle input[type=time],
+.tb-pricingtitle input[type=week],
+.tb-pricingtitle input[type=number],
+.tb-pricingtitle input[type=email],
+.tb-pricingtitle input[type=url],
+.tb-pricingtitle input[type=search],
+.tb-pricingtitle input[type=tel],
+.tb-pricingtitle input[type=color]{
+  height: 50px;
+  padding: 0 20px;
+  color: #676767;
+  font: 400 15px "Open Sans", sans-serif;
+  border: 1px solid #eee;
+  border-radius: 0;
+  background-clip: unset;
+  caret-color: #353648;
+}
+.form-control::placeholder,
+input[type=text]::placeholder,
+input[type=password]::placeholder,
+input[type=datetime]::placeholder,
+input[type=datetime-local]::placeholder,
+input[type=date]::placeholder,
+input[type=month]::placeholder,
+input[type=time]::placeholder,
+input[type=week]::placeholder,
+input[type=number]::placeholder,
+input[type=email]::placeholder,
+input[type=url]::placeholder,
+input[type=search]::placeholder,
+input[type=tel]::placeholder,
+input[type=color]::placeholder,
+select::placeholder,
+.uneditable-input::placeholder {
+  color: #999 !important;
+  opacity: 1;
+}
+.form-control:focus,
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=datetime]:focus,
+input[type=datetime-local]:focus,
+input[type=date]:focus,
+input[type=month]:focus,
+input[type=time]:focus,
+input[type=week]:focus,
+input[type=number]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=search]:focus,
+input[type=tel]:focus,
+input[type=color]:focus,
+select:focus,
+.uneditable-input:focus {
+  box-shadow: unset;
+}
+.radio_field .tb-pricingtitle{
+    justify-content: flex-start;
+}
+.tb-radiobox{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+.tb-radiobox label{
+        padding-left: 10px !important;
+        font-weight: 400 !important;
+}
+.tb-pricingtitle textarea{
+  resize: none;
+  min-height: 120px;
+  width: 100%;
+  padding-top: 14px !important;
+  
+}
+.tb-pricingtitle.subtask-selection .tb-select{
+    width: auto;
+    display: inline-flex;
+}
+.woocommerce_options_panel .product-data-subtasks-feilds p.form-field label{
+    font:400 14px/20px "Open Sans", sans-serif;
+    padding: 15px 10px 15px 0;
+}
+.tb-pricingtitle .tb-select{
+    width: 100%;
+}
+.jconfirm-box-container{padding: 12px;}
+.jconfirm .jconfirm-box{
+  max-width: 500px;
+  width: 100% !important;
+  padding: 30px;
+}
+.jconfirm.jconfirm-modern .jconfirm-box div.jconfirm-content{
+  margin-bottom: 0 !important;
+}
+.jconfirm .jconfirm-box div.jconfirm-title-c .jconfirm-title{
+  font: 700 1.375rem/1.3636363636em "Urbanist", sans-serif;
+}
+.jconfirm .jconfirm-box div.jconfirm-title-c{
+  margin-bottom: 0 !important;
+  padding-bottom: 10px !important;
+}
+.jconfirm .jconfirm-box .form-group.jconfirm-buttons{
+  float: left;
+  padding: 0;
+}
+.jconfirm .jconfirm-box div.jconfirm-content-pane{
+  max-height: initial !important;
+  margin: 0;
+}
+.form-group.jconfirm-buttons p,
+.jconfirm-content > div{
+  margin-top: 0;
+  font: 400 0.9375rem/1.6em "Open Sans", sans-serif;
+}
+.jconfirm .jconfirm-box-container .jconfirm-box .jconfirm-buttons{
+  float: left;
+  padding: 0;
+}
+.form-group.jconfirm-buttons textarea{
+  width: 100%;
+  display: flex;
+}
+.jconfirm textarea{
+  padding: 14px 20px 20px;
+  border-radius: 0;
+  color: #353648;
+  font: 400 15px "Open Sans", sans-serif;
+  border: 1px solid #eee;
+  background-clip: unset;
+  caret-color: #353648;
+  outline: none;
+  line-height: 24px;
+  background-color: #fff;
+  resize: none;
+  height: 200px;
+}
+.jconfirm .form-group.jconfirm-buttons .btn{margin: 10px 0 0;}
+.jconfirm-buttons .btn{
+  margin: 10px 0 0;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  font: 600 15px "Urbanist", sans-serif;
+  color: #fff;
+  min-width: 160px;
+  background-color: #295FCC;
+  letter-spacing: 0.5px;
+  overflow: hidden;
+  z-index: 0;
+  height: 48px;
+  margin: 20px 20px 0 0 !important;
+}
+.tb-btn,
+.tb-btnvtwo {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  font: 600 15px "Urbanist", sans-serif;
+  color: #fff;
+  padding: 0 20px;
+  min-width: 160px;
+  background-color: #295FCC;
+  border: 0;
+  letter-spacing: 0.5px;
+  overflow: hidden;
+  z-index: 0;
+}
+.tb-btn i,
+.tb-btnvtwo i {
+  margin-right: 10px;
+}
+.tb-btn:before,
+.tb-btnvtwo:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0;
+  z-index: -1;
+}
+.tb-btn:hover, .tb-btn:focus,
+.tb-btnvtwo:hover,
+.tb-btnvtwo:focus {
+  outline: none;
+  color: #fff;
+}
+.tb-btn:hover:before,
+.tb-btnvtwo:hover:before {
+  opacity: 0.1;
+}
+
+.tb-btnvthree {
+  background-color: #f7f7f7;
+  color: #676767;
+}
+.tb-btnvthree:hover, .tb-btnvthree:focus {
+  outline: none;
+  color: #676767;
+}
+#adminmenu .menu-icon-sellers .wp-menu-image img{
+    max-width: 20px;
+padding-top: 6px;
+}
+/* Import User Styling */
+.import-users {
+    float: left;
+    position: relative;
+    background: #e9fef5;
+    border: 5px solid #26a06d;
+    transition: all 300ms ease-in-out;
+    -webkit-box-shadow: 0 9px 10px 0 rgba(165,165,165,0.2);
+    box-shadow: 0 9px 10px 0 rgba(165,165,165,0.2);
+}
+.import-users:hover{
+    -webkit-box-shadow: 0 9px 20px 0 rgba(165,165,165,0.5);
+    box-shadow: 0 9px 20px 0 rgba(165,165,165,0.5);
+}
+.custom-import {margin-left: 30px; }
+.import-users .theme-name {
+    font-size: 15px;
+    font-weight: 600;
+    height: 18px;
+    margin: 0;
+    overflow: hidden;
+    padding: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-top: 1px solid #2a9f72;
+    position: relative;
+    background: #e9fef5;
+}
+.import-users .user-actions {
+    bottom: 0;
+    height: 38px;
+    opacity: 1;
+    padding: 9px 10px 0;
+    position: absolute;
+    right: 0;
+    transition: opacity 0.1s ease-in-out 0s;
+    background: transparent;
+    border: 0;
+}
+.wp-core-ui .import-users .button-primary {
+    background: #35ce8d;
+    border-color: #35ce8d;
+}
+.import-users:hover img{opacity: 1;}
+.import-users img {
+    cursor: pointer;
+    width: 100%;
+    display: block;
+}
+#upload-dummy-csv {
+    display: none;
+}
+.upload-dummy-csv {
+    position: absolute;
+    top: 10px;
+}
+.tb-select {
+    display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+.tb-select:before {
+  right: 16px;
+  z-index: 1;
+  content: "\f347";
+  position: absolute;
+  font-size: 16px;
+  pointer-events: none;
+  color: #999999;
+  font-family: Dashicons;
+}
+.tb-select select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  padding-right: 40px;
+  width: 100%;
+  line-height: 30px;
+  cursor: pointer;
+}
+.tb-select select:focus {
+  outline: 0;
+}
+.tb-select .form-control {
+  padding-right: 40px;
+}
+@media(max-width:782px){
+    .import-users{
+        margin: 0 30px;
+        box-sizing: border-box;
+        float: none;
+    }
+    .custom-import{margin-top: 30px;}
+    .wp-core-ui .import-users .button-primary{
+        line-height: 30px;
+        min-height: 30px;
+    }
+}
+@media(max-width:575px){
+  .jconfirm .jconfirm-box{
+    max-width: 87%;
+  }
+}
+@media(max-width:420px){
+  .jconfirm .jconfirm-box{
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+@media(max-width:420px){
+    .import-users {margin: 0 10px 0 0;}
+    .custom-import{margin-top: 30px; }
+}
+
+.reject-identity-form p{ font-weight:bold;}
+.reject-identity-form textarea{height:150px;margin-bottom:15px;}
+.reject-identity-form button{
+	min-width: 150px;
+    height: 40px;
+    margin: 0;
+}
+.tb-font-icon{width:24px;}
+.column-tb_varifiled .dashicons-before{
+	position: relative;
+}
+.column-tb_varifiled{
+  vertical-align: middle !important;
+}
+.tb-icon-color-red:before {
+  content: "\f335";
+  color: #FF5722;
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  background: #ff57221a;
+  border-radius: 50px;
+  line-height: 20px;
+}
+
+.tb-icon-color-green:before{
+	content: "\f147";
+    color: #4caf50;
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background: #4caf5021;
+    border-radius: 50px;
+    line-height: 20px;
+}
+.do_download_identity .dashicons.dashicons-visibility,
+.do_verify_identity.dashicons-before{margin-left: 10px;}
+.cus-options-type, 
+.cus-options-data, 
+.measurement-update-btn {
+    width: 100%;
+    float: left;
+}
+.cus-options-data label {
+    margin: 0;
+    width: 50%;
+    float: left;
+    color: #767676;
+    text-align: left;
+    padding: 0 0 0 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font: 400 13px/40px 'Open Sans', Arial, Helvetica, sans-serif;
+}
+.step-value {
+    width: 50%;
+    float: right;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.step-value span {
+    width: 100%;
+    float: left;
+    color: #767676;
+    text-align: left;
+    font: 400 13px/40px 'Open Sans', Arial, Helvetica, sans-serif;
+}
+.cus-options-data:nth-child(odd) {
+    background: #fafafa;
+}
+.cus-options-data:nth-child(even) {
+    background: #fff;
+}
+/* Loader */
+.tb-preloader-section {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  position: fixed;
+  background: rgba(255, 255, 255, 0.6);
+}
+.tb-preloader-section .tb-preloader-holder {
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: relative;
+  background: #fff;
+  margin: -15px 0 0 -15px;
+  -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tb-preloader-section .tb-loader {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: relative;
+  -webkit-animation: sectionloader 0.5s infinite linear;
+  animation: sectionloader 0.8s infinite linear;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  background: var(--themecolor);
+  background: -moz-linear-gradient(left, var(--themecolor) 10%, rgba(255, 88, 81, 0) 42%);
+  background: -webkit-linear-gradient(left, var(--themecolor) 10%, rgba(255, 88, 81, 0) 42%);
+  background: -o-linear-gradient(left, var(--themecolor) 10%, rgba(255, 88, 81, 0) 42%);
+  background: -ms-linear-gradient(left, var(--themecolor) 10%, rgba(255, 88, 81, 0) 42%);
+  background: linear-gradient(to right, var(--themecolor) 10%, rgba(255, 88, 81, 0) 42%);
+}
+.tb-preloader-section .tb-loader:before {
+  width: 50%;
+  height: 50%;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background: #1b355e;
+}
+.tb-preloader-section .tb-loader:after {
+  background: #fff;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: "";
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+@keyframes sectionloader {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.tb-radio.tb-pricingtitle{
+    display: flex;
+    flex-direction: inherit;
+    align-items: center;
+    justify-content: left;
+}
+.tb-radio.tb-pricingtitle input[type="radio"] + label{
+    margin: 0 0 0 12px;
+}
+.tb-select .select2-selection__arrow,
+.tb-hide-acf-label{
+    display: none !important;
+}
+.delivery-time .select2-container{height: 32px;}
+.select2-container--default .select2-selection--multiple .select2-selection__rendered li {
+  padding: 0 20px;
+}
+#at-item-verification .at-content{
+	background: #FFF;
+    padding: 0 20px 20px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+	position: relative;
+}
+#at-item-verification .inportusers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#at-item-verification .inportusers {box-sizing: border-box;}
+#adminmenu .toplevel_page_taskbot_code_settings .wp-menu-image img {
+  max-width: 20px;
+  padding-top: 6px;
+}
+
+.wp-guppy-admin-notice a{margin-top:0 !important; margin-bottom: 0 !important;}
+
+.generate-linked-data+.generate-linked-data,
+.generate-linked-data{
+  background: #03a9f4;
+  color: #FFF;
+  padding: 5px 15px;
+  border-radius: 5px;
+  display: table;
+  font-size: 12px;
+}
+.generate-linked-data+.generate-linked-data{margin-top:5px; background:#ff5722 ;}
+.generate-linked-data:active,
+.generate-linked-data:focus,
+.generate-linked-data:visited,
+.generate-linked-data:hover{color:#f3ebeb}

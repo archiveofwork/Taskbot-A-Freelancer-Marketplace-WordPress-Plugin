@@ -1,0 +1,294 @@
+/** ====== Invoice Detail components ====== **/
+.te-printshaer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 0 30px;
+
+    a{
+        & + a{
+            margin: 0 0 0 10px;
+        }
+    }
+    .te-btn {
+        & + .te-btn{
+            min-width: 140px;
+        }
+    }
+}
+.btn-sm{
+    min-width: 44px;
+    line-height: 44px;
+    background: #00cc8d;
+    color: $clr-white;
+    padding: 0 10px;
+}
+.te-shareinvoice{
+    color: $text-light;
+    font: 600 rem(14)/em(18,14) $heading-font-family;
+    margin: 0 20px 0 0;
+    display: inline-block;
+    i{
+        display: inline-block;
+        margin: 0 10px 0 0;
+        font-size: rem(18px);
+    }
+}
+
+.te-printable {
+    border-radius: $radius;
+    box-shadow: 0px 0px 20px 6px rgb(0 0 0 / 0.1);
+    padding: 85px 95px;
+    background: $clr-white;
+
+    .te-tasksinfos{
+        margin: 18px 0 0;
+    }
+}
+.te-invoicebill {
+    display: flex;
+    justify-content: space-between;
+    figure{
+        margin: 0;
+        width: 160px;
+        height: 100%;
+    }
+}
+.te-billno{
+    h3 {
+        color: #004aff;
+        font-size: rem(36px);
+        margin: 0;
+        line-height:em(37,36)
+    }
+    span {
+        color: #333333;
+        font: 700 rem(18)/em(22,18) $heading-font-family;
+
+    }
+}
+.te-invoicetasks{
+    h6{
+        margin: 0;
+        font-weight: 400;
+    }
+    h3{
+        font: 700 rem(20)/em(28,20) $heading-font-family;
+        margin: 0;
+    }
+}
+.te-tasksdates{
+    @extend %flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: flex-end;
+    span{
+        display: inline-block;
+        font: 400 rem(13)/em(22,13) $heading-font-family;
+        color: $heading-font-color;
+        em{
+            font-style: normal;
+        }
+    }
+}
+.te-tasksinfos{
+    @extend %flex;
+    .te-invoicetasks{
+        flex: 1;
+    }
+}
+.te-fromreceiver{
+    span{
+        line-height: em(17,14);
+        display: block;
+        font-family: $body-font-family;
+    }
+    h5{
+        margin: 0;
+        line-height: em(19,13);
+    }
+}
+.te-invoicefromto{
+    @extend %flex;
+    border-top: 1px solid $border-color;
+    padding: 37px 0;
+    margin-top: 32px;
+    .te-fromreceiver{
+        flex: 50%;
+    }
+}
+.te-invoice-table {
+    margin: 0;
+    >thead {
+        border-top: 1px solid $border-color;
+		>tr {
+            border: 0;
+            border-bottom: 1px solid $border-color;
+			>th {
+                padding: 17px 28px;
+                line-height: 21px;
+				font: 400 rem(14)/em(35, 14) $heading-font-family;
+				color: $body-font-color;
+            }
+            td{
+                color: $body-font-color;
+                font: 700 rem(14)/em(15, 14) $body-font-family;
+                > span{
+                    display: inline-block;
+                    color: $body-font-color;
+                    font: 400 rem(14)/em(15, 14) $body-font-family;
+                    em {
+                        font-size: rem(12px);
+                        vertical-align: middle;
+                        display: inline-block;
+                    }
+                }
+            }
+		}
+	}
+	>tbody {
+		>tr {
+            border: 0;
+            td {
+                color: $heading-font-color;
+                font: 700 rem(14)/em(20, 14) $heading-font-family;
+                padding: 24px 28px 23px 28px;
+                line-height: 21px;
+                border: 0;
+                vertical-align: bottom;
+                & + td:nth-child(2){
+                    width: 31%;
+                }
+                h6{
+                    margin: 0;
+                    position: relative;
+                    top: 22px;
+                    left: 12px;
+                }
+                &:last-child{
+                    width: 20%;
+
+                }
+            }
+            & +  tr{
+                & td:first-child {
+                    vertical-align: top;
+                    padding: 26px 28px 0;
+
+                }
+            }
+            &:first-child{
+                td{
+                    vertical-align: top;
+                }
+            } 
+		}
+	}
+	
+}
+.te-tablelist{
+    li{
+        font: 400 rem(14)/em(22, 14) $heading-font-family;
+        position: relative;
+        list-style-type: none;
+        padding: 0 0 0 12px;
+        color: $body-font-color;
+        margin-top: 3px;
+
+        & + li {
+            margin-top: 4px;
+        }
+        &::after{
+            color: $text-gray;
+            position: absolute;
+            content: ".";
+            top: -5px;
+            left: 0;
+            font-size: 19px;
+        }
+    }
+}
+.te-tablelistv2{
+    margin-top: 6px;
+    position: relative;
+    top: 20px;
+    li{
+        margin-top: 6px;
+        &::after{
+          display: none;
+        }
+        & + li{
+            margin-top: 4px;
+        }
+    }
+}
+.te-subtotal{
+    @extend %flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 22px 0 44px;
+    border-top: 1px solid $border-color;
+    padding: 25px 0 0;
+}
+.te-subtotalbill{
+    width: 38%;
+    padding: 0 100px 0 30px;
+    > li:not(.te-sumtotal){
+        font: 400 rem(14)/em(22, 14) $heading-font-family;
+        list-style: none;
+        margin: 0 0 10px;
+        color: $heading-font-color;
+        h6{
+            margin: 0;
+            float: right;
+        }
+    }
+ 
+}
+.te-sumtotal{
+    min-width: 350px;
+    padding: 14px 90px 14px 30px;
+    background: #004aff;
+    border-radius: $radius;
+    margin-top: 14px;
+    list-style-type: none;
+    font: 700 rem(14)/em(22, 14) $heading-font-family;
+    color: $clr-white;
+    h6{
+        margin: 0;
+        float: right;
+        color: $clr-white;
+        font: 700 rem(18)/em(22, 18) $heading-font-family;
+    }
+}
+.tw-termstitle{
+    h4{
+        font: 400 rem(20)/em(28, 20) $heading-font-family;
+        margin: 0 0 14px;
+
+    }
+}
+.te-termconditionlist{
+    margin-top: 20px;
+    li{
+        list-style-type: none;
+        font: 400 rem(16)/em(25,16) $body-font-family;
+        position: relative;
+        padding-left: 12px;
+
+        &::before{
+            content: "";
+            background: $text-gray;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 10px;
+        }
+        & + li{
+            margin: 3px 0 0;
+        }
+    }
+}

@@ -1,0 +1,405 @@
+/** ====== Index V4 ====== **/
+.tk-headervfour{
+    z-index: 9;
+    padding: 30px 0;
+    position: relative;
+    .tk-navbar-right{
+        margin-left: auto;
+    }
+    .tk-navbar-nav{
+        display: flex;
+        margin: 0 -15px;
+        li{
+            padding: 0 15px;
+        }
+    }
+    & + .tk-bannervthree{
+        margin-top: -100px;
+    }
+    .tk-navbar-right {
+        .navbar-toggler{
+            background-color: $theme-color;
+        }
+    }
+}
+.tk-headerwrap{
+    display: flex;
+    align-items: center;
+    .tk-logo{
+        flex: none;
+    }
+}
+@media (min-width:992px){
+    .tk-headervfour{
+        .tk-navbar-nav > li > a{
+            color: $clr-white;
+        }
+    }
+}
+// Banner Style
+.tk-bannervthree{
+    z-index: 1;
+    display: flex;
+    min-height: 700px;
+    padding: 50px 0;
+    position:relative;
+    align-items: center;
+    &:before{
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+        content: '';
+        height: 100%;
+        position:absolute;
+        pointer-events: none;
+        background: rgba(0, 0, 0, 0.6);
+    }
+    .tk-appendinput .tk-inputicon .form-control{
+        height: 48px;
+        padding: 0 20px 0 56px;
+        border-radius: $radius 0 0 $radius; 
+    }
+}
+.tk-bannerinfo{
+    &_title{
+        margin: 0 0 20px;
+        max-width: 636px;
+        h4{
+            margin: 0;
+            color: $clr-white;
+        }
+        h1{
+            color: $clr-white;
+            margin: 0 0 10px;
+            span{
+                color: $theme-color;
+                display: inline-block;
+            }
+        }
+        p{
+            margin: 0;
+            color: $clr-white;
+            @extend %p18;
+        }
+    }
+    &_search{
+        padding: 15px;
+        max-width: 100%;
+        margin: 0 0 30px;
+        border-radius: $radius;
+        background: rgba(255,255,255,0.2);
+        .tk-searcbar{
+            border-radius:4px;
+            overflow: hidden;       
+            width: 100%;
+            display: flex;
+            align-items: center;
+            .tk-darkbtn{
+                height: auto;
+                line-height: 48px;
+                color: $button-color;
+                background: $theme-color;
+                border-radius: 0 $radius $radius 0;
+                &:hover{
+                    background:$theme-color_20_light;
+                }
+            }
+        }
+        .select2-container--default .select2-selection--single{
+            border-radius: 0;
+            .select2-selection__rendered{
+                line-height: 48px;
+            }
+        }
+        .select2-container,
+        .form-control{
+            height: 48px;
+        }
+    }
+    &_tag{
+        display: flex;
+        align-items: flex-start;
+        & > span{
+            flex: none;
+            @extend %h5;
+            color: $clr-white;
+            margin: 2px 10px 2px 0;
+            display: inline-block;
+        }
+    }
+}
+.tk-tagvtwo{
+    margin: 0;
+    padding: 0;
+    margin: -5px;
+    @extend %flex;
+    list-style: none;
+    align-items:center;
+    li{
+        padding: 5px;
+        line-height: inherit;
+        list-style-type: none;
+    }
+    a{
+        color: $clr-white;
+        display: block;
+        padding: 2px 11px;
+        border-radius: $radius;
+        @extend %transition;
+        border: 1px solid $text-light;
+        text-transform: uppercase;
+        font: 700 rem(12)/em(24,12) $heading-font-family;
+        &:hover{
+            background: $lightest;
+            border-color: $lightest;
+            color: $heading-font-color;
+        }
+    }
+}
+.tk-bannervideo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 58px;
+    span{
+        position: relative;
+        color: $clr-white;
+        padding-top: 42px;
+        font: 400 20px/24px 'Gochi Hand', cursive;
+        img{
+            position: absolute;
+            bottom: 10px;
+        }
+    }
+    .venobox{
+        display: block;
+        max-width: 90px;
+        position:relative;
+        &:after,
+        &:before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            content: "";
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+        }
+        &:after {
+            animation: pulse 2s infinite;
+        }
+        &:before {
+            animation: pulset 2s infinite;
+        }
+        i{
+            margin: 0;
+            border: 0;
+            min-width: 90px;
+            min-height: 90px;
+            font-size: 24px;
+            color: $button-color;
+            background:$theme-color;
+        }
+    }
+}
+.tk-exploreslider{
+    .splide__arrow{
+        top: 46%;
+    }
+    .splide__arrow--prev{
+        left: -100px;
+    }
+    .splide__arrow--next {
+        right: -100px;
+    }
+}
+.tk-slider-content{
+    border-radius: 0px 0px $radius $radius;
+    .tk-cardtitle{
+        a{
+            max-width: 247px;
+        }
+    }
+    .tk-blogviewdates{
+        margin: -10px;
+        li{
+            padding: 10px;
+        }
+    }
+}
+.tk-btn-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    .tk-btn-plain{
+        border-radius: $radius;
+        border: 2px solid $lighter;
+        color: $heading-font-color !important;
+        &:hover{color: $heading-font-color !important;}
+        i{
+            color: $heading-font-color;
+        }
+    }
+}
+.tk-section-bg{
+    background: $dark;
+    position: relative;
+}
+.tk-hirring-section{
+    padding: 80px 0;
+    z-index: 1;
+    position: relative;
+}
+.tk-hirring-section{
+    .tk-main-title-holder{
+        color: $clr-white;
+        padding:0;
+        max-width: 856px;
+        margin: 0 auto;
+        h2{
+            color: $clr-white;
+        }
+    }
+    .tk-maintitle{
+        max-width: 479px;
+        margin: 0 auto;
+    }
+}
+.tk-shapes{
+    &_one{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    &_two{
+        position: absolute;
+        top: -1px;
+        left: 0;
+    }
+}
+.tk-category_list-two{
+    margin-bottom: 30px;
+}
+.tk-mobileapp{
+    h6{
+        color: #06B6D4;
+        i{
+            color: $clr-white;
+        }
+    }
+}
+.tk-clients-wrapper_three,
+.tk-clients-wrapper_two{
+    .tk-clients li{
+        &:hover{
+            img{
+                filter: none;
+                opacity: 1;
+            }
+        }
+        img{
+            opacity: 0.2;
+            filter: grayscale(1);
+            @extend %transition;
+        }
+    }   
+}
+.tk-clients-wrapper_three{
+    .tk-clients{
+        margin: 0 -40.7px;
+        padding: 40px 0;
+    }
+}
+.tk-sliderarrow-two{
+    @extend .tk-sliderarrow;
+    .splide__arrow{
+        width: 60px;
+        height: 60px;
+        &::before{
+            font-size: 25px;
+        }
+    }
+}
+.tk-bannerinfo_search.tk-appendinput {
+    padding: 15px;
+    max-width: 100%;
+    margin: 0 0 30px;
+    border-radius: $radius;
+    background: rgba(255,255,255,0.2);
+    .tk-theme-form{
+        width: 100%;
+        .tk-select{
+            .form-control{
+                padding-left: 45px;
+            }
+        }
+    }
+}
+.tk-bannerinfo .tk-appendinput{
+    .form-control{
+        border: 0;
+        height: 40px;
+    }
+    .select2-container--default .select2-selection--single{
+        border: 0;
+        padding-left: 30px;
+        height: 48px;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__rendered{
+        line-height: 48px;
+        padding-left: 0;
+ 
+    }
+    .select2-container{
+        height: 48px;
+        min-height: 48px;
+        padding-left: 25px;
+        background: #fff;
+        .select2-selection--single:hover{
+            box-shadow: none;
+        }
+    }
+    .select2-container--focus{
+        box-shadow: none;}
+    .tk-inputicon{
+        flex: auto;
+        a{
+            left: 20px;
+            right: auto;
+            font-size: 20px;
+            pointer-events: none;
+        }
+    }
+    .tk-select{
+        > i{
+            left: 20px;
+        }
+    }
+    > a{
+        flex: none;
+    }
+}
+.tk-bannerinfothree{
+    .tk-bannerinfo_title {
+        p , h1{
+            color: $heading-font-color;
+        }
+    }
+    .tk-btn-vsixplain{
+        border: 2px solid $lighter;
+        background: transparent !important;
+        color: $heading-font-color !important;
+        &:hover{color: $heading-font-color !important;}
+        i{
+            color: $heading-font-color;
+        }
+    }
+}
+.tk-bannerthree{
+    padding: 60px 0;
+    .tk-banner-img{
+        padding: 0;
+    }
+}

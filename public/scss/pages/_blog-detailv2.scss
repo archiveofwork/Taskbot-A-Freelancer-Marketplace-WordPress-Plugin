@@ -1,0 +1,317 @@
+/** ====== Blog Detail v2 components ====== **/
+.tk-blogbanner {
+    padding-bottom: 30px;
+    figure {
+        img {
+            border-radius: $radius;
+            margin: 0 0 29px;
+        }
+    }
+}
+.tk-helpsuppotcontainer {
+    @extend %flex;
+    align-items: center;
+    justify-content: space-between;
+    & ~ figure {
+        margin: 0;
+        img {
+            width: 100%;
+            margin: 0 0 40px;
+            border-radius: $radius;
+        }
+    }
+    .post-categories li a{
+        color: $anchor-color;
+    }
+}
+.tk-tehelpop {
+    max-width: 662px;
+    > a {
+        display: block;
+        margin: 0 0 9px;
+    }
+    h3{
+        margin: 0;
+    }
+}
+.tk-bloglistingicons {
+    @extend %flex;
+    align-items: flex-end;
+    flex-direction: column;
+    h5{
+        margin-bottom: 0;
+        padding-bottom: 12px;
+    }
+}
+.tk-blogbanner__img{
+    margin-top: 37px;
+}
+.tk-overviewtitle {
+    padding-bottom: 15px;
+    h4 {
+        margin-bottom: 0;
+        font-size: rem(20);
+        line-height: em(28,20);
+    }
+}
+.tk-qouttext{
+    margin: 40px auto;
+    max-width: 663px;
+    h3{
+        margin: 0;
+    }
+}
+.tk-blogtags {
+    display: flex;
+    align-items: center;
+}
+.tk-tags_links{
+    @extend %flex;
+    align-items: center;
+    margin: -5px -8px;
+    padding-left: 30px;
+    li {
+        padding: 5px 8px;
+        list-style-type: none;
+    }
+}
+.tk-blog-tags {
+    @extend %label_title;
+    padding: 2px 11.5px;
+    display: block;
+    background-color: $clr-white;
+    border: 1px solid $lighter;
+    @extend %transition;
+    &:hover,
+    &-active{
+        color: $theme-color;
+    }
+}
+.tk-blog-showmore{
+    @extend %label_title;
+    color: $theme-color;
+}
+.tk-tagtittle{
+    span{
+        @extend %h6;
+    }
+}
+.tk-blogbtnarea [type=submit] {margin-top: 8px;}
+.tk-profilrtitle {
+    h6{
+        margin: 0;
+        a{color: $theme-color;}
+    }
+    h5 {
+        margin-bottom: 0;
+    }
+}
+.tk-blogprofileuser {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    &__description{
+        padding: 14px 0 30px;
+        p{
+            @extend %p15;
+            margin-bottom: 0;
+        }
+    }
+    figure {
+        margin: 0 0 20px;
+        img {
+            width: 100px;
+        }
+    }
+    .tk-socialmediaicons {margin: 0 0 17px;}
+}
+.tb-blogtags .tb-tagtittle{
+    padding:0;
+}
+.tk-comentinfo {
+    @extend %flex;
+    align-items: center;
+    figure {
+        margin: 0 20px 0 0;
+        img {
+            width: 34px;
+            border-radius: 50%;
+        }
+    }
+    .btn-reply {
+        margin-left: auto;
+        align-self: start;
+    }
+}
+.tk-tabasidebar{
+    .tk-switchaccount{
+        border: 0;
+        border-radius: 0 0 $radius $radius;
+    }
+}
+.tk-socailmedia{
+    padding-left: 0;
+    margin: -10px;
+    @extend %flex;
+    li{
+        padding: 10px;
+        list-style: none;
+        a{font-size: 16px;}
+    }
+}
+article{
+    &.tk-box{
+        padding: 0;
+        background-color: transparent;
+        border: 0;
+    }    
+}
+.tk-box{
+  padding: 30px;
+  background-color: $clr-white;
+  border: 1px solid $lightest_2;
+  border-radius: 0 0 $radius $radius;
+  h4{
+      margin-bottom: 0;
+  }
+  ~ .tk-box{margin-top: 30px;}
+}
+.tk-description{
+    + .tk-sectiontitle__list{padding-top: 19px;}
+}
+.tk-themeform__wrap{
+    @extend %flex;
+    width: 100%;
+}
+.tk-blogcmntinfonames{
+    h4{
+        margin-bottom: 0;
+    }
+}
+.tk-blogimg{
+    display: flex;
+    figure{
+        margin: 0 24px 0 0;
+    }
+}
+.tk-blogcmntinfo {
+    flex: 1;
+    @extend %flex;
+    justify-content: space-between;
+    align-items: center;
+    span{
+        display: block;
+        @extend %h6;
+    }
+}
+.tk-addcomment {
+    .tk-main-description {
+        padding-left: 110px;
+        p {
+            @extend %p15;
+        }
+    }
+    ~ .tk-addcomment{padding-top: 30px;}
+    ~ :last-child{
+        border-bottom: 0;
+        padding-bottom: 0;
+    }
+}
+.tk-blogcommentsholderchild{
+	padding: 0 0 0 110px;
+	margin-left: auto;
+    .tk-addcomment{padding-top: 30px;}
+    + {
+		a {
+			width: 86% !important;
+			margin-left: auto;
+		}
+	}
+}
+.tk-terms{
+    @extend %flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.form-check{
+    padding-left: 0;
+    .form-check-input{
+        margin-left: 0;
+    }
+}
+.tk-explorearchives{
+    @extend %flex;
+    margin: -5px 0;
+    padding: 0;
+    li {
+        list-style: none;
+        width: 50%;
+        padding: 5px 0;
+        span{@extend %tiny_title;}
+    }
+}
+.tk-blogs-unactive{
+    display: none;
+}
+.button--disapear {
+    display: none;
+  
+      &.active {
+        animation: scale-display .4s;
+        display: inline-flex;
+      }  
+}
+  @keyframes scale-display {
+      0% {
+          opacity: 0;
+          transform: scale(0);
+      -webkit-transform: scale(0);
+      }
+  
+      100% {
+          opacity: 1;
+          transform: scale(1);
+      -webkit-transform: scale(1);
+      }
+}
+.taskon-author a,
+.taskon-posted-on a{
+    color: $heading-font-color;
+    &:hover{
+        color: $anchor-color;
+    }
+}
+.tk-profilrtitle h6 a {
+    color: $anchor-color;
+}
+.comment-respond .tk-themeform__wrap .form-group p a{
+    color: $anchor-color;
+}
+.wp-block-latest-comments,
+.wp-block-latest-posts__list{
+    a{
+       color: $heading-font-color;
+       &:hover{
+           color: $anchor-color;
+       }
+   }
+}
+button.tk-theme-btn,
+a.tk-theme-btn,
+.nav-next,
+.nav-previous,
+.taskon-comments .taskon-reply a,
+.wp-block-search .wp-block-search__button{
+    background-color:$theme-color;
+    color: $button-color !important;
+    &:hover{
+        color: $button-color !important;
+        background-color: $theme-color_20_light;
+    }
+}
+.taskon-comments .taskon-reply a.tk-theme-btn,
+.nav-next span, .nav-previous span{
+    color: $button-color !important;
+}

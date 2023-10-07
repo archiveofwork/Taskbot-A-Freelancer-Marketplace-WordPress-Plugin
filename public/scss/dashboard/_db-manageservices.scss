@@ -1,0 +1,17 @@
+/** ====== Manage Services components ====== **/
+.te-eyeviews{
+    span.fa-envelope::before{
+        font-weight: 500;
+    }
+}
+.te-switchservice {
+    border-left: 1px solid $border-color;
+    padding: 10px 0 9px 30px;
+    margin: 0 0 0 30px;
+  >  span{
+        display: block;
+        margin: 0 0 7px;
+        font: 400 rem(13) / em(13, 13) $heading-font-family;
+
+    }
+}

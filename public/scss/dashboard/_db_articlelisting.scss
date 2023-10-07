@@ -1,0 +1,17 @@
+/** ====== Article listing components ====== **/
+.te-articlelisting{
+    .te-switchservice{
+        border: 0;
+    }
+}
+.te-deatlswithimg {
+    &:hover{
+        .te-featuretag{
+            left: 0;
+        }
+    }
+}
+.te-addarticleside .te-sidebartitle ~ .te-sidebartitle{
+    border-bottom: 1px solid  $border-color;
+    border-top: 0;
+}

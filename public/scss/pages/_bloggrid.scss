@@ -1,0 +1,350 @@
+/** ====== Blog Grid components ====== **/
+.te-blogpagination {
+    margin-top: 30px;
+}
+.te-blogdescription p {
+    margin: 0 0 10px;
+}
+.te-blogtitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 34px;
+    h2 {
+        margin: 0;
+    }
+}
+.te-desclinks {
+    @extend %flex;
+    align-items: center;
+    margin: 0;
+    li {
+        position: relative;
+        list-style-type: none;
+        margin: 0 0 2px;
+        a {
+            display: block;
+            font-size: rem(16px);
+            line-height: em(24,16);
+        }
+        & ~ li {
+            padding-left: 1px;
+            &::before {
+                position: absolute;
+                content: ",";
+                top: -2px;
+                left: 0;
+            }
+            a {
+                margin: 0 0 0 5px;
+            }
+        }
+    }
+}
+.te-bloglistingicons {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    span {
+        display: inline-block;
+        margin: 0 0 6px;
+        color: $text-light;
+        font: 400 rem(14)/em(24,14) $body-font-family;
+    }
+}
+.te-blogviewdates {
+    display: flex;
+    align-items: center;
+    li {
+        list-style-type: none;
+        em {
+            font-style: normal;
+            font-size: rem(14px);
+            line-height: em(20,14);
+            color: $text-light;
+            display: inline-block;
+            span {
+                margin: 0 4px 0 0;
+            }
+        }
+        & ~ li {
+            margin: 0 0 0 25px;
+        }
+    }
+}
+.ts-blogbanner {
+    margin: 0 0 40px;
+    border-bottom: 1px solid $border-color;
+    figure {
+        img {
+            margin: 0 0 29px;
+            border-radius: $radius;
+        }
+    }
+}
+.te-blogprofileuser {
+    background: #eef5ff;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: $radius;
+    border: 0;
+    figure {
+        margin: 0 0 13px;
+        img {
+            width: 100px;
+            border-radius: 50%;
+        }
+    }
+    .te-socialmediaicons {
+        margin: 0 0 17px;
+    }
+}
+.te-descriptionitalic {
+    p {
+        font-size: rem(16px);
+        font-style: italic;
+    }
+}
+.te-profilrtitle {
+    h4 {
+        margin: 0 0 4px;
+    }
+}
+.te-descriptionitalic {
+    em {
+        display: block;
+        margin: 0 0 23px;
+        margin: 0 0 25px;
+        font-size: rem(16px);
+    }
+}
+.te-explorelisting {
+    > a {
+        display: block;
+        font-size: rem(14);
+        margin: 6px 0 0;
+    }
+}
+.te-exploretite {
+    [aria-expanded="false"] {
+        margin: 0;
+    }
+}
+.te-explorearchives {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    li {
+        flex: 0 0 50%;
+        padding: 0 0 8px;
+        & + li {
+            padding: 0 0 8px;
+        }
+        a {
+            margin: 3px 0 0;
+        }
+    }
+}
+.te-blogtags {
+    display: flex;
+    margin: 33px 0 40px 0;
+    background: #f6f8f7;
+    padding: 11px 20px;
+    @extend %border-radius4;
+    .te-desclinks {
+        li {
+            a {
+                font-size: rem(14px);
+                line-height: em(22,14);
+            }
+        }
+    }
+}
+.te-tagtittle {
+    i {
+        color: #123652;
+        display: inline-block;
+        font-size: rem(14px);
+    }
+    em {
+        display: inline-block;
+        margin: 0 3px;
+        color: #333333;
+        font-style: normal;
+    }
+}
+.te-blogreadlinks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    padding: 30px 0;
+    .te-deatlswithimg {
+        figure {
+            width: 60px;
+        }
+        .te-icondetails {
+            h6 {
+                white-space: initial;
+                width: 68%;
+                margin: 0;
+                line-height: 20px;
+            }
+        }
+        & + .te-deatlswithimg {
+            text-align: right;
+            figure {
+                margin: 0 0 0 20px;
+            }
+            .te-priviouslink {
+                a {
+                    margin: 0 0 0 20px;
+                }
+            }
+            .te-icondetails {
+                h6 {
+                    white-space: initial;
+                    width: 69%;
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}
+.te-priviouslink {
+    a {
+        margin: 0 20px 0 0;
+        color: $text-light;
+        display: inline-block;
+        font-size: rem(18px);
+    }
+}
+.te-blogcommenttitle {
+    h4 {
+        margin-top: 33px;
+        font: 700 rem(20)/em(28,20) $body-font-family;
+    }
+}
+.te-blogcmntinfo {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 0 30px;
+}
+.te-addcommentblog {
+    border-bottom: 1px solid $border-color;
+    .te-addcomment {
+        padding: 15px 0 25px;
+        .te-description {
+            max-width: 635px;
+            margin: 0 0 0 auto;
+        }
+        .te-profileform__title {
+            margin: 30px 0 0;
+        }
+        & + .te-addcomment {
+            border-top: 1px solid $border-color;
+            padding: 30px 0 25px;
+        }
+    }
+    .te-addcommenthalf {
+        margin-left: 96px;
+        padding-top: 30px;
+        .te-description {
+            max-width: 539px;
+        }
+    }
+}
+.te-blogcmntinfonames {
+    .te-comentinfodetail {
+        a {
+            h5 {
+                line-height: 20px;
+            }
+        }
+        span {
+            margin: 0 0 11px;
+        }
+    }
+}
+.te-blogbtnarea {
+    [type="submit"] {
+        margin-top: 8px;
+    }
+}
+.form-checkboxes {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-top: 11px;
+    .te-checkbox {
+        & + .te-checkbox {
+            margin-top: 13px;
+        }
+    }
+    .te-checkbox {
+        label {
+            color: $text-light;
+        }
+    }
+}
+.te-formblog {
+    margin-top: 36px;
+    .te-themeform {
+        .form-group {
+            textarea {
+                height: 166px;
+                color: $text-light;
+            }
+        }
+    }
+}
+.te-formblogtitle {
+    h3 {
+        font: 700 rem(20)/em(24,20) $heading-font-family;
+        margin-bottom: 24px;
+    }
+}
+.te-overlay_1 {
+    background: #123652;
+    position: absolute;
+    margin: auto;
+    width: 0;
+    height: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: $radius;
+    opacity: 0;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+.te-deatlswithimg:hover .te-overlay_1 {
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+}
+.te-dhb-mainheading {
+    .te-actionselect {
+        margin-left: auto;
+    }
+}
+.te-marketrendtitle {
+    h2 {
+        margin: 0 0 5px;
+    }
+}
+.te-articleinfotwo{
+    align-self: center;
+    .te-icondetails {
+        h6{
+          margin: 0;
+        }
+    }
+}

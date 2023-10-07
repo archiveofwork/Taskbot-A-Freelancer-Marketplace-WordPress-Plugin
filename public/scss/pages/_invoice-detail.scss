@@ -1,0 +1,329 @@
+/** ====== Invoice Detail  Component ====== **/
+.tb-printshaer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 0 30px;
+    a{
+        & + a{
+            margin: 0 0 0 10px;
+        }
+    }
+    .tb-btn {
+        & + .tb-btn{
+            min-width: 140px;
+        }
+    }
+}
+.btn-sm{
+    min-width: 50px;
+    height: 50px;
+    background: #00cc8d;
+    color: #fff;
+    padding: 0 10px;
+}
+.tb-shareinvoice{
+    color: $text-light;
+    font: 600 rem(14)/em(18,14) $heading-font-family;
+    margin: 0 20px 0 0;
+    display: inline-block;
+    i{
+        display: inline-block;
+        margin: 0 10px 0 0;
+        font-size: rem(18px);
+    }
+}
+.tb-printable {
+    padding: 30px;
+    background: $clr-white;
+    border-radius: $radius;
+    border: 1px solid $border-color;
+    box-shadow: $drop_shadows_lightest;
+    .tb-tasksinfos{margin: 30px 0 0;}
+}
+.tb-invoicebill {
+    display: flex;
+    justify-content: space-between;
+    figure{
+        margin: 0;
+        width: 160px;
+        height: 100%;
+    }
+}
+.tb-billno{
+    h3 {
+        font-size: rem(36px);
+        margin: 0;
+        line-height:em(37,36)
+    }
+    span {font: 700 rem(18)/em(22,18) $heading-font-family;}
+}
+.tb-invoicetasks{
+    h5{
+        margin: 0;
+        font-weight: 400;
+        font-family: $body-font-family;
+    }
+    h3{
+        font: 700 rem(20)/em(28,20) $heading-font-family;
+        margin: 0;
+    }
+}
+.tb-tasksdates{
+    @extend %flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: flex-end;
+    & > span{
+        display: inline-block;
+        font: 400 rem(14)/em(22,14) $body-font-family;
+        color: $heading-font-color;
+        em{
+            font-style: normal;
+        }
+    }
+}
+.tb-tasksinfos{
+    @extend %flex;
+    .tb-invoicetasks{
+        flex: 1;
+    }
+}
+.tb-fromreceiver{
+    span{
+        font-size: rem(14);
+        display: block;
+        color: $text-gray;
+        line-height: em(24,14);
+    }
+    h5{
+        margin: 0 0 10px;
+        line-height: em(19,13);
+    }
+}
+.tb-invoicefromto{
+    @extend %flex;
+    border-top: 1px solid $border-color;
+    padding: 30px 0;
+    margin-top: 30px;
+    .tb-fromreceiver{
+        flex: 50%;
+    }
+}
+.tb-invoice-table{
+    &.tb-table{
+        margin: 0;
+        border: 0;
+        >thead {
+            border-top: 1px solid $border-color;
+            >tr {
+                border: 0;
+                border-bottom: 1px solid $border-color;
+                >th {
+                    padding: 17px 28px;
+                    line-height: 21px;
+                    color: $heading-font-color;
+                    font: 700 rem(14)/em(35, 14) $body-font-family;
+                }
+                td{
+                    color: $secondary-color;
+                    font: 700 rem(14)/em(15, 14) $body-font-family;
+                    > span{
+                        display: inline-block;
+                        color: $secondary-color;
+                        font: 400 rem(14)/em(15, 14) $body-font-family;
+                        em {
+                            font-size: rem(12px);
+                            vertical-align: middle;
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+        >tbody {
+            >tr {
+                border: 0;
+                td {
+                    padding: 24px 28px 23px 28px;
+                    line-height: 21px;
+                    border: 0;
+                    vertical-align: bottom;
+                    & + td:nth-child(2){
+                        width: 31%;
+                    }
+                    h6{
+                        margin: 0;
+                        position: relative;
+                        top: 22px;
+                        left: 0;
+                    }
+                    &:last-child{
+                        width: 20%;
+    
+                    }
+                }
+                & +  tr{
+                    & td:first-child {
+                        vertical-align: top;
+                        padding-top: 28px;
+                        padding-bottom: 28px;
+    
+                    }
+                }
+                &:first-child{
+                    td{
+                        vertical-align: top;
+                        padding-bottom: 10px;
+                    }
+                } 
+            }
+        }
+    }
+}
+.tb-tablelist{
+    padding: 0;
+    margin: 3px 0 0;
+    li{
+        font: 400 rem(14)/em(22, 14) $body-font-family;
+        position: relative;
+        list-style-type: none;
+        padding: 0;
+        color: $secondary-color;
+        margin-top: 3px;
+        & + li {
+            margin-top: 4px;
+        }
+        &::after{
+            color: $text-gray;
+            position: absolute;
+            content: ".";
+            top: -5px;
+            left: 0;
+            font-size: 19px;
+        }
+    }
+}
+.tb-tablelistv2{
+    margin-top: 6px;
+    position: relative;
+    top: 20px;
+    li{
+        margin-top: 6px;
+        &::after{
+          display: none;
+        }
+        & + li{
+            margin-top: 4px;
+        }
+    }
+}
+.tb-subtotal{
+    @extend %flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 20px 0 30px;
+    border-top: 1px solid #eee;
+    padding: 30px 0 0;
+}
+.tb-subtotalbill{
+    width: 100%;
+    max-width: 350px;
+    padding: 0 20px 0 30px;
+    margin: 0;
+    > li:not(.tb-sumtotal){
+        font: 400 rem(14)/em(22, 14) $body-font-family;
+        list-style: none;
+        margin: 0 0 10px;
+        color: $heading-font-color;
+        h6{
+            margin: 0;
+            float: right;
+        }
+    }
+ 
+}
+.tb-sumtotal{
+    min-width: 350px;
+    margin-top: 14px;
+    border-radius: $radius;
+    list-style-type: none;
+    color: $button-color;
+    background: $theme-color;
+    padding: 14px 20px 14px 30px;
+    font: 700 rem(14)/em(22, 14) $heading-font-family;
+    h6{
+        margin: 0;
+        float: right;
+        color: $button-color;
+        font: 700 rem(18)/em(22, 18) $heading-font-family;
+    }
+}
+.tw-termstitle{
+    h4{
+        font-size: rem(20);
+        line-height: em(28,20);
+        margin: 0 0 13px;
+    }
+}
+.tb-termconditionlist{
+    margin: 19px 0 0;
+    li{
+        list-style-type: none;
+        font: 400 rem(16)/em(25,16) $body-font-family;
+        position: relative;
+        padding-left: 12px;
+        color: $text-gray;
+        &::before{
+            content: "";
+            background: $text-gray;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 10px;
+        }
+        & + li{
+            margin: 3px 0 0;
+        }
+    }
+}
+.tb-anoverview{
+    .tb-description{
+        p{
+            margin-bottom: 0;
+            &:not(:last-child){padding-bottom: 18px;}
+        }
+        ul{margin: 20px 0 0;}
+    }
+}
+.tb-anoverview .tb-description p + ul{margin-top: 0;}
+.tb-invoicestable{
+    border:1px solid #eee;
+    box-shadow: $drop_shadows_lightest;
+}
+.tb-invoicehead{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 30px;
+    .tb-btn{
+        margin-left: auto;
+    }
+}
+.tb-ad-balance{
+    padding-top: 10px;
+    span{
+        @extend %h6;
+        float: right;
+    }
+}
+.tb-seller-empty-hourlyinvoice{
+    p{
+        text-align: center;
+        font-weight: 700;
+        
+    }
+}

@@ -1,0 +1,10 @@
+/** ====== 404 components ====== **/
+.tb-404{
+    text-align: center;
+    > .row{
+        justify-content: center;
+    }
+    &__img{
+        margin-bottom: 36px;
+    }
+}

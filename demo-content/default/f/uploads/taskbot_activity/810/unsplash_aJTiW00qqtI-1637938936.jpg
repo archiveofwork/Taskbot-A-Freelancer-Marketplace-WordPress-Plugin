@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>Page not found &#8211; Taskbot &#8211; A task marketplace for freelancers</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<link rel='dns-prefetch' href='//apis.google.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Taskbot - A task marketplace for freelancers &raquo; Feed" href="https://amentotech.com/projects/taskbot/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Taskbot - A task marketplace for freelancers &raquo; Comments Feed" href="https://amentotech.com/projects/taskbot/comments/feed/" />
+		<script>
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/amentotech.com\/projects\/taskbot\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.2"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://amentotech.com/projects/taskbot/wp-includes/css/dist/block-library/style.min.css?ver=5.8.2' media='all' />
+<link rel='stylesheet' id='wc-blocks-vendors-style-css'  href='https://amentotech.com/projects/taskbot/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-vendors-style.css?ver=6.1.0' media='all' />
+<link rel='stylesheet' id='wc-blocks-style-css'  href='https://amentotech.com/projects/taskbot/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-style.css?ver=6.1.0' media='all' />
+<link rel='stylesheet' id='extendify-sdk-utility-classes-css'  href='https://amentotech.com/projects/taskbot/wp-content/plugins/redux-framework/redux-core/extendify-sdk/public/build/extendify-utilities.css?ver=13.1' media='all' />
+<link rel='stylesheet' id='woocommerce-layout-css'  href='https://amentotech.com/projects/taskbot/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=5.9.0' media='all' />
+<link rel='stylesheet' id='woocommerce-smallscreen-css'  href='https://amentotech.com/projects/taskbot/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=5.9.0' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='woocommerce-general-css'  href='https://amentotech.com/projects/taskbot/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=5.9.0' media='all' />
+<style id='woocommerce-inline-inline-css'>
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link rel='stylesheet' id='select2_css-css'  href='https://amentotech.com/projects/taskbot/wp-content/plugins/taskbot/public/css/select2.min.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='fontawesome-css'  href='https://amentotech.com/projects/taskbot/wp-content/plugins/taskbot/public/css/fontawesome/all.min.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='feather-icons-css'  href='https://amentotech.com/projects/taskbot/wp-content/plugins/taskbot/public/css/feather-icons.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='carousel-css'  href='https://amentotech.com/projects/taskbot/wp-content/plugins/taskbot/public/css/owl.carousel.min.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='jquery-ui-css'  href='https://amentotech.com/projects/taskbot/wp-content/plugins/taskbot/public/css/jquery-ui.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='datetimepicker-css'  href='https://amentotech.com/projects/taskbot/wp-content/plugins/taskbot/public/css/datetimepicker.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='mCustomScrollbar-css'  href='https://amentotech.com/projects/taskbot/wp-content/plugins/taskbot/public/css/jquery.mCustomScrollbar.min.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='tagify-css'  href='https://amentotech.com/projects/taskbot/wp-content/plugins/taskbot/public/css/tagify.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='jquery-confirm-css'  href='https://amentotech.com/projects/taskbot/wp-content/plugins/taskbot/public/css/jquery-confirm.min.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='nouislider-css'  href='https://amentotech.com/projects/taskbot/wp-content/plugins/taskbot/public/css/nouislider.min.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='bootstrap-css'  href='https://amentotech.com/projects/taskbot/wp-content/plugins/taskbot/public/css/bootstrap.min.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='croppie-style-css'  href='https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='taskbot-main-css'  href='https://amentotech.com/projects/taskbot/wp-content/plugins/taskbot/public/css/main.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='taskbot-css'  href='https://amentotech.com/projects/taskbot/wp-content/plugins/taskbot/public/css/style.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='bootstrap.min-css'  href='https://amentotech.com/projects/taskbot/wp-content/themes/taskon/css/bootstrap.min.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='taskon-main-css'  href='https://amentotech.com/projects/taskbot/wp-content/themes/taskon/css/main.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='taskon-normalize-css'  href='https://amentotech.com/projects/taskbot/wp-content/themes/taskon/css/normalize.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='taskon-style-css'  href='https://amentotech.com/projects/taskbot/wp-content/themes/taskon/style.css?ver=1.0.0' media='all' />
+<script src='https://amentotech.com/projects/taskbot/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
+<script src='https://amentotech.com/projects/taskbot/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script src='https://amentotech.com/projects/taskbot/wp-includes/js/plupload/moxie.min.js?ver=1.3.5' id='moxiejs-js'></script>
+<script src='https://amentotech.com/projects/taskbot/wp-includes/js/plupload/plupload.min.js?ver=2.1.9' id='plupload-js'></script>
+<link rel="https://api.w.org/" href="https://amentotech.com/projects/taskbot/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://amentotech.com/projects/taskbot/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://amentotech.com/projects/taskbot/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.8.2" />
+<meta name="generator" content="WooCommerce 5.9.0" />
+<meta name="framework" content="Redux 4.3.4" />	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	</head>
+
+<body class="error404 theme-taskon woocommerce-no-js hfeed elementor-default elementor-kit-33">
+<nav class="navbar navbar-expand-lg tk-navbar">
+	<div class="container">
+					<a class="navbar-brand" href="https://amentotech.com/projects/taskbot/"><strong><img src="https://amentotech.com/projects/taskbot/wp-content/themes/taskon/images/logo.png" alt=""></strong></a>
+				
+		<div class="tk-navbar-right">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="fa fa-bars"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<div class="menu-header-menu-container"><ul id="primary-menu" class="navbar-nav tk-navbar-nav"><li id="menu-item-608" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-608"><a href="https://amentotech.com/projects/taskbot/">Home</a></li>
+<li id="menu-item-607" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-607"><a href="https://amentotech.com/projects/taskbot/about-us/">About us</a></li>
+<li id="menu-item-609" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-609"><a href="https://amentotech.com/projects/taskbot/how-it-work/">How it work</a></li>
+<li id="menu-item-628" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-628"><a href="https://amentotech.com/projects/taskbot/sign-in/">Sign In</a></li>
+</ul></div>			</div>
+		</div>
+	</div>
+</nav><main class="taskon-main-wrapper tk-lightest_bg">
+<main id="taskon-primary" class="taskon-site-main">
+	<section class="taskon-error-404 taskon-not-found">
+		<header class="taskon-page-header">
+			<h1 class="taskon-page-title">Oops! That page can&rsquo;t be found.</h1>
+		</header>
+		<div class="taskon-page-content">
+			<p>It looks like nothing was found at this location. Maybe try one of the links below or a search?</p>
+				<form role="search" method="get" class="search-form" action="https://amentotech.com/projects/taskbot/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form>
+		<div class="widget widget_recent_entries">
+		<h2 class="widgettitle">Recent Posts</h2>
+		<ul>
+											<li>
+					<a href="https://amentotech.com/projects/taskbot/2021/11/26/i-will-do-seo-full-on-page-and-off-page-optimization-for-any-site/">I Will Do SEO Full On Page And Off Page Optimization For Any Site</a>
+									</li>
+											<li>
+					<a href="https://amentotech.com/projects/taskbot/2021/11/26/i-will-create-fix-customize-your-wordpress-website-2/">I Will Create, Fix, Customize, Your WordPress Website</a>
+									</li>
+											<li>
+					<a href="https://amentotech.com/projects/taskbot/2021/11/25/the-quickest-way-to-deliver-your-message-make-it-visual/">The quickest way to deliver your message? make it visual</a>
+									</li>
+											<li>
+					<a href="https://amentotech.com/projects/taskbot/2021/11/25/why-steve-markinson-didnt-let-his-kids-use-ipads/">Why steve markinson didn’t let his kids use iPads</a>
+									</li>
+											<li>
+					<a href="https://amentotech.com/projects/taskbot/2021/11/15/steve-markinson/">Why steve markinson didn’t let his kids use iPads</a>
+									</li>
+					</ul>
+
+		</div>
+				<div class="taskon-widget taskon-widget_categories">
+					<h2 class="taskon-widget-title">Most used categories</h2>
+					<ul>
+							<li class="cat-item cat-item-149"><a href="https://amentotech.com/projects/taskbot/category/marketing/" title="Marketing">Marketing</a> (4)
+</li>
+	<li class="cat-item cat-item-146"><a href="https://amentotech.com/projects/taskbot/category/business/" title="Business ">Business</a> (2)
+</li>
+	<li class="cat-item cat-item-147"><a href="https://amentotech.com/projects/taskbot/category/it/" title="IT">IT</a> (2)
+</li>
+	<li class="cat-item cat-item-148"><a href="https://amentotech.com/projects/taskbot/category/technology/" title="Technology ">Technology</a> (2)
+</li>
+					</ul>
+				</div>
+				<div class="widget widget_archive"><h2 class="widgettitle">Archives</h2><p>Try looking in the monthly archives. 🙂</p>		<label class="screen-reader-text" for="archives-dropdown--1">Archives</label>
+		<select id="archives-dropdown--1" name="archive-dropdown">
+			
+			<option value="">Select Month</option>
+				<option value='https://amentotech.com/projects/taskbot/2021/11/'> November 2021 </option>
+
+		</select>
+
+<script>
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "archives-dropdown--1" );
+	function onSelectChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value !== '' ) {
+			document.location.href = this.options[ this.selectedIndex ].value;
+		}
+	}
+	dropdown.onchange = onSelectChange;
+})();
+/* ]]> */
+</script>
+			</div>		</div>
+	</section>
+</main>
+
+</main>
+<footer class="tk-mainfooter">
+			<div class="container">
+			<div class="row tk-footer">
+									<div class="col-sm-12 col-md-6">
+						<div id="taskbot_apps-2" class="tb-footerapp tk-widgetbox">            <div class="tk-footeritem">
+                                    <figure>
+                        <img src="https://amentotech.com/projects/taskbot/wp-content/uploads/2021/11/logo-1.png" alt="Taskbot - A task marketplace for freelancers">
+                    </figure>
+                                                    <div class="tk-main-description">
+                        <p>Alame eoluptatem accusantium doloremque laudantium totam rem aperiame eaque ipsa quae ab illo inventore veritatis et quasi architecto beata vitae dicta sunt explicabo ipsam voluptatem quia voluptas..</p>
+                    </div>
+                                                    <ul class="tk-socialink">
+                                                    <li><a href="https://www.facebook.com/tasklaystudio"> <i class="fab fa-facebook-f"></i> /tasklaystudio</a> </li>
+                                                                            <li><a href="https://www.twitter.com/tasklaymanhatan001"> <i class="fab fa-twitter"></i> /tasklaymanhatan001</a> </li>
+                                                                            <li><a href="https://www.linkedin.com/gethired@tasklaystudio"> <i class="fab fa-linkedin-in"></i> /gethired@tasklaystudio</a> </li>
+                                            </ul>
+                                                    <ul class="tk-storeicons">
+                                                    <li> <a href="#"><img src="https://amentotech.com/projects/taskbot/wp-content/uploads/2021/11/img-03-3.png" alt="App store"></a> </li>
+                                                                            <li> <a href="#"><img src="https://amentotech.com/projects/taskbot/wp-content/uploads/2021/11/img-04-1.png" alt="Play store"></a> </li>
+                                            </ul>
+                            </div>
+			</div>					</div>
+													<div class="col-sm-12 col-md-3">
+						<div id="nav_menu-2" class="widget_nav_menu tk-widgetbox"><div class="tk-sidetitle"><h5>Trending categories</h5></div><div class="menu-trending-categories-container"><ul id="menu-trending-categories" class="menu"><li id="menu-item-793" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-793"><a href="https://amentotech.com/projects/taskbot/product-category/website-design/">Website design</a></li>
+<li id="menu-item-794" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-794"><a href="https://amentotech.com/projects/taskbot/product-category/app-design/">App design</a></li>
+<li id="menu-item-795" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-795"><a href="https://amentotech.com/projects/taskbot/product-category/landing-page-design/">Landing page design</a></li>
+<li id="menu-item-796" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-796"><a href="https://amentotech.com/projects/taskbot/product-category/resume-design/">Resume Design</a></li>
+<li id="menu-item-797" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-797"><a href="https://amentotech.com/projects/taskbot/product-category/pattern-design/">Pattern Design</a></li>
+<li id="menu-item-798" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-798"><a href="https://amentotech.com/projects/taskbot/product-category/book-layout-design-typesetting/">Book layout design &amp; typesetting</a></li>
+<li id="menu-item-799" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-799"><a href="https://amentotech.com/projects/taskbot/product-category/packaging-label-design/">Packaging &amp; label design</a></li>
+<li id="menu-item-800" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-800"><a href="https://amentotech.com/projects/taskbot/product-category/social-media-design/">Social media design</a></li>
+</ul></div></div><div id="block-5" class="widget_block tk-widgetbox"><a href="javascript:void(0);">Explore all</a></div>					</div>
+													<div class="col-sm-12 col-md-3">
+						<div id="nav_menu-3" class="widget_nav_menu tk-widgetbox"><div class="tk-sidetitle"><h5>Useful links</h5></div><div class="menu-useful-links-container"><ul id="menu-useful-links" class="menu"><li id="menu-item-745" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-745"><a href="https://amentotech.com/projects/taskbot/about-us/">About us</a></li>
+<li id="menu-item-746" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-746"><a href="https://amentotech.com/projects/taskbot/how-it-work/">How it work</a></li>
+<li id="menu-item-747" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-747"><a href="#">Careers</a></li>
+<li id="menu-item-748" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-748"><a href="#">What’s useful for me</a></li>
+<li id="menu-item-749" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-749"><a href="#">Working policy</a></li>
+<li id="menu-item-750" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-750"><a href="#">Terms and conditions</a></li>
+<li id="menu-item-751" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-751"><a href="#">Copyright policy</a></li>
+</ul></div></div><div id="block-6" class="widget_block tk-widgetbox"><a href="javascript:void(0);">Explore all</a></div>					</div>
+							</div>
+		</div>
+		
+	<div class="tk-footerbtm">
+		<div class="container">
+			<div class="row">
+									<div class="col-sm-12 col-md-6">
+						<div class="tk-footerbtmtitle">
+							<h6>Copyright &copy;2021&nbsp;Taskbot - A task marketplace for freelancers</h6>
+						</div>
+					</div>
+											</div>
+		</div>
+	</div>
+</footer>      <div class="modal hidden fade taskbot-profilepopup tb-addonspopup" tabindex="-1" role="dialog"
+           id="taskbot-modal-popup">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="taskbot-modalcontent modal-content">
+            <div class="tb-popuptitle">
+              <h4></h4>
+              <a href="javascript:void(0);" class="close"><i class="icon-x" data-bs-dismiss="modal"></i></a>
+            </div>
+            <div class="modal-body" id="taskbot-model-body"></div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade tb-creditwallet" id="tbcreditwallet" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="tb-popuptitle">
+              <h4>Add credit to your wallet</h4>
+              <a href="javascript:void(0);" class="close"><i class="icon-x" data-bs-dismiss="modal"></i></a>
+            </div>
+            <div class="modal-body">
+              <form class="tb-themeform">
+                <fieldset>
+                  <div class="form-group">
+                    <input type="text" id="tb_wallet_amount" class="form-control"
+                           placeholder="Enter amount" name="amount"
+                           autocomplete="off">
+                  </div>
+                  <div class="form-group">
+                    <a href="javascript:void(0);" class="tb-btn"
+                       id="tb_submit_fund">Add funds now<i
+                        class="icon-arrow-right"></i></a>
+                  </div>
+                </fieldset>
+              </form>
+              <div class="tb-checkoutbox">
+                <span>You will be redirect to Woocommerce checkout page to add your billing details.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade tb-modal" id="taskbot-popup" tabindex="-1" role="dialog" aria-hidden="true">
+
+      </div>
+            <!-- Add New Faq Popup Start-->
+      <div class="modal fade tb-addonpopup" id="addnewfaq" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog tb-modaldialog" role="document">
+          <div class="modal-content">
+            <div class="tb-popuptitle">
+              <h4>Add New FAQ</h4>
+              <a href="javascript:void(0);" class="close"><i class="icon-x" data-bs-dismiss="modal"></i></a>
+            </div>
+            <div class="modal-body">
+              <form class="tb-themeform tb-formlogin">
+                <fieldset>
+                  <div class="form-group">
+                    <label class="form-group-title">Add Title Here:</label>
+                    <input type="text" id="service-question" class="form-control"
+                           placeholder="Enter question here" autocomplete="off">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-group-title">Add Description:</label>
+                    <textarea class="form-control" id="service-answer"
+                              placeholder="Enter brief answer"></textarea>
+                  </div>
+                  <div class="form-group tb-form-btn">
+                    <div class="tb-savebtn">
+                      <span>Click “Save &amp; Update” to update your add-ons</span>
+                      <a href="javascript:void(0);" class="tb-btn"
+                         id="tb-faqs-addlist">Save &amp; Update</a>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+            <div class="modal fade tb-taskreject" id="tb-reject-task" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="tb-popuptitle">
+              <h4>Feedback on Reject</h4>
+              <a href="javascript:void(0);" class="close"><i class="icon-x" data-bs-dismiss="modal"></i></a>
+            </div>
+            <div class="modal-body">
+              <form class="tb-themeform">
+                <fieldset>
+                  <div class="form-group">
+                    <textarea class="form-control" rows="6" cols="80" id="tb_reject_task_reason" name="tb_reject_task_reason" placeholder="Feedback..."></textarea>
+                  </div>
+                  <div class="form-group">
+                    <a href="javascript:void(0);" class="tb-btn tb_rejected_task" tb_task_id=""
+                       id="tb_submit_reject_task">Send</a>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      	<script type="text/javascript">
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+	<script src='https://amentotech.com/projects/taskbot/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.5.9.0' id='jquery-blockui-js'></script>
+<script id='wc-add-to-cart-js-extra'>
+var wc_add_to_cart_params = {"ajax_url":"\/projects\/taskbot\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/projects\/taskbot\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"https:\/\/amentotech.com\/projects\/taskbot\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
+</script>
+<script src='https://amentotech.com/projects/taskbot/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=5.9.0' id='wc-add-to-cart-js'></script>
+<script src='https://amentotech.com/projects/taskbot/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.5.9.0' id='js-cookie-js'></script>
+<script id='woocommerce-js-extra'>
+var woocommerce_params = {"ajax_url":"\/projects\/taskbot\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/projects\/taskbot\/?wc-ajax=%%endpoint%%"};
+</script>
+<script src='https://amentotech.com/projects/taskbot/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=5.9.0' id='woocommerce-js'></script>
+<script id='wc-cart-fragments-js-extra'>
+var wc_cart_fragments_params = {"ajax_url":"\/projects\/taskbot\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/projects\/taskbot\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_2b283ea82e4dc6009c5335056b6c9fd1","fragment_name":"wc_fragments_2b283ea82e4dc6009c5335056b6c9fd1","request_timeout":"5000"};
+</script>
+<script src='https://amentotech.com/projects/taskbot/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=5.9.0' id='wc-cart-fragments-js'></script>
+<script src='https://amentotech.com/projects/taskbot/wp-includes/js/jquery/ui/core.min.js?ver=1.12.1' id='jquery-ui-core-js'></script>
+<script src='https://amentotech.com/projects/taskbot/wp-includes/js/jquery/ui/mouse.min.js?ver=1.12.1' id='jquery-ui-mouse-js'></script>
+<script src='https://amentotech.com/projects/taskbot/wp-includes/js/jquery/ui/slider.min.js?ver=1.12.1' id='jquery-ui-slider-js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js?ver=1.0.0' id='jquery-validationnn-js-js'></script>
+<script src='https://amentotech.com/projects/taskbot/wp-content/plugins/taskbot/public/js/vendor/bootstrap.min.js?ver=1.0.0' id='bootstrap_js-js'></script>
+<script src='https://amentotech.com/projects/taskbot/wp-content/plugins/taskbot/public/js/vendor/select2.min.js?ver=1.0.0' id='select2_js-js'></script>
+<script src='https://amentotech.com/projects/taskbot/wp-content/plugins/taskbot/public/js/vendor/readmore.js?ver=1.0.0' id='readmorejs-js'></script>
+<script src='https://amentotech.com/projects/taskbot/wp-content/plugins/taskbot/public/js/jquery-confirm.min.js?ver=1.0.0' id='jquery-confirm-js'></script>
+<script src='https://amentotech.com/projects/taskbot/wp-content/plugins/taskbot/public/js/vendor/tippy.js?ver=1.0.0' id='tippy-js'></script>
+<script src='https://amentotech.com/projects/taskbot/wp-content/plugins/taskbot/public/js/vendor/owl.carousel.min.js?ver=1.0.0' id='carousel-js'></script>
+<script src='https://amentotech.com/projects/taskbot/wp-content/plugins/taskbot/public/js/vendor/jquery.mCustomScrollbar.concat.min.js?ver=1.0.0' id='mCustomScrollbar-js'></script>
+<script src='https://amentotech.com/projects/taskbot/wp-content/plugins/taskbot/public/js/vendor/sortable.min.js?ver=1.0.0' id='sortable-js'></script>
+<script src='https://amentotech.com/projects/taskbot/wp-content/plugins/taskbot/public/js/vendor/nouislider.min.js?ver=1.0.0' id='nouislider-js'></script>
+<script src='https://amentotech.com/projects/taskbot/wp-content/plugins/taskbot/public/js/vendor/tagify.min.js?ver=1.0.0' id='tagify-js'></script>
+<script src='https://amentotech.com/projects/taskbot/wp-content/plugins/taskbot/public/js/sticky.js?ver=1.0.0' id='sticky-js'></script>
+<script src='https://amentotech.com/projects/taskbot/wp-content/plugins/taskbot/public//js/vendor/particles.min.js?ver=1.0.0' id='particles-js'></script>
+<script src='https://amentotech.com/projects/taskbot/wp-content/plugins/taskbot/public//js/datetimepicker.js?ver=1.0.0' id='datetimepicker-js'></script>
+<script src='https://amentotech.com/projects/taskbot/wp-content/plugins/taskbot/public/js/taskbot-core-public.js?ver=1.0.0' id='taskbot-public-js'></script>
+<script src='https://amentotech.com/projects/taskbot/wp-includes/js/underscore.min.js?ver=1.13.1' id='underscore-js'></script>
+<script id='wp-util-js-extra'>
+var _wpUtilSettings = {"ajax":{"url":"\/projects\/taskbot\/wp-admin\/admin-ajax.php"}};
+</script>
+<script src='https://amentotech.com/projects/taskbot/wp-includes/js/wp-util.min.js?ver=5.8.2' id='wp-util-js'></script>
+<script id='taskbot-js-extra'>
+var scripts_vars = {"ajax_nonce":"b321b23a6b","home_url":"https:\/\/amentotech.com\/projects\/taskbot\/","ajaxurl":"https:\/\/amentotech.com\/projects\/taskbot\/wp-admin\/admin-ajax.php","username":"Username required.","valid_email":"Valid email required","first_name":"First Name is required","last_name":"Last Name is required","user_password":"Password is required","user_password_confirm_match":"Password and confirm password should be same","user_agree_terms":"You must agree our terms & conditions before signup.","upload_size":"50mb","service_type":"Task type","file_size_error":"Uh-Oh!","error_title":"Uh-Oh!","file_size_error_title":"Uh-Oh!","deactivate_account":"Uh-Oh!","deactivate_account_message":"Do you want to deactivate this account?","edu_date_error_title":"Education","load_more":"Load more","show_less":"Show Less","edu_date_error":"Please add a vaild dates","date_format":"Y-m-d","tpl_dashboard":"https:\/\/amentotech.com\/projects\/taskbot\/dashboard\/","startweekday":"1","remove_education":"Remove education","remove_education_message":"Do you want to remove this education?","remove_faq":"Remove FAQ","remove_faq_message":"Do you want to remove this FAQ?","remove_task":"Remove task","remove_task_message":"Do you want to remove this task?","remove_subtask":"Remove subtask","remove_subtask_message":"Do you want to remove this subtask?","default_image_extensions":"jpg,jpeg,gif,png","default_file_extensions":"pdf,doc,docx,xls,xlsx,ppt,pptx,csv,jpg,jpeg,gif,png,zip,rar,mp4,mp3,3gp,flv,ogg,wmv,avi,stl,obj,iges,js,php,html,txt","croppie_uploaded_file_width":"400","croppie_uploaded_file_height":"400","gclient_id":"410921500890-a682repkq3irrdrno0l2b3dm8vkv09mn.apps.googleusercontent.com"};
+</script>
+<script src='https://amentotech.com/projects/taskbot/wp-content/plugins/taskbot/public/js/taskbot_callback.js?ver=1.0.0' id='taskbot-js'></script>
+<script src='https://amentotech.com/projects/taskbot/wp-content/plugins/taskbot/public//js/vendor/jquery.downCount.js?ver=1.0.0' id='taskbot_downCount-js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js?ver=1.0.0' id='croppie-js-js'></script>
+<script src='https://apis.google.com/js/api:client.js?ver=1.0.0' id='google-signin-api-js-js'></script>
+<script src='https://amentotech.com/projects/taskbot/wp-content/plugins/taskbot/public/js/gconnect.js?ver=1.0.0' id='taskbot-gconnect-js-js'></script>
+<script src='https://amentotech.com/projects/taskbot/wp-content/themes/taskon/js/callbacks.js?ver=1.0.0' id='taskon-callbacks-js'></script>
+<script src='https://amentotech.com/projects/taskbot/wp-includes/js/wp-embed.min.js?ver=5.8.2' id='wp-embed-js'></script>
+</body>
+</html>

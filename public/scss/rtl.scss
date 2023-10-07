@@ -1,0 +1,1205 @@
+/** ====== RTL Styling components ====== **/
+.tk-easyinfotitle {
+    i {
+        margin-right: 0;
+        margin-left: 30px;
+    }
+}
+.tk-trendingserviceslider_title .tk-like {
+    right: auto;
+    left: 0;
+}
+.tb-navbarnav > .tb-menu-notifications + li.tb-inbox{
+    padding-left: 22px;
+    padding-right: 3px;
+}
+.tk-notification-info{
+    text-align: right;
+}
+.tk-noti_new{
+    left: auto;
+    right: -3px;
+}
+.tk-noti_icon{
+    margin-right: 0;
+    margin-left: 16px;
+}
+.tk-notidropdowns .tk-noti_wrap .tk-notiwrap_title .tk-noti-counter{
+    margin-right: 10px;
+    margin-left: 0;
+}
+.tk-trendingserviceslider_title .tk-startingprice i {
+    margin-right: 0;
+    margin-left: 5px;
+}
+.tk-trendingserviceslider_title h5 i {
+    margin-left: 0;
+    margin-right: 15px;
+}
+.tk-trendingserviceslider_title .tk-featureRating {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+.tk-trendingserviceslider_title .tk-featureRating__stars span::after {
+    left: 0;
+    right: 0;
+}
+.tk-featureRating__stars::before {
+    right: 0;
+    left: auto;
+}
+.tk-trendingserviceslider_title .tk-featureRating__stars {
+    letter-spacing: 3.5px;
+}
+.tk-feedbackslider {
+    margin-right: 304px;
+    margin-left: 0;
+}
+.tk-feedbackitem figure {
+    margin-right: 0 !important;
+    margin-left: 20px !important;
+}
+.tk-trendingserviceslider_title h5 {
+    margin-left: 30px;
+    margin-left: 0;
+}
+.tk-sliderarrow.splide--rtl>.splide__arrows .splide__arrow--next{
+    left: -35px;
+}
+.tk-sliderarrow.splide--rtl>.splide__arrows .splide__arrow--prev{
+    right: -35px;
+}
+.tk-btn-line i,
+.tk-btn-line-sm i,
+.tk-btn-line-sm-lefticon i,
+.tk-btn-line-lg i,
+.tk-btn-line-lg-lefticon i,
+.tk-btn-line-lefticon i,
+.tk-btn-solid i,
+.tk-btn-solid-sm i,
+.tk-btn-solid-sm-lefticon i,
+.tk-btn-solid-lg i,
+.tk-btn-solid-lefticon i,
+.tk-featuretag i {
+    padding-right: 10px;
+    padding-left: 0;
+}
+.tk-btn-solid-lg-lefticon i {
+    padding-right: 0;
+    padding-left: 10px;
+}
+.tk-appcompat i {
+    padding-left: 10px;
+    padding-right: 0;
+}
+.tk-sliderarrow .splide__arrow--next::before {
+    transform: rotate(-180deg);
+}
+.tk-sliderarrow .splide__arrow--prev::before {
+    transform: rotate(-180deg);
+}
+.tk-mainlink a span {
+    margin-left: 10px;
+    margin-right: 0;
+}
+.tb-pagination .next i::before {
+    content: "\e92f";
+}
+.tb-pagination .next {
+    margin-right: 40px;
+    margin-left: 0;
+}
+.tb-pagination .prev i::before {
+    content: "\e930";
+}
+.tb-pagination .prev {
+    margin-left: 40px;
+    margin-right: 0;
+}
+.tk-authorinfo {
+    text-align: right;
+}
+.tk-aboutusauthor figure {
+    margin-left: 20px !important;
+    margin-right: 0 !important;
+}
+.tk-mainlist li {
+    padding-right: 30px;
+    padding-left: 0;
+}
+.tk-mainlist li::after {
+    right: 0;
+    left: auto;
+}
+.tk-sort .tk-actionselect > span {
+    padding-right: 0;
+    padding-left: 20px;
+}
+.tk-asidetitle h5::after,
+.tb-sidebartitle h5::after {
+    left: 0;
+    right: auto;
+}
+.tk-cards__img .tk-servicesvideo{
+    right: auto;
+    left: 10px;
+}
+.tk-inputiconbtn .form-control{
+    padding-left: 50px;
+    padding-right: 20px;
+}
+.tb-packages li ~ li {
+    border-right: 0;
+    border-left: 1px solid #eee;
+}
+.tb-additionalservices__content{
+    padding-left: 0;
+    padding-right: 10px;
+    &:before{
+        left: auto;
+        right: 0;
+    }
+}
+.tk-additionolinfo > span{
+    padding-right: 0 !important;
+}
+.tb-btn i, .tb-btnvtwo i{
+    margin-right: 0;
+    margin-left: 10px;
+}
+.tk-inputiconbtn a{
+    right: auto;
+    left: 10px;
+}
+.tk-bestservice .tk-featuretag{
+    left: auto;
+    right: 10px;
+}
+.tb-areasizebox .form-control + .form-control {
+    margin-left: 0;
+}
+.tk-like {
+    left: 0;
+    right: auto;
+}
+.tk-startingprice i {
+    margin-right: 0;
+    margin-left: 5px;
+}
+.tb-main-bg .tb-servicedetailtitle.tb-tehelpop {
+    padding-right: 30px;
+    padding-left: 100px;
+}
+.tb-servicedetailtitle > .tk-featuretag {
+    left: 10px;
+    right: auto;
+}
+.tb-sectiontitlev2 img {
+    padding-left: 17px;
+    padding-right: 0;
+}
+.tb-sectiontitle__list--title .tb-sectiontitle__list li span:before {
+    padding-left: 14px;
+    padding-right: 0;
+}
+.icon-arrow-right:before {
+    content: "\e910";
+}
+.icon-arrow-left:before {
+    content: "\e912";
+}
+.tb-sidebarpkg__btn a i {
+    margin-left: 0;
+    margin-right: 10px;
+}
+.tb-recommend i {
+    padding-left: 0;
+    padding-right: 10px;
+}
+.tb-tags_links {
+    padding-left: 0;
+    padding-right: 30px;
+}
+.tb-faq__title h6::before {
+    left: 0;
+    right: auto;
+}
+.tb-faq__title h6 {
+    padding-left: 30px;
+    padding-right: 0;
+}
+.tk-accordion_title:after {
+    left: 30px;
+    right: auto;
+}
+.tk-accordion_title h5 {
+    padding-left: 30px;
+    padding-right: 0;
+}
+.tb-packages__title span {
+    text-align: right;
+}
+.tb-main-bg .tb-addcommentblogv2.tb-addcommentblog .tb-addcomment {
+    margin-right: 35px;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 65px;
+}
+.tb-main-bg .tb-addcommentblogv2 .tb-blogimg figure {
+    transform: translateX(50%);
+    position: absolute;
+    right: 0;
+    left: auto;
+    margin-right: 0;
+    margin-left: 20px;
+}
+.tb-blogcmntinfonames .tb-featureRating h6 {
+    padding-right: 5px;
+    padding-left: 0;
+}
+.select2-container[dir="rtl"] .select2-selection--single .select2-selection__rendered {
+    padding-left: 8px;
+    padding-right: 20px;
+}
+.tb-rateviews em + span {
+    padding-right: 5px;
+    padding-left: 0;
+}
+.tb-rateviews em {
+    padding-right: 8px;
+    padding-left: 0;
+}
+.tb-rateviews span {
+    padding-right: 6px;
+}
+.tb-tasklist .tb-cards__title {
+    padding-right: 0;
+    padding-left: 20px;
+}
+.tb-tasksitem .tb-like {
+    right: auto;
+    left: 0;
+}
+.tb-sales li > span {
+    margin-left: 10px;
+    margin-right: 0;
+}
+.tb-startingprice i + span {
+    margin-right: 5px;
+    margin-left: 0;
+}
+.tb-bestservicedetail__user .tb-asideprostatus > figure {
+    margin-left: 20px;
+    margin-right: 0;
+}
+.btn-signup img {
+    padding-left: 10px;
+    padding-right: 0;
+}
+.tb-reg-option .tb-radio + .tb-radio {
+    padding-left: 0;
+    padding-right: 30px;
+}
+.tb-asideprostatusv2 > a {
+    margin-left: 20px;
+    margin-right: 0;
+}
+.tb-extrascompleted {
+    margin-left: 152px;
+    margin-right: 0;
+}
+.tb-tabitemextrasinfo figure {
+    margin-left: 10px;
+    margin-right: 0;
+}
+.tb-addtaskfile .tb-uploadbox {
+    text-align: right;
+}
+.tb-taskcountdown .tb-select .select2-container .select2-selection--single .select2-selection__rendered,
+.tb-taskcountdown .tb-calendar .select2-container .select2-selection--single .select2-selection__rendered {
+    padding-right: 65px;
+    padding-left: 0;
+}
+.tb-taskdeadline .select2-selection:before {
+    right: 13px;
+    left: auto;
+}
+.tb-sortby {
+    margin-right: auto;
+    margin-left: 0;
+}
+.tb-actionselect .tb-select:before,
+.tb-calendar:before {
+    left: 16px;
+    right: auto;
+}
+.tb-deadlinebtn .tb-btnvtwo {
+    transform: translate(5px, 0);
+}
+.tb-popuptitle .close {
+    margin-right: auto;
+    margin-left: 0;
+}
+.tb-checkterm .tb-checkbox label:after {
+    left: auto;
+    right: 0;
+}
+.tb-checkterm .tb-checkbox label:before {
+    left: auto;
+    right: 0;
+}
+.tb-checkterm .tb-checkbox label {
+    padding-right: 34px;
+}
+.tb-actionselect > span {
+    padding-left: 10px;
+    padding-right: 0;
+}
+.tb-userfeedback img {
+    margin-left: 10px;
+    margin-right: 0;
+}
+.tb-featureRatingv2 span + h6 {
+    padding-right: 5px;
+    padding-left: 0;
+}
+.tb-featureRatingv2 > h6 + a {
+    margin-right: 7px;
+    margin-left: 0;
+}
+.tb-startingprice {
+    padding-left: 0;
+    padding-right: 10px;
+}
+.tk-nav-signin img + .tb-username {
+    margin-right: 20px;
+    margin-left: 0;
+}
+.tb-planslist li h6 span {
+    padding-right: 10px;
+    padding-left: 0;
+}
+.tb-addservices_details .tb-additionollist li h6 {
+    padding-right: 15px;
+    padding-left: 0;
+}
+.tb-addservices_details .tb-additionollist li h6:after {
+    right: 0;
+    left: auto;
+}
+.tk-blogviewdatessm li span i {
+    margin-left: 5px;
+    margin-right: 0;
+}
+.tb-featureRating__stars + em,
+.tk-featureRating__stars + em {
+    padding-right: 2px;
+    padding-left: 0;
+}
+.tb-featureRating__stars span::after,
+.tk-featureRating__stars span::after,
+.tb-featureRating__stars::before,
+.tk-featureRating__stars::before {
+    right: 0;
+    left: auto;
+}
+.tb-settingtab li a i {
+    padding-right: 0;
+    padding-left: 10px;
+}
+.tb-settingtab li::before {
+    left: auto;
+    right: 0;
+}
+.tb-dhbbtnarea em {
+    padding-right: 0;
+    padding-left: 30px;
+}
+.tb-dhb-box-wrapper .tb-profileform__holder .tb-dhbbtnarea {
+    justify-content: space-between;
+}
+.tb-onoff label span {
+    padding-right: 10px;
+    padding-left: 0;
+}
+.tb-formcheckbox .tb-onoff {
+    margin-right: auto;
+    margin-left: 0;
+}
+.tb-detail__icon a ~ a {
+    margin-right: 23px;
+    margin-left: 0;
+}
+.tb-detail__icon {
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: 0;
+    padding-right: 20px;
+}
+.tb-profileform__title--rightarea {
+    margin-right: auto;
+    margin-left: 0;
+}
+.tb-pkgresponse {
+    flex-direction: row-reverse;
+}
+.tb-sidebartabholder .tb-sidebartabs__pkgtitle .nav-link {
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+}
+.tb-sidebartabs__pkgtitle.nav-tabs li.tb-sideactive + li a {
+    border-left: 1px solid #eee;
+}
+.tk-checkoutinfo figure {
+    margin-left: 20px;
+    margin-right: 0;
+}
+.tk-walletamount {
+    margin-right: auto;
+    margin-left: 0;
+}
+.tb-checkoutbox em {
+    padding-left: 10px;
+    padding-right: 0;
+}
+.tk-pakagelist-item a img,
+.tb-pakagelist-item a img {
+    margin-left: 10px;
+    margin-right: 0;
+}
+.tk-pakagedetail figure {
+    margin-left: 20px;
+    margin-right: 0;
+}
+.tk-pakagedetail::after {
+    right: auto;
+    left: 25px;
+}
+.tk-pakagelist-item a em,
+.tb-pakagelist-item a em {
+    margin-right: auto;
+    margin-left: 0;
+}
+.tk-pakagelist-item a em i,
+.tb-pakagelist-item a em i {
+    padding-right: 10px;
+    padding-left: 0;
+}
+.tk-walletsystem .tk-additionolinfo {
+    margin-right: 10px;
+    margin-left: 0;
+}
+.wo-inputicon.wo-inputheight {
+    margin-left: 10px;
+    margin-right: 0;
+}
+.tb-subtotalbill > li:not(.tb-sumtotal) h6 {
+    float: left;
+}
+.tb-sumtotal h6 {
+    float: left;
+}
+.tb-invoice-table.tb-table > tbody > tr td h6 {
+    left: auto;
+    right: 0;
+}
+.tb-refunddetail_info .tb-extrasarticles{
+    padding-right: 20px;
+    padding-left: 0;
+}
+.tb-table > tbody > tr td {
+    text-align: right;
+}
+.tb-doclist li{
+    margin-right: 0;
+    margin-left: 10px;
+}
+.tb-deatlswithimg figure {
+    margin-left: 20px;
+    margin-right: 0;
+}
+.tb-tabicon > li + li {
+    margin-right: 18px;
+    margin-left: 0;
+}
+.tb-featuretag__shadow {
+    top: 10px;
+    left: auto;
+}
+.tb-dhb-mainheading__rightarea em {
+    padding-left: 30px;
+    padding-right: 0;
+    text-align: left;
+}
+.tb-dhb-mainheading__rightarea {
+    margin-left: 0;
+    margin-right: auto;
+}
+.tb-switchservice {
+    margin-right: 20px;
+    margin-left: 0;
+    border-right: 1px solid #eee;
+    border-left: 0;
+    padding-right: 20px;
+    padding-left: 0;
+}
+.tb-savelisting > li .tb-profilestatus li + li {
+    margin-right: 30px;
+    margin-left: 0;
+}
+.tk-notidropdowns .tk-noti_wrap {
+    right: auto;
+    left: -30px;
+}
+.tk-notidropdowns .tk-noti_wrap:before {
+    right: auto;
+    left: 30px;
+}
+.tk-notidropdowns .tk-noti_wrap:after {
+    right: auto;
+    left: 28.5px;
+}
+.tb-printable .tb-table > tbody > tr td {
+    text-align: right;
+}
+.tb-subtotalbill {
+    padding-left: 20px;
+    padding-right: 30px;
+}
+.tb-addcommentblogv2 .tb-comentinfodetail h5 {
+    padding-left: 10px;
+    padding-right: 0;
+}
+.tk-featuredlisted li span {
+    float: left;
+}
+.tb-tabicon{
+    border-left: 0;
+    border-right: 1px solid #eee;
+    padding-left: 0;
+    padding-right: 20px;
+    margin-right: 20px;
+    margin-left: 0;
+}
+.tb-invoicecon{
+    text-align: right;
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+.tb-payoutmethodpopup .tb-radioholder .tb-radio .payoutlists:after {
+    right: 20px !important;
+    left: auto;
+}
+.tk-trendingserviceslider.splide--rtl>.splide__arrows .splide__arrow--prev,
+.tk-trendingserviceslider.splide--rtl>.splide__slider>.splide__track>.splide__arrows .splide__arrow--prev, 
+.tk-trendingserviceslider.splide--rtl>.splide__track>.splide__arrows .splide__arrow--prev{
+    right: -35px;
+}
+.tk-trendingserviceslider.splide--rtl>.splide__arrows .splide__arrow--next, 
+.tk-trendingserviceslider.splide--rtl>.splide__slider>.splide__track>.splide__arrows .splide__arrow--next,
+.tk-trendingserviceslider.splide--rtl>.splide__track>.splide__arrows .splide__arrow--next{
+    left: -35px;
+}
+.tk-faqsslider.splide--rtl>.splide__arrows .splide__arrow--prev,
+.tk-faqsslider.splide--rtl>.splide__slider>.splide__track>.splide__arrows .splide__arrow--prev,
+.tk-faqsslider.splide--rtl>.splide__track>.splide__arrows .splide__arrow--prev{
+    right: -64px;
+}
+.tk-faqsslider.splide--rtl>.splide__arrows .splide__arrow--next,
+.tk-faqsslider.splide--rtl>.splide__slider>.splide__track>.splide__arrows .splide__arrow--next,
+.tk-faqsslider.splide--rtl>.splide__track>.splide__arrows .splide__arrow--next{
+    left: -64px;
+}
+.tb-packages__plan h6{
+    text-align: right;
+}
+.tb-packages__text{
+    justify-content: flex-start;
+}
+.tb-resvsionbtn-holder .tb-radio input[type=radio] + label span{
+    padding-left: 60px;
+    padding-right: 19px;
+}
+.tb-resvsionbtn-holder .tb-radio input[type=radio] + label:after{
+    left: 30px;
+    right: auto;
+}
+.tb-additionollist li h6 > span{
+    margin-right: 5px;
+    margin-left: 0;
+}
+.tb-table > thead > tr > th{
+    text-align: right;
+}
+.tb-preloader-section .tb-preloader-holder{
+    left: auto;
+    right: 50%;
+    margin: -15px -15px 0 0;
+}
+.tk-inputappend{
+    padding: 14px 20px 14px 14px;
+}
+.tb-addservice-step-complete:after{
+    right: auto;
+    left: 20px;
+}
+.tb-checkbox label, .tb-radio label{
+    padding: 0 34px 0 0;
+}
+.tb-checkbox label:before, .tb-radio label:before{
+    left: auto;
+    right: 0;
+}
+.tb-addon__content .tb-checkbox label:before{
+    left: auto;
+    right: -1.5px;
+}
+.tb-checkbox input[type=radio] + label:after, .tb-radio input[type=radio] + label:after{
+    left: auto;
+    right: 5px;
+}
+.tb-checkbox label:after, .tb-radio label:after{
+    left: auto;
+    right: 0;
+}
+.tb-addon__content .tb-checkbox{
+    padding-right: 0;
+    padding-left: 20px;
+}
+.tb-videolink{
+    padding-right: 0;
+    padding-left: 20px;
+}
+.tb-uploadbar li span{
+    padding-right: 0;
+    padding-left: 15px;
+}
+.tb-postservicev2 .tb-uploadbar-content::before{
+    padding-right: 0;
+    padding-left: 20px;
+}
+.download-service .tb-uploadbar-content::after{
+    margin-right: 20px;
+    margin-left: 0;
+}
+.tb-uploadbar-list li .tb-actionbtn{
+    margin-left: 0;
+    margin-right: auto; 
+}
+.tb-remove{
+    margin-left: 0;
+    margin-right: auto;
+}
+.tb-addonpopup .tb-savebtn span + .tb-btn, .tb-addonpopup .tb-savebtn em + .tb-btn{
+    margin-left: 0;
+    margin-right: 30px;
+}
+.tb-postservicev2 .tb-uploadbar-content::after{
+    margin-left: 0;
+    margin-right: auto;
+}
+.tb-uploadcontent .tb-dhbbtnarea .tb-btnvthree{
+    margin-right: 0;
+    margin-left: auto;
+}
+.tb-combine-group .tb-calendar + .tb-calendar .form-control{
+    border-radius: 3px 0 0 3px;
+    border-right: 0;
+    border-left: 1px solid #eee;
+}
+.tb-combine-group .form-control{
+    border-radius: 0 3px 3px 0;
+}
+.tb-select .form-control, .tb-calendar .form-control{
+    padding-right: 20px;
+    padding-left: 40px;
+}
+.tb-comentinfo figure{
+    margin-right: 0;
+    margin-left: 20px;
+}
+.tk-package-tags{
+    padding-left: 0;
+    padding-right:20px;
+}
+.tb-addonspopup .tb-savebtn span + .tb-btn{
+    margin-right: 30px;
+    margin-left: auto;
+}
+.jconfirm.jconfirm-modern .jconfirm-box div.jconfirm-closeIcon{
+    right: auto;
+    left: 15px;
+}
+.tb-addonspopup .form-group-title{
+    padding-left: 10px;
+    padding-right: 0;
+}
+.tb-actionbtn a + a{
+    margin-left: 0;
+    margin-right: 10px;
+}
+.tb-radio.tb-pricingtitle input[type=radio] + label:after{
+    left: auto;
+    right: 5px;
+}
+.tb-pricingitems__content > div ~ div{
+    border-left: 0;
+    border-right: 1px solid #eee;
+}
+[aria-multiselectable=true] .select2-results__option{
+    padding-left: 20px;
+    padding-right: 38px;
+}
+[aria-multiselectable=true] .select2-results__option:before{
+    right: 0;
+    left: auto;
+    margin-right: 0 !important;
+    margin-left: 17px !important;
+}
+.tb-postservicebtn .tb-savebtn{
+    justify-content: flex-end;
+}
+.tb-postservicebtn .tb-savebtn span + .tb-btn{
+    margin-left: 0;
+    margin-right: 20px;
+}
+.tk-form-checkbox label span{
+    padding-left: 0;
+    padding-right: 15px;
+}
+.tk-faq-category:after{
+    right: 0;
+    left: auto;
+}
+.form-loader{
+    left: 30px;
+    right: auto;
+}
+.tb-postservicev2 .tb-addservice-steps li:not(:last-child):after{
+    right: auto;
+    left: -12px;
+    transform: rotate(180deg);
+}
+.select2-container--default .select2-selection--multiple .select2-selection__rendered .select2-search input{
+    padding-left: 0;
+    padding-right: 0;
+}
+.mCS-dir-rtl>.mCSB_inside>.mCSB_container {
+    margin-left: 16px;
+}
+.tb-postservicev2 .tb-addservice-steps li:not(:first-child) .tb-addservice-step span{
+    padding-right: 34px;
+    padding-left: 30px;
+}
+.tk-navbarbtn {
+    padding-right: 10px;
+    padding-left: 0;
+}
+.tk-feedbackinfo{
+    border-right: 2px solid #3377FF;
+    border-left: 0;
+}
+.rtl{
+    .modal-body{
+        .wpcf7{
+            direction: rtl;
+            &[dir]{
+                direction: rtl;
+            }
+        }
+        .form-group{
+            .wpcf7-form-control{
+                direction: rtl;
+            }
+        }
+    } 
+} 
+.tk-status-tabs_content {
+    > p{
+        padding-left:0;
+        padding-right: 22px;
+    }
+} 
+.tk-status-tabs_content h6::before{
+    margin-right: 0;
+    margin-left: 12px;
+}
+.tk-status-tabs_content::before{
+    left: auto;
+    right: 4px;
+}
+.tk-project-type{
+    > div{
+        margin-left: 0;
+        margin-right: 14px;
+    }
+}
+.tk-betaversion-wrap {
+    figure{
+        margin-right: 0;
+        margin-left: 20px;
+    }
+} 
+.tk-switch{
+    margin-right: 20px;
+    margin-left: 0;
+}
+.tk-attechment-tittle i{
+    margin-left: 0;
+    margin-right: auto;
+}
+.tk-btn-solid-lg-lefticon i{
+    padding-left: 0;
+    padding-right: 10px;
+}
+.tk-price{
+    margin-left: 0;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 30px;
+}
+.tk-projectsstatus_option{
+    margin-left: 0;
+    margin-right: 30px;
+}
+.tk-contract-list{
+    right: auto;
+    left: 0;
+}
+.tk-template-view li i{
+    padding-right: 0;
+    padding-left: 6px;
+}
+.tk-edit-project i{
+    padding-left: 6px;
+    padding-right: 0;
+}
+.tk-project-detail{
+    margin-left: 0;
+    margin-right: auto;
+    a {
+        + a{
+           margin-left: 0;
+           margin-right: 10px;
+       }
+    }
+}
+.tk-invite-bidbtn{
+    margin-left: 0;
+    margin-right: 20px;
+}
+.tk-hire-freelancer-info{
+    padding-left: 0;
+    padding-right: 20px;
+    .tk-blogviewdates {
+        padding-left: 0;
+        padding-right: 10px;
+    }
+}
+.tk-hire-freelancer_content > span{
+    margin-left: 0;
+    margin-right: auto;
+}
+.tk-proposal-list{
+    li{
+        + li{
+            margin-left: 0;
+            margin-right: -15px;
+        }
+    }
+}
+.tk-view-proposal{
+    margin-left: 0;
+    margin-right: 20px;
+}
+.tk-price span, 
+.tk-price h4{
+    text-align: left;
+}
+.tk-project-table-status{
+    .tb-table{
+        & thead tr th,
+        & tbody tr th,
+        & tfoot tr th,
+        & thead tr td,
+        & tbody tr td,
+        & tfoot tr td {
+            text-align: right;
+        }
+        & > thead > tr > th {
+            text-align: right;
+        }
+    }
+}
+.tk-project-table-info{
+    padding-left: 0;
+    padding-right: 10px;
+}
+.tk-project-wrapper .tk-blogviewdates li i{
+    margin-right: 0 !important;
+    margin-left: 10px;
+}
+.tk-proposal .tk-select{
+    margin-left: 0;
+    margin-right: auto;
+}
+.tk-downloadbtn{
+    margin-left: 0;
+    margin-right: auto;
+}
+.tk-project-box-two .tk-project-share .tk-like i{
+    padding-right: 0;
+    padding-left: 10px;
+}
+.tk-project-requirement_content{
+    padding-left: 0;
+    padding-right: 14px;
+}
+.tk-verified-title img{
+    margin-right: 0;
+    margin-left: 20px;
+}
+.tk-verified-info i{
+    margin-left: 0;
+    margin-right: 10px;
+}
+.tk-total-title i{
+    margin-right: 0;
+    margin-left: 10px;
+}
+.tk-projectstatus_users{
+    box-shadow: inset 1px 0px 0px #eeeeee;
+}
+.tk-prouserslist a .tk-project-tag{
+    margin-left: 0;
+    margin-right: auto;
+}
+.tk-projectsstatus_budget{
+    margin-left: 0;
+    margin-right: auto;
+}
+.tk-prouserslist a img + h6{
+    margin-left: 0;
+    margin-right: 10px;
+}
+.tk-projectsstatus_img,
+.tk-proactivity_img{
+    margin-right: 0;
+    margin-left: 16px;
+}
+.tk-projectsactivity .tk-nav-tabs li button i{
+    margin-right: 0;
+    margin-left: 10px;
+}
+.tk-proactivity_file img{
+    margin-right: 0;
+    margin-left: 10px;
+}
+.tk-proactivity_info h6 span{
+    margin-left: 0;
+    margin-right: 10px;
+}
+.tk-uploadfile-doc .tk-form-btn span + span{
+    margin-left: 0;
+    margin-right: 10px;
+}
+.tk-uploadphoto span, 
+.tk-uploadphoto label{
+    margin-left: 0;
+    margin-right: 4px;
+}
+.tk-proactivity_file .tb-download-attachment{
+    margin-left: 0;
+    margin-right: auto;
+}
+.tk-hire-freelancer-info .tk-blogviewdates em{
+    padding-left: 0;
+    padding-right: 6px;
+}
+.tk-price .tk-featuretag{
+    margin-left: 0;
+    margin-right: auto;
+}
+.tk-project-box .tb-tags_links{
+    padding-left: 30px;
+    padding-right: 0;
+}
+.tk-select .form-control{
+    padding-right: 20px;
+    padding-left: 50px;
+}
+.tk-project-detail .tk-likev2 i{
+    padding-right: 0;
+    padding-left: 10px;
+}
+.tb-input-loader::after{
+    right: auto;
+    left: 30px;
+}
+.tk-milestones-prices::before{
+    margin-right: 0;
+    margin-left: 10px;
+}
+.tk-addslots{
+    margin-right: 0;
+    margin-left: 10px;
+}
+.tk-removeicon{
+    margin-left: 0;
+    margin-right: 10px;
+}
+.tk-btnline i{
+    padding-right: 0;
+    padding-left: 10px;
+}
+.tk-profile-view a{
+    margin-left: 0;
+    margin-right: auto;
+}
+.tk-project-table-content .tk-blogviewdates li i{
+    margin-left: 20px;
+}
+.tk-proposals-btn button + button{
+    margin-left: 0;
+    margin-right: 20px;
+}
+.tk-statusview .tk-statusview_btns span + span{
+    margin-left: 0;
+    margin-right: 20px;
+}
+.tk-proinvoices_table thead > tr > th,
+.tk-proinvoices .tb-table thead > tr > th,
+.tk-proinvoices_table tbody > tr > td,
+.tk-proinvoices .tb-table tbody > tr > td{
+    text-align: right;
+}
+.tb-popupbtnarea .tb-checkterm{
+    padding-right: 0;
+    padding-left: 20px;
+}
+.tk-counterinfo_list li:not(:last-child){
+    box-shadow: inset 1px 0px 0px #eee;
+}
+.tk-completed-proposal .tk-hire-freelancer-info{
+    padding-left: 0;
+}
+.tk-projectsstatus_budget strong{
+    text-align: left;
+}
+@media (max-width: 1680px) {
+    .tk-feedbackslider{margin-right: 192px;}
+}
+@media (max-width: 1536px) {
+    .tk-feedbackslider {
+        margin-right: 120px;
+    }
+}
+@media (max-width: 1440px) {
+    .tk-feedbackslider {margin-right: 72px;}
+}
+@media (max-width: 1400px) {
+    .tk-trendingserviceslider.splide--rtl > .splide__arrows .splide__arrow--next,
+    .tk-trendingserviceslider.splide--rtl > .splide__slider > .splide__track > .splide__arrows .splide__arrow--next,
+    .tk-trendingserviceslider.splide--rtl > .splide__track > .splide__arrows .splide__arrow--next{
+        left: 20px;
+    }
+    .tk-trendingserviceslider.splide--rtl>.splide__arrows .splide__arrow--prev,
+    .tk-trendingserviceslider.splide--rtl>.splide__slider>.splide__track>.splide__arrows .splide__arrow--prev, 
+    .tk-trendingserviceslider.splide--rtl>.splide__track>.splide__arrows .splide__arrow--prev{
+        right: 20px;
+    }
+    .tk-sliderarrow.splide--rtl>.splide__arrows .splide__arrow--next{
+        left: 20px;
+    }
+    .tk-sliderarrow.splide--rtl>.splide__arrows .splide__arrow--prev{
+        right: 20px;
+    }
+}
+@media (max-width:1366px){
+    .tk-feedbackslider {margin-right: 125px;}
+}
+@media (max-width:1280px){
+    .tk-feedbackslider {margin-right: 82px;}
+}
+@media (max-width:1200px){
+    .tk-feedbackslider {margin-right: 42px;}
+}
+@media (max-width: 1199px) {
+    .tk-headerchatbtn a .tk-remaining-notification{
+       left: auto; 
+       right: 44px;
+    }
+    .tk-main-notiwrap .tk-notidropdowns li + li{
+        padding: 0;
+    }
+    .tb-navbarnav .tk-remaining-notification {
+        left: auto;
+        right: 32px;
+        margin-right: 0;
+    }
+    .tb-dropdowarrow {
+        display: inline-block;
+        left: 15px;
+        right: auto;
+        transform: rotate(180deg);
+    }
+    .tb-open .tb-dropdowarrow i {
+        transform: rotate(-90deg);
+    }
+    .tb-packages__text .tb-packages__title span,
+    .tb-packages__text .tb-packages__check{
+        padding: 0 5px;
+    }
+    .tk-feedbackslider {margin-right: 50px;}
+}
+@media (max-width: 991px) {
+    .tb-dhb-mainheading__rightarea {
+        margin-left: auto;
+        margin-right: 0;
+    }
+    .tb-table td:before{
+        text-align: right;
+    }
+    .tk-feedbackslider{
+        margin: -30px 154px -30px 0;
+    }
+}
+@media (max-width: 767px) {
+    .tb-main-bg .tb-servicedetailtitle.tb-tehelpop {
+        padding-left: 30px;
+        padding-top: 40px;
+    }
+    .tb-savelisting .tb-itemlinks .tb-startingprice{
+        padding-right: 0;
+    }
+    .tb-tabbitem__list .tb-itemlinks .tb-switchservice, .tb-tabbitem__list .tb-itemlinks .tb-tabicon{
+        border-right: 0;
+        padding-right: 0;
+    }
+    .tb-bestservicedetail__user .tb-startingprice {
+        position: absolute;
+        left: 30px;
+        right: 0;
+    }
+    .tb-main-bg .tb-addcommentblogv2.tb-addcommentblog .tb-addcomment {
+        padding-right: 35px;
+        padding-top: 30px;
+    }
+    .tk-feedbackslider {margin-right: 30px;}
+}
+@media (max-width:575px){
+    .tk-feedbackslider {margin-right: 12px;}
+}
+@media (max-width: 480px) {
+    .tb-desclinks {
+        margin-right: 0;
+    }
+    .tb-payoutmethodpopup .tb-radio .payoutlists{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .tb-dhb-mainheading__rightarea em{
+        padding: 0;
+    }
+}

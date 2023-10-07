@@ -1,0 +1,671 @@
+/** ====== Post A project components ====== **/
+.tk-postproject-title{
+    margin-bottom: 30px;
+    h3{
+        color: $heading-font-color;
+        margin-bottom: 10px;
+    }
+    p{
+        color: $heading-font-color;
+        margin-bottom: 0;
+    }
+}
+.tk-newproject-list{
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    margin:-12px;
+    li{ 
+        flex:max(416px, 100%/2);
+        padding: 12px;
+        list-style-type: none;
+    }
+}
+.tk-postproject-new{
+    display: flex;
+    padding: 39px 20px;
+    align-items: center;
+    flex-direction: column;
+    background: $clr-white;
+    border: 1px solid $lightest_2;
+    border-radius: $radiusvtwo;
+    @extend %transition;
+    box-shadow: $drop_shadows_lightest;
+    span{
+        margin-top: 20px;
+        color: $heading-font-color;
+        @extend %h5;   
+    }
+    p{
+        color:$text-light;
+        margin-bottom: 0;
+    }
+    &:hover{
+        box-shadow: $drop_shadows_light;
+    }
+}
+.tk-purple-icon,
+.tk-red-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    width: 90px;
+    height: 90px;
+    border-radius: 60px;
+}
+.tk-purple-icon{
+    color: #7357FB;
+    background: rgba(115, 87, 251, 0.1);
+}
+.tk-red-icon{
+    color: #FF6167;
+    background: rgba(255, 97, 103, 0.1);
+}
+.tk-blue-icon{
+    color: #2196F3;
+    background: rgba(33, 150, 243, 0.1);
+}
+.tk-darkred-icon{
+    color: #F44336;
+    background: rgba(244, 67, 54, 0.1);
+}
+.tk-yellow-icon{
+    color: #FFC107  ;
+    background: rgba(255, 193, 7, 0.1);
+}
+.tk-green-icon{
+    color: #4CAF50;
+    background: rgba(76, 175, 80, 0.1);
+}
+.tk-template-serach{
+    @extend %flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 19px;
+    background-color: $clr-white;
+    border: 1px solid $lightest_2;
+    border-radius: $radiusvtwo;
+    .tk-inputicon{
+        width: 386px;
+        .form-control{
+            padding: 0 40px 0 20px;
+        }
+        i{
+            left: auto;
+            right: 20px;
+        }
+    }
+}
+.tk-template-list{
+    padding-left: 0;
+    margin-bottom:0;
+    > li{ 
+        margin-top: 10px;
+        list-style-type: none;
+    }
+    &_content{
+        @extend %flex;
+        align-items: center;
+        padding: 29px;
+        background-color: $clr-white;
+        border: 1px solid $lightest_2;
+        border-radius: $radiusvtwo;
+        justify-content: space-between;
+        @extend %transition;
+        box-shadow: $drop_shadows_lightest;
+        &:hover{
+            box-shadow: $drop_shadows_light;
+        }
+        > span{
+            flex: none;
+            padding-left: 20px;
+        }
+    }
+}
+.tk-template-info{
+    h5{
+        margin: 10px 0 0 0;
+        word-break: break-all;
+    }
+    .tk-template-view{
+        li{
+            > i{
+                font-size: rem(16)
+            }
+        }
+    }
+}
+.tk-template-view{
+    padding: 0;
+    @extend %flex;
+    gap: 10px 24px;
+    margin: 10px 0 0 0;
+    align-items: center;
+    li{
+        @extend %p14;
+        color:$text-gray;
+        display: flex;
+        align-items: center;
+        i{ 
+            flex: none;
+            font-size: 16px;
+            display: inline-block;
+            color:$text-gray;
+            padding-right: 10px;
+        }
+        .tb_saved_items{
+            @extend %p14;
+            color: $text-gray;
+        }
+    }
+}
+.tk-status-holder{
+    border-radius: $radiusvtwo;
+    background-color: $clr-white;
+    box-shadow: $drop_shadows_lightest;
+    padding:30px;
+    border: 1px solid $lightest_2;
+    > a{
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+.tk-status-tabs{
+    padding-left: 0;
+    margin-bottom: 0;
+    &_content{
+        position: relative;
+        padding-bottom: 16px;
+        h6{
+            margin: 0;
+            &::before{
+                content: '';
+                border-radius: 50%;
+                width: 10px;
+                height: 10px;
+                margin-right:12px;
+                display: inline-block;
+                background-color: $lighter;
+            }
+        }
+        > p{
+            color: #64748B;
+            @extend %p14;
+            margin-bottom: 0;
+            padding:6px 0 0 22px;
+            display: inline-block;
+        }
+        a{
+            font-weight: 600;
+            @extend %tiny_title;
+            color: $anchor-color;
+            display: inline-block;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            left: 4px;
+            bottom: 0;
+            width: 2px;
+            height: calc(100% - 28px);
+            background: $lightest_2;
+            
+        }
+    }
+}
+.tk-status-tabs{
+    li{
+        list-style-type: none;
+        &:last-child{
+            .tk-status-tabs_content{
+                padding-bottom: 0;
+                &::before{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.tk-tabs-star{
+    &::after{
+        content: '*';
+        color: $red;
+        margin-left: 5px;
+    }
+}
+.tk-current-status{
+    h6{
+        &::before{
+            background-color: $bright-green;
+        }
+    }
+}
+.tk-complete-status{
+    .tk-status-tabs_content{
+        &::before{
+            background: $bright-green;
+            
+        }
+    }
+    h6{
+        &::before{
+            background-color: $bright-green;
+        }
+    }
+}
+.tk-label{
+    @extend %flex;
+    align-items: center;
+    width: 100%;
+    @extend %h6;
+    color: $heading-font-color;
+    font-weight: 600;
+    i{
+        font-size: 18px;
+        color:$text-light;
+        padding-left: 10px;
+    }
+}
+.tk-addslot-icon{
+    display: flex;
+    align-items: center;
+    @extend %label_title-two;
+    i{
+        font-size: 20px;
+        padding-left: 6px;
+    }
+}
+.tk-nav-tabs{
+    border: 0;
+    width: 100%;
+    li{
+        flex:max(443px, 100%/3);
+        input[type=radio]{
+            display: none;
+        }
+        + li{
+            margin-left: 18px;
+        }
+    }
+}
+.tk-project-type{
+    @extend %flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 20px 30px 20px 20px;
+    background: $clr-white;
+    border: 2px solid $lightest_2;
+    border-radius: $radiusvtwo;
+    position: relative;
+    margin-bottom: 0;
+    > i{
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+    }
+    > div{
+        margin-left: 14px;
+    }
+    h6,p{
+        margin-bottom: 0;
+    }
+    h6{
+        font-weight: 600;
+        color: $heading-font-color;
+    }
+    p{
+        @extend %p15;
+        color:$text-light;
+    }
+    &.active{
+        border-color: $bright-green;
+        box-shadow: $drop_shadows_lightest;
+        &::after{
+            content: "\f00c";
+            font-size: 16px;
+            display: inline-block;
+            font-weight: 600;
+            color: $bright-green;
+            margin-left: auto;
+            font-family: "Font Awesome 5 Free";
+        }
+    }
+}
+.tk-project-type-content{
+    width: 100%;
+}
+.tab-content>.active .tk-themeform__holder{
+    @extend %flex;
+}
+.tk-project-select{
+    .select2-container--default .select2-selection--single{
+        border: 1.5px solid $lightest_2;
+    }   
+}
+.tk-projectbtns{
+    @extend %flex;
+    align-items: center;
+    justify-content: space-between;
+    > a{
+        border-radius: $radiusvtwo;
+        &:last-child{
+            margin-left: auto;
+        }
+    }
+    
+}
+.tk-project-wrapper{
+    background: $clr-white;
+    position: relative;
+    @extend %transition;
+    border-radius: $radiusvtwo;
+    border: 1px solid $lightest_2;
+    &:hover{
+        .tk-project-option .tk-btn-solid-lg-lefticon{ 
+            color: $button-color;
+            background-color: $theme-color;
+        }
+    }
+}
+.tk-searchresult .tk-project-wrapper{
+    box-shadow: $drop_shadows_lightest;
+    &:hover{
+        box-shadow: $drop_shadows_light;
+    }
+}
+.tk-project-wrapper.tk-activities-{
+    filter: none;
+    box-shadow: $drop_shadows_lightest; 
+}
+.tk-featureditem{
+    top: 0;
+    left: 0;
+    width: 29px;
+    font-size: 15px;
+    background: $red;
+    line-height: 29px;
+    color: $clr-white;
+    text-align: center;
+    position: absolute;
+    border-radius: 4px 0px 20px;
+}
+.tk-milestones-prices{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    cursor:grab;
+    margin-top: 10px;
+    &::before{
+        content: "";
+        background-image: url("./../images/sortv3.svg");
+        background-repeat: no-repeat;
+        display: inline-block;
+        background-position: center;
+        margin-right: 10px;
+        background-color: $lightest;
+        border-radius: $radiusvtwo;
+        height: 178px;
+        width: 30px;
+    }
+}
+.tk-grapinput{
+    width: 100%;
+    textarea.form-control{
+        margin-top: 10px;
+        height: 120px ;
+    }
+}
+.tk-milestones-input{
+    display: flex;
+    align-items: center;
+}
+.tb-milestone-list{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    + .tb-milestone-list{
+        margin-top: 10px;
+    }
+}
+.tk-addslots{
+    width: 170px;
+    flex: none;
+    margin-right: 10px;
+}
+.tk-removeicon{
+    display: inline-block;
+    font-size: 24px;
+    color: $red;
+    padding: 0 12px;
+    margin-left: 10px;
+    &:hover{
+        color: $red;
+    }
+}
+.tb-active-option{
+    input{
+        display: none;
+    }
+    .tk-project-type{
+        border-color: $bright-green !important;
+        box-shadow: 0px 1px 3px rgb(0 0 0 / 8%);
+        &::after{
+            content: "\f00c";
+            font-size: 16px;
+            display: inline-block;
+            font-weight: 600;
+            color: $bright-green;
+            margin-left: auto;
+            font-family: "Font Awesome 5 Free";
+        }
+    }
+    
+}
+.tk-betaversion-wrap{
+    width: 100%;
+    display: flex;
+    padding: 30px;
+    align-items: center;
+    border-radius: $radiusvtwo;
+    background: rgba(#D9A1131A, 0.1);
+    .tk-project-tag{
+        background-color: $blazing-purple;
+        margin-left: 10px;
+        color: $clr-white;
+    }
+    figure{
+        margin: 0 20px 0 0;
+        flex: none;
+    }
+    
+}
+.tk-betaversion-info{
+    max-width: 695px;
+    h5,p{margin-bottom: 0}
+    p{
+        @extend %p15;
+        padding-top: 6px;
+        a{
+            font-weight: 600;
+        }
+    }
+}
+.tk-switch{
+    padding-left: 0;
+    margin:0 0 0 20px;
+    display: flex;
+    align-items: center;
+    .form-check-input{
+        width: 38px;
+        height: 20px;
+        border: 1.5px solid $lighter;
+        background-color: $lightest;
+        border-radius: 60px;
+        margin: 0;
+        background-image: none;
+        display: flex;
+        align-items: center;
+        position: relative;
+        box-shadow: none;
+        cursor: pointer;
+        flex: none;
+        &:active{filter: initial;}
+        &:checked{
+            border-color: $bright-green;
+            background-color: $clr-white;
+            background-image: none;
+            &::before{
+                background-color: $bright-green;
+                left: 100%;
+                transform: translateX(-100%);
+                margin-left: 2px;
+            }
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            border-radius: 60px;
+            left: -1px;
+            background-color: $lighter;
+            @extend %transition;
+        }
+        &:checked[type=checkbox]::after{
+            display: none;
+        }
+    }
+    label{
+        cursor: pointer;
+        margin-bottom: 0;
+        @extend %p14;
+        color: $heading-font-color;
+        padding-right: 10px;
+        display: flex;
+    }
+}
+.tk-attachments-hodler{
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+}
+.tk-attechment-wrapper{
+    border: 1px solid $lightest_2;
+    border-radius: $radiusvtwo;
+}
+.tk-attechment-tittle{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: $lightest;
+    padding: 10px 20px;
+    h6{
+        margin-bottom: 0;
+        cursor: pointer;
+    }
+    i{
+        margin-left: auto;
+        font-size: 20px;
+    }
+    .icon-plus:before {
+        content: "\e9c0" !important;
+    }
+    i.icon-plus[aria-expanded="true"] {
+        cursor: pointer;
+        &::before {
+            display: block;
+            @extend %transition;
+            content: "\e9a3" !important;
+            font-size: 20px;
+            color: $heading-font-color;
+        }
+    }
+}
+.tk-attechment-content{
+    padding: 20px;
+    box-shadow: inset 0px 1px 0px $lightest_2;
+    .form-group{
+        padding: 0;
+        + .form-group{
+            padding-top: 20px;
+        }
+    }
+}
+.tk-attechment-content{
+    .tb-postservicetitle{
+        padding-bottom: 10px;
+        h6{
+            margin-bottom: 0;
+        }
+    }
+    .tb-videolink{
+        .form-control{
+            &:hover{
+                box-shadow: none;
+            }
+        }
+    } 
+    .tb-uploadarea{
+        width: 100%;
+        border: 1.5px solid $lightest_2;
+        padding:10px 20px 20px;
+        border-radius: $radiusvtwo;
+    }
+    .tb-uploadbox{
+        padding: 0;
+        background: transparent;
+        text-align: left;
+        align-items: flex-start;
+        > em{
+            @extend %p13;
+            padding-top: 0;
+            font-style: normal;
+            line-height: em(22,13);
+            padding-top: 10px;
+            color: $heading-font-color;
+        }
+    }
+    .tb-uploadbar{
+        li{
+            margin-top: 0;
+            border-radius: $radiusvtwo;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-top: 10px;
+        }
+    }
+    .taskbot-list{
+        span{
+            a{
+                @extend %p13;
+                display: inline-block;
+            }
+        }
+        .tb-remove{
+            display: none;
+        }
+    }
+    .taskbot-file-uploaded{
+        span{
+            a{
+                @extend %p14 ;
+            }
+        }
+        .tb-remove{
+            display: inline-flex;
+            align-self: center;
+            a{
+                color: $red;
+                font-size: rem(20);
+            }
+        }
+    } 
+}
+.tb-project-form .select2-container--default .select2-selection--multiple .select2-selection__rendered li {
+    line-height: 22px;
+    text-transform: uppercase;
+}
+.tb-project-form .select2-container--default .select2-selection--multiple{
+    padding: 2.5px 0 5.5px !important;
+}

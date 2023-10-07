@@ -1,0 +1,44 @@
+/** ====== Saved Items components ====== **/
+.te-mainbg {background: $bg-light;}
+.te-eyeviews{
+    em {
+        color: $body-font-color;
+        font-style: normal;
+        font: 400 rem(12) / em(15, 12) $heading-font-family;
+        margin: 0 2px;
+    }
+    span {
+        font-size: 12px;
+        margin: 0 0 0 22px;
+        font-weight: 500;
+    }
+}
+.te-reviewsviews{
+    display: flex;
+    .te-eyeviews:first-child{
+        span{
+            margin: 0;
+        }
+    }
+}
+.bg-light{
+
+    color: #bebebe;
+}
+.te-tabbitem {
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+} 
+
+.bg-redheart{
+    color: #ff7062;
+}
+.bg-blue{
+    color: $theme-color;
+}
+.bg-gray{
+    color: #ccc;
+}

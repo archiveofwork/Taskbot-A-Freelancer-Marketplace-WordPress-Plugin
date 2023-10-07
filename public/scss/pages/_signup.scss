@@ -1,0 +1,261 @@
+/** ====== Signup components ====== **/
+.tk-loginconatiner{
+    height: 100%;
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    figure{
+        top: 0;
+        left: 0;
+        margin: 0;
+        width: 100%;
+        z-index: -1;
+        height: 100%;
+        position: absolute;
+        background: $dark-black;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: $opacity_20;
+            object-position: top;
+        }
+    }
+}
+.tk-popupcontainer{
+    padding: 50px 12px;
+}
+.tk-login_title{
+    width: 100%;
+    padding: 30px;
+    margin: 0 auto;
+    max-width: 476px;
+    text-align: center;
+    background-color: $clr-white;
+    border-radius: 30px 30px 0 0;
+    & > a{
+        display: block;
+        text-align: center;
+        max-width: 130px;
+        margin: 0 auto;
+    }
+    h5{
+        margin: 10px 0 0;
+    }
+    & + .tk-login-content{padding-top: 0;}
+}
+.tk-login-content{
+    max-width: 476px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 0 0 30px 30px;
+    background-color: $clr-white;
+    .form-group-title{display: none;}
+    .form-control{height: 48px;}
+    fieldset{margin: -10px;}
+    .tk-themeform__wrap{
+        > *{
+            padding: 10px;
+        }
+        .form-group.tk-lost-password{
+            margin-top: 10px;
+        }
+        .tk-popup-terms{
+            .tk-btn-solid-lg{
+                margin-top: 0;
+            }
+        }
+    }
+    .tb-form-btn{
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        > span{
+            @extend %h6;
+            color:$text-light;
+            background-color: $clr-white;
+            position: relative;
+            padding: 0 10px;
+            margin: 30px 0 10px;
+        }
+        .tk-lost-password{
+            padding-top: 30px;
+        }
+        .tb-checkterm{
+            width: 100%;
+            .tb-btn{width: 100%;}
+        }
+        .tk-sginup-btn{
+            display: flex;
+            justify-content: center;
+        }
+        .tk-optioanl-or::before{
+            left: 0;
+            width: 100%;
+        }
+    }
+}
+.am-registration-terms .tb-checkterm{
+    margin: 10px 0 30px;
+}
+.tk-optioanl-or{
+    width: 100%;
+    text-align: center;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    position: relative;
+    span{
+        @extend %h6;
+        color:$text-light;
+        background-color: $clr-white;
+        position: relative;
+        padding: 0 10px;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        height: 1px;
+        width: calc(100% - 20px);
+        background-color: $lighter;
+    }
+}
+.tk-login-content .tk-themeform__wrap .tb-form-btn .tk-optioanl-or{
+    padding-top:30px !important;
+    padding-bottom: 30px !important;
+}
+.tk-sginup-btn{
+    width: 100%;
+    padding-bottom: 20px;
+}
+.btn-signup{
+    width: 100%;
+    border : 1.5px solid $lighter;
+    height: auto;
+    padding: 13px 10px;
+    img{
+        padding-right: 10px;
+    }
+    &:hover,
+    &:focus{
+        background-color: #fff;
+        color: $heading-font-color;
+    }
+}
+.tk-lost-password{
+    @extend %flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    a{
+        @extend %h6;
+    }
+}
+.tk-password-clr_light{
+    color:$text-light;
+    &:hover{
+        color:$text-light;
+    }
+}
+.tk-login-titlev2{
+    h5{
+        max-width: 330px;
+        margin: 0 auto;
+    }
+}
+.user-registration-form,.tb-forgot-password-form{
+    .form-group-half,
+    .form-group{
+        margin: 0;
+    }
+}
+.password-hide-show{display:none;}
+.tb-reg-option{
+    .tb-radio{
+        input[type=radio]{
+            &:checked{
+                & + label{
+                    color: $heading-font-color;
+                    &:before{border: 0;}
+                }
+            }
+            & + label{
+                &:after{
+                    top: 8px;
+                    left: 5px;
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+        }
+        & + .tb-radio{
+            padding-left:30px
+        }
+    }
+}
+
+
+// signIn popup
+
+
+.tk-loginclose-tag{
+    right: -10px;
+    top: -10px;
+    width: 40px;
+    z-index: 1051;
+    height: 40px;
+    color: $clr-white;
+    display: grid;
+    border-radius: 50%;
+    position: absolute;
+    place-items: center;
+    background-color: $red;
+    i{
+        font-size: 20px;
+    }
+    &:hover{
+        color: $clr-white;
+    }
+}
+.tk-loginconatiner-two{
+    .tk-popupcontainer{
+        max-width: 440px;
+        position: relative;
+    }
+}
+.tk-login-content-two{
+    border-radius: 30px 0 30px 30px;
+}
+.tk-login-info{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 30px;
+    h5{
+        margin-bottom: 0;
+    }
+}
+
+.tk-reg-popups{
+    .modal-dialog{
+        max-width: 416px;
+        .modal-content{
+            border-radius: 30px 0 30px 30px;
+        }
+    }
+    .tk-loginconatiner{
+        min-height: unset;
+    }
+    .tk-popupcontainer{
+        padding: 0;
+    }
+    .tk-login_title{
+        padding: 0 0 30px;
+    }
+    .tk-login-content{
+        padding: 0;
+    }
+    
+}

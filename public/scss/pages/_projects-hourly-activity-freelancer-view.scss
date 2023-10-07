@@ -1,0 +1,280 @@
+/** ====== Project Houly Freelancer components ====== **/
+.tk-projectsstatus_headvtwo{
+    padding: 30px;
+    display: flex;
+    box-shadow: inset 0px 1px 0px $lightest_2;
+}
+.tk-timecards{
+    padding: 30px;
+    box-shadow: inset 0px 1px 0px $lightest_2;
+    &_head{
+        display: flex;
+        margin: 0 0 20px;
+        align-items: center;
+        > h5{
+            margin: 0;
+        }
+        .tk-actionselect{
+            padding-left: 20px;
+            margin-left: auto;
+        }
+        .tk-project-tag{
+            margin-left: 10px;
+        }
+    }
+    &_total{
+        @extend %flex;
+        align-items: center;
+        margin-left: auto;
+        flex: none;
+        padding-right: 10px;
+        > h6{
+            margin-bottom: 0;
+            flex: none
+            
+        }
+        > span{
+            @extend %h5;
+            padding-left: 6px;
+            em{
+                font-style: normal;
+                color:$text-light;
+                font-weight: 600;
+            }
+        }
+        .tk-calendar{
+            padding-left: 20px;
+        }
+    }
+}
+.tk-timeslot{
+    &_list{
+        margin: -5px;
+        padding: 0;
+        display: flex;
+        align-items: flex-start;
+        li{
+            padding: 5px;
+            list-style-type: none;
+        }
+        span{
+            @extend %p15;
+            display: block;
+            margin: 0 0 4px;
+            font-weight: 600;
+        }
+        input{
+            height: 40px;
+            padding: 0 10px;
+            text-align: center;
+        }
+    }
+    &_save{
+        display: flex;
+        margin: 20px 0 0;
+        align-items: center;
+        justify-content: flex-end;
+        .tk-btn-solid{
+            flex: none;
+            background-color: $bright-green;
+        }
+        > span{
+            @extend %p14;
+            & + .tk-btn-solid{
+                margin-left: 20px;
+            }
+        }
+    }
+}
+.tk-workinghours-popup{
+    .modal-dialog{
+        max-width: 856px;
+    }
+    .tk-themeform{
+        .tk-btnarea{
+            .tk-btn-solid-lg{
+                width: 100%;
+                background-color: $bright-green;
+            }
+        }
+    }
+    .tk-themeform{
+        fieldset{
+            margin: 0;
+            .tk-dragslots{
+                width: auto;
+                flex: auto;
+                margin: -10px;
+            }
+        }
+        .tk-label{
+            @extend %flex;
+            align-items: center;
+            .tk-addicon{
+                margin-left: auto;
+                display: flex;
+                align-items:center;
+            }
+        }
+    }
+}
+.at-slots-timedate{
+    h4{
+        margin: 0;
+    }
+}
+.tk-projectsactivityvtwo{
+    .tk-nav-tabs{
+        padding: 0;
+        box-shadow: inset 0px -1px 0px $lightest_2;
+        li{
+            flex: none;
+            width: auto;
+            button{
+                padding: 14px 60px;
+            }
+        }
+    }
+    .tk-proinvoices,
+    .tk-proactivity{
+        padding: 30px;
+    }
+    .tk-proinvoices_table tbody > tr > td p{
+        max-width: initial;
+    }
+}
+.tk-addtime-slot{
+    @extend %flex;
+    align-items: center;
+    padding-left: 0;
+    margin: 20px 0 0;
+    border-top: 1px solid $lightest_2;
+    border-left: 1px solid $lightest_2;
+    border-radius: $radiusvtwo;
+    li{
+        
+        height: 118px;
+        list-style-type: none;
+        width: 14.26%;
+        background: $lightest;
+        box-shadow: inset -1.5px 0px 0px #EEEEEE, inset 0px -1.5px 0px #EEEEEE;
+        padding: 20px;
+        > span{
+            @extend %p15;
+            font-weight: 600;
+            display: block;
+        }
+        > em{
+            @extend %p14;
+            color:$text-light;
+            font-weight: 600;
+            display: block
+        }
+        > a{
+            @extend %p14;
+            font-weight: 600;
+            @extend %flex;
+            align-items: center;
+            padding-top: 6px;
+            i{
+                font-size: 20px;
+                padding-left: 10px;
+            }
+        }
+    }
+    li.tk-added-time{
+        background-color: transparent;
+        a{
+            color: $heading-font-color;
+        }
+    }
+}
+.tk-timecard-table tbody  > tr > td p{
+    max-width: 100%;
+}
+.tk-timecard-table{
+    thead {
+        > tr {
+            th{
+                &:nth-child(2){
+                    width: 60%;
+                }
+                &:last-child{
+                    width: 170px;
+                }
+            }
+        }
+    } 
+} 
+.tk-timealert-table{
+    margin-top: 20px;
+}
+.tk-timealert-table tbody > tr > td p{
+    max-width: 480px;
+}
+.tk-timealert-table thead > tr th:last-child{
+    width: 170px;
+}
+.tk-timealert-table tbody > tr > td{
+    vertical-align: top;
+}
+.tk-today-timeslot{
+    padding-left: 0;
+    margin: 20px 0 0;
+    li{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 10px 10px 20px;
+        background: $lightest;
+        border-radius: $radiusvtwo;
+        @extend %transition;
+        span{
+            @extend %p15;
+            font-weight: 600;
+            flex: none;
+            padding-right: 10px;
+        }
+        input{
+            height: 40px;
+            text-align: center;
+            @extend %transition;
+        }
+        .form-control[readonly]{
+            background-color: $clr-white;
+        }
+        &:hover{
+            input{
+                box-shadow: $drop_shadows_lightest;
+            }
+        }
+        + li{
+            margin-top: 10px;
+        }
+    }
+}
+.tk-popup-content{
+    .tk-themeform__wrap{
+        h4{
+            margin-bottom: 0;
+        }
+    }
+}
+.tk-timecardwraper{
+    border: 0;
+    box-shadow: none;
+    border-radius: 0;
+}
+.tk-betaversion-wrap-two{
+    flex-direction: column;
+    text-align: center;
+}
+.tk-unlock-week{
+    padding-top: 20px;
+    h5{
+        margin-bottom: 4px;
+    }
+    p{
+        @extend %p15;
+    }
+}

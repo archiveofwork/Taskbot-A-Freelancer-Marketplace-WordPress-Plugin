@@ -1,0 +1,35 @@
+/** ====== Empty components ====== **/
+.tb-submitreview{
+    display: flex;
+    padding: 120px 30px;
+    align-items: center;
+    border-radius: $radius;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $clr-white;
+    border: 1px solid $border-color;
+    box-shadow: $drop_shadows_lightest;
+    h4{
+        font-size: rem(22);
+        line-height: em(30,22);
+        width: 100%;
+        margin: 0 auto;
+        max-width: 350px;
+        text-align: center;
+    }
+    figure{
+        margin: 0 0 40px;
+        img{
+            width: 100%;
+            max-width: 150px;
+        }
+    }
+    .tb-description{
+        width: 61%;
+        text-align: center;
+        p{
+            font-size: rem(16);
+            margin: 0 0 23px;
+        }
+    }   
+}

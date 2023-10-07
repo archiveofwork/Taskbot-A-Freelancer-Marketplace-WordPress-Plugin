@@ -1,0 +1,285 @@
+/** ====== Dispute Detail components ====== **/
+.te-disputemain{
+    padding: 28px 30px 24px 30px;
+    background-color: $clr-white;
+    border-bottom: 1px solid $border-color;
+    .te-extras{
+        text-align: right;
+        margin-top: 0;
+    }
+}
+
+.te-disputextrasinfo{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    & ~ .te-disputextrasinfo{
+        margin-right: auto;
+        margin-left: 60px;
+    }
+    figure{
+        max-width: 40px;
+        margin: 0 20px 0 0;
+        img{
+         @extend %border-radius4;
+        }
+    }
+    .te-taskinfo{
+        span{
+            color: $body-font-color;
+        }
+    }
+    .te-taskinfo{
+        h6{
+            font-size: rem(16px);
+        }
+    }
+}
+
+.te-disputedisc{
+    flex: 0 0 80%;
+    .te-tags{
+        padding-bottom: 3px;
+    }
+    > span{
+        display: inline-block;
+        font: 400 rem(14)/em(14,14) $heading-font-family;
+        margin: 9px 0 0;
+    }
+    h5{
+        margin: 0;
+        a{
+            line-height:em(17,14);
+            display: block;
+            &:hover{
+                color: inherit;
+            }
+        }
+    }
+}
+.te-sarticlesbtnsarea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 27px 30px 30px;
+    border-bottom: 1px solid $border-color;
+}
+.te-disputearea{
+    margin: 0 0 30px;
+    background-color: $clr-white;
+    border: 1px solid $border-color;
+    border-radius: $radius;
+    .te-extrasarticles{
+        & + .te-extrasarticles{
+            padding: 27px 30px 26px 30px;
+            border-bottom: 0;
+        }
+    }
+}
+.te-extrasarticles{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    border-bottom: 1px solid $border-color;
+}
+.te-articletitle{
+    h4{
+        margin: 0 0 14px;
+        font: 400 rem(20)/em(28,20) $heading-font-family;   
+    }
+}
+.te-articlediscription{
+    p{
+        font-size: rem(16px);
+        line-height: em(26,16);
+        margin: 0 0 18px;
+    }
+}
+.te-articlelist{
+    padding: 2px 0 28px;
+
+    li{
+        position: relative;
+        list-style-type: none;
+        padding: 0 0 7px 15px;
+        font: 400 rem(16)/em(22,16) $body-font-family;   
+        &:after {
+            width: 4px;
+            height: 4px;
+            left: 0;
+            top:9px;
+            font-size: 1.375rem;
+            content: "";
+            position: absolute;
+            background-color: $text-gray;
+            border-radius: 50%;
+        }
+        &:last-child{
+            padding-bottom: 0;
+        }
+    }
+    & ~ .te-articlediscription{
+        p{
+            margin: 0;
+        }
+    }
+}
+.te-extrasarticlesbg{
+    background: $lightest;
+}
+.te-articlebtns{
+    display: flex;
+    justify-content: space-between;
+    a{
+        min-width: 150px;
+    }
+    a.te-btngreen{
+        margin: 0 10px 0 0;
+    }
+}
+.te-articleaction{
+    p{
+        width: 68%;
+        margin: 0;
+        color: $text-light;
+    }
+}
+.te-btngreen{
+    background: #00cc8d;
+}
+.te-btnred{
+    background: #ff7062;
+}
+.wo-inputheight{
+    margin: 0 10px 0 0;
+    width: 340px;
+    padding: 0;
+    .form-control{
+        height: 44px;
+    }
+}
+.te-displistform{
+    fieldset{
+        margin:0;
+    }
+}
+.te-table {
+    margin: 0;
+    background-color: $clr-white;
+    >thead {
+		>tr {
+            border-left: 1px solid $border-color;
+            border-right: 1px solid $border-color;
+			>th {
+                vertical-align: middle;
+                padding: 6px 28px;
+				font: 400 rem(14)/em(35, 14) $heading-font-family;
+				color: $heading-font-color;
+				border: 0;
+                text-align: left;
+                .te-checkbox{
+                    label{
+                        span{
+                            display: block;
+                            font: 400 rem(14)/em(15,14) $body-font-family;
+                        }
+                    }
+                }
+            }
+            td{
+                color: $body-font-color;
+                > span{
+                    display: inline-block;
+                    color: $body-font-color;
+                    font: 400 rem(14)/em(15, 14) $body-font-family;
+                    em {
+                        font-size: rem(12px);
+                        vertical-align: middle;
+                        display: inline-block;
+                    }
+                }
+            }
+		}
+	}
+	>tbody {
+		>tr {
+            border-left: 1px solid $border-color;
+            border-right: 1px solid $border-color;
+            td {
+                color: $body-font-color;
+                vertical-align: middle;
+                padding: 6px 28px;
+                color: $body-font-color;
+                border-top: 1px solid $border-color;
+                border-right: 0;
+                border-left: 0;
+                text-align: left;
+            }
+            td{
+                > span{
+                    display: inline-block;
+                    color: $body-font-color;
+                    font: 400 rem(14)/em(15, 14) $body-font-family;
+                    cursor: pointer;
+                    em {
+                        color: #999;
+                        font-size: rem(12px);
+                        vertical-align: baseline;
+                        display: inline-block;
+                        margin: 0 0 0 3px;
+
+                    }
+                }
+            }
+			>th {
+				font: 400 rem(14)/em(15, 14) $body-font-family;
+				color: $body-font-color;
+				border: 0;
+				text-align: left;
+			}
+		}
+	}
+	
+}
+
+.te-vieweye{
+    display: inline-block;
+    color: $body-font-color;
+    font: 400 rem(14)/em(15, 14) $body-font-family;
+        span{
+            margin: 0 2px 0 0;
+            color: $theme-color;
+            font-family: 'themify';
+        }
+    }
+.te-dispueitems{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-left: auto;
+    .te-tags{
+        padding: 0;
+    }
+    .te-vieweye{
+        margin: 0 0 0 20px;
+    }
+    a{
+        &:hover{
+            color: $theme-color;
+
+        }
+    }
+}
+.te-invoicecon{
+    text-align: right;
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+.te-disputrightinfo{
+    span{
+        color: $body-font-color;
+    }
+}

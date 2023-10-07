@@ -1,0 +1,319 @@
+/** ====== Dispute Listing components ====== **/
+.tb-disputemain{
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid $border-color;
+    .tb-extras{
+        text-align: right;
+        margin-top: 0;
+    }
+    .tb-disputedisc{flex: initial;}
+}
+.tb-disputextrasinfo{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    & ~ .tb-disputextrasinfo{
+        margin-right: auto;
+        margin-left: 60px;
+    }
+    figure{
+        margin: 0 20px 0 0;
+        flex: none;
+        img{
+         @extend %border-radius4;
+        }
+    }
+    .tb-taskinfo{
+        span{
+            color: $text-gray;
+            font-size: rem(14);
+            margin-bottom: 2px;
+        }
+    }
+    .tb-taskinfo{
+        h6{
+            font-size: rem(16px);
+        }
+    }
+}
+.tb-disputedisc{
+    flex: 0 0 80%;
+    .tb-tags{
+        padding-bottom: 3px;
+    }
+    > span{
+        display: inline-block;
+        font: 400 rem(14)/em(20,14) $body-font-family;
+        margin: 9px 0 0;
+    }
+    h5{
+        margin: 0;
+        a{
+            line-height:em(17,14);
+            display: block;
+            &:hover{
+                color: inherit;
+            }
+        }
+    }
+}
+.tb-sarticlesbtnsarea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px 29px;
+}
+.tb-disputearea{
+    margin: 0 0 30px;
+    background-color: #fff;
+    border: 1px solid $border-color;
+    border-radius: $radius;
+    .tb-extrasarticles{
+        & + .tb-extrasarticles{
+            padding: 25px 30px 23px 30px;
+            border-bottom: 0;
+        }
+    }
+}
+.tb-extrasarticles{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 29px;
+    border-bottom: 1px solid $border-color;
+}
+.tb-articletitle{
+    h4{
+        margin: 0 0 13px;
+        font: 700 rem(20)/em(28,20) $heading-font-family;   
+    }
+}
+.tb-articlediscription{
+    p{
+        font-size: rem(16px);
+        line-height: em(26,16);
+        margin: 0;
+        color: $text-gray;
+        ~ p{margin-top: 18px;}
+    }
+}
+.tb-articlelist{
+    padding: 2px 0 28px;
+    margin: 0;
+    li{
+        position: relative;
+        list-style-type: none;
+        padding: 0 0 7px 15px;
+        font: 400 rem(16)/em(22,16) $body-font-family;   
+        color: $text-gray;
+        &:after {
+            width: 4px;
+            height: 4px;
+            left: 0;
+            top:9px;
+            font-size: 1.375rem;
+            content: "";
+            position: absolute;
+            background-color: $text-gray;
+            border-radius: 50%;
+        }
+        &:last-child{
+            padding-bottom: 0;
+        }
+    }
+    & ~ .tb-articlediscription{
+        p{
+            margin: 0;
+        }
+    }
+}
+.tb-extrasarticlesbg{background: #f7f7f7;}
+.tb-articlebtns{
+    @extend %flex;
+    margin: -5px;
+    a{
+        min-width: 150px;
+        margin: 5px;
+    }
+}
+.tb-articleaction{
+    p{
+        width: 68%;
+        margin: 0;
+        color: $text-light; 
+    }
+}
+.tb-btngreen{
+    background: #00cc8d;
+}
+.tb-btnred{
+    background: #ff7062;
+}
+.wo-inputheight{
+    margin: 0 10px 0 0;
+    width: 340px;
+    padding: 0;
+    .form-control{
+        height: 44px;
+    }
+    &.wo-inputicon.form-group i{
+        right: 9px;
+    }
+}
+.tb-displistform{
+    fieldset{
+        margin:0;
+    }
+}
+.tb-table {
+    margin-bottom: 0;
+    background-color: #fff;
+    border: 1px solid #eeeeee;
+    >thead {
+		>tr {
+            border-left: 1px solid $border-color;
+            border-right: 1px solid $border-color;
+			>th {
+                vertical-align: middle;
+                padding: 10px 30px;
+				font: 700 rem(16)/em(26, 16) $heading-font-family;
+				color: #333;
+				border: 0;
+                text-align: left;
+                background: #fff;
+                .tb-checkbox{
+                    label{
+                        color: #333;
+                        span{
+                            display: block;
+                            font: 700 rem(14)/em(24,14) $body-font-family;
+                            color: $heading-font-color;
+                        }
+                    }
+                }
+            }
+            td{
+                color: $secondary-color;
+                > span{
+                    display: inline-block;
+                    color: $secondary-color;
+                    font: 400 rem(14)/em(15, 14) $body-font-family;
+                    em {
+                        font-size: rem(12px);
+                        vertical-align: middle;
+                        display: inline-block;
+                    }
+                }
+            }
+		}
+	}
+	>tbody {
+		>tr {
+            border-left: 1px solid $border-color;
+            border-right: 1px solid $border-color;
+            td {
+                font-size: 14px;
+                vertical-align: middle;
+                padding: 6px 28px;
+                border: 0;
+                border-top: 1px solid $border-color;
+                text-align: left;
+                background: #fff;
+                color: $text-gray;
+                label, a{
+                    font-size: 14px;
+                    font-family: $body-font-family;
+                    font-weight: 400;
+                    display: inline-block;
+                    width: auto;
+                }
+                a{
+                    color: $text-gray;
+                    span{
+                        color: $text-gray;
+                        &.tb-blue{
+                            color: $text-gray;
+                        }
+                    }
+                    &:hover{
+                        color: $anchor-color;
+                        span{
+                            color: $anchor-color;
+                            &.tb-blue{
+                                color: $anchor-color;
+                            }
+                        }
+                    }
+                }
+            }
+            td{
+                > span{
+                    display: inline-block;
+                    color: $secondary-color;
+                    font: 400 rem(14)/em(15, 14) $body-font-family;
+                    em {
+                        color: #999;
+                        font-size: rem(12px);
+                        vertical-align: baseline;
+                        display: inline-block;
+                        margin: 0 0 0 3px;
+                    }
+                }
+            }
+			>th {
+				font: 400 rem(14)/em(15, 14) $body-font-family;
+				color: $secondary-color;
+				border: 0;
+				text-align: left;
+			}
+		}
+	}
+	
+}
+.tb-vieweye{
+    display: inline-block;
+    color: $secondary-color;
+    font: 400 rem(14)/em(15, 14) $body-font-family;
+        span{
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 2px 0 0;
+            color: $theme-color;
+            font-family: 'themify';
+        }
+    }
+.tb-dispueitems{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-left: auto;
+    .tb-tags{
+        padding: 0;
+    }
+    .tb-vieweye{
+        margin: 0 0 0 20px;
+        font-size: rem(13);
+        span{font-size: 16px;}
+    }
+    a{
+        &:hover{
+            color: $theme-color;
+        }
+    }
+}
+.tb-invoicecon{
+    text-align: left;
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+.tb-disputrightinfo{
+    span{color: $text-gray;}
+    .tb-taskinfo h6{font-size: rem(13);}
+}
+.tb-extrasarticles-column{
+    flex-direction: column;
+    align-items: flex-start;
+}

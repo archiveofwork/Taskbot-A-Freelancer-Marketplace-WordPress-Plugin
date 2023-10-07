@@ -1,0 +1,90 @@
+/** ====== Blog components ====== **/
+.tk-bg{
+    background-color: $lightest;
+}
+.tk-blog-main{
+    background-color: $clr-white;
+    @extend %transition;
+}
+.tk-blog-listing-pg{
+    .tk-blog-image{
+        border-radius: 0;
+        img{
+            border-radius: 0 !important;
+        }
+    }
+    .tk-blogs-section{
+        padding:20px;
+    }
+    .tk-blog-main{
+        overflow: hidden;
+        border-radius: $radius;
+    }
+}
+.tk-blog-image{
+    margin-bottom: 0;
+    border-radius: $radius;
+    background-color: $dark-black;
+    a{display: block;}
+    img{ 
+        width: 100%;
+        @extend %transition;
+        border-radius: $radius !important;
+    }
+    &:hover{
+        img{opacity: $opacity_60;}
+    }
+}
+.tk-blogs-section{
+    padding: 20px;
+    border: 1px solid $lightest_2;
+    h4{
+        margin-bottom: 0;
+        a{color: $heading-font-color;}
+    }
+    p{margin: 14px 0 0;}
+}
+.tk-blogviewdates{
+    padding: 0;
+    @extend %flex;
+    list-style: none;
+    line-height: 26px;
+    margin: 0 -10px !important;
+    & li{
+        display: flex;
+        padding: 0 10px;
+        align-items: center;
+        list-style-type: none;
+        line-height: inherit;
+        color:$text-light;
+        @extend %p15;
+        font-weight: 600;
+    }
+    & span i{
+        font-weight: 400;
+        font-size: 18px;
+    }
+}
+.tk-tags{
+    padding: 0;
+    list-style: none;
+    margin-bottom: 0;
+    li{
+        list-style: none;
+        display: inline-block;
+        > *{margin: 0;}
+        a{
+            color: $anchor-color;
+            &:hover{color: $anchor-color;}
+        }
+        &:not(:last-child) {
+            a{
+                &:after{
+                    content:', ';
+                    font-size: 16px;
+                    color: $anchor-color;  
+                }
+            }
+          }
+    }
+}

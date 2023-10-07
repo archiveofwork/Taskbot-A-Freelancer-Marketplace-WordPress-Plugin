@@ -1,0 +1,537 @@
+/** ====== All Proposel components ====== **/
+.tk-price{
+    .tk-project-detail{
+        margin-top: 20px;
+        .tk-edit-project{
+            padding: 0;
+        }
+        > a{
+            border-radius: $radiusvtwo;
+            & + a{margin-left: 20px;}
+        }
+    }
+}
+.tk-employerproject{
+    .tk-price{
+        margin-left: auto;
+    }
+}
+.tk-proposal{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .tk-select{
+        width: auto;
+        flex: none;
+        margin-left: auto;
+    }
+    .select2-container{min-height: 24px;}
+    .select2-container--default .select2-selection--single{border: 0;}
+    .select2-container--default .select2-selection--single .select2-selection__rendered{line-height: 24px;}
+    h5{
+        margin-bottom: 0;
+        font-weight: 600;
+        span{
+            color:$text-light;
+        }
+    }
+}
+.tk-propsal-list-show{
+    color: $heading-font-color;
+    font-size: 24px;
+    display: none;
+    &:hover,
+    &:active{
+        color: $heading-font-color;
+    }
+}
+.tk-propposal_title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.tk-project-box-two{
+    .tk-template-serach{
+        padding:20px 0 0;
+        width: 100%;
+        .tk-inputicon{
+            width: 100%;
+        }
+    }
+}
+.tk-table-wrapper{
+    padding: 1px 0 0 !important;
+}
+.tk-project-table-status{
+    .tb-table{
+        border: 0;
+        margin-bottom: 0;
+        & thead tr th,
+        & tbody tr th,
+        & tfoot tr th,
+        & thead tr td,
+        & tbody tr td,
+        & tfoot tr td {
+            border-top: 0;
+            border: 0;
+            text-align: left;
+            vertical-align: middle;
+        }
+        & thead >  tr {
+            background: $lightest;
+        } 
+        & > thead > tr > th {
+            border-top: 0 ;
+            text-align: left;
+            border-bottom:0;
+            vertical-align: bottom;
+            color: $heading-font-color;
+            @extend %h6;
+            font-weight: 600;
+            background-color: unset;
+            i{
+                color:$text-light;
+                font-size: 14px;
+                padding-left: 10px;
+            }
+        }
+        th { text-align: left; }
+        & tbody {
+            display: block;
+            max-height: 760px;
+            overflow: auto;
+            &::-webkit-scrollbar-track{
+                background-color: $lightest;
+                border-radius: 60px;
+            }
+            &::-webkit-scrollbar{
+                width: 3px;
+                background-color: #F5F5F5;
+            }
+            &::-webkit-scrollbar-thumb{
+                background-color: $theme-color;
+                border: 2px solid $theme-color;
+                border-radius: 60px;
+            }
+            tr{
+                box-shadow: inset 0px -1px 0px $lightest_2;
+                > td{
+                    @extend %p15;
+                    color: $heading-font-color;
+                    background-color: unset;
+                    > a{
+                        @extend %p14;
+                        font-weight: 600;
+                        color: $anchor-color;
+                    }
+                    > span{
+                        color: $heading-font-color;
+                        @extend %label_title;
+                    }
+                    .tk-project-table-content{
+                        img{
+                            width: 48px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    thead, tbody tr {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+    }
+    .table caption + thead tr:first-child th,
+    .table colgroup + thead tr:first-child th,
+    .table thead:first-child tr:first-child th,
+    .table caption + thead tr:first-child td,
+    .table colgroup + thead tr:first-child td,
+    .table thead:first-child tr:first-child td { border-top: 0; }
+    table caption + thead tr:first-child th,
+    table colgroup + thead tr:first-child th,
+    table thead:first-child tr:first-child th,
+    table caption + thead tr:first-child td,
+    table colgroup + thead tr:first-child td,
+    table thead:first-child tr:first-child td { border-bottom: 0; }
+    table tbody + tbody { border-top: 0; }
+    .table thead tr td,
+    .table thead tr th{padding: 10px 20px;}
+    .table tbody tr th,
+    .table tfoot tr th,
+    .table tbody tr td,
+    .table tfoot tr td{padding:14px 20px;}
+    .table>:not(:first-child){border: 0;}
+    .tb-submitreview {
+        border: 0;
+        box-shadow: none;
+    }
+}
+.tk-project-table-content{
+    display: flex;
+    align-items: center;
+    img{
+        border-radius: 50%;
+        width: 60px;
+        object-fit: cover;
+    }
+    .tk-blogviewdates{
+        margin: 0 !important;
+        padding: 0 !important;
+        li{
+            padding: 0;
+            i{
+                font-size: 16px;
+                width: auto !important;
+            }
+            em{
+                & + span{margin-left: 10px;}
+            }
+            em,span{
+                @extend %p14;
+            }
+            span{
+                color:$text-light;
+            }
+        }
+    }
+}
+.tk-project-table-info{
+    padding-left: 10px;
+    span{
+        @extend %p15;
+        display: block;
+    }
+}
+.tk-profile-view{
+    background-color: $lightest;
+    a{
+        margin-left: auto;
+        border-radius: $radiusvtwo;
+    }
+    h4{
+        margin-bottom: 0;
+    }
+}
+.tk-working-rate{
+    .tk-project-price{
+        padding-top: 0;
+        h5{
+            margin-bottom: 0;
+        }
+        > span{
+            @extend %h4;
+        }
+    }
+}
+.tk-offer-milestone{
+    .tk-statusview_title{
+        @extend %flex;
+        align-items: center;
+        justify-content: space-between;
+        h5{
+            margin-bottom: 2px;
+        }
+        span{
+            @extend %h4;
+        }
+    }
+}
+.tk-milestones-content{
+    margin: 10px 0 0;
+    + .tk-milestones-content{
+        margin-top: 30px;
+    }
+    h6{
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+    p{
+        margin-bottom: 0;
+        @extend %p15;
+    }
+}
+.tk-milestones-content-list{
+    margin-bottom: 0;
+    padding-left: 0;
+    li{
+        position: relative;
+        list-style-type: none;
+        padding-left: 11px;
+        &::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            background-color: $dark;
+            border-radius: 50%;
+            width: 3px;
+            height: 3px;
+        }   
+    }
+}
+.tk-proposals-btn{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    button{
+        + button{
+            margin-left: 20px;
+        }
+    }
+}
+.tk-decline{
+    color:$text-light;
+    padding: 11px 24px;
+    background-color: $clr-white;
+    @extend %h6;
+    &:hover{
+        color:$text-light;
+    }
+}
+.tk-rectangular-shape{
+        width: 40px;
+        height: 40px;
+        background: $theme-color;
+        position: relative;
+        border-radius: 50%;
+        color: $clr-white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+      &::before{
+        content: "";
+        position: absolute;
+        right: 12px;
+        bottom: -6px;
+        width: 0px;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 13px solid transparent;
+        border-top: 10px solid $theme-color;
+    }
+}
+.tk-continue{
+    display: flex;
+    align-items: center;
+    @extend %p15;
+    font-weight: 600;
+    margin-top: 10px;
+    justify-content: flex-end;
+    width: 100%;
+    background-color: $clr-white;
+    color: $theme-color;
+    i{
+        font-size: rem(20);
+        padding-left: 6px;
+    }
+}
+.tk-firstweek-payment{
+    margin-bottom: 20px;
+    .tk-unlock-week{
+        padding-top: 0;
+        padding-left: 20px;
+        p{margin-bottom: 0;}
+    }
+}
+// popup
+.tk-popup_title{
+    @extend %flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    background-color: $lightest;
+    border-radius: 4px 4px 0px 0px;
+    > a{display: inline-flex;}
+    h5{
+        margin: 0;
+    }
+    i{
+        color: $heading-font-color;
+        font-size: rem(24);
+        font-weight: 500;
+    }
+}
+.tb-seller-profile-two {
+    &.tb-asideholder{margin-top: 80px;}
+    .tb-asideprostatus{
+        @extend %flex;
+        margin: -50px 0 0;
+        align-items: center;
+        figure{
+            flex: none;
+            border: 0;
+            padding: 0;
+            img{
+                height: 100%;
+                width: 100%;
+                border-radius: 4px;
+                object-fit: cover;
+            }
+        }
+        .tb-usertag{
+            left: 0;
+            top: auto;
+            bottom: 0;
+        }
+    }
+    .tb-seller-details{
+        width: 100%;
+        padding: 20px 0 0;
+        h4{
+            display: flex;
+            align-items: center;
+            @extend %h6;
+            margin-bottom: 0;
+            a{color: $anchor-color;}
+            i{
+                font-size: 16px;
+                margin-left: 10px;
+                color: $bright-green;
+            }
+        }
+        h6{
+            margin-bottom: 0;
+            span{
+                color: $theme-color;
+                padding-left: 5px;
+                @extend %h5;
+            }
+        }
+    }
+    .tb-asidebox .tb-icondetails .tb-sidebarinnertitle h5{
+        margin-bottom: 0;
+        font-size: rem(16);
+        line-height: em(26,16);
+    }
+    .tk-project-requirement_content{
+        padding: 20px 0 0;
+    }
+    .tb-sidebarcontent{
+        padding-top: 20px;
+    }
+    .tk-requirement-tags{
+        font: 600 0.9375rem/1.6em "Open Sans", sans-serif;
+    }
+    .tb-asidebox{
+        padding: 0 29px 29px;
+        .tb-icondetails{
+            & > h5{
+                @extend %h5;
+                margin-bottom: 6px;
+            }
+            h6{
+                color: $text-gray;
+                @extend %p15;
+            }
+        }
+        .tb-rateviews{
+            margin: 0;
+            padding: 0;
+            li{
+                padding: 0;
+                a span{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+} 
+.tb-sidebarinnertitle{
+    .tb-btn{
+        i{
+            font-size: 20px;
+        }
+    }
+}
+.tb-posttag {
+    @extend %flex;
+    align-items: center;
+    margin: -3px;
+    padding: 10px;
+    border-radius: 3px;
+    li {
+        padding: 3px;
+        list-style-type: none;
+        a {
+            @extend %label_title;
+            padding: 2px 12px;
+            display: inline-block;
+            color:$text-light;
+            @extend %transition;
+            background-color: $lightest;
+            border-radius: 3px;
+            border: 1px solid transparent;
+        }
+        &:hover {
+            a {
+                color: $heading-font-color;
+                border-color: $lightest_2;
+                background: $clr-white;
+            }
+        }
+    }
+}
+.tb-tippytooltip{
+    + div {
+        .tippy-box {
+            max-width: 400px !important;
+            background-color: #fff;
+            border: 1px solid #eeeeee;
+            border-radius: 3px;
+            filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.04)) drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.08));
+        }
+        .tippy-content {
+            padding: 0;
+        }
+    }
+}
+.tb-tippytooltip + div{
+    [data-placement="bottom"],
+    [data-placement="bottom-start"],
+    [data-placement="bottom-end"] {
+        .tippy-arrow {
+            &:before {
+                border: 1px solid #eee !important;
+                border-bottom: 0 !important;
+                border-left: 0 !important;
+            }
+        }
+    }
+    .tippy-arrow {
+        color: #fff;
+        width: 10px;
+        height: 10px;
+        z-index: 1;
+        &:before {
+            transform: rotate(-45deg) !important;
+            border: 1px solid #eee !important;
+            height: 10px;
+            width: 10px;
+            border-top: 0 !important;
+            border-right: 0 !important;
+            background: #fff;
+            border-left: 0 !important;
+        }
+    }
+}
+.tb-blogtags{
+    .tb-tags_links{
+        padding-left: 0;
+    }
+}
+.tb-sort + .tk-project-wrapper-two{
+    margin-top: 0;
+}
+.tk-hire-freelancer-two{
+    li{width: 50%;}
+}
+.tb-insightcontainerv2{
+    .tk-hire-freelancer{
+        li{width: 50%;}
+    }  
+}

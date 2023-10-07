@@ -1,0 +1,153 @@
+/** ====== Service Detail C components ====== **/
+.te-pricingitems{
+    width: 50%;
+    background: $clr-white;
+    li{
+        list-style-type: none;
+        display: flex;
+        border-bottom: 1px solid  $border-color;
+        border-right: 0;
+        div.te-pricingtitle:first-child{
+            border-bottom: 0;
+            border-right:1px solid $border-color;
+
+        }
+    }
+    li:last-child{
+        border-bottom: 0;
+    }
+    .te-pricingtitle{
+        width: 50%;
+        padding: 14px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h6{
+            line-height: em(23,14);
+            color: $body-font-color;
+            font-family: $body-font-family;
+            font-weight: 400;
+            margin: 0;
+        }
+    }
+}
+.te-select-half{
+    width: 50%;
+    .select2-container--default {
+		.select2-selection--single {
+			border: 0;
+		}
+	}
+}
+.te-serviceformwrap{
+    .form-group{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        margin-bottom: 13px;
+        label{
+            color:$heading-font-color;
+            font: 400 rem(14)/em(24,14) $heading-font-family;
+            margin: 0 0 3px;
+
+        }
+    }
+    div.form-group:last-child{
+        margin: 0;
+    }
+}
+.te-pricingcontainer{
+    display: flex;
+    margin: 0 0 30px;
+    border:1px solid $border-color;
+    @extend %border-radius4;
+    ul.te-pricingitems:last-child{
+        li{
+            border-right: 1px solid $border-color;
+        }
+    }
+}
+.te-pricingitemsoverlay {
+    position: relative;
+    overflow: hidden;
+}
+
+.te-pricingitemsoverlay:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: rgb(252, 252 ,252);
+    opacity: 0.8;
+    z-index: 2;
+    border-radius: 0 $radius $radius 0;
+    -webkit-border-radius: 0 $radius $radius 0;
+
+}
+.te-pricing-items{
+    position: relative;
+    width: 50%;
+    .te-pricingitems{
+        width: 100%;
+    }
+}
+.te-overleymodel{
+    display: flex;
+    background: $clr-white;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 50px;
+    text-align: center;
+    border: 1px solid $border-color;
+    position: absolute;
+    z-index: 2;
+    max-width: 350px;
+    top: 33%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    @extend %themeboxshadow ;
+    @extend %border-radius4;
+   > span{
+        display: block;
+        color: #004aff;
+        font-size: 30px;
+        margin: 0 0 16px;
+    }
+    h5{
+        margin: 0 0 11px;
+    }
+    p{
+        margin: 0 0 20px ;
+    }
+}
+.btn-lock{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    font: 700 rem(14px)/em(44px,14px) $heading-font-family;
+    color: $heading-font-color;
+    padding: 0 20px;
+    min-width: 110px;
+    border: 0;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    span{
+        font-size: 12px;
+        margin: 0 0 0 5px;
+    }
+}
+.te-lockbtn {
+    a:hover{
+        color: $heading-font-color;
+    }
+}

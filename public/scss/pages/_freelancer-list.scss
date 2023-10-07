@@ -1,0 +1,628 @@
+/** ====== Freelancer List components ====== **/
+.tk-tasks-listv1{
+    .tk-bestservice{
+        margin-bottom: 30px;
+    }
+    .tb-pagination{
+        padding-top: 10px;
+    }
+}
+.tk-sort{
+    @extend %flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+    h3{margin-bottom: 0;}
+    .tk-actionselect > span{margin: 0}
+}
+.tk-asidetitle,.tb-sidebartitle{
+    h5{
+        margin: 0;
+        @extend %h6;
+        display: flex;
+        position: relative;
+        align-items: center;
+        &::after{
+            right: 0;
+            color: $heading-font-color;
+            line-height: 1;
+            font-size: 16px;
+            content: "\e9a3";
+            position:absolute;
+            font-family: 'icomoon';
+        }
+    }
+    &[aria-expanded="false"]{
+        h5{
+            &:after{
+                content: "\e9c0";
+            }
+        }
+    }
+}
+.tk-aside-content{
+    padding-top: 10px;
+}
+.tk-aside-holder{
+    .tk-placeholder {
+        span{
+            @extend %p16;
+        }
+    }
+    ~ .tk-aside-holder{margin-top: 30px;}
+}
+.tk-search-icon{
+    height: 32px;
+    width: 32px;
+    display: flex;
+    align-items: center;
+    @extend %transition;
+    justify-content: center;
+    background-color: $theme-color;
+    color: $button-color !important;
+    i{
+        font-size: 16px;
+    }
+    &:hover{
+        background-color: $theme-color_20_light;
+    }
+}
+.tk-filterselect{
+    ~ .tk-filterselect{
+        .tk-select{padding-top: 10px;}
+    }
+}
+.tk-categoriesfilter{
+    padding: 0;
+    margin: 10px 0 0;
+    li{
+        @extend %flex;
+        align-items: center;
+        & + li{padding: 14px 0 0;}
+    }
+    .form-check-label{
+        span{
+            color: $heading-font-color;
+            padding-left: 10px;
+            font-size: rem(15);
+            line-height: em(24,15);
+        }
+    }
+}
+.tk-readmorebtn{
+    position: relative;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background-color:$lightest;
+    width: 100%;
+    @extend %h6;
+    color:$text-light;
+    padding:7px 5px;
+    @extend %transition;
+    &::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        top: 0;
+        transform: translateY(-100%);
+        background: -moz-linear-gradient(top,  rgba(0,0,0,0.07) 0%, rgba(0,0,0,0.07) 100%);
+        background: -webkit-linear-gradient(top,  rgba(0,0,0,0.07) 0%,rgba(0,0,0,0.07) 100%);
+        background: linear-gradient(to top, rgb(247 247 247) 0%, rgb(255 255 255) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#12000000', endColorstr='#12000000',GradientType=0 );
+        opacity: 0.8;
+        visibility: hidden;
+        @extend %transition;
+    }
+    span{
+        display: inline-flex;
+        align-items: center;
+    }
+    &:hover{color:$text-light;}
+}
+.tk-readmorebtnv2{
+    display: block;
+    margin-top: 10px;
+}
+.tk-additionalservices[data-readmore],
+ .tk-categoriesfilter[data-readmore],
+ .tk-exploremore[data-readmore] {
+    transition: height 500ms;
+    overflow: hidden;
+}
+.tk-rangevalue{
+    display: flex;
+    flex-direction: column;
+    .form-control{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: $radius $radius 0 0;
+        + .form-control{
+            border-radius: 0 0 $radius $radius;
+            border-left: 0;
+        }
+    }
+}
+.noUi-target{
+    background: #f7f7f7;
+    border: 0;
+    border-radius: 1.5px;
+    height: 3px;
+    margin-top: 20px;
+}
+.noUi-horizontal .noUi-handle{
+    width: 20px;
+    height: 20px;
+    top: 0px;
+}
+.noUi-handle{
+    border-radius: 50%;
+    background: #63d594;
+    border: 2px solid #fff;
+    top: 1px;
+    transform: translateY(-50%);
+    outline: none;
+    -webkit-box-shadow: 0 0 15px 0 rgb(0 0 0 / 30%);
+    box-shadow: 0 0 15px 0 rgb(0 0 0 / 30%);
+}
+.noUi-connect{background: $theme-color_20_dark;}
+.noUi-handle:after,
+.noUi-handle:before{content: none;}
+.tk-distanceholder{
+    -webkit-box-shadow: 0 6px 20px 0 rgb(0 0 0 / 10%);
+    box-shadow: 0 6px 20px 0 rgb(0 0 0 / 10%);
+    .tk-distance{box-shadow: none;}
+    .tk-btnholder .tk-btn {
+        min-width: 60px;
+        height: 36px;
+        font-size: 14px;
+    }
+}
+.tk-areasizebox{
+    width: 100%;
+    @extend %flex;
+    justify-content: space-between;
+    .form-control{
+        background: $clr-white;
+        max-width: 148px;
+    }
+}
+.tk-rangeslider{
+    background: $clr-white;
+    margin: 17px 0 0;
+    padding: 31px 20px;
+    border: 1px solid $lightest_2;
+    box-shadow: none;
+}
+.noUi-horizontal .noUi-handle {
+    width: 24px;
+    height: 24px;
+    top: 0px;
+    background: $clr-white;
+    box-shadow: $drop_shadows_medium;
+}
+.noUi-connects {
+    background: #ddd;
+    border-radius: 60px 0px 0px 60px;
+    height: 4px;
+}
+.noUi-horizontal .noUi-handle{
+    right: -12px;
+}
+.tk-tooltiparrow:after {
+    content: " ";
+    position: absolute;
+    border: 1px solid $lightest_2 !important;
+    transform: rotate(135deg) !important;
+    height: 12px;
+    width: 12px;
+    border-top: 0 !important;
+    border-right: 0 !important;
+    background: #fff;
+    top: -6px;
+    left: 68px;
+}
+.tk-filterbtns{
+    @extend %flex;
+    margin-top: 30px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    .tk-btn-solid-lg{
+        color: $button-color;
+        background: $theme-color;
+        &:hover{
+            color: $button-color;
+            background: rgba($theme-color, 0.8);
+        }
+    }
+    a,button{
+        width: 100%;
+        height: 40px;
+        & + a {
+            margin-top: 10px;
+        }
+    }
+}
+.tk-like{
+    position: absolute;
+    right: 0;
+    top: -30px;
+    li{list-style: none;}
+    a{
+        font-size: 16px;
+        color: #ddd;
+        @extend %transition;
+        &:hover{color: $red;}
+    }
+}
+.tk-liked{
+    a{
+        color: $red;
+    }
+}
+.tk-cardtitle{
+    position: relative;
+    margin-top: 14px;
+    & > a{
+        @extend %h6;
+        display: block;
+        color: $anchor-color;
+    }
+    h5{
+        margin: 0 0 10px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .tk-like{
+        i{font-size: 20px;}
+    }
+}
+.tk-bestservice{
+    overflow: hidden;
+    background: $clr-white;
+    border-radius: $radius;
+    position: relative;
+    &__content{
+        margin: -31px 0 0;
+        padding: 0 20px 30px;
+        > figure{
+            margin: 0;
+            display: block;
+            z-index: 1;
+            height: 62px;
+            width: 100%;
+            max-width: 62px;
+            background: #fff;
+            overflow: hidden;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            > img{
+                border-radius: 50%;
+                border: 6px solid $clr-white;
+                background-color: $clr-white;
+            }
+        }
+        .tk-startingprice{
+            margin: 20px 0 0; 
+        }
+    }
+    .tk-sevicesinfo{
+        padding: 0;
+        border: 1px solid $lightest_2;
+        border-top: 0;
+        border-radius: 0 0 $radius $radius;
+    } 
+    .tk-noofslides{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+    .tk-featuretag{
+        top: 10px;
+        z-index: 2;
+        left: 10px;
+        position: absolute;
+        text-transform: uppercase;
+    }  
+    &:hover{
+        .splide__arrows{
+            .splide__arrow--prev{
+                left: 0;
+            }
+            .splide__arrow--next{
+                right: 0;
+            }
+        }
+        .tk-prev{
+            left: 0;
+         }
+         .tk-next{
+            right: 0;
+         }
+    }
+}
+.tk-cards__img{
+    margin: 0;
+    background: $dark;
+    border-radius: $radius $radius 0 0;
+    img{
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        object-position: top;
+        @extend %transition;
+        border-radius: $radius $radius 0 0 !important;
+    }
+    .venobox ~ img {
+        opacity: 0.6;
+    }
+    .tk-servicesvideo{
+        top: 10px;
+        right: 10px;
+    }
+}
+.tk-servicesvideo {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background: $dark;
+    border-radius: 50%;
+    z-index: 1;
+    animation: ripple 1.5s linear infinite;
+    &:after{
+	    content: "\f04b";
+        z-index: 1;
+        font-family: "Font Awesome 5 Free";
+        font-size: 10px;
+        color: $clr-white;
+        font-weight: 700;
+	}
+}
+.tk-startingprice{
+    @extend %flex;
+    align-items: center;
+    i{
+        margin-right: 10px;
+        display: inline-block;
+        font: 700 rem(16)/em(26,16) $heading-font-family;
+    }
+    span{
+        @extend %h5;
+    }
+    .tb-startingprice{
+        display: block;
+        i{
+            display: inline-block;
+            @extend %h6;
+        }
+        span{
+            @extend %h5;
+            color: $theme-color;
+        }
+    }
+}
+.tk-blogviewdatessm{
+    padding: 0;
+    margin: -15px;
+    li{
+        i{
+            margin-right: 6px;
+            font-size: 16px;
+            color:$text-light;
+            + span{margin-left: 5px;}
+        }
+        em{
+            margin-right: 5px;
+            @extend  %p14;
+        }
+        span{
+            @extend  %p14;
+            display: flex;
+            align-items: center;
+            vertical-align: initial;
+            em{
+                color: $heading-font-color;
+            }
+          i{
+            font-size: 16px;
+            margin-right: 6px;
+            color:$text-light;
+          }
+        }
+    }
+}
+.tk-searchslide{
+    .splide__arrows{
+        .splide__arrow{
+            width: 36px;
+            height: 36px;
+            background: $clr-white;
+            border-radius: 0;
+            opacity: 1;
+            @extend %transition;
+            i{
+                color: $heading-font-color;
+                font-size: 22px;
+            }
+            svg{
+                display: none;
+            }
+        }
+        .splide__arrow--prev{
+           left: -37px;
+        }
+        .splide__arrow--next{
+           right: -37px;
+        }
+    }
+}
+.tk-prev,
+.tk-next{
+    position:absolute;
+    @extend %transition;
+    top: 50%;
+    transform: translateY(-50%);
+    i{
+        width: 36px;
+        height: 36px;
+        background: $clr-white;
+        border-radius: $radius 0 0 $radius;
+        opacity: 1;
+        cursor: pointer;
+        color: $heading-font-color;
+        font-size: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.tk-prev{
+   left: -37px;
+   i{border-radius: 0 $radius $radius 0;}
+}
+.tk-next{
+   right: -37px;
+}
+.tk-noofslides{
+    background: $dark;
+    color: $clr-white;
+    padding: 3px 15px;
+    border-radius: 60px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    @extend %label_title;
+    i{
+        font-size: 13px;
+        margin-right: 6px;
+    }
+   
+}
+.tk-actionselect{
+    display: flex;
+    align-items: center;
+    .select2-container--default .select2-selection--single .select2-selection__rendered{
+        line-height: 45px;
+    }
+    .tk-select{width: auto;}
+    > span{ 
+        @extend %h6;
+        color: $heading-font-color;
+        flex: none;   
+        padding-right: 20px;
+    }
+    .form-control{
+        font-size: 14px;
+        color:$text-light;
+        height: 44px;
+    }
+    .select2-container--default .select2-selection--single{border-color: $border-colorv2;}
+}
+// taskbot styling
+.tb-sidebartitle{
+    i{display: none;}
+}
+.tb-areasizebox{
+    .tb-rangevalue{
+        justify-content: space-between;
+    }
+    .form-control{
+        height: 50px;
+        + .form-control{
+            border-left: 1.5px solid $lightest_2;
+            margin-left: 10px;
+            &:hover,
+            &:focus{border-color: $lighter;}
+        }   
+        
+    }
+}
+.tb-distanceholder{
+    box-shadow: none;
+    .tb-distance{
+        padding: 0;
+        padding: 20px;
+        box-shadow: none;
+        margin: 17px 0 0;
+        border-radius: 0;
+        background: $clr-white;
+        position: relative;
+        border-radius: $radius;
+        border: 1px solid $lightest_2;   
+        &::after{
+            top: -6px;
+            left: 68px;
+            width: 12px;
+            height: 12px;
+            content: " ";
+            background: $clr-white;
+            position: absolute;
+            transform: rotate(135deg) !important;
+            border: 1px solid $lightest_2 !important;
+            border-top: 0 !important;
+            border-right: 0 !important;
+        }
+    }
+    .ui-widget.ui-widget-content{
+        background: #ddd;
+        border-radius: 60px 0px 0px 60px;
+        height: 4px;
+    }
+    .ui-widget-header{
+         background: $bright-green;
+    }
+    .tb-distance__description,.tb-btnholder{
+        display: none;
+    }
+    .ui-state-default, .ui-widget-content .ui-state-default{
+        background-color: #fff; 
+        box-shadow: $drop_shadows_medium;
+        cursor: pointer;
+    }
+    .noUi-handle:after,
+    .noUi-handle:before{content: none;}
+}
+.tk-searchresult{
+    aside{
+        .tb-asidebox{
+            padding: 0;
+            margin-top: 30px;
+            background-color: transparent;
+        }
+    }
+    .tk-pagination{
+        margin:  10px 0 0;
+    }
+}
+.tk-filtermenu{
+    display: none;
+}
+.tk-filtericon{
+    width: 48px;
+    font-size: 20px;
+    line-height: 48px;
+    text-align: center;
+    display: inline-block;
+    border-radius: $radius;
+    color: $button-color;
+    background: $theme-color;
+    &:hover,
+    &:focus{
+        color: $button-color;
+        background: $theme-color_20_light;
+    }
+    i{
+        display: block;
+        line-height: inherit;
+    }
+}

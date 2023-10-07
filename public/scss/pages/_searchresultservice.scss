@@ -1,0 +1,425 @@
+/** ====== Search Result Services components ====== **/
+.te-communitybanner-wrap{padding: 50px 0 30px;}
+.te-communitybanner{
+    @extend %border;
+    border-radius: $radius;
+    padding: 5px;
+    &__content{
+        position: relative;
+        background-color: #f7f8fa;
+        border-radius: $radius;
+        overflow: hidden;
+        .te-btnholder{
+            width: 100%;
+            justify-content: initial;
+            align-items: center;
+            .te-btn{
+                min-width: 140px;
+            }
+        }
+        .te-joinnow__imgright {
+            right: 37px;
+            top: 12px;
+        }
+        .te-joinnow__imgleft--img{right: 15px;}
+    }
+    &__textarea{
+        padding: 28px 34px 34px;
+    }
+}
+.te-nobtn{
+    font: 600 14px $heading-font-family;
+    color: $text-light;
+    &:hover{color: $text-light;}
+}
+.te-particles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.te-filter{
+    margin: -6px 0 33px;
+    .te-themeform{
+        display: block;
+        padding-top: 17px;
+    }
+    .te-themeform__wrap{align-items: center;}
+}
+.form-group{
+    .te-dropdownholder,
+    .te-filterdropdownholder{margin-top: -5px;}
+    &.te-filtericonholder{
+        .te-filterdropdownholder{margin-top: 0;}
+    }
+}
+.te-dropdownholder,
+.te-filterdropdownholder{
+    position: absolute;
+    z-index: 4;
+    -webkit-box-shadow: 0 10px 30px 0 rgba(18,54,82,0.2);
+    box-shadow: 0 10px 30px 0 rgba(18,54,82,0.2);
+    min-width: 250px;
+    top: 100%;
+    background-color: #fff;
+    border-radius: 0 0 6px 6px;
+}
+.te-dropdownholder{
+    .mCSB_scrollTools {
+        top: -10px;
+        bottom: 10px;
+    }
+}
+.te-filterscrollholder{
+    .te-dropdownholder{
+        max-height: 285px;
+        width: 100%;
+    }
+    &.te-filterselect{
+        .te-dropdownholder{
+            min-width: 445px;
+        } 
+    }
+}
+.te-filterselect{
+    position: relative; 
+    min-width: 200px;
+    width: auto;
+    margin: 0;
+    align-items: initial;
+    [data-toggle="collapse"]{width: 100%;}
+    .form-control{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+}
+.te-dropdowntilte{
+    position: relative;
+    @extend %flex;
+    align-items: center;
+    font-size: 13px;
+    padding-left: 14px;
+    margin-bottom: 0;
+    &:before{
+        content: '-';
+        padding-right: 10px;
+        color: inherit;
+    }
+}
+.te-dropdown{
+    padding: 12px 10px 10px; 
+    &.mCustomScrollbar{
+        max-height: 285px;
+        padding-top: 28px;
+    }
+    &__content{
+        h6{
+            + .te-dropdown__list{padding-top: 10px;}
+        }
+        ~ .te-dropdown__content{padding-top: 11px;}
+    }
+    &__list{
+        li{
+            list-style: none;
+        }
+        input{
+            display: none;
+            &:checked + label{
+                &:after{
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+        label{
+            position: relative;
+            @extend %flex;
+            align-items: center;
+            padding: 8px 30px;
+            border-radius: $radius;
+            @extend %transition;
+            font-size: 13px;
+            font-family: $heading-font-family;
+            margin-bottom: 0;
+            cursor: pointer;
+            &:after{
+                content: "\f00c";
+                font-weight: 900;
+                font-family: "Font Awesome 5 Free";
+                position: absolute;
+                right: 20px;
+                font-size: 10px;
+                color: #63d594;
+                visibility: hidden;
+                opacity: 0;
+                @extend %transition;
+            }
+            &:hover{
+                background-color: #f7f7f7;
+            }
+        }
+    }
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
+    background-color: $theme-color;
+    border-radius: 2px;
+    &:hover{opacity: 1;} 
+}
+.mCSB_scrollTools .mCSB_draggerRail{
+    border-radius: 2px;
+    background-color: #f7f7f7;
+    width: 4px;
+}
+.mCSB_scrollTools,
+.mCSB_scrollTools .mCSB_buttonDown,
+.mCSB_scrollTools .mCSB_buttonLeft,
+.mCSB_scrollTools .mCSB_buttonRight,
+.mCSB_scrollTools .mCSB_buttonUp,
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{opacity: 1;} 
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background-color: $theme-color;}
+.te-filtericonholder{
+	width: 60px;
+    height: 50px;
+    margin-bottom: 0;
+	.te-filtericonholder{
+		.te-advanceicon{
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+.te-advanceicon{
+    position: relative;
+	@extend %flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	background-color: #f7f8fa;
+    border-radius: $radius;  
+    cursor: pointer;
+    &[aria-expanded="true"]{
+        &:before{height: 100%;}
+        span{
+            i{
+                background-color: #fff;
+                border-color: #fff;
+                &:after{
+                    border-color: #fff;
+                    background-color: $theme-color;
+                }
+                &:nth-child(1)::after{left: 0}
+                &:nth-child(2)::after{left: 75%}
+                &:nth-child(3)::after{left: 50%}
+            }
+        }
+    }
+    &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 0;
+        background-color: $theme-color;
+        border-radius: $radius;
+        @extend %transition;
+    }
+	span{
+		display: inline-block;
+		vertical-align: middle;
+		i{
+			background-color: #999;
+			width: 17px;
+			display: block;
+			margin: 7px 0 0;
+			position: relative;
+			border: 0.5px solid #999;
+			&:after{
+				top: 0; 
+				left: 0;
+				width: 5px;
+				height: 5px;
+				content: '';
+				position: absolute;
+				border-radius: 50%;
+				margin: -2px 0 0 -2px;
+				border: 1px solid #999;
+				background: #f7f8fa;
+				@extend %flex;
+				@extend %transition;
+			}
+			&:nth-child(1){
+				margin-top: 0;
+				&:after{left: 50%;}
+			}
+			&:nth-child(2){
+				&:after{left: 25%;}
+			}
+			&:nth-child(3){
+				&:after{left: 75%;}
+			}
+		}
+    }
+    &:hover{
+        &:before{height: 100%;}
+        span{
+            i{
+                background-color: #fff;
+                border-color: #fff;
+                &:after{
+                    border-color: #fff;
+                    background-color: $theme-color;
+                }
+                &:nth-child(1)::after{left: 0}
+                &:nth-child(2)::after{left: 75%}
+                &:nth-child(3)::after{left: 50%}
+            }
+        }
+    }
+}
+.te-filterdropdownholder{
+    width: 540px;
+    margin-top: 0;
+}
+.te-filterdropdown{
+    padding: 15px 30px 9px;
+    &:first-child{padding-top: 13px;}
+    ~ .te-filterdropdown{@extend %border-top;}
+    .te-dropdowntilte{
+        padding-left: 0;
+        + .te-filterdropdown__content,
+        + .te-filtershowallholder{padding-top: 10px;} 
+    }
+    &__content{
+        @extend %flex;
+        margin: -7px -5px;
+        padding-bottom: 8px;
+        &.mCustomScrollbar{
+            max-height: 150px;
+            width: calc(100% + 24px);
+        }
+        .mCSB_inside>.mCSB_container{margin-right: 15px;}
+        .mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden{margin-right: 0;}
+        &.mCS_no_scrollbar{width: auto;}
+        .mCSB_container{@extend %flex;}
+        li{
+            padding: 7px 5px;
+            list-style: none;
+            width: calc(100% / 3);
+        }
+    }
+    &__half{
+        li{width: 50%;}
+    }
+}
+.te-filterbtnholder{
+    width: auto;
+    margin-bottom: 0;
+    .te-btnholder{
+        padding-top: 0;
+        .te-nobtn{
+            min-width: auto;
+            width: auto;
+        }
+        .te-btn{
+            min-width: 140px;
+            height: 50px;
+        }
+    }
+}
+.te-selected {
+    padding-top: 20px;
+    margin: -5px;
+    @extend %flex;
+    li {
+        font: 400 rem(12) $heading-font-family;
+        padding: 7px 14.13px;
+        border-radius: 15px;
+        @extend %flex;
+        align-items: center;
+        margin: 5px;
+        background-color: #f7f8fa;
+        @extend %transition;
+        &:hover {
+            background-color: #ff7062;
+            color: #fff;
+            a {
+                color: #fff;
+            }
+        }
+        a {
+            font-size: 10px;
+            color: $secondary-color;
+            padding-left: 13px;
+            line-height: 1;
+            @extend %transition;
+        }
+    }
+}
+.te-filterinput{
+    margin: 0 0 0 auto;
+    width: auto;
+    .select2-container{height: 50px;}
+    .select2-container--default .select2-selection--single .select2-selection__rendered{
+        font-size: 15px;
+        line-height: 50px;
+    }
+}
+.te-filterselected{
+    .te-selected{padding-top: 10px;}
+}
+.te-searchservice{
+    margin-bottom: -7px;
+    &__text{
+        padding: 33px 0 29px;
+        .te-sectiontitle{margin-top: -6px;}
+    }
+    &__img{
+        figure{
+            margin-bottom: 0;
+            img{border-radius: $radius;}
+        }
+    }
+}
+.te-norecords{
+    padding-top: 60px;
+    figure{margin-bottom: 0;}
+    .te-sectiontitle{
+        padding-top: 36px;
+        @extend %flex;
+        flex-direction: column;
+        align-items: center;
+        h2{width: 70%;}
+    }
+    .te-btnholder li a{min-width: 160px;}  
+}
+.te-range{
+    padding: 30px 30px 27px;
+    &__title{
+        padding-bottom: 9px;
+        label{
+            font: 700 rem(14) / em(11,14) $heading-font-family;
+            color: $heading-font-color;
+            margin: 0;
+        }
+        input{
+            font: 400 rem(14) / em(14,14) $heading-font-family;
+            color: $heading-font-color;
+            border: none;
+            height: auto;
+            padding: 0;
+            border-radius: 0;
+            outline: none;
+        }
+    }
+}
+.te-filtershowall{
+    + .te-readmorebtn{
+        padding: 3px 0;
+    }  
+}
+.te-readmorebtn{font-size: 13px;} 

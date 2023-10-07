@@ -1,0 +1,51 @@
+/** ====== Login Component ====== **/
+.tb-loginconatiner{
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    figure{
+        margin: 0;
+        background: #353648;
+        position: absolute;
+        width: 100%;
+        img{
+            width: 100%;
+            opacity: 0.3;
+            height: 100vh;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+}
+.tb-popupcontainer{
+    background: #fff;
+    max-width: 600px;
+    border-radius: 6px;
+    position: relative;
+    .tb-formlogin{
+        .form-group-title{flex: 0 0 136px;}
+    }
+    .tb-popuptitle{
+        padding-top: 22px;
+        padding-bottom: 22px;
+        h4{
+            font-size: rem(18);
+            line-height: em(26,18);
+        }
+    }
+}
+.tb-popupcontainervtwo{
+    .tb-loginfooterinfo{
+        background: #f7f7f7;
+        a{
+            width: 100%;
+        }
+    }
+}
+.tb-popupcontainer .tb-loginfooterinfo a{
+    background: #f7f7f7;
+    border-radius: 0 0 6px 6px;
+}

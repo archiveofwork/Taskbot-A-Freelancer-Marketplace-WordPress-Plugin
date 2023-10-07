@@ -1,0 +1,542 @@
+/** ====== Freelancer Search Result components ====== **/
+.tb-bestservicedetail{
+    &.tb-bestservice__content{
+        padding: 0;
+        border: 0;
+    }
+    border: 1px solid #eee;
+    border-radius: $radius;
+    ~ .tb-bestservicedetail{margin-top: 20px;}
+    &__user{
+        padding: 30px;
+        @extend %flex;
+        align-items: center;
+        border-radius: $radius;
+        border: 1px solid $lightest_2;
+        justify-content: space-between;
+        .tk-price-holder{
+            width: 100%;
+            .tb-startingprice{margin-left: auto;}
+        }
+        .tk-bidbtn{
+            flex: none;
+        }
+        .tb-asideprostatus{
+            display: flex;
+            align-items: center;
+            > figure{
+                padding: 0;
+                border: 0;
+                width: 100%;
+                height: auto;
+                max-width: 82px;
+                margin: 0 20px 0 0;
+                border-radius: $radius;
+                img{
+                    width: 100%;
+                    height: 82px;
+                    display: block;
+                    max-width: 82px;
+                    object-fit: cover;
+                    border-radius: $radius;
+                }
+            }
+        }
+    }
+    &__title{
+        h6{
+            margin: 0;
+            @extend %flex;
+            align-items: center;
+            & > i{
+                font-size: 16px;
+                color: $bright-green;
+            }
+            a{
+                & + i{margin-left: 10px;}
+                color: $anchor-color;
+                &:hover{color: $anchor-color;}
+            }
+        }
+        h5{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            margin-bottom: 6px;
+        }
+    }
+    &__list{
+        @extend %flex;
+        padding: 0 29px; 
+        > li{
+            list-style: none;
+            position: relative;
+            ~ li{
+                padding-left: 30px;
+                margin-left: 30px;
+                &:before{
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 1px;
+                    height: 44px;
+                    background-color: #ddd;
+                }
+            }
+            .tb-sidebarinnertitle{padding-top: 0;}
+        }
+        .tb-sidebarcontent .tb-profileprogress {
+            width: 162px;
+            margin-bottom: 0;
+        }
+    }
+    .tb-blogtags{
+        margin: 20px 0 0;
+        background-color: #fff;
+        border-top: 1px solid #ddd;
+        border-radius: 0;
+        padding: 19px;
+        .tb-btn{
+            margin-left: auto;
+            background-color: #f7f7f7;
+            color: $heading-font-color;
+        }
+    }
+    &:hover{
+        .tb-blogtags{
+            .tb-btn{
+                background-color: $theme-color;
+                color: #fff;
+            }
+        }
+    }
+    .tb-tagtittle{align-self: initial;}
+}
+.tb-map{
+    width: 100%;
+    height: 100%;
+}
+.tb-freelancersearch{
+    .tb-bestservice{
+        box-shadow: none;
+        + .tb-bestservice{margin-top: 20px}
+    }
+    .tb-bestservicedetail{
+        .tb-rateviews{
+            & a > span{font-weight: 400;}
+            a,
+            span{
+                font-weight: 600;
+                padding-left: 6px;
+                color: $text-light;
+            }
+            .tb_saved_items{
+                padding-left: 0;
+                span{padding-left: 0;}
+            }
+        }
+        @extend %transition;
+        box-shadow: $drop_shadows_lightest;
+        &:hover{
+            box-shadow: $drop_shadows_light;
+        }
+    }
+}
+.tb-blogtags__content{
+    display: flex;
+    .tb-desclinks{
+        margin-left: -9px;
+        li{
+            ~ li{margin-left: 9px;}
+            a{margin: 0;}
+        }
+    }
+}
+// Search Task
+.tk-tasks-listv2{
+    .tb-pagination{padding-top: 10px;}
+}
+.tk-topservice{
+    padding: 9px;
+    overflow: hidden;
+    position: relative;
+    background: $clr-white;
+    @extend %transition;
+    border-radius: $radius;
+    border: 1px solid $lightest_2;
+    box-shadow: $drop_shadows_lightest;
+    &:after{
+        bottom: 0;
+        left: 19px;
+        height: 0;
+        content: '';
+        @extend %transition;
+        position: absolute;
+        width: calc(100% - 38px);
+        border-radius: 3px 3px 0 0;
+        background: $theme-color;
+    }
+    &:hover{
+        box-shadow: $drop_shadows_light;
+        &:after{height: 3px;}
+        .tk-card__img > a {
+            & img{
+                transform: scale(1.1);
+            }
+            & > i{
+                opacity: 1;
+                transform: scale(1);
+                visibility: visible;
+            }
+        }
+    }
+    .tk-noofslides{
+        top: 10px;
+        right: 10px;
+        position: absolute;
+    }
+    .tk-featuretag{
+        top: 19px;
+        left: 19px;
+        height: auto;
+        padding: 1px 6px;
+        background: $red;
+        color: $clr-white;
+        position: absolute;
+        text-transform: uppercase;
+        font: 700 rem(10)/em(16,10) $heading-font-family;
+    }
+    &__content  {
+        margin: 0;
+        position: relative;
+        > figure{
+            border-radius: 50%;
+            background: $clr-white;
+            display: inline-block;
+            border: 6px solid $clr-white;
+            margin: 0 14px !important;
+           
+            > img{
+                max-width: 50px;
+                border-radius: 50%;
+            }
+        }
+        .tk-starting-price{
+            margin: 15px 0 0; 
+        }
+        .tk-featureRatingv2{
+            h6{
+                display: flex;
+                align-items: center;
+                margin: 0 6px 0 0;
+                color: $heading-font-color;
+                font: 600 rem(14)/em(24,14) $heading-font-family;
+                em{
+                    color:$text-light;
+                    font: normal 600 rem(14)/em(24,14) $body-font-family;
+                }
+            }
+            & > em{
+                color:$text-light;
+                font: 600 rem(14)/em(24,14) $body-font-family;
+            }
+        }
+        .tk-featureRating{
+            margin: 16px 0 0;
+            .tk-featureRating{margin: 0;}
+            &__stars{
+                width: 100px;
+                margin-right: 10px;
+                letter-spacing: 2px;
+                &::before,
+                span::after{
+                    font-size: 16px;
+                    line-height: 14px;
+                }
+            }
+            address{
+                width: 100%;
+                color:$text-light;
+                font: 600 rem(14)/em(24,14) $body-font-family;
+            }
+        }
+        .tk-total-review span em{
+            font: 600 rem(14)/em(24,14) $body-font-family;
+        }
+        .tk-startingprice{
+            margin: 16px 0 0;
+            i,
+            span{
+                letter-spacing: 0.5px;
+                color: $heading-font-color;
+            }
+        }
+    } 
+}
+.tk-sevicesinfo{
+    padding: 10px;
+}
+.tk-card{
+    &__img{
+        overflow: hidden;
+        margin: 0 0 5px !important;
+        border-radius: $radiusvtwo;
+        img{
+            width: 100%;
+            @extend %transition;
+            border-radius: $radius !important;
+        }
+        .tk-servicesvideo{
+            top: 10px;
+            right: 10px;
+        }
+        & > a > i{
+            top: 0;
+            left: 0;
+            opacity: 0;
+            color: #fff;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            font-size: 30px;
+            visibility: hidden;
+            position: absolute;
+            align-items: center;
+            @extend %transition;
+            transform: scale(0.5);
+            border-radius: $radius;
+            justify-content: center;
+            background: rgba(#0A1833, 0.6);
+        }
+    }
+    &-title{
+        display: flex;
+        position: relative;
+        align-items: center;
+        .tk-like{
+            top: auto;
+            margin-left: auto;
+            position: relative;
+            a{color:$text-light;}
+        }
+        .tk-likev-two{
+            margin-left: auto;
+        }
+        & > i{
+            font-size: rem(16);
+            padding-left: 10px;
+            color: $bright-green;
+            display: inline-block;
+        }
+        h6{
+            margin-bottom: 0;
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            i{padding-left: 10px;}
+        }
+        h5{
+            margin:  0 0 10px;
+            font-weight: 600;
+        }
+        & > a{
+            @extend %h6;
+            color: $anchor-color;
+            letter-spacing: 0.5px;
+        }
+        .tk-likev-two{
+            display: inline-flex;
+            a{display: inline-flex;}
+        }
+    }
+}
+.tk-title-wrapper{
+    h5{
+        margin-bottom: 0;
+        a{
+            @extend %transition;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            color: $heading-font-color;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            &:hover{
+                color: $anchor_color;
+            }
+        }
+    }
+}
+.tk-liked{
+    a{
+        color: red !important;
+    }
+}
+.tk-featureRating {
+    margin-top: 14px;
+    z-index: 111;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    &__stars {
+        @extend %tk-featureRating__stars;
+        letter-spacing: 5.5px;
+        display: inline-flex;
+        vertical-align: middle;
+        width: 90px;
+        + em {
+            padding-left: 2px;
+        }
+        &::before {
+            @extend %tk-featureRating;
+            @extend %tk-featureRating__starsIcon;
+            color: #eee;
+        }
+        span {
+            @extend %tk-featureRating__stars;
+            overflow: hidden;
+            width: 100%;
+            &::after {
+                @extend %tk-featureRating;
+                @extend %tk-featureRating__starsIcon;
+            }
+        }
+    }
+    address{
+        @extend %label_title-two;
+        color:$text-light;
+        padding-top: 10px;
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        i{
+            font-size: 18px;
+            padding-right: 10px;
+            display: inline-block;
+        }
+    }
+}
+//  Search Job
+.tk-featured-listing{
+    margin: 0;
+    padding: 0;
+    .tk-price-holder{
+        align-items: center;
+    }
+    .tk-verified-info strong {
+        color: $anchor-color;
+        display: flex;
+        align-items: center;
+    }
+    .tk-template-view{
+        gap: 10px 30px;
+        margin: 10px 0 0;
+        li{
+            font: 400 rem(14)/em(24,14) $body-font-family;
+            span{
+                color:$text-gray;
+                font: 400 rem(14)/em(24,14) $body-font-family;
+            }
+            i{
+                margin: 0;
+            }
+        }
+    }
+    > li{
+        padding: 29px;
+        position: relative;
+        @extend %transition;
+        list-style-type: none;
+        border-radius: $radiusvtwo;
+        border: 1px solid $lightest_2;
+        &:hover{
+            box-shadow: $drop_shadows_light;
+            .tk-price .tk-btn-solid-lg-lefticon{background: $theme-color;}
+        }
+        + li{
+            margin-top: 10px;
+        }
+    }
+    .tk-price{
+        padding-left: 20px;
+        text-align: right;
+        h4{
+            color: $heading-font-color;
+        }
+        .tk-btn-solid-lg{
+            opacity: 1;
+            height: 40px;
+            margin: 10px 0 0;
+            line-height: 40px;
+            display: inline-block;
+            color: $heading-font-color;
+            background: $lightest;
+            &:hover{
+                background: $theme-color_20_light !important;
+            }
+        }
+        .tk-featuretag{
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 24px;
+            padding: 1px 10px;
+            width: auto;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+}
+.tk-project-img{
+    flex: none;
+    margin-right: 20px;
+    img{
+        width: 130px;
+        object-fit: cover;
+        height: 106px !important;
+        border-radius: $radius !important;
+    }
+}
+.tb-freelancersearch{
+    .tk-tags-holder{
+        margin: 20px 0 0;
+        & > p{
+            @extend %p15;
+        }
+    }
+    .tb-singleservice-tile{
+        padding: 0;
+    }
+    .tb-blogtags{
+        border: 0;
+        padding: 0;
+    }
+    .tb-startingprice{
+        .tk-btn-solid-lg{
+            height: 40px;
+            margin: 10px 0 0;
+            &:not(:hover){background-color: $lightest;}
+        }
+    }
+    .tb-blog-tags{
+        padding: 3px 12px;
+        @extend %label_title;
+        border-radius: $radiusvtwo;
+        border: 1px solid $lightest;
+        background-color: $lightest;
+        &:hover{
+            color: $heading-font-color;
+            background-color: $clr-white;
+            border-color: $border-color;
+        }
+    }
+    .tb-bestservicedetail__user .tb-asideprostatus > figure{
+        max-width: 100px;
+        img{
+            height: 100px;
+            max-width: 100px;
+        }
+    }
+}

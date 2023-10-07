@@ -1,0 +1,754 @@
+/** ====== Fixed-project Employerview components ====== **/
+.tk-employerproject{
+    display: flex;
+    &-title{
+        width: 100%;
+        .tk-project-tag{
+            margin: 0 0 10px;
+        }
+        h3{
+            margin: 0;
+            font-size: rem(22);
+            line-height: em(30,22);
+        }
+    }
+    &-edit{
+        flex: none;
+        display: flex;
+        margin-left: auto;
+        align-self: center;
+        padding-left: 30px;
+        align-items: center;
+       .tk-btn-solid-lg {
+        height: 40px;
+       }
+    }
+}
+.tk-editbtn{
+    color: #999999;
+    font: 700 rem(16)/em(26,16) $body-font-family;
+    i{
+        margin-right: 10px;
+    }
+    & + .tk-btn-solid-lg{margin-left: 34px;}
+}
+.tk-projectstatus{
+    display: flex;
+    box-shadow: inset 0px 1px 0px $lightest_2;
+    &_users{
+        flex: none;
+        width: 100%;
+        max-width: 416px;
+        box-shadow: inset -1px 0px 0px $lightest_2;
+        .tk-project-box-two{box-shadow: inset 0px -1px 0px $lightest_2;}
+        & .tk-proposal{
+            .tk-select{
+                &:before{
+                    right: 0;
+                }
+                .form-control{
+                    border: 0;
+                    height: auto;
+                    box-shadow: none;
+                    padding: 0 30px 0 0;
+                }
+            }
+        }
+        & .tk-propposal_title{
+            h5{
+                font-size: rem(18);
+                line-height: em(26,18);
+                span{
+                    font-size: rem(16);
+                    line-height: em(26,16);
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+}
+.tk-prouserslist{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li{
+        list-style-type: none;
+    }
+    a{
+        display: flex;
+        padding: 14px 20px;
+        align-items: center;
+        @extend %transition;
+        h6{margin: 0;}
+        img{
+            border-radius: 50%;
+            width: 38px;
+            height: 38px;
+            & + h6{
+                margin-left: 10px;
+            }
+        }
+        &.active,
+        &:hover{
+            background: $lightest;
+        }
+        .tk-project-tag{
+            margin-left: auto;
+        }
+    }
+}
+.tb-active-proposal{background: $lightest;}
+.tk-contract-list{
+    right: 0;
+    margin: 0;
+    display: none;
+    padding: 10px;
+    position:absolute;
+    background: $clr-white;
+    border-radius: $radiusvtwo;
+    box-shadow: $drop_shadows_medium;
+    width: 100%;
+    min-width: 349px;
+    z-index: 1051;
+    li{
+        list-style-type: none;
+        span{
+            color: $heading-font-color;
+            @extend %h6;
+            display: block;
+            cursor: pointer;
+            padding: 14px 20px;
+            @extend %transition;
+            border-radius: $radius;
+            &:hover{
+                background-color: $lightest;
+            }
+        }
+    }
+}
+.tk-projectsstatus{
+    flex: auto;
+    &_head{
+        padding:30px;
+        display: flex;
+        position: relative;
+    }
+    &_info{
+        display: flex;
+        align-items: center;
+    }
+    &_img{
+        flex: none;
+        border-radius: 50%;
+        margin: 0 16px 0 0;
+        img{
+            border-radius: 50%;
+            width: 50px;
+        }
+    }
+    &_name{
+        @extend %flex;
+        .tk-project-tag{
+            margin: 0 0 4px;
+        }
+        h5{
+            margin: 0;
+            width: 100%;
+        }
+    }
+    &_budget{
+        flex: none;
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+        strong{
+            color:$text-light;
+            text-align: right;
+            font: 600 rem(15)/em(24,15) $body_font_family;
+            span{
+                display: block;
+                color: $heading-font-color;
+                font: 700 rem(22)/em(30,22) $body-font-family;
+            }
+            em{
+                font: 600 rem(15)/em(24,15) $body_font_family;
+                font-style: normal;
+            }
+        }
+    }
+    &_option{
+        margin-left: 30px;
+        position: relative;
+        & > a{
+            color: $heading-font-color;
+            display: block;
+            font-size: rem(34px);
+            &:hover{
+                color: $heading-font-color;
+            }
+        }
+    }
+}
+.tk-counterinfo{
+    box-shadow: inset 0px 1px 0px $lightest_2;
+    &_list{
+        margin: 0;
+        padding: 0;
+        @extend %flex;
+        list-style: none;
+        li{
+            width: 100%;
+            padding: 20px;
+            @extend %flex;
+            max-width: 33.33%;
+            list-style-type: none;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            align-items: center;
+            strong{
+                width: 62px;
+                display: block;
+                margin: 0 0 10px;
+                line-height: 62px;
+                font-size: rem(22);
+                border-radius: 50%;
+            }
+            span{
+                width: 100%;
+                display: block;
+                @extend %p15;
+                font-weight: 600;
+                color:$text-light;
+                padding-bottom: 4px;
+            }
+            h5{
+                margin-bottom: 0;
+            }
+            &:not(:last-child){box-shadow: inset -1px 0px 0px $lightest_2;}
+            
+        }
+    }
+    &_escrow{
+        color: #7357FB;
+        background: rgba(115, 87, 251, 0.1);
+    }
+    &_earned{
+        color: #FF6167;
+        background: rgba(255, 97, 103, 0.1);
+    }
+    &_remaining{
+        color: #D9A113;
+        background: rgba(217, 161, 19, 0.1);
+    }
+    &_carried{
+        color: #22C55E;
+        background: rgba(34, 197, 94, 0.1);
+    }
+    &_card{
+        color: #3377FF;
+        background: #D6E4FF;
+    }
+}
+.tk-activities-hourly{
+    .tk-counterinfo_list{
+        li{
+            max-width: 50%;
+            .tb-tooltip-data{
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                width: auto ;
+            }
+            &:nth-child(n+2){box-shadow:inset -1px 1px 0 #eeeeee; }
+        }
+    }
+}
+.tk-projectsinfo{
+    padding: 30px;
+    box-shadow: inset 0px 1px 0px $lightest_2;
+    &_title{
+        margin: 0 0 20px;
+        h4,p{
+            margin: 0;
+        }
+    }
+    &_list{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li{
+            line-height: inherit;
+            list-style-type: none;
+            & + li{margin-top: 10px;}
+        }
+    }
+}
+.tk-statusview{
+    padding: 19px;
+    border-radius: $radiusvtwo;
+    border: 1px solid $lightest_2;
+    @extend %transition;
+    &_head{
+        > p{
+            margin-bottom: 0;
+            @extend %p16;
+            color: $heading-font-color;
+        }
+    }
+    &_title{
+        flex: auto;
+        h5{
+            margin: 0 0 4px;
+        }
+        p{
+            margin: 0;
+        }
+    }
+    &_btns{
+        display: flex;
+        margin: 20px 0 0;
+        align-items: center;
+        a + a{margin-left: 20px;}
+        p{
+            margin: 0 0 0 20px;
+        }
+    }
+    &_alert{
+        padding: 19px;
+        margin: 20px 0 0;
+        border-radius: $radiusvtwo;
+        background: rgba(255, 97, 103, 0.1);
+        border: 1.5px solid rgba(255, 97, 103, 0.2);
+        span{
+            color: #FF6167;
+            display: flex;
+            font: 600 rem(15)/em(24,15) $body-font-family;
+            i{
+                margin-right: 10px;
+                font-size: rem(18);
+                line-height: inherit;
+            }
+        }
+        p{
+            background: #fff;  
+            margin: 10px 0 0;
+            padding:10px 20px;
+            font-size: rem(14);
+            line-height: em(24,14);
+            border-radius: $radiusvtwo;
+        }
+    }
+    &_tag{
+        align-self: center;
+        padding-left: 28px;
+    }
+    .tk-statusview_btns{
+        button{
+            + button{
+                margin-left: 20px;
+            }
+        }
+        span{
+            + span{
+                margin-left: 20px;
+            }
+        }
+        p{
+            margin: 0 0 0 20px;
+        }
+    }
+    &:hover{
+        box-shadow:$drop_shadows_lightest;
+        .tk-statusview_btns{
+            button{
+                color: $heading-font-color;
+                border-color: $theme-color;
+                background-color: $theme-color;
+            }
+        }
+    }
+}
+.tk-mile-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    > span{
+        display: block;
+        margin: 0 0 4px;
+        font: 700 rem(22)/em(30,22) $body-font-family;
+    }
+    .tk-statusview_tag{
+        padding-left: 0;
+        margin-bottom: 4px;
+        .tk-project-tag{
+            display: block;
+        }
+    }
+}
+.tk-btn{
+    &_decline,
+    &_approve{
+        padding: 9px 22px;
+        display: inline-block;
+        letter-spacing: 0.5px;
+        border-radius: $radiusvtwo;
+        border: 2px solid $lighter;
+        font: 700 rem(16)/em(26,16) $body-font-family;
+        cursor: pointer;
+    }
+    &_decline{
+        color: $heading-font-color;
+        &:hover{color: $heading-font-color;}
+    }
+    &_approve{
+        color: #fff;
+        background: $bright-green;
+        border: 2px solid $bright-green;
+        &:hover{
+            color: #fff;
+        }
+    }
+}
+.tk-popup_title{
+    border-radius: 4px 4px 0px 0px;
+}
+.modal-content{border-radius: $radiusvtwo;}
+.tk-projectsactivity{
+    box-shadow: inset 0px 1px 0px $lightest_2;
+    .tk-nav-tabs{
+        display: flex;
+        padding: 30px;
+        li{
+            margin: 0;
+            width: 50%;
+            flex: auto;
+            line-height: inherit;
+            button{
+                color:$text-light;
+                width: 100%;
+                display: flex;
+                padding: 14px 20px;
+                text-align: center;
+                align-items: center;
+                @extend %transition;
+                justify-content: center;
+                background: transparent;
+                box-shadow: inset 0px -1px 0px $lightest_2;
+                font: 600 rem(16)/em(26,16) $body-font-family;
+                &.active{
+                    color: $heading-font-color;
+                    box-shadow: inset 0px -3px 0px $theme-color;
+                }
+                i{
+                    font-size: 20px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+.tk-proactivity{
+    padding: 0 30px 30px;
+    .tb-submitreview{
+        box-shadow: none;
+    }
+    &_list{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        max-height: 568px;
+        overflow: hidden;
+        li{
+            display: flex;
+            list-style-type: none;
+            & + li{
+                margin-top: 30px;
+            }
+        }
+    }
+    &_img{
+        border-radius: 50%;
+        margin: 0 16px 0 0;
+        img{
+            max-width: 38px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    }
+    &_info{
+        flex: auto;
+        padding: 6px 0 0;
+        h6{
+            margin: 0 0 10px;
+            span{
+                color:$text-light;
+                margin-left: 10px;
+                font: 400 rem(15)/em(24,15) $body_font_family;
+            }
+        }
+        p{
+            margin: 0;
+            font-size: rem(15);
+            line-height: em(24,15);
+        }
+    }
+    &_file{
+        display: flex;
+        margin: 10px 0 0;
+        align-items: center;
+        background: $lightest;
+        border-radius: $radiusvtwo;
+        padding: 10px 20px 10px 10px;
+        font-size: rem(14);
+        line-height: em(24,14);
+        .tb-download-attachment{
+            cursor: pointer;
+            margin-left: auto;
+            color: $anchor-color;
+        }
+        img{
+            margin-right: 10px;
+            width: 22px;
+            height: 26px;
+        }
+    }
+}
+.tk-uploadfile-doc{
+    box-shadow: inset 0px 1px 0px $lightest_2;
+    padding: 30px;
+    .tk-upload-resume{
+        padding: 19px;
+    }
+    .tk-upload-list li span{
+        color: $heading-font-color;
+        word-break: break-word;
+        white-space: break-spaces;
+    }
+    .tk-form-btn{
+        justify-content: flex-end;
+        span{
+            font-size: rem(14);
+            line-height: em(24,14);
+            strong{font-weight: 600;}
+            & + span{
+                margin-left: 10px;
+            }
+        }
+    }
+}
+.tk-proinvoices{
+    padding: 0 30px 30px;
+    &_title{
+        display: flex;
+        margin: 0 0 20px;
+        align-items: center;
+        h5{
+            margin: 0;
+        }
+    }
+    &_sorting{
+        flex: none;
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+        & em{
+            display: block;
+            white-space: nowrap;
+            font: normal 700 rem(16)/em(26,16) $body-font-family;
+            & + .tk-select{
+                margin-left: 20px;
+            }
+        }
+    }
+    &_table,.tb-table{
+        margin: 0;
+        border: 0;
+        thead{
+            & > tr {
+                background: #F7F7F7;
+                & > th{
+                    background: unset;
+                    &:first-child{
+                        padding-left: 20px;
+                    }
+                    text-align: left;
+                    padding: 10px 5px;
+                    border: 0 !important;
+                    font: 700 rem(16)/em(26,16) $body-font-family;
+                    i {
+                        color: #999999;
+                        font-size: 14px;
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+        &>:not(:first-child){
+            border: 0;
+        }
+        tbody{
+            & > tr{
+                box-shadow: inset 0px -1px 0px $lightest_2 ;
+                &:first-child > td{
+                    border: 0;
+                }
+                & > td{
+                    &:first-child{
+                        padding-left:20px;
+                    }
+                    background-color: unset;
+                    border: 0;
+                    @extend %p15;
+                    text-align: left;
+                    padding: 13px 5px ;
+                    vertical-align: middle;
+                    a{
+                        font-weight: 600;
+                        color: $anchor-color;
+                    }
+                    p{
+                        margin: 0;
+                        max-width: 280px;
+                    }
+                    .tk-statusview_tag{
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+    }
+    .tk-pagination{
+        margin: 20px 0 0;
+    }
+}
+.tk-proinvoices_table.tb-table th:empty{
+    display: block !important;
+}
+.tk-declinereason{
+    .tk-popup-terms button{margin: 0;}
+}
+.tk-completed-proposal{
+    .tk-hire-freelancer-info{
+        width: 100%;
+        gap: 0 10px;
+        display: flex;
+        padding-left: 10px;
+        align-items: center;
+        justify-content: space-between;
+        .tk-blogviewdates {
+            padding-left: 5px;
+        }
+    }
+}
+.tk-complete-process{
+    border: 1.5px solid $lightest_2;
+    border-radius: $radiusvtwo;
+    box-shadow: $drop_shadows_lightest;
+    padding:28px 30px;
+    margin-bottom: 20px;
+    &_head{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 20px;
+    }
+    p{
+        margin-bottom: 0;
+        @extend %p14;
+        text-align: center;
+    }
+}
+.tk-complete-title{
+    strong{
+        width: 62px;
+        display: grid;
+        place-items: center;
+        height: 62px;
+        font-size: 1.375rem;
+        border-radius: 50%;
+    }
+}
+.tk-complete-title{
+    display: flex;
+    align-items: center;
+    h5{
+        margin-bottom: 0;
+        span{
+            display: block;
+            @extend %p13;
+            font-weight: 600;
+            color:$text-light;
+        }
+    }
+}
+.tk-counterinfo_carried{
+    margin: 0 10px 0 0;
+}
+.tk-counterinfo_card{
+    margin: 0 0 0 10px;
+}
+.text-right{
+    text-align: right;
+}
+.tk-completestatus_budget{
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    align-items: flex-end;
+    strong{
+        color:$text-light;
+        text-align: right;
+        font: 600 rem(15)/em(24,15) $body_font_family;
+    };
+    .tk-featureRating{
+        margin-top: 0;
+        .tk-featureRating__stars{
+            width: 150px;
+        }
+        span{
+            height: 26px;
+            line-height: 26px;
+            width: 70%;
+            &::after,
+            &::before{
+                font-size: 22px;
+                line-height: 22px;
+            }
+        }
+    }
+}
+.tk-btnarea-two{
+    display: flex;
+    align-items: center;
+    button{
+        width: 100%;
+        max-width: 278px;
+        + button{
+            margin-left: 20px;
+        }
+    }
+    .tb-formbtnlist{
+        li{
+            width: 100%;
+            max-width: 260px;
+            a{
+                width: 100%;
+            }
+            .tb-btn{
+                &:hover{
+                    background: transparent;
+                }
+            }
+            + li{
+                margin-left: 20px;
+            }
+        }
+    }
+}
+.tk-popup-content{
+    .tk-projectsstatus_head{
+        padding: 0 0 20px;
+    }
+}

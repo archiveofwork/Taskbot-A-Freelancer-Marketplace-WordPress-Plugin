@@ -1,0 +1,34 @@
+/** ====== Sub Categories components ====== **/
+.tk-subcategory{
+    .tk-category_list{
+        ul li{
+            max-width: 25%;
+        }
+    }
+    .tk-category_info{
+        display: flex;
+        text-align: left;
+        flex-direction: column;
+        align-items: flex-start;
+        h6{
+            margin: 0;
+        }
+        & > a{
+            align-items:center;
+            display: inline-flex;
+            margin-top: 10px;
+            color: $heading-font-color;
+            &:hover{
+                color: $anchor-color;
+            }
+        }
+    }
+    .tk-noti-counter{
+        padding: 0 6px;
+        font-size: 11px;
+        font-weight: 900;
+        margin-left: 8px;
+        line-height: 20px;
+        font-style: normal;
+    }
+}

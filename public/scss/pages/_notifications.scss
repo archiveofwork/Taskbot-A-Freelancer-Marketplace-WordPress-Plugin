@@ -1,0 +1,444 @@
+/** ====== Notification components ====== **/
+.tk-noti{
+    &_title{
+        margin: 0 0 30px;
+        h3{
+            margin: 0;
+            display: flex;
+            align-items:center;
+            .tk-noti-counter{
+                margin-left: 10px;
+            }
+        }
+    }
+    &-counter{
+        color: #FFFFFF;
+        padding: 0px 12px;
+        border-radius: 15px;
+        background-color: $red;
+        text-transform: uppercase;
+        font: 700 rem(12)/em(24,12) $heading-font-family;
+    }
+    &_icon{
+        flex: none;
+        width: 40px;
+        margin-top: 5px;
+        line-height: 38px;
+        position:relative;
+        margin-right: 16px;
+        text-align: center;
+        display: inline-block;
+        img{
+            width: 100%;
+            display: block;
+            max-width: 40px;
+            border-radius: 50%;
+        }
+        i{
+            color:$text-light;
+            display: block;
+            font-size: 16px;
+            border-radius:50%;
+            line-height: inherit;
+            background-color: #fff;
+            border: 1px solid $lighter;
+        }
+    }
+    &_wrap{
+        margin: 0;
+        padding: 0;
+        list-style:none;
+        h5{
+            margin: 0;
+            padding-bottom: 10px;
+        }
+        & > li{
+            list-style: none;
+        }
+        & > li:not(.tk-notiwrap_title){
+            display: flex;
+            padding: 20px;
+            flex-wrap: wrap;
+            border-radius: 10px;
+            background-color: #fff;
+            border: 1px solid $lightest_2;
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08);
+            .tk-notification{
+                width: 100%;
+            }
+            & ~ li{
+                margin-top: 10px;
+            }
+        }
+        & + .tk-noti_wrap{
+            margin-top: 20px;
+        }
+    }
+    &_new{
+        top: 0;
+        left: -3px;
+        width: 15px;
+        height: 15px;
+        cursor: pointer;
+        border-radius:50%;
+        position:absolute;
+        background-color: $red;
+        border: 4px solid #FFFFFF;
+    }
+    &_showall{
+        padding: 0 !important;
+        background-color: $clr-white;
+        border-radius: 0 0 10px 10px;
+        border-top: 1px solid $border-color;
+        a{
+            width: 100%;
+            padding: 10px;
+            display: block;
+            text-align: center;
+            color: $text-light!important;
+            font: 600 rem(16)/em(26,16) $body-font-family;
+            &:hover{
+                color: $anchor-color !important;
+            }
+        }
+    }
+    &_empty{
+        min-height: 300px;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        box-shadow: none !important;
+        padding: 40px 20px !important;
+        span{
+            font-size: 30px;
+            width: 70px;
+            color:$text-light;
+            margin: 0 0 10px;
+            line-height: 68px;
+            border-radius: 20px;
+            text-align: center;
+            display: inline-block;
+            border: 1px solid $lighter;
+            i{
+                display: block;
+                line-height: inherit;
+            }
+        }
+        em{
+            color:$text-light;
+            display: block;
+            font: normal 400 rem(15)/em(24,15) $body-font-family;
+        }
+    }
+}
+.tk-notiwrap_title ~ .tk-notiwrap_title{
+    h5{padding: 0;}
+}
+.tk-notification{
+    display: flex;
+    text-align: left;
+    align-items: flex-start;
+    &-info{
+        p{
+            margin: 0;
+            color: $heading-font-color;
+            word-break: break-word;
+            span{
+                font-weight: 600;
+            }
+        }
+        em{
+            color: #999999;
+            display: block;
+            font: normal 400 rem(14)/em(24,14) $body-font-family;
+        }
+        strong{
+            font-weight: 600;
+        }
+    }
+    & ~ .tk-viewtask {
+        margin-top: 10px;
+    }
+}
+.tk-admincomment{
+    margin: 10px 0 0 !important;
+    strong{
+        margin: 0;
+        @extend %h6;
+        display: block;
+    }
+}
+.tk-viewtask{
+    flex: none;
+    margin-left: auto;
+    padding-left: 20px;
+    align-self: center;
+}
+.jconfirm-content,
+.tk-stickynoti{
+    &_timer{
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        background-color: $lightest_2;
+        em{
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            position:absolute;
+            background-color: $bright-green;
+        }
+    }
+    .tk-notification-info{
+        display: flex;
+        flex-wrap: wrap;
+        .tk-viewtask{
+            width: 100%;
+            text-align: right;
+        }
+        p{
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+    .tk-viewtask a{
+        display: inline-block;
+        font: 600 rem(15)/em(24,15) $body-font-family;
+        i{
+            font-weight: 600;
+            margin-left: 8px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+}
+.tk-stickynoti{
+    top: 30px;
+    right: 20px;
+    padding:14px;
+    display: flex;
+    position: fixed;
+    max-width: 350px;
+    flex-wrap: wrap;
+    background-color: #fff;
+    box-shadow: $drop_shadows_light;
+    border-radius: 0px 0px 10px 10px;
+}
+// Notification Dropdown 
+.tk-notidropdowns{
+    z-index: 9;
+    position:relative;
+    .tk-noti_wrap{
+        top: 100%;
+        right: -30px;
+        width: 416px;
+        display: none;
+        margin-top: 10px;
+        position:absolute;
+        background: #FFFFFF;
+        border-radius: 10px;
+        border: 1px solid $lightest_2;
+        box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.04), 0px 3px 16px rgba(0, 0, 0, 0.04);
+        &:after,
+        &:before{
+            top: -9px;
+            right: 30px;
+            width: 21px;
+            content: '';
+            height: 9.5px;
+            position:absolute;
+            z-index: 1;
+            background-color: #fff;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+        &:after{
+            z-index: 0;
+            top: -11px;
+            width: 24px;
+            height: 10px;
+            right: 28.5px;
+            z-index: 0;
+            background-color: $lightest_2;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+        h5{
+            padding: 0;
+            display: flex;
+            align-items: center;
+            .tk-noti-counter{
+                margin-left: 10px;
+            }
+        }
+        li:not(.tk-notiwrap_title){
+            margin: 0;
+            padding: 0;
+            border: 0;
+            flex-wrap: wrap;
+            box-shadow: none;
+            border-radius: 0;
+            padding: 16px 20px;
+            list-style-type: none;
+            ~ li{
+                border-top: 1px solid $lightest_2;
+            }
+        }
+        .tk-noti_empty{
+            min-height: auto;
+        }
+        & > li:not(.tk-noti-unread){
+            background-color: transparent !important;
+        }
+        .tk-notiwrap_title{
+            display: flex;
+            padding: 16px 20px;
+            align-items: center;
+            box-shadow: inset 0px -1px 0px #EEEEEE;
+            .tk-noti-counter{
+                margin-left: 10px;
+            }
+        }
+    }
+    .tk-notification-info p{
+        font: 400 rem(15)/em(24,15) $body-font-family;
+    }
+    .tk-viewtask{
+        width: 100%;
+        display: flex;
+        text-align: right;
+        justify-content: flex-end;
+        a{
+            color: $anchor-color;
+            display: inline-block;
+            font: 600 rem(15)/em(24,15) $body-font-family;
+            &:hover{color: $anchor-color;}
+            i{
+                font-weight: 600;
+                margin-left: 8px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+    }
+    .tk-admincomment{
+        padding: 15px;
+        font: 400 rem(15)/em(24,15) $body-font-family;
+        border: 1px solid $lighter;
+        margin: 20px 0 0 !important;
+        background-color: $lightest;
+    }
+    .tk-noti-unread .tk-admincomment{background: #fff;}
+}
+.tb-notify-list{
+    margin: 0;
+    overflow: auto;
+    max-height: 617px;
+    padding:0;
+    &::-webkit-scrollbar-track {
+        background-color: #eee;
+    }
+    &::-webkit-scrollbar{
+        width: 5px;
+    }
+    &::-webkit-scrollbar-thumb{
+        border: 0;
+        background-color: $theme-color;
+    }
+}
+.jconfirm-content .tk-admincomment {
+    padding: 15px;
+    text-align: left;
+    font: 400 0.9375rem/1.6em "Open Sans", sans-serif;
+    border: 1px solid #DDDDDD;
+    margin: 20px 0 0 !important;
+    background-color: #F7F7F7;
+}
+.tb-navbarnav > li.tb-menu-notifications{
+    padding: 0 22px 0 10px;
+}
+.tb-menu-notifications .tk-noti-unread{
+    background-color: $lightest !important;
+    .tk-noti_new{border-color: $lightest;}
+}
+.tk-main-notiwrap{
+    display: flex;
+    align-items: center;
+    .tk-notidropdowns{
+        margin: 0;
+        display: flex;
+        align-items: center;
+        list-style: none;
+        padding-left: 0;
+        & > a{
+            display: block;
+            font-size: 22px;
+            position: relative;
+            color: $secondary-color;
+        }
+        li{
+            line-height: inherit;
+            list-style-type: none;
+            padding: 0 22px 0 10px;
+            &+li{
+                padding-left: 3px;
+                padding-right: 22px;
+            }
+        }
+    }
+    .tb-menu-notifications {
+        display: block;
+        padding: 0 22px 0 10px;
+    }
+}
+.tk-headerchatbtn{
+    a{
+        display: block;
+        position: relative;
+        color: $secondary-color;
+        i{
+            font-size: 22px;
+        }
+    }
+}
+.tk-headerv2{
+    .tk-headerchatbtn a,
+    .tk-notidropdowns > a{
+        color: #fff;
+    }
+}
+.tk-headerchatbtn,
+.tb-inbox,
+.tk-nav-icons{
+    span{
+        display: none;
+    }
+}
+.tb-noti-status{
+    gap: 0 20px;
+    display: flex;
+    margin-top: 4px;
+    align-items: center;
+    em{
+        font-size: rem(12);
+        line-height: em(18,12);
+    }
+    a{
+        margin-left: auto;
+        color: #999999;
+        text-decoration: underline;
+        &:hover{
+            color: $anchor-color;
+            text-decoration: underline;
+            em{
+                color: $anchor-color;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+.tk-notification-listing-wrap{
+    .tb_read_notification{display: none !important;}
+}

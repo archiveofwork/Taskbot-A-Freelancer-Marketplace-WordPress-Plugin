@@ -1,0 +1,82 @@
+/** ====== Categories components ====== **/
+.tk-categoriestab{
+    h5{
+        margin: 0;
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: rem(16);
+        line-height: em(26,16);
+        li{
+            display: flex;
+            margin-top: 10px;
+            line-height: inherit;
+            list-style-type: none;
+            &.tb-active a{color: $anchor-color;}
+        }
+        a{
+            color: $heading-font-color;
+            display: inline-block;
+            &:hover{color: $anchor-color;}
+        }
+    }
+}
+.tk-category{
+    &_title{
+        margin: 0 0 30px;
+        h5{margin: 0;}
+        h3{margin: 0;}
+    }
+    
+    .tk-category_list .tk-category_item{
+        max-width: 33.33%;
+    }
+    &_item{
+        @extend %flex;
+        &:hover{
+            .tk-category_img img{
+                opacity: 0.6;
+            }
+        }
+    }
+    &_img{
+        margin: 0;
+        border-radius:4px;
+        background-color: #000;
+        img{
+            width: 100%;
+            display: block;
+            @extend %transition;
+            border-radius: $radius !important;
+        }
+    }
+    &_info{
+        margin: 20px 0 0;
+        h5{margin: 0;}
+        span{
+            color:$text-light;
+            display: block;
+            @extend %p16;
+        }
+    }
+}
+.tk-subcategory{
+    .tk-category_list .tk-category_item{
+        max-width: 25%;
+    }
+}
+.tk-category_list{
+    .tk-btn-wrapper{
+        margin: 0;
+        width: 100%;
+        padding: 15px 12px;
+    }
+}
+.tk-category_item{
+    .tk-bestservice{
+        margin: 0;
+        background-color: transparent;
+    }
+}

@@ -1,0 +1,228 @@
+/** ====== Earning components ====== **/
+.te-payoutmethod{
+    width: 100%;
+    > li{
+        > input{
+            &:checked + div{
+                border-color: #ddd;
+                background-color: #fff;
+                label{
+                    .te-payoutmode{
+                        span{
+                            color: $text-gray;
+                        }
+                    }
+                    &:before,
+                    &:after{
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                    &:before{
+                        background-color: #00cc8d;
+                        border-color: #00cc8d;
+                    }
+                }
+            }
+            + div{
+                label{
+                    &:before,
+                    &:after{content: '';}
+                }
+            }
+        }
+    }
+    .te-radiobox{
+        list-style-type: none;
+        input[type=radio] {
+            display: none;
+            &:checked {
+                & + .payoutlists{
+                    border-color: #ddd;
+                    background-color: #fff;
+                    .te-payoutmode{
+                        span{
+                            color: $text-gray;
+                        }
+                    }
+                }
+            }
+        }
+        & + .te-radiobox{
+            margin-top: 10px;
+        }
+    }
+    .payoutlists{
+        @extend %flex;
+        align-items: center;
+        padding: 18px 0;
+        cursor: pointer;
+        &:before{position: static;}
+        &:after{
+            top: auto;
+            left: auto;
+            margin-left: 5px;
+        }
+    }
+}
+.te-payoutmode{
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 15px;
+    span{
+        display: inline-block;
+        margin: 0 0 0 10px ;
+        font: 600 rem(14)/em(24,14) $heading-font-family;
+        color: #999;
+    }
+}
+.te-paymetdesc{
+    padding-top: 13px;
+    p{
+        color: #999;
+        margin:0;
+        em{
+            display: block;
+            > span{
+                display: block;
+                > span{
+                    display: inline-block;
+                    color: #ddd;
+                    font-style: normal;
+                    padding: 0 5px;
+                }
+            }
+        }
+    }
+    a{display: inline-block;}
+}
+.te-norecordsv2{
+    padding: 122px 0 118px;
+    background-color: #fff;
+    border-radius: 0 0 $radius $radius;
+    @extend %border;
+    .te-sectiontitle{
+        padding-top: 38px;
+        h2 {
+            font-size: rem(22);
+            line-height: em(30,22);
+            width: 80%;
+        }
+    }
+}
+.te-steppaypal{
+    transform: translateX(100%);
+    @extend %transition;
+    display: none;
+    .te-themeform{
+        fieldset{
+            margin: 0;
+            .form-group{
+                margin: 0;
+                width: 100%;
+                & ~ .form-group {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+.te-paybtn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 13px;
+}
+.te-btnplain{
+    min-width: auto;
+    background: transparent;
+    color: #999;
+    &:hover{
+        color: inherit;
+    }
+}
+.te-payouthistory{
+    margin-top: 40px;
+}
+.te-paypaltitle,
+.te-stripetilte,
+.te-banktitle{display: none;}
+.te-radioholder{
+    @extend %flex;
+    @extend %border;
+    background-color: #fcfcfc;
+    @extend %border-radius4;
+    padding-left: 20px;
+    width: 100%;
+    > a{
+        margin-left: auto;
+        font-size: 12px;
+        color: $text-gray;
+        @extend %flex;
+        align-items: center;
+        padding: 0 20px;
+    }
+}
+.te-additionolinfoholder{overflow: hidden;}
+.te-payoutmethodholder{
+    @extend %transition;
+    .te-radiobox{
+        display: flex;
+    }
+}
+.te-slide{
+    .te-radioholder,
+    > .te-paymetdesc{
+        transform: translateX(120%);
+        display: none;
+    }
+    .te-payoutmethod .te-radiobox + .te-radiobox{margin-top: 0;}
+}
+.te-slidecontent{
+    transform: translateX(0);
+    display: block;
+} 
+.te-payoutmethodwrap{
+    h5{display: none;}
+    .te-banktitle{display: block;}
+}
+.te-graph{
+    @extend %border;
+    border-radius: $radius;
+    background-color: #fff;
+    height: 100%;
+    > div{height: 100%;}
+}
+.te-tooltiptable{
+    width: 150px;
+    padding: 15px;
+    height: 100%;
+    border-radius: $radius;
+    margin: 0;
+    @extend %themeboxshadow;
+    thead{
+    .te-toolsummery{
+        border: 0;
+        font: 400 rem(14)/em(22,14) $heading-font-family;
+        text-align: left;
+        color: $heading-font-color;
+        padding: 15px 15px 3px;
+    }
+}
+    tbody{
+        padding: 0 0 15px;
+        display: block;
+        .te-toolsummeryinfo{
+            border: 0;
+            td{
+                padding: 0 15px;
+                border: 0;
+                text-align: left;
+                color: $secondary-color;
+                font: 400 rem(13)/em(22,13) $body-font-family;
+                & + td{
+                    padding-top: 15px;
+                }
+            }
+        }
+    }
+}

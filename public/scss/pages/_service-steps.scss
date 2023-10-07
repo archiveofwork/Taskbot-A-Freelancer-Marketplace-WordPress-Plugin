@@ -1,0 +1,862 @@
+.tb-addservice-steps{
+    @extend %flex;
+    max-width: 730px;
+    margin: 0 auto 40px;
+    list-style: none;
+    padding: 0;
+    li{
+        width: 25%;
+        list-style-type: none;
+        border-bottom: 3px solid #f7f7f7;
+    }
+}
+.tb-addservice-step{
+    padding:0 20px 10px 0;
+    &.tb-addservice-step-fill{
+        position:relative;
+        &:after{
+            bottom:-3px;
+            width: 100%;
+            height: 3px;
+            position: absolute;
+            content: '';
+            border-radius:1.5px;
+            background-color: #63d594;
+        }
+        & span,
+        & strong{
+            color: $heading-font-color;
+        }
+    }
+    strong{
+        display: block;
+        color: $text-light;
+        font:700 rem(15)/em(18,15) $heading-font-family;
+        & i{color: #63d594;}
+    }
+    span{
+        display: block;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: em(18,15);
+        color: $text-light;
+    }
+}
+.tb-addservice-title{
+    margin: 0 0 26px;
+    padding:20px 20px 20px 30px;
+    background: #f7f7f7;
+    @extend %flex;
+    align-items: center;
+    border-radius: $radius;
+    & h2{
+        margin: 0;
+        font-size: 26px;
+    }
+}
+.tb-savebtn{
+    @extend %flex;
+    padding-left:20px;
+    margin-left: auto; 
+    align-items:center;
+    span,
+    em{
+        max-width: 200px;
+        text-align: right;
+        font-size: rem(14);
+        line-height: em(18,14);
+        color: $heading-font-color;
+        & + .tb-btn{margin-left: 20px; }
+    }
+}
+.tb-addservice-subtitle{
+    clear: both;
+    margin: 0 0 28px;
+    max-width: 550px;
+    h3{
+        font-size: rem(18);
+        line-height: em(26,18);
+        margin-bottom: 4px;
+    }
+    p{margin: 0;}
+    & + .tb-addtolist-wrap{padding-top: 0;}
+}
+.tb-addtolist-wrap{
+    flex: auto;
+    margin: 0 0 19px !important;
+    .tb-addtolist-head{
+        flex: auto;
+    }
+}
+.tb-addtolist-head{
+    @extend %flex;
+    .tb-checkbox{
+        margin: 0 0 10px;
+        label span{
+            display: block;
+            & i{
+                color: $text-light;
+                font-size: rem(13);
+            }
+        }
+    }
+}
+.tb-uploadbar{
+    width: 100%;
+    margin: -5px;
+    flex: auto;
+    display: flex;
+    align-items:center;
+    &__url{
+        @extend %flex;
+        align-items:center;
+        position:relative;
+        & label{
+            margin: 0;
+            right: 20px;
+            cursor: pointer;
+            position:absolute;
+            color: $anchor-color;
+            & + input{padding-right: 100px;}
+        }
+    }
+    &__url,
+    &__group{
+        padding:5px;
+        flex: auto;
+        &.tb-addbtn{
+            flex:none;
+        }
+        label{
+            input[type="file"]{
+                display: none;
+            }
+        }
+    }
+}
+.tb-uploadbar-list{
+    list-style: none;
+    width: 100%;
+    padding:0;
+    li{
+        background: #f7f7f7;
+        list-style-type: none;
+        border-radius: $radius;
+        border:1px solid $border-color; 
+        margin-top: 10px; 
+        & > a{
+            font:700 rem(15)/em(18,15) $heading-font-family;
+        }
+        & .tb-actionbtn{
+            padding:11px;
+            margin-left: auto;
+        }
+    }
+}
+.tb-uploadbar-content{
+    display: flex;
+    align-items:center;
+    width: 100%;
+    > a{
+        font: 700 rem(15) $heading-font-family;
+        color: $heading-font-color;
+    }
+}
+.tb-bar-handle{
+    width: 37px;
+    cursor: pointer;
+    line-height: 48px;
+    text-align: center;
+    color: $text-light;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+}
+.tb-actionbtn{
+    @extend %flex;
+    flex: none;
+    & a{
+        display: inline-block;
+        border-radius:$radius;
+        width: 26px;
+        color: #fff;
+        line-height: 26px;
+        text-align: center;
+        &:focus,
+        &:hover{
+            color: #fff;
+        }
+        & + a{margin-left: 10px;}
+    }
+}
+.tb-addlink{background: #0075d6;}
+.tb-trashlink{background: #ff5b00;}
+.tb-pricingitems{
+    width: 100%;
+    background: #fff;
+    @extend %flex;
+    .select2-container{min-height: auto;}
+    li{
+        width: 25%;
+        list-style-type: none;
+        &:first-child{
+            .tb-pricingitems__content{border-radius: $radius 0 0 $radius;}
+            .tb-pricingtitle{
+                &:first-child{
+                    margin-bottom: auto;
+                }
+            }
+        }
+        
+        ~ li{
+            .tb-pricingitems__content{
+                border-left: 0;
+                border-radius: 0;
+            }
+            .tb-pricingtitle > h6:first-child{display: none;}
+        }
+        & > .tb-select .form-control{border: 0;}
+        & > .form-group{
+            padding:0;
+            & input{border: 0}
+        }
+    }
+    .tb-select-half{
+        .tb-pricingtitle{display: none;}
+    }
+}
+.tb-pricingtitle{
+    padding: 12.5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ~ div{border-top: 1px solid $border-colorv2;}
+    .tb-onoff{
+        width: 100%;
+        label{
+            justify-content: space-between;
+            span{
+                font: 400 rem(14)/em(23,14) $body-font-family;
+                color: $secondary-color;
+                padding: 0;
+            }
+        }
+    }
+    > h6{
+        line-height: em(23,14);
+        color: $secondary-color;
+        font-family: $body-font-family;
+        font-weight: 400;
+        margin: 0;
+    }
+}
+.tb-pricingswitch{
+    padding-top: 13.5px;
+    padding-bottom: 13.5px;
+}
+.tb-serviceformwrap{
+    .form-group{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        margin-bottom: 15px;
+        label{
+            color:$heading-font-color;
+            font: 700 rem(15)/em(25,15) $heading-font-family;
+            margin-bottom: 1px;
+        }
+    }
+    div.form-group:last-child{
+        margin: 0;
+    }
+}
+.tb-pricingcontainer{
+    display: flex;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.tb-pricingitems__content{
+    @extend %flex;
+    border:1px solid $border-colorv2;
+    @extend %border-radius4;
+}
+.tb-pricingitemsoverlay {
+    position: relative;
+    overflow: hidden;
+    pointer-events: none;
+    &:after{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        background: rgb(252, 252 ,252);
+        opacity: 0.8;
+        z-index: 2;
+        border-radius: 0 $radius $radius 0;
+        -webkit-border-radius: 0 $radius $radius 0;
+    }
+}
+.tb-overleymodel{
+    display: flex;
+    background: #fff;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 50px;
+    text-align: center;
+    border: 1px solid #eee;
+    position: absolute;
+    z-index: 2;
+    max-width: 350px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 60px;
+    @extend %themeboxshadow ;
+    @extend %border-radius4;
+   > span{
+        display: block;
+        color: #004aff;
+        font-size: 30px;
+        margin: 0 0 16px;
+    }
+    h5{
+        margin: 0 0 11px;
+    }
+    p{
+        margin: 0 0 20px ;
+    }
+}
+.btn-lock{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    font: 700 rem(14px)/em(40px,14px) $heading-font-family;
+    color: #fff;
+    padding: 0 20px;
+    min-width: 110px;
+    background-color: #ff5b00;
+    border: 0;
+    border-radius: $radius;
+    span{
+        font-size: 12px;
+        margin: 0 0 0 5px;
+    }
+}
+.tb-lockbtn {
+    a:hover{
+        color: #fff;
+    }
+}
+.tb-additionalservice{
+    @extend %flex;
+    padding: 25px 24px 29px;
+    background-color: #f7f7f7;
+    border: 1px solid $border-colorv2;
+    border-radius: $radius;
+    .form-group{
+        margin-bottom: 20px;
+        &.tb-additionalservice__btn{margin-bottom: 0;}
+    }
+    &__title{
+        h5{
+            margin-bottom: 0;
+            font-size: rem(18);
+            line-height: em(26,18);
+        }
+    }
+    &__btn{
+        display: flex;
+        padding-top: 7px;
+    }
+}
+.tb-uploadbar-listholder{
+    padding-top: 0;
+    .tb-uploadbar-list{
+        margin: 0;
+        li{
+            &:first-child{margin-top: 0;}
+        }
+        .tb-uploadbar-content{
+            > h6{
+                margin-bottom: 0;
+                line-height: em(26,16);
+                font-size: rem(15px);
+                em{
+                    font-weight: 400;
+                    font-style: normal;
+                }
+            }
+        }
+    }
+}
+.tb-uploadbarappend{
+    margin: 0;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    .form-control{
+        border-radius: 0;
+        height: 48px;
+        border: 0;
+    }
+    .tb-uploadbar__url{
+        padding: 0;
+        border-left: 1px solid #ddd;
+    }
+    .tb-uploadbar__group{
+        padding: 0;
+    }
+}
+.tb-uploadbar__group{
+    .form-control{
+        font-size: 15px;
+    }
+}
+.tb-checked{background-color: #63d594;}
+.tb-uploadbar-list{
+    margin: 0;
+    .tb-uploadfile-list{display: none;}
+}
+.tb-select-half .select2-container--default .select2-selection--single{border: 0;}
+.tb-postservice{
+    > .row{justify-content: center;}
+    .select2-container--default .select2-selection--single,
+    .form-control{
+        border-color: $border-color;
+        &:hover{
+            border-color:#ddd;
+        }
+    }
+}
+.tb-postservice-c{
+    .tb-addservice-subtitle{margin-bottom: 24px;}
+}
+.tb-postservicev2{
+    &.tb-postservice > .row > [class^=col-]{
+        padding-right: 15px;
+        padding-left: 15px;
+        padding-top: 0;
+        padding-bottom: 0;
+        background-color: transparent;
+    }
+    .tb-addservice-steps{
+        background-color: #fff;
+        max-width: initial;
+        margin: 0;
+        margin-left: 0;
+        border-radius: $radius $radius 0 0;
+        li{
+            position: relative;
+            border-bottom: 1px solid #eee;
+            &:not(:last-child){
+                &:after{
+                    content: '';
+                    position: absolute;
+                    right: -12px;
+                    top: 0;
+                    background: url(../images/right-arrow.png) no-repeat;
+                    height: 100%;
+                    width: 12px;
+                }
+            }
+            &:not(:first-child){
+                .tb-addservice-step{
+                    span{padding-left: 34px;}
+                }
+            }
+        }
+    }
+    .tb-addservice-step{
+        padding: 0;
+        a{display: block;}
+        span{padding: 26px 30px;}
+        &.tb-addservice-step-fill:after{
+            left: 0;
+            bottom: 0;
+        }
+    }
+    .tb-themeform{
+        background-color: #fff;
+        padding: 30px;
+        .form-group{
+            &:first-child{
+                .tb-postservicetitle{padding-top: 1px;}
+            }
+        }
+    }
+    .tb-savebtn span{max-width: initial}
+    .tb-postservicebtn{
+        padding-top: 21px !important;
+        margin-bottom: 0;
+        margin-top: 13px;
+    }
+    &.tb-postservice-c{
+        .tb-themeform{padding-top: 35px;}
+    }
+    .tb-uploadarea{
+        width: 100%;
+        padding:0;
+        border: 0;
+    }
+    .tb-uploadbar-content{
+        position: relative;
+        padding: 11px 29px 11px 30px;
+        cursor: pointer;
+        &[aria-expanded="true"]{
+            &::after{
+                transform: rotate(90deg);
+            }
+        }
+        &::before{
+            content: "\f31e";
+            font-family: "Font Awesome 5 Free";
+            color: #999;
+            font-size: 14px;
+            padding-right: 20px;
+            font-weight: 700;
+        }
+        &::after{
+            content: "\e930";
+            font-family: icomoon;
+            color: $text-gray;
+            font-size: 20px;
+            margin-left: auto;
+            @extend %transition;
+        }
+    }
+    .tb-uploadbar-listholder .tb-uploadbar-list .tb-uploadbar-content > h6{
+        line-height: em(23,15);
+    }
+}
+.tb-addservice-step-complete{
+    position: relative;
+    @extend %flex;
+    align-items: center;
+    span{color: $heading-font-color}
+    &:after{
+        content: '\f058';
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        position: absolute;
+        right: 20px;
+        color: #63d594;
+        font-size: 15px;
+    }
+}
+.tagify{
+    @extend %flex;
+    align-items: center;
+    height: auto;
+    padding: 4px 15px 4px 4px;
+    &.tb-tagscroll{
+        height: auto;
+        padding: 3px 20px 8px 15px;
+        overflow-y: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {display: none;}
+    }
+    &__tag{
+        font: 400 rem(12) $heading-font-family;
+        border-radius: 15px;
+        margin: 5px 0 0 5px;
+        background-color: #f7f7f7; 
+        color: $heading-font-color;
+        &.tagify--notAllowed:not(.tagify__tag--editable) div{
+            & > span{
+                opacity: 1;
+            }
+            &::before{
+                display: none !important;
+            }
+        }
+        > div{
+            border-radius: 15px;
+            padding: 5px 10px 5px 16.1px;
+            background-color: #f7f7f7;
+            color: $heading-font-color;
+            &:before{box-shadow: none;}
+        }
+        &:hover {
+            background-color: $theme-color;
+            .tagify__tag__removeBtn{color: $heading-font-color;}
+            &:not([readonly]) div:before{box-shadow: none;}
+            > div {
+                background-color: $theme-color;  
+            }
+        }
+        + .tagify__input{padding: 0 0 0 10px;}
+    }
+    &__input{
+        color: $text-gray;
+        min-width: 1px;
+        padding: 0 0 0 5px;
+        margin: 5px 0 0;
+        line-height: 30px;
+        &:empty::before,
+        &:focus:empty::before{
+            color: $text-gray;
+            line-height: 30px;
+            height: 30px;
+        }
+    }
+    .tagify__tag-text{
+        font: 400 rem(13) $body-font-family;
+        line-height: em(20,13);
+    }
+}
+.tagify__tag__removeBtn{
+    font-size: 10px;
+    color: $text-gray;
+    line-height: 1;
+    width: auto;
+    height: auto;
+    margin: 0;
+    border-radius: 0;
+    @extend %transition;
+    padding: 5px 16.1px 5px 0;
+    &:after{
+        font-size: 14px;
+        content: "\ea15";
+        font-family: icomoon;
+    }
+    &:hover{
+        color: #fff;
+        background: transparent;
+        +div{
+            >span{opacity: 1;}
+            &:before{box-shadow: none !important;} 
+        }
+    }
+}
+.tb-postservicebtn{
+    position: relative;
+    margin-top: 11px;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -25px;
+        border-top: 1px solid #eee;
+        width: calc(100% + 50px);
+    }
+}
+.tb-postserviceholder{width: 100%;}
+.tb-postservicetitle{
+    @extend %flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 6px 0 11px;
+    h4{
+        margin: 0;
+        span{
+            font: 400 rem(16) $body-font-family;
+            color: $text-gray;
+        }
+    }
+}
+.tb-addon{
+    margin: 0;
+    li{
+        list-style: none;
+        display: flex;
+        ~ li{padding-top: 10px;}
+    }
+    &__content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #f7f7f7;
+        padding: 9px 20px;
+        width: 100%;
+        border-radius: $radius 0 0 $radius;
+        h5{margin: 0;}
+        .tb-checkbox{
+            padding-right: 20px;
+            label{
+             @extend %h6;
+             color: $heading-font-color;
+             &:before{
+                left: -1.5px;
+             }
+            }
+        }
+    }
+    &__right{
+        font-size: 16px;
+        color: $anchor-color;
+        width: 52px;
+        min-height: 50px;
+        @extend %flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f7f7f7;
+        border-radius: 0 $radius $radius 0;
+        border-left: 2px solid #fff;
+        flex: none;
+        &:hover{ color: $anchor-color;}
+    }
+}
+.tb-addonpopup{
+    .tb-formlogin{
+        .form-group{
+            align-items: flex-start;
+            &.tb-combine-group{padding: 0;}
+        }
+    }
+    .tb-savebtn{
+        padding: 0;
+        span,
+        em{
+            font-style:normal;
+            max-width: initial;
+            color: $heading-font-color;
+            & + .tb-btn{
+                margin-left: 30px;
+            }
+        }
+    }
+}
+.tb-postserviceformbtn{
+    position: relative;
+    margin-top: 11px;
+    &.form-group{
+        padding-top: 20px !important;
+        margin-bottom: -10px;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -25px;
+        height: 1px;
+        width: calc(100% + 50px);
+        background-color: #eee;
+    }
+}
+.tb-uploadbox{
+    background-color: #f7f7f7;
+    position: relative;
+    @extend %flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+    > i{
+        width: 70px;
+        height: 70px;
+        border: 2px solid #ddd;
+        border-radius: 50%;
+        font-size: 26px;
+        color: #ddd;
+        @extend %flex;
+        align-items: center;
+        justify-content: center;
+    }
+    svg{
+        width: calc(100% - 2px);
+        height: calc(100% - 2px);
+        position: absolute;
+        overflow: visible;
+        top: 1px;
+        left: 1px;
+        rect{
+            stroke-width: 2;
+            stroke: #ddd;
+            width: 100%;
+            height: 100%;
+            fill: none;
+            stroke-dasharray: 12;
+        }
+    }
+    > em{
+        position: relative;
+        z-index: 1;
+    }
+}
+/** ====== Service Steps components ====== **/
+.tb-videolink{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+    @extend %border;
+    border-radius: $radius;
+    > em{
+        flex: none;
+        label{
+            display: inline;
+            margin: 0;
+            cursor: copy;
+            color: $anchor-color;
+            input{display: none;}
+        }
+    }
+    .form-control{
+        border: 0;
+        &:focus , &:hover{
+            box-shadow: none;
+        }
+    }
+}
+.tb-uploadcontent{
+    background-color: #fff;
+    padding: 30px;
+    @extend %border-top;
+    .tb-titleinput{
+        align-self: flex-start;
+        padding: 17px 10px 17px 0;
+        flex: 0 0 159px;
+    }
+    textarea.form-control{height: 150px;}
+    .tb-dhbbtnarea{
+        margin-left: 0;
+        justify-content: flex-start;
+        width: 100%;
+        .tb-btn{height: 40px;}
+        .tb-btnvthree{
+            min-width: 120px;
+            margin-right: auto;
+        }
+    }
+}
+.tb-addon{
+    padding:0
+}
+.tb-custom-fields{
+    margin: 0;
+    list-style: none;
+    li{
+        ~ li{margin-top: 10px;}
+        list-style-type: none;
+    }
+    .tb-pricingitems__content{
+        flex-wrap: nowrap;
+        flex-direction: inherit;
+        border-radius: $radius !important;
+        border: 1px solid $border-color !important;
+        .tb-pricing-input{
+            width: auto;
+            padding: 10px;
+        }
+    }
+    .tb-pricing-input,
+    .tb-pricingtitle{
+        input{height: 40px;}
+    }
+    .tb-remove-field{padding: 10px;}
+    .tb-trashlink{
+        color: #fff;
+        width: 30px;
+        font-size: 16px;
+        line-height: 30px;
+        text-align: center;
+        border-radius: $radius;
+        cursor: pointer;
+    }
+}

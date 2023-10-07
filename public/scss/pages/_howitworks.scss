@@ -1,0 +1,76 @@
+/** ====== How it Works components ====== **/
+.tk-howitwork{
+  > .row{
+    align-items: center;
+    
+    &:nth-child(even){flex-direction: row-reverse;}
+  }
+  .tk-main-title-holder{padding: 0;}
+}
+.tk-howitwork-section{
+  .tk-main-section{
+    padding: 0;
+  }
+}
+.tk-reverse-direction{
+  > .row{
+    flex-direction: row-reverse;
+  }
+}
+  .tk-howitwork{
+    .tk-maintitle{
+      max-width: 455px;
+    }
+  }
+  .tk-startedtoday-section{
+    background-color: $dark;
+    .tk-main-title-holder{padding-bottom: 0;}
+    .tk-maintitle h5,
+    .tk-main-description p{color: $clr-white;}
+    .tk-maintitle h2{color: $theme-color;}
+  }
+  .tk-mainlink{
+    padding-top: 20px;
+    a{
+      display: inline-flex;
+      align-items: center;
+      color: $anchor-color;
+      span{
+        display: inline-block;
+        margin:  0 10px 0 0 ;
+      }
+    } 
+  }
+  .tk-starrate{
+    padding: 22.5px 25px;
+    box-shadow: $drop_shadows_medium;
+    background: $clr-white;
+    max-width: 270px;
+    border-radius: 60px;
+    margin-top: 20px;
+    @extend %flex;
+    align-items:center ;
+    flex-wrap: nowrap;
+    position: relative;
+    span{
+      font-size: 24px;
+      color: $theme-color;
+      vertical-align: top;
+      margin:  0 8px 0 0;
+      display: inline-block;
+    }
+    img{
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+  .tk-howitworks-v3 .tk-main-title-holder{
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .tk-reverse-direction{
+    .row{
+      flex-direction: row-reverse;
+    }
+  }

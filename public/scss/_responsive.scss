@@ -1,0 +1,3702 @@
+/** ====== Responsive components ====== **/
+@media (max-width:1680px){
+    .tb-contentbanner .tb-inputappendin,
+    .tb-contentbanner__title p{width: auto;}
+    .tb-contentbanner{padding-right: 0;}
+    .tb-homebanner{.pr-0{padding-right: 15px !important;}}
+    .tb-bannerslider{&:after{content: none;}}
+    .tb-langslider div{font-size: 8rem;}
+    .tb-commingsoonimg{flex: auto;}
+    .tk-feedbackslider {margin-left: 192px;}
+}
+@media (max-width:1650px) and (min-width:1537px){
+    .tk-headerv2 .tk-appendinput{max-width: 620px;}
+}
+@media (max-width:1536px){
+    .tb-mainfreeconatinor .tb-mainfreelancers{width: 50%;}
+    .tb-sectiontitle h2 img{
+        left: 80%;
+        top:-60px;
+    }
+    .tb-langslider div {font-size: 7rem;}
+    .tk-feedbackslider {margin-left: 120px;}
+}
+@media (max-width:1440px){
+    .tb-contentbanner{padding-left: 81px;}
+    .tb-langslider div {font-size: 6rem;}
+    .tb-commingsoon__footer .col-7{
+        -ms-flex: 0 0 66.666667%;
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+    .tb-commingsoonimg{
+        overflow: hidden;
+        height: 100%;
+    }
+    .tk-feedbackslider {margin-left: 72px;}
+}
+@media (max-width:1400px){
+    .tk-projectdetail-img{
+        iframe{
+            width: 100%;
+            display: block;
+        }
+    }
+    .tb-savelisting > li .tb-profilestatus{
+        flex-wrap: nowrap;
+    }
+    .tk-easyoperate{
+        padding:0 70px;
+    }
+    .tk-exploremore li{align-items: flex-start;}
+    .tk-clients {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .tk-sliderarrow {
+        .splide__arrow--prev,
+        .splide__arrow--next{
+            opacity: 0.5;
+            &::before{
+                color: $heading-font-color;
+            }
+        }
+    }
+    .tk-sliderarrow .splide__arrow--prev{
+        left: 20px;
+    }
+    .tk-sliderarrow .splide__arrow--next{
+        right: 20px;
+    }
+    .tk-status-holder{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .tk-bidbtn{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: none;
+        .tk-invite-bidbtn,.tb-invite-sent{
+            margin-left: 0;
+            margin-top: 10px;
+        }
+    }
+    .tk-bidbtn.tk-proposals-btn{
+        flex-direction: row;
+        align-items: center;
+    }
+    .tk-proposal-btn a{
+        max-width: 358px;
+    }
+    .tk-nav-tabs li + li{
+        margin-left: 0;
+        margin-top: 18px;
+    }
+}
+@media (max-width: 1400px) and (min-width: 1199px){
+    .tk-topservice__content .tk-featureRatingv2 > em{
+        display: none;
+    } 
+}
+@media (max-width:1399px){
+    .tk-searchresult {
+        .tb-tags_links{
+            li.d-none{
+                display: block !important;
+            }
+            li{
+                .tb-selected__showmore{
+                    display: none;
+                }
+            }
+            
+        }
+    }
+    .tb-packages{
+        li{
+            width: calc(100% / 3);
+            ~ li{border-left: 1px solid $border-color;}
+            &:nth-child(2){
+                border-radius: $radius 0 0 $radius;
+            }
+            &:nth-child(n+3){border-left: 0;}
+            &:first-child{display: none;}
+        }
+    }
+    .tb-packages__plan .tb-packages__maintitle,
+    .tb-packages__text .tb-packages__title span:first-child,
+    .tb-packages__days .tb-packages__title span,
+    .tb-packages__buy .tb-packages__title span,
+    .tb-packages__days .tb-packages__title,
+    .tb-packages__buy .tb-packages__title{display: block;}
+    .tb-packages__plan .tb-packages__maintitle{height: auto;}
+    .tb-packages__title span:nth-child(odd) {background-color: transparent;}
+    .tb-packages__text {
+        padding: 10px 29px;
+        justify-content: space-between;
+        .tb-packages__title{
+            padding-right: 20px;
+            text-align: left;
+        }
+    }
+    .tb-packages__plan .tb-packages__maintitle{min-height: 35px;}
+    .tb-packages__title span{font-weight: 500;}
+    .tb-packages__text .tb-packages__title span + span{
+        font-weight: 700;
+    }
+    .tb-packages__text .tb-packages__title{
+        flex: auto;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+@media (max-width:1366px){
+    .tb-homebanner{
+        .align-items-center{align-items: flex-start !important;}
+    }
+    .tb-bannerimg:after{
+        width: 500px;
+        height: 500px;
+    }
+    .tb-circlepattern{display: none;}
+    .tb-count__content{width: 50%;}
+    .tb-counterarea{margin: 35px 0 0 0;}
+    .tb-count{padding: 33px 0;}
+    .tb-commingsoonimg{
+        height: auto;
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .tb-commingsoonimg figure{height: 100%;}
+    .tb-headerinput,
+    .tb-fixedheader .tb-headersupport + .tb-headerinput{display: none;}
+    .tb-headerinputbtn,
+    .tb-fixedheader .tb-headersupport + .tb-headerinput + .tb-headerinputbtn{display: block;}
+    .tb-commingsoon__footer{
+        .col-7{
+            max-width: 100%;
+            flex: 100%;
+        }
+        .tb-footertop__left{padding-bottom: 20px;}
+    }
+    .tb-dropdownholder{
+        min-width: 300px;
+    }
+    .tb-nav {
+        .owl-prev{
+            transform: translateX(0);
+        }
+    }
+    .tb-nav{
+        .owl-next{
+            transform: translateX(0);
+        }
+    } 
+    .tb-humansservices.tb-nav .owl-prev{transform: translate(0, -50%);}
+    .tb-humansservices.tb-nav .owl-next{transform: translate(0, -50%);}
+    .tk-feedbackslider {margin-left: 125px;}
+    .tk-easyoperate{padding: 50px;}
+}   
+@media (max-width:1366px) and (min-width:992px){
+    .tb-headerwrap{padding: 0;}
+}
+@media (max-width:1199px) and (min-width:992px){
+    .tb-asideprostatusv2 > a{
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width:1366px) and (min-width:1200px){
+    .tk-img-content{
+        padding: 20px 10px;
+        & > a i{
+           padding-left: 0; 
+        }
+    }
+    .tk-hirring-img{
+        margin: -5px;
+        li{
+            padding: 5px;
+        }
+    }
+}
+@media (max-width:1280px){
+    .tb-commingsoonimg:before{display: none;}
+    .tb-headersupport__content img{display: none;}
+    .tk-feedbackslider {margin-left: 82px;}
+}
+@media (max-width:1200px){
+    .tb-communitymid .tb-communityinfo::after{right: 48px;}
+    .tb-communityinfo{width: 270px;}
+    .tb-customerfeedback.tb-slimdots .owl-dots{transform: translate(30px, -5px);}
+    .tb-headersupport li{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .tb-langslider div {font-size: 5rem;}
+    .tk-feedbackslider {margin-left: 42px;}
+} 
+@media (max-width:1199px){
+    .tk-navbar-right .navbar-collapse .tk-navbarbtn span.tk-btn-solid-lg{
+        margin: 0;
+        width: 100%;
+        display: flex;
+        cursor: pointer;
+        padding: 0 24px;
+        position: relative;
+        align-items: center;
+        letter-spacing: 0.5px;
+        justify-content: center;
+        border-radius: 0 0 4px 4px;
+        color: var(--themefontcolor);
+        background-color: var(--themecolor);
+        border-top: 1px solid rgba(0,0,0,0.1);
+        font: 700 16px/48px "Urbanist", sans-serif;
+        box-shadow: inset 0 3px rgb(255 255 255 / 5%);
+        -webkit-box-shadow: inset 0 3px rgb(255 255 255 / 5%);
+    }
+    .tk-project-requirement > li{max-width: 50%;}
+    .tb-tasksitem__footer{
+        .tb-tasksitem__btn{
+            width: 100%;
+            padding-top: 20px;
+        }
+        .tb-sales li{
+            flex: 0 0 50%;
+        }
+    }
+    .tk-project-holder .tk-betaversion-wrap{
+        flex-direction: column;
+        align-items: flex-start;
+        .tk-downloadbtn{
+            margin: 20px 0 0;
+            padding: 0;
+        }
+    }
+    .tk-navbar,
+    .tb-navbar{
+        .navbar-collapse{
+            left: 0;
+            top: 100%;
+            width: 100%;
+            z-index: 9;
+            margin-top: -1px;
+            position: absolute;
+            background: $clr-white;
+            border-radius: 0 0 $radius $radius;
+            box-shadow: rgba(165, 165, 165, 0.5) 0px 9px 20px 0px;
+        }
+        .menu-item-has-children .sub-menu,
+        .page_item_has_children .children,
+        .menu-item-has-children .sub-menu{
+            top: 0;
+            margin: 0;
+            opacity: 1;
+            width: 100%;
+            box-shadow: none;
+            transition: none;
+            position: relative;
+            visibility: visible;
+            border: 0;
+            display: none;
+            margin-top: 0 !important;
+            border-top: 1px solid $border-color;
+        }
+    }
+    .tb-navbar{
+        .menu-item-has-children > a{
+            padding-right: 60px;
+        }
+    }
+    .tb-navbarnav > li{
+        & > a{
+            padding: 15px 20px;
+        }
+        & ~ li{border-top: 1px solid $border-color;}
+    }
+    .tb-insightcontainerv2 .tk-hire-freelancer li{
+        width: 100%;
+    }
+    .tk-addtime-slot li{
+        width: 16.65%;
+    }
+    .tk-proposal-btn{
+        a{
+            max-width: 100%;
+        }
+    }
+    .tk-projectpaid-list{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .tk-addslots{width: 80px;}
+    .tk-clients-wrapper_three .tk-clients{
+        margin: 0 -15px;
+    }
+    .tk-subcategory .tk-category_list .tk-category_item {
+        max-width: 33.33%;
+    }
+    .tk-bannervideo{
+        padding: 30px 0 0;
+        flex-direction: row;
+        span{
+            padding:0 0 0 20px;
+            img{
+                display: none;
+            }
+        }
+    }
+    .tk-sliderarrow-two{
+        .splide__arrow{top: 138px;}
+    }
+    .tk-hirring{
+        &-section{
+            .tk-main-title-holder{
+                max-width: 100%;
+            }
+        }
+        &-info{
+            margin: 0;
+            padding: 80px 0;
+        }
+        &-img{
+            max-width: initial;
+        }
+    }
+    .tk-img-info{
+        transform: none;
+        &-two{
+            transform: none;
+        }
+        img{
+            max-width: 100% !important;
+            object-position: bottom center;
+        }
+    }
+    .tk-navbarbottom > li{
+        width: 100%;
+        border-top: 1px solid rgba(255,255,255,0.2);
+        & > a {
+            display: block;
+            padding: 12px 30px !important;
+        }
+    }
+    .tk-togglebtmmenu{
+        display: flex;
+    }
+    .tk-navbarbottom{
+        z-index: 9;
+        display: none;
+        position: absolute;
+    }
+    .tk-bannerthree{
+        padding: 80px 0;
+        .tk-banner-img{
+            display: none;
+        }
+    }
+    .tb-user-menu .tk-notidropdowns + .tk-navbarbtn{
+        height: calc(100vh - 115px);
+    }
+    .tk-headerchatbtn,
+    .tb-inbox,
+    .tk-nav-icons{
+        span{
+            margin-left: 20px;
+            display: inline-block;
+            font: 700 rem(16)/em(24,16) $heading-font-family;
+        }
+    }
+    .tk-main-notiwrap .tk-notidropdowns > a{
+        .tk-remaining-notification{
+            top: 5px;
+            left: 35px;
+            padding: 0;
+            right: auto;
+            line-height: 22px;
+            text-align: center;
+        }
+    }
+    .tk-headerchatbtn a{
+        display: flex;
+        align-items:center;
+        .tk-remaining-notification{
+            left: 30px;
+            top: 4px;
+            right: auto;
+        }
+    }
+    .tb-header .tk-remaining-notification{
+        right: auto;
+        left: 32px;
+        top: 6px;
+    }
+    .tb-navbarnav > li.tb-inbox,
+    .tb-inbox{
+        a{
+            display: flex;
+            align-items:center;
+        }
+    }
+    .tk-notidropdowns .tk-noti_wrap{display: none !important;}
+    .tb-navbarnav > .tb-menu-notifications + li.tb-inbox,
+    .tb-navbarnav > li.tb-menu-notifications{
+        padding:0;
+        & .tk-nav-icons{
+            padding:15px 20px;
+            display: flex;
+            align-items: center;
+        }
+    }
+    .tb-user-menu{
+        .tk-notidropdowns .tk-noti_wrap{
+            position:relative;
+            width: 100%;
+            right: auto;
+            margin: 0;
+            border-radius: 0;
+            &:after{
+                display: none;
+            }
+        }
+    }
+    .tk-headerv2 .tk-headerchatbtn a,
+    .tk-headerv2 .tk-notidropdowns > a{
+        color: $secondary-color;
+    }
+    .tk-headerchatbtn{
+        a{
+            padding: 15px 20px;
+        }
+    }
+    .tk-main-notiwrap{
+        flex-wrap: wrap;
+        border-top: 1px solid $border-color;
+        overflow: auto;
+        .tk-notidropdowns{
+            width: 100%;
+            flex-direction: column;
+            & > a{
+                width: 100%;
+                display: flex;
+                align-items:center;
+                padding: 15px 20px;
+            }
+        }
+        & > .tk-notidropdowns{
+            width: 100%;
+            flex-direction: column;
+            align-items: flex-start;
+            border-bottom: 1px solid $border-color;
+            li{
+                padding: 0;
+                width: 100%;
+                & + li{
+                    padding:0;
+                    border-top:1px solid $border-color;
+                }
+            }
+        }
+    }
+    .tb-orderdetailswrap{
+        margin-top: 30px;
+    }
+    .tk-easyoperate{width: 100%;}
+    .tb-dropdowarrow{
+        display: inline-block;
+    }
+    .tb-headerwrap__right{
+        display: none;
+    }
+    .tk-mainbodydark .tk-header .tk-navbar-nav li a,
+    .tk-mainbodydark .tb-header .tk-navbar-nav li a{
+        color: $heading-font-color;
+    }
+    .tb-user-menu{
+        .tk-navbarbtn.sub-menu-holder{display: block;width: 100%;}
+    }
+    .tk-navbarbtn.sub-menu-holder{display: none;}
+    .tb-preloader-holder .tb-logo{padding:0 !important; }
+    .tb-navbarnav{margin: 0;}
+    .tb-headersupport li{
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    .tb-navbar{margin-right: 0;}
+    .tb-headersupport__content img{display: block;}
+    .tb-bannerslider{
+        padding-top: 20px;
+        &:before{left: 0;}
+    }
+    .tb-bannerimg:after{
+        width: 772px;
+        height: 772px;
+    }
+    .tb-followicons{display: none;}
+    .tb-contentbanner{
+        padding-left: 0;
+        width: 65%;
+    }
+    ul.tb-navbarnav > .menu-item-has-children > a:after,
+    .tb-navbarnav > li > a:after{content: none;}
+    .tb-navbar .navbar-collapse .tb-navbar-nav > li{padding: 0;}
+    .tb-navbar .navbar-collapse .tb-navbar-nav > li > a{padding: 0 20px !important;}
+    .tb-navbar .navbar-collapse .tb-navbar-nav > li + li {border-top: 1px solid rgba(250, 255, 255, 0.1);}
+    .tb-navbar .tb-navbar-nav > li > a:after{display: none;}
+    .tb-navbar-nav > .menu-item-has-mega-menu > a:before,
+    .tb-navbar-nav > .tb-dropdown > a:before,
+    .tb-navbar-nav > .menu-item-has-children > a:before,
+    .tb-navbar-nav > .page_item_has_children > a:before{right: 20px;}
+    .menu-item-has-children .sub-menu{
+        left: 0;
+        width: 100%;
+        display: none;
+        position: static;
+        opacity: 1;
+        transition: none;
+        background: $clr-white;
+        visibility: visible;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+        margin: 0;
+        li{
+            & ~ li{border-top: 1px solid $border-colorv2;}
+            > a{padding-left: 30px;}
+        }
+        .sub-menu a{padding-left: 40px;}
+    }
+    .tb-homebanner{padding: 55px 25px 0;}
+    .tb-communitybanner-wrap .tb-joinnow__imgright figure {display: none;}
+    .tb-commingsoonimg{
+        position:absolute;
+        z-index: -1;
+        width: 100%;
+        top: 15px;
+        left: -15px;
+        height:800px;
+    }
+    .tb-count{margin:0 0 300px 0;}
+    .tb-commingsoon{
+        .tb-navbar .navbar-collapse{
+            top: 100px;
+            width: calc(100% - 30px);
+            left: 15px;
+        }
+        .tb-navbarnav{
+            width: 100%;
+            margin: 0;
+        }
+    }
+    .tb-commingsoonimg img{
+        object-fit: cover;
+        object-position: top;
+    }
+    .tb-count__content{width: 25%;}
+    .tb-counterarea{padding: 0;}
+    .tb-counterarea .tb-sectioninfov2 .tb-sectiontitle h3,
+    .tb-counterarea .tb-sectioninfov2 .tb-sectiontitle h2,
+    .tb-counterarea .tb-sectiontitle .tb-description p{color: $clr-white;}
+    .tb-sectiontitle h2 img{
+        left: 100%;
+        top: -25px;
+    }
+    .tb-langslider div{font-size:140px;}
+    .tb-commingsoon__footer{
+        border-top: none;
+        margin-right: 0;
+    }
+    .tb-insightmain figure{height: 10%;}
+    .tb-sectioninfo .tb-sectiontitle{width: 60%;}
+    .tb-nav .owl-prev{left: -40px;}
+    .tb-nav .owl-next{right: -40px;}
+    .tb-communitymid .tb-communityinfo::after {right: 37px;}
+    .tb-communityinfo{width: 240px;}   
+    .tb-customerfeedback.tb-slimdots .owl-dots{transform: translate(80px, -5px);}
+    .tb-tabbitem__listtwo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .tb-tabbitem__list .tb-itemlinks {
+        margin-top: 20px;
+    }
+    .tb-disputemain{
+        .tb-tabbitem__list{
+            .tb-disputedisc {
+                flex: 1;
+            }
+        }
+    }
+    .tb-table > tbody > tr td,
+    .tb-table > thead > tr > th {
+        padding: 6px 18px ;
+    }
+    .tb-invoice-table.tb-table > tbody > tr td,
+    .tb-invoice-table.tb-table > thead > tr > th{
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+    .tb-extrascompleted {margin: 28px 0 0;}
+    .tb-asideholder {
+        .tb-asideholder{
+            margin-bottom: 0 !important;
+        }
+    } 
+    .tb-profileform__detail {
+        .tb-dhbbtnarea{
+            flex-direction: column;
+            align-items: flex-end;
+            em{padding: 0 0 10px;}
+        }
+    }
+    .tb-footertop__left{padding-bottom: 26px;}
+    .tb-submitreview h4{width: 38%;}
+    .tb-blogtags__content .tb-tagtittle {align-self: flex-start;}
+    .tb-navbarnav{
+        .sub-menu li a:hover{background-color: transparent;}
+        .sub-menu li .sub-menu{margin: 0;}
+    }
+    .tb-fixedheader{
+        padding-top: 0;
+        .tb-headerwrap{
+            padding-right: 25px;
+            padding-left: 25px;
+        }
+        .tb-header{
+           position: static;
+           box-shadow: initial;
+           width: auto;
+           background-color: transparent;
+       }
+       .tb-logo{
+           padding-top: 38px;
+           padding-bottom: 38px;
+       }
+       .tb-headersupport + .tb-headerinput + .tb-headerinputbtn{display: none;}
+    }
+    .tb-commingsoon__footer{
+        .col-7{
+            -ms-flex: 0 0 58.333333%;
+            flex: 0 0 58.333333%;
+            max-width: 58.333333%;
+        }
+        .tb-footertop__left{padding-bottom: 0;}
+    }
+    .tb-submitreview.tb-submitreviewv3 h4 {width: 42%;}
+    .tb-navbarnav > li{padding: 0;}
+    .menu-item-has-children > .sub-menu > li > a:nth-last-child(2):before{right: 50px;}
+    .menu-item-has-children li.tb-open-menu > a:before {transform: rotate(90deg);}
+    .menu-item-has-children > a{
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    .tb-open-menu{
+        > a{
+            &:before{transform: rotate(90deg);}
+        }
+    }
+    .tb-requestarea{
+        .tb-readmorebtn{position: relative;}
+        [aria-expanded=false] ~ .tb-readmorebtn:before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 40px;
+            top: -39px;
+            background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.07) 0%, rgba(0, 0, 0, 0.07) 100%);
+            background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.07) 0%, rgba(0, 0, 0, 0.07) 100%);
+            background: linear-gradient(to top, #fafafa 0%, white 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#12000000", endColorstr="#12000000",GradientType=0 );
+            opacity: 0.8;
+        }
+    }
+    .tb-sortv2{
+        flex-direction: column;
+        align-items: flex-start;
+        .tb-sortby{margin: 10px 0 0;}
+    }
+    textarea{
+        width: 100%;
+        padding: 10px;
+    }
+    .tk-easyoperate {
+        padding: 0 30px;
+    }
+    .tk-clients{
+        margin-right: -8px;
+        margin-left: -8px;
+        li{
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+    .tk-howitwork .tk-main-title-holder{
+        padding-top: 20px;
+    }
+    .tk-feedbackslider {margin-left: 50px;}
+    .tk-starrate{
+        margin-bottom: 5px;
+    }
+    .tb-taskcountdown .tb-countdownno{
+        margin-top: 0;
+        li{margin-top: 7px;}
+    }
+    .tk-aboutusimg img{
+        max-width: 100% !important;
+    }
+    .tk-betaversion-wrap{
+        flex-wrap: wrap;
+        figure{
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+        .tk-switch{
+            order: 2;
+            margin-left: auto;
+        }
+    }
+    .tk-betaversion-info{
+        order: 3;
+    }
+    .tk-hire-freelancer{
+        li{
+            width: 50%;
+        }
+    }
+    .tk-downloadbtn{
+        order: 4;
+        margin-top: 10px;
+    }
+    .tk-projectstatus_users{
+        max-width: 340px;
+    }
+    .tk-firstweek-payment .tk-unlock-week{
+        padding-left: 0;
+        padding-top: 20px;
+    }
+}
+@media (max-width:1199px) and (min-width:992px){
+    .tk-paid-option{
+        flex-wrap: wrap;
+    }
+    .tb-radiobox {
+        .tb-radioholder{
+            padding-left: 0;
+            .tb-radio {
+                .payoutlists{
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    .tb-payoutmode {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        margin: 0 0 0 10px;
+                        span{margin: 5px 0 0 0;}
+                    }
+                }
+            }
+        }
+    }
+    .tb-payoutmethodpopup{
+        .tb-radiobox {
+            .tb-radioholder{
+                padding-left: 0;
+                .tb-radio {
+                    .payoutlists{
+                        padding-left: 20px;
+                        padding-right: 20px;
+                        .tb-payoutmode {
+                            display: block;
+                            margin: 0 0 0 15px;
+                            span{margin: 0 0 0 10px;}
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .tb-asideprostatusv2{
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+    .tb-rateviewsv2{padding-top: 30px;}
+    .tb-blogcommentsholderchild{padding-left: 30px;}
+    .tb-bestservicedetail__list .tb-sidebarcontent .tb-profileprogress{width: auto;}
+    .tb-radioholder .tb-radio .payoutlists:after {margin-left: 9px;}    
+    .tb-payoutmethodpopup{
+        .tb-radiobox .tb-radioholder .tb-radio .payoutlists .tb-payoutmode{
+            margin-left: 15px;
+            span{margin: 0 0 0 10px;}
+        }
+        &.tb-payoutmethod .payoutlists:after{
+            top: 42%;
+            left: 19px !important;
+            transform: translateY(-40%);
+        }
+    }
+    .tb-profileform__detail,
+    .tb-taskcountdown{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .tb-profiletime{padding-left: 10px;}
+    .tb-profile-settings-box{
+        .tb-profileform__holder{
+            .tb-dhbbtnarea{
+                flex-direction: column;
+                align-items: flex-start;
+                em{padding: 0 0 10px;}
+            }
+        }
+    }
+}
+@media (max-width: 1080px){
+    .tb-topfreelancers:hover::after{transform: scale(100);}
+    .tb-mainfreeconatinor .tb-mainfreelancers{width: 100%;}
+    .tb-customerfeedback.tb-slimdots .owl-dots{transform: translate(90px, -5px);}
+    .tb-communityinfo {width: 235px;}
+    .tk-easyrightarea{
+        flex-direction: column;
+        align-items: flex-start;
+        figure{
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+    .tk-easyoperate {
+        padding: 50px;
+    }
+}
+@media (max-width: 1024px){
+    .tb-contentbanner{width: 70%;}
+    .tb-communityinfo {width: 220px;}
+    .tb-communitymid .tb-communityinfo::after {right: 35px;}
+    .tb-customerfeedback__img{margin-right: 30px;}
+    .tb-customerfeedback.tb-slimdots .owl-dots{transform: translate(90px, -5px);}
+}
+@media (max-width:991px){
+    .tk-serviesbann__content{padding: 30px;}
+    .tu-notfound-img {
+        display: none;
+    }
+    .tb-insightcontainerv2 .tb-asideholder {
+        margin: 0 0 30px;
+    }
+    .tb-single-seller .tb-asideholder .tb-seller-profile-two.tb-asideholder{
+        margin-top: -50px !important;
+    }
+    .tk-mt0{transition: all 0.3s ease-in-out;}
+    .tk-mt0:not(.tk-mt){margin-top: 0 !important;}
+    .tk-searchresult .tk-sort{
+        flex-wrap: wrap;
+        .tk-select{width: auto;}
+    }
+    .tk-addtime-slot li{
+        width: 25%;
+    }
+    .tk-timeslot_list{
+        flex-wrap: wrap;
+        li{
+            width: 33.33%;
+        }
+    }
+    .tk-timecard-table tbody > tr > td p{
+        max-width: 350px;
+    }
+    .tk-template-list_content{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .tk-category_list ul li{
+        max-width: 33.33%;
+    }
+    .tk-category .tk-category_list .tk-category_item{
+        max-width: 50%;
+    }
+    .tk-img-content{
+        position: relative;
+    }
+    .tk-hirring-img{
+        align-items: flex-start;
+        & li:first-child .tk-img-info {background-color: #fdeacc;}
+        & li:nth-child(2) .tk-img-info {background-color: #f7d6cf;}
+        & li:nth-child(3) .tk-img-info {background-color: #b8d6d8;}
+    }
+    .tk-img-info img{display: none;}
+    .tk-hirring-info{
+        border-radius: 0;
+    }
+    .tk-bannervfive{
+        .tk-banner-img{
+            display: none;
+        }
+        .tk-bannerinfo{
+            padding: 60px 0;
+            &_title{
+                max-width: 100%;
+            }
+        }
+    }
+    .tk-img-info-two, .tk-img-info {
+        transform: translateY(0);
+    }
+    .tk-sortby{
+        flex: auto;
+        & + .tk-filtermenu{
+            margin-left: 28px;
+        }
+    }
+    .tk-sort{
+        flex-wrap: wrap;
+        h3{
+            width: 100%;
+            margin: 0 0 20px;
+        }
+    }
+    .tk-filtermenu{
+        display: flex;
+        & + .tk-searchlist{
+            margin-top: 20px;
+        }
+    }
+    .tk-searchlist{
+        display: none;
+    }
+    .tb-invoicestable > tbody > tr > td{
+        background: $clr-white;
+        &:first-child{
+            background: $lightest;
+        }
+    }
+    .tb-dhb-mainheading .tb-actionselect {margin-left: 0;}
+    .tb-dhb-mainheading__rightarea{
+        justify-content: flex-start;
+        margin-left: 0;
+        em{
+            padding: 0 0 0 30px;
+            order: 10;
+            text-align: left;
+        }
+    }
+    .tb-invoice-table.tb-table > tbody > tr{
+        td{
+            ~ td{
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            &:last-child{padding-bottom: 23px;}
+        }
+        + tr{
+            td{
+                &:first-child{
+                    padding-top: 24px;
+                    padding-bottom: 10px;
+                }
+            }
+        }
+    }
+    .tb-headersupport{display: none;}
+    .tb-contentbanner {width: 90%;}
+    .tb-searchresult-section .tb-filterselect {width: 50%;}
+    .tb-langslider div{font-size:120px;}
+    .tb-navbarnav > li ~ li{border-top: 1px solid $border-colorv2;}
+    .tb-videoguide{margin: 30px 0;}
+    .tb-helpsuppotcontainer{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .tb-bloglistingicons{align-items: flex-start;}
+    .tb-tehelpop{
+        width: 100%;
+        margin:0 0 25px;
+    }
+    .tb-servicedetailtitle.tb-tehelpop{
+        margin:0;
+    }
+    .tb-sectioninfo .tb-sectiontitle{width: 70%;}
+    .tb-communitymid{
+        display: flex;
+        position: relative;
+        top: 50%;
+        left: auto;
+    }
+    .tb-comunnitygrid{
+        top: 0;
+        right: auto;
+        left: 15px;
+        transform: translateX(100%);
+        margin: 0 0 0 -30px;
+    }
+    .tb-communityarea{
+        padding-top: 76px;
+        padding-bottom: 234px;
+        .tb-sectioninfo{padding-bottom: 30px;}
+    }
+    .tb-communityinfo{width: 285px;}
+    .tb-communitymid .tb-communityinfo::after {right: 37px;}
+    .tb-customerfeedback__content{flex-wrap: wrap;}
+    .tb-customerfeedback__title{
+        width: 100%;
+        padding-top: 26px;
+    }
+    .tb-customerfeedback.tb-slimdots .owl-dots {
+        transform: none;
+        justify-content: flex-start;
+    }
+    .tb-footercontent{
+        .col-lg-6{padding-top: 47px;}
+    }
+    .tb-communitysection{padding-top: 0;}
+    .tb-intensionmain{padding-top: 37px;}
+    .tb-humansservices.tb-nav{
+        .owl-prev {left: -40px;}
+        .owl-next{right: -40px;}
+    }
+    .tb-appfeaturesimg{
+        justify-content: flex-start;
+        padding: 0 0 36px;
+    }
+    [class^='col-']{
+        &:first-child .tb-asideholder:not(.tb-seller-profile-two){margin-bottom: 30px;}
+    }
+    .tb-asideholder.tb-taskdeadline{
+        .tb-asideholder.tb-taskdeadline{margin-top: 0;}
+    }
+    .tb-tabasidebar{
+        .tb-asideholder{
+            .tb-asideholder{
+                margin-top: 0 !important;
+            }
+        }
+    }
+    .tb-dhb-mainheading__rightarea em {
+        display: block
+    }
+    .tb-disputemain {
+        .tb-extras{
+            margin-top:rem(15);
+            text-align: left;
+        }
+    }
+    .tb-tasktabs .tb-navtabs li {
+        width: calc(100% / 2);
+    }
+    .tb-table,.tk-timecard-table{
+        display: block;
+        thead, tbody, th, td, tr{display: block;}
+        thead tr{
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        >tbody {
+            >tr {
+                >td {
+                    background-color: transparent;
+                }
+                &:nth-child(even){
+                    background-color: $bg-light;
+                }
+            }
+        }
+        td {
+            border: none;
+            border-bottom: 1px solid rgba(151, 151, 151, 0.3);
+            position: relative;
+            padding-left: 200px;
+            display: flex;
+            align-items: center;
+            &:before {
+                width: 40%;
+                padding-right: 20px;
+                color:$text-light;
+                font-weight: 600;
+                content: attr(data-label);
+            }
+        }
+        .tb-bordertags {
+            margin: 0 15px 0 0;
+        }
+        .tb-dispueitems {
+            .tb-vieweye {
+                margin-right: auto;
+            }
+        }
+    }
+    .tk-timecard-table{
+        >tbody {
+            >tr {
+                >td {
+                    padding-left: 5px !important;
+                }
+            }
+        } 
+    }
+    .tb-dispueitems {
+        margin: 0;
+        width: auto;
+    }
+    .tb-tasktabs .tb-navtabs li {
+        width: 100%;
+        ~ li .nav-link{
+            border-top: 1px solid $border-color;
+            border-left: 0;
+        }
+    }
+    .tb-tabbitem__list .tb-itemlinks {
+        align-self: flex-start;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .tb-asideprostatusv2{
+        justify-content: initial;
+        .tb-temp{max-width: 240px;}
+    }
+    .tb-invoice-table.tb-table > tbody > tr td + td:last-child,
+    .tb-invoice-table.tb-table > tbody > tr td + td:nth-child(2) {
+        width: 100%;
+    }
+    .tb-printable {
+        padding: 30px;
+    }
+    .tb-tablelist{display: none;}
+    .tb-invoice-table.tb-table > tbody > tr td h6 {
+        top: 0;
+        left: 0;
+    }
+    .tb-invoice-table.tb-table > tbody > tr:not(:last-child) {
+        border-bottom: 1px solid $border-color;
+    }
+    .tb-subtotal{
+        .tb-subtotalbill {
+            padding: 0 15px;
+        }
+        .tb-sumtotal {
+            padding: 14px 15px 14px 30px;
+        }
+    }
+    .tb-invoicefromto .tb-fromreceiver {
+        flex-basis: 45%;
+        + .tb-fromreceiver{margin-left: 10px;}
+    }
+    .tb-extrasarticlesbg{span{width: 40%;}}
+    .tb-switchaccount{
+        border-top: 0;
+        border-radius: 0 0 $radius $radius;
+        border-left: 1px solid $border-color;
+    }
+    .tab-taskcontent .tb-tabtasktitle,
+    .tb-tasklist div.tb-tabfilteritem{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .tb-submitreview h4{width: 53%;}
+    .tb-filtericonholder{
+        width: 100%;
+        .tb-advanceicon{width: 100%;}
+    }
+    .tb-map{height: 300px;}
+    .tb-freelancersearch .tb-map{margin-bottom: 30px;}
+    .tb-pricingplan{
+        .tb-pricingtitle{
+            width: calc(100% / 3);
+            .tb-serviceformwrap{
+                .tb-pricingtitle{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .tb-pricingitems li ~ li .tb-pricingtitle > h6:first-child,
+    .tb-pricingitems .tb-select-half .tb-pricingtitle{
+        display: block;
+        padding-bottom: 0;
+    }
+    .tb-pricingtitle{
+        flex-wrap: wrap;
+    }
+    .tb-commingsoon__footer{
+        .tb-bloglistingicons{
+            align-items: flex-end;
+        }
+    }
+    .tb-commingsoon__footer{
+        .col-7 {
+            -ms-flex: 0 0 83.333333%;
+            flex: 0 0 83.333333%;
+            max-width: 83.333333%;
+        }
+        .tb-footertop__left{padding-bottom: 20px;}
+    }
+    .tb-submitreview.tb-submitreviewv3 h4 {width: 58%;}
+    .tb-savelisting{
+        .tb-tabbitem__list{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    .tb-themeform{
+        &__wrap{
+            align-items: center;
+        }
+        .tb-paymetdesc{
+            padding: 13px 13px 0 0;
+        }
+    }
+    .tb-requestarea [aria-expanded=false] ~ .tb-readmorebtn:before{
+        height: 56px;
+        top: -56px;
+    }
+    .tb-navtabs .nav-link{width: 100%;}
+    .tb-postservicev2 .tb-addservice-step span{ 
+        padding-left:15px;
+        padding-right:15px;
+    }
+    .tb-addservice-step-complete:after{right: 0;}
+    .tb-packages li{
+        width: 50%;
+        &:last-child{
+            border-left: 1px solid $border-color;
+            border-top: 0;
+            width: 100%;
+        }
+    }
+    .tk-feedbackwrap{
+        .tk-btn-solid-lg{
+            margin-top: 20px;
+        }
+    }
+    .tk-feedbackslider{
+        margin: -30px 0 -30px 154px;
+    }
+    .tb-dhb-account-settings,
+    .tb-dhb-profile-settings{
+        .tb-dhb-mainheading{
+            h2{
+                margin-bottom: 0;
+            }
+        }
+    }
+    .tk-faqsslider .splide__arrows .splide__arrow--prev{left: 0;}
+    .tk-faqsslider .splide__arrows .splide__arrow--next{right:0;}
+    .tk-question-section{
+        .tk-btn-solid-lg{
+            margin-top: 20px;
+        }
+    }
+    .tk-filterbtns{
+        margin-bottom: 6px;
+    }
+    .tb-earninginvoices{
+        flex-wrap: wrap;
+        margin: -5px -5px 25px;
+    }
+    .tb-earningcostvtwo{
+        width: 50%;
+        padding: 5px;
+    }
+    .tb-invoicestable{border-top: 0;}
+    .tk-package-list li{width: 33.333%;}
+    .tk-explore-categories{justify-content: center;}
+    .tk-bannerheight.tk-bannerv2{padding-top: 200px;}
+    .tk-banner .tk-about_content{
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    .tb-postservicev2 .tb-addservice-steps li:not(:first-child) .tb-addservice-step span{padding-left: 24px;}
+    .tb-hide-acf-label{
+        display: block;
+    }
+    .tb-settingtab{min-height: auto;}
+    .tk-newproject-list{
+        margin: -6px;
+        li{
+            padding: 6px;
+        }
+    }
+    .tk-status-holder{
+        margin-bottom: 30px;
+    }
+    .tk-status-holder{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .tk-bidbtn{
+        padding-left: 15px;
+    }
+    .tb-duplicate-project{
+        margin-top: 10px;
+    }
+    .tk-sidebarpkg__btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .tk-btnline{
+            margin-top: 0;
+            margin-left: 10px;
+        }
+    }
+    .tk-projectstatus{
+        flex-wrap: wrap;
+    }
+    .tk-projectstatus_users{
+        max-width: 100%;
+        box-shadow: inset 0 -1px 0px $border-color;
+    }
+    .tk-projectsactivity .tk-nav-tabs{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .tk-prouserslist{
+        max-height: 390px;
+        display: none;
+    }
+    .tk-proinvoices_table tbody > tr > td:first-child, 
+    .tk-proinvoices .tb-table tbody > tr > td:first-child{
+        padding-left: 5px;
+    }
+    .tk-project-table-status .tb-table > tbody > tr td,
+    .tk-proinvoices_table tbody > tr > td,
+    .tk-proinvoices .tb-table tbody > tr > td{
+        box-shadow: inset 0px -1px 0px $border-color;
+    }
+    .tk-propsal-list-show{display: block;}
+    .tb-payouthistory {
+        .tb-dhb-mainheading{
+            flex-direction: column;
+            align-items: flex-start;
+            .tb-sortby {
+                width: 100%;
+                .tb-themeform__wrap{
+                    width: 100%;
+                    .wo-inputicon.wo-inputheight{
+                        width: 100%;
+                        margin:  15px 0 0;
+                        & ~ .wo-inputicon {
+                            margin: 20px 0 0 auto;
+                        }
+                    }
+                }
+            } 
+        }
+    }
+    .tb-custom-fields .tb-pricingitems__content {
+        flex-wrap: wrap;
+    }
+    .tb-custom-fields .tb-pricingitems__content .tb-pricing-input {
+        width: 100%;
+        padding: 10px 20px;
+        border: 0;
+    }
+    .tb-custom-fields .tb-remove-field {
+        margin: 10px 0 0;
+      }
+}
+@media (max-width:991px) and (min-width:768px){
+    .tb-packages li{
+        &:nth-child(2){border-radius: $radius 0 0 0;}
+        &:nth-child(3){border-radius: 0 $radius 0 0;}
+        &:last-child{border-radius: 0 0 $radius $radius;}
+    }
+}
+@media (max-width:800px){
+    .tb-headerinputopen{
+        flex-wrap: nowrap;
+        .tb-logo{flex: none;}
+        .tb-headerinput,
+        .tb-inputappend{width: 100%;}
+        .tb-inputappend .form-control{min-width: auto;}
+    }
+    .tb-acountdeactive .modal-dialog{max-width: 600px;}
+    .tb-sectionmidv2{
+        width: auto;
+        .tb-themeform{width: 100%;}
+    }
+}
+@media (max-width:782px){
+    .logged-in.admin-bar .tb-user-menu {
+      top: 46px;
+    }
+}
+@media (max-width:767px){
+    .tk-project-box .tk-price{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        .tk-project-option{
+            width: 100%;
+        }
+    }
+    .tb-freelancersearch .tb-bestservicedetail__user .tb-startingprice{
+        padding: 0;
+        flex-wrap: wrap;
+        background: transparent;
+    }
+    .tb-freelancersearch .tb-startingprice .tk-btn-solid-lg{
+        width: 100%;
+    }
+    .tk-project-box .tb-singleservice-tile,
+    .tk-project-box > .tk-price-holder + p,
+    .tb-freelancersearch .tk-tags-holder{
+        display: none;
+    }
+    .tk-bannervthree .tk-appendinput .tk-inputicon .form-control{
+        border-radius: 4px 4px 0 0;
+    }
+    .tk-bannervthree .tk-bannerinfo .tk-bannerinfo_search .tk-searcbar .tk-darkbtn{
+        border-radius: 0 0 4px 4px;
+    }
+    .tk-serviesbann__content{
+        flex-wrap: wrap;
+        .tk-btnserviesarea{text-align: left;}
+        .tk-share-wrapper{justify-content: flex-start;}
+    }
+    .tb-refunddetailttabs .nav-tabs li {width: 100%;}
+    .tb-packages li{
+        &:nth-child(2){
+            border-radius: $radius $radius 0 0;
+        }
+        &:last-child{
+            border-radius: 0 0 $radius $radius;   
+        }
+    }
+    .tk-sidebarpkg__btn{
+        flex-direction: column;
+        align-items: flex-start;
+        .tk-btnline {
+            margin-top: 10px;
+            margin-left: 0;
+        }
+    }
+    .tk-addtime-slot li{
+        width: 33.33%;
+    }
+    .tk-timecards_total{
+        margin-left: 0;
+    }
+    .tk-timecard-table tbody > tr > td p{
+        max-width: 230px;
+    }
+    .tk-projectsstatus_option{
+        position: absolute;
+        right: 0;
+        margin-left: 0;
+    }
+    .tk-price .tk-featuretag{
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .tk-paid-option,
+    .tk-employerproject{
+        flex-direction: column;
+    }
+    .tk-add-price-slots{
+        .tk-label{
+            flex-direction: column;
+            align-items: flex-start;
+            a{
+                margin-top: 10px;
+            }
+        }
+    }
+    .tk-uploadfile-doc .tk-form-btn{
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .tk-uploadfile-doc .tk-form-btn span + span{
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .tk-employerproject .tk-price{margin-left: 0;}
+    .tk-price{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+        padding-left: 0;
+        h4{
+            text-align: left;
+        }
+        .tk-project-option .tk-btn-solid-lg-lefticon{
+            width: 100%;
+            margin-left: 0;
+            text-align: center;
+        }
+    }
+    .tk-price-holder{
+        flex-direction: column;
+        align-items: self-start;
+        position: relative;
+    }
+    .tk-price-wrapper{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .tk-alert-readbtn{
+        margin-top: 15px;
+    }
+    .tk-project-detail{
+        justify-content: flex-start;
+    }
+    .tk-bidbtn{
+        padding-left: 0;
+        padding-top: 15px;
+        margin-left: auto;
+    }
+    .tk-subcategory .tk-category_list .tk-category_item {
+        max-width: 50%;
+    }
+    .tk-category_list ul li{
+        max-width: 50%;
+    }
+    .tk-category .tk-category_list .tk-category_item{max-width: 100%;}
+    .tk-sliderarrow-two .splide__arrow{
+        top: 120px;
+    }
+    .tb-packages__plan .tb-packages__maintitle{
+        display: none;
+    }
+    .tb-addservices_details .tb-additionollist li{
+        width: 100%;
+    }
+    .woocommerce .woocommerce-Address + .woocommerce-Address{margin-top: 20px;}
+    .tb-sync__content{
+        min-height: 300px;
+        img{
+            min-height: 300px;
+        }
+    }
+    .tb-tasksitem__btn{
+        padding: 10px 7.5px 7.5px 0;
+    }
+    .tb-resvsionbtn-holder .tb-radio input[type=radio] + label span{
+        padding: 14px 30px 14px 19px;
+    }
+    .tb-resvsionbtn-holder .tb-radio input[type=radio] + label:after{
+        right: 20px;
+    }
+    .tb-joincommunity{
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    .tb-packages__content.tb-shadow{box-shadow: none;}
+    .tb-contentbanner {width: auto;}
+    .tb-sort h3 + *{margin-top: 10px;}
+    .tb-langslider div{font-size:100px;}
+    .tb-sectiontitle h2 img{display: none;}
+    .tb-uploadbar{flex-direction: column;}
+    .tb-uploadbar__url, 
+    .tb-uploadbar__group{width: 100%;}
+    .tb-uploadfile-list .tb-actionbtn{align-items: center;}
+    .tb-uploadfile-list .tb-actionbtn .tb-actionbtn a{height: 28px;}
+    .tb-uploadfile-list .tb-uploadbar__url {
+        border-top: 1px solid $border-colorv2;
+        border-left: 0;
+    }
+    .tb-uploadfile-list .tb-bar-handle{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .tb-savebtn{
+        width: 100%;
+        justify-content: flex-start;
+        padding-top: 10px;
+        margin-left: 0;
+        padding-left: 0;
+        span{
+            text-align: left;
+            + .tb-btn{
+                order: -1;
+                margin: 0 20px 0 0;
+            }
+        }
+    }
+    .tb-formlogin{
+        .tb-savebtn span{text-align: right;}
+    }
+    .taskbot-faqlistitem{
+        .tb-uploadcontent .tb-profileform__content .tb-titleinput{padding-top: 0;}
+    }
+    .tb-addservice-steps li{width: 100%;}
+    .tb-addservice-steps li + li{margin: 15px 0 0 0;}
+    .tb-uploadbar-list{
+        .tb-uploadbar-content{
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 10px;
+            .tb-actionbtn{
+                padding-right: 0;
+                padding-left: 0;
+                padding-bottom: 0;
+            }
+            .tb-bar-handle{
+                justify-content: flex-start;
+                padding-bottom: 12px;
+            }
+        }
+    }
+    .tb-uploadbar-content .tb-actionbtn{width: 100%;}
+    .tb-insightmain{flex-direction: column;}
+    .tb-insightmain figure{margin: 0 0 15px;}
+    .tb-nav .owl-prev{left: -40px;}
+    .tb-nav .owl-next{right: -40px;}
+    .tb-communityinfo{width: 270px;}
+    .tb-sectioninfo{
+        flex-wrap: wrap;
+        padding-bottom: 6px;
+        .tb-sectiontitle{width: 100%;}
+        .tb-btnarea{padding-top: 23px;}
+    }
+    .tb-bannerimg:after {
+        width: 422px;
+        height: 422px;
+    }
+    .tb-footertop__left{
+        flex-wrap: wrap;
+        padding-bottom: 29px;
+        p{width: 100%;}
+    }
+    .tb-footerlogo{
+        border-right: 0;
+        border-bottom: 1px solid #5d5e7f;
+        width: 100%;
+        margin: 0 0 12px;
+        padding: 0 0 20px;
+    }
+    .tb-footerbottom__nav{
+        width: 100%;
+        padding-top: 14px;
+    }
+    .tb-humansservices.tb-nav{
+        .owl-prev {left: -40px;}
+        .owl-next{right: -40px;}
+    }
+    .tb-blogcommentsholderchild + a {
+        width: 90% !important;
+    }
+    .tb-blogcommentsholdervthree + [data-readmore-toggle],
+    .tb-blogcommentsholdervfour + [data-readmore-toggle]{
+        margin-top: -48px;
+    }
+    .tb-readmorebtn{
+        position: relative;
+    }
+    .tb-blogcommentsholder [aria-expanded="true"] ~ .tb-readmorebtn {
+        margin-top: 0;
+    }
+    [aria-expanded="false"] ~ .tb-readmorebtn::before,
+    [aria-expanded="false"] ~ .tb-readmorebtn::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 40px;
+        top: -39px;
+        background: -moz-linear-gradient(top,  rgba(0,0,0,0.07) 0%, rgba(0,0,0,0.07) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  rgba(0,0,0,0.07) 0%,rgba(0,0,0,0.07) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to top, rgb(250 250 250) 0%, rgb(255 255 255) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#12000000', endColorstr='#12000000',GradientType=0 );/* IE6-9 */
+        opacity: 0.8;
+    }
+    .tb-tabbitem__list .tb-deatlswithimg {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .tb-tabbitem__list .tb-deatlswithimg .tb-profilestatus {
+        display: flex;
+        flex-direction: column;
+    }
+    .tb-tabbitem__list .tb-deatlswithimg .tb-profilestatus li {
+        margin: 0;
+    }
+    .tb-tabbitem__list .tb-deatlswithimg .tb-profilestatus li ~ li {
+        margin-top: 18px;
+    }
+    .tb-dhb-mainheading__rightarea em{flex: 0 0 60%;}
+    .tb-profilestatus li .tb-profiletime, .tb-profilestatus li .tb-profiletime .tb-profileprogress {
+        width: 100%;
+    }
+    .tb-tabbitem__listtwo .tb-icondetails {
+        padding-top: 10px;
+        flex-direction: column;
+        width: 100%;
+    }
+    .tb-tabfilteritem {
+        .tb-tabbitem__list{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    .tb-extras{
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0;
+        .tb-tabitemextras {
+           width: 50%;
+           min-width: auto;
+           float: none;
+           margin: 15px 0 0;
+           & + .tb-tabitemextras {margin: 25px 0 0 0px;}
+       }
+    }
+    .tb-startingprice {align-items: self-end;}
+    .tb-bestservicedetail__user{
+        .tb-startingprice {align-items: flex-end;}
+    }
+    .tab-taskcontent .tb-tabtasktitle {
+        flex-direction: column;
+        align-items: start;
+        h5{margin: 0 0 15px;}
+    }
+    .tb-extrasarticles{
+        flex-direction:column;
+        align-items: flex-start;
+        .tb-disputextrasinfo ~ .tb-disputextrasinfo{
+            margin-left: 0;
+            margin-top: rem(15);
+        }
+    }
+    .tb-dhb-mainheading {
+        .tb-themeform{
+            .tb-themeform__wrap{
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+            }
+        }
+        .wo-inputicon{width: 100%;}
+    }
+    .tb-sortby{
+        .tb-actionselect2{
+            width: 100%;
+            .tb-select{
+                flex: auto;
+            }
+            .select2-container{
+                min-width: auto;
+            }
+        }
+    }
+    .tab-taskcontent .selected-filter + .tb-themeform{
+        min-width: auto;
+        width: 100%;
+    }
+    .tb-tasklist .tb-tabfilteritem .tb-itemlinks{
+        margin: 10px 0 5px;
+        .tb-startingprice{
+            align-items: flex-start;
+            padding: 0;
+        }
+    }
+    .tab-taskcontent {
+        .tb-tabtasktitle {
+            flex-direction: column;
+            align-items: start;
+            h5{margin: 0 0 10px;}
+        }
+    }
+    .tb-additionollist li~li {margin: 10px 0 0 13px;}
+    .tb-byadons {
+        .tb-dhb-mainheading__rightarea{
+            flex-direction: column;
+            align-items: flex-start;
+            em{margin: 10px 0 0 0;}
+        }
+    }
+    .tb-addcomment {
+        .tb-description{
+            padding: 10px 0 14px;
+        }
+    }
+    .tb-comentinfo {
+        figure {
+            img {
+                padding: 0 0 8px;
+            }
+        }
+    }
+    .tb-orderrequest{padding: 25px 12px;}
+    .tb-earninginvoices{ 
+        flex-wrap: wrap;
+        .tb-earningcostvtwo {
+            min-width: 50%;
+            width: 50%;
+            padding: 5px;
+        }
+    }
+    .tb-sort{
+        .tb-sortby{margin-left: 0;}
+    }
+    .tb-profileform{
+        .tb-profileform__content{
+            flex-direction: column;
+            &.tb-dhbbtnarea{flex-direction: row;}
+            ~ .tb-profileform__content{
+                .tb-titleinput{padding-top: 10px;}
+            }
+            .tb-titleinput{
+                flex: 0 0 auto;
+                padding: 0 0 8px;
+            }
+        }
+    }
+    .tb-dhbbtnarea{
+        em {
+            padding-bottom: 10px;
+            padding-right: 0;
+        }
+    }
+    .tb-profileform__detail{
+        .tb-formcheckbox{
+            display: block;
+        }
+    }
+    .tb-disputemain {
+        .tb-tabbitem__list{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    .tb-printable {
+        .tb-tasksinfos {
+            flex-direction: column;
+            align-items: self-start;
+            .tb-tasksdates{
+                margin: 10px 0 0;
+                align-items: flex-start;
+                justify-content: flex-start;
+            }
+        }
+    }
+    .tb-invoicebill, 
+    .tb-invoicefromto {
+        flex-direction: column;
+        figure {
+            margin: 0 0 10px;
+        }
+    }
+    .tb-invoicefromto .tb-fromreceiver + .tb-fromreceiver {
+        margin: 10px 0 0;
+    }
+    .tb-invoice-table td:before {
+        padding-right: 0;
+        width: auto;
+        min-width: 130px;
+    }
+    .tb-subtotal {
+        align-items: flex-end;
+        .tb-subtotalbill {
+            padding: 0;
+        }
+        .tb-sumtotal {
+            margin: 0;
+            padding: 14px 15px 14px 30px;
+        }
+    }
+    .tb-sarticlesbtnsarea{
+        flex-direction: column;
+        align-items: flex-start;
+        span{
+            width: 100%;
+        }
+        .tb-articlebtns{margin-top: 10px;}
+    }
+    .tb-hiretaskpopup{
+        .tb-popuptitle{
+            flex-direction: column;
+            align-items: flex-start;
+            .tb-startingprice{
+                margin-left: 0;
+                padding-left: 0;
+                margin-top: 10px;
+            }
+        }
+    }
+    .wo-inputheight{
+        + .wo-inputicon{padding-top: 10px;}
+    }
+    .tb-comentinfo .btn-reply{margin: 10px 0 0;}
+    .tb-additionolinfo div.tb-addcomment{
+        margin-right: 15px;
+        margin-left: 15px;
+        padding-bottom: 0;
+    }
+    .tb-submitreview h4{width: 74%;}
+    .tb-bestservicedetail__list{
+        margin: -5px;
+        > li{
+            width: 50%;
+            padding: 5px;
+            ~ li{
+                margin-left: 0;
+                padding-left: 5px;
+                &:before{content: none;}
+            }
+        }
+    }
+    .tb-bestservicedetail__user{
+        flex-wrap: wrap;
+        .tb-asideprostatus > figure{
+            max-width: 110px;
+            img{
+                max-width: 110px;
+                height: 110px;
+            }
+        }
+        .tb-startingprice{
+            width: 100%;
+            display: flex;
+            margin: 20px 0 0;
+            align-items: center;
+            padding: 10px 20px;
+            flex-direction: row;
+            background: $lightest;
+            border-radius: $radius;
+            em{
+                margin-left: auto;
+            }
+        }
+    }
+    .tb-tasksitem_head{
+        flex-wrap: wrap;
+        .tb-cards__title{
+            padding: 0;
+        }
+        .tb-startingprice{
+            width: 100%;
+            display: flex;
+            margin: 20px 0 0;
+            align-items: center;
+            padding: 10px 20px;
+            flex-direction: row;
+            background: $lightest;
+            border-radius: $radius;
+            span{
+                margin-left: auto;
+            }
+        }
+    }
+    .tb-rateviewsv2{padding-top: 30px;}
+    .tb-blogcommentsholderchild{padding-left: 30px;}
+    .tb-blogcommentsholderchild + [data-readmore-toggle]{margin-left: 30px;}
+    .tb-serviceformwrap{width: 100%;}
+    .tb-pricingcontainer{justify-content: center;}
+    .tb-overleymodel{
+        top: auto;
+        transform: translateY(50%);
+        bottom: 493.25px;
+        right: auto;
+    }
+    .tb-commingsoon__footer{padding-top: 0;}
+    .tb-commingsoonimg{height: 820px;}
+    .tb-submitreview.tb-submitreviewv3 h4 {width: 82%;}
+    .tb-filtermsg {
+        flex-direction: column;
+        align-items: self-end;
+    }
+    .tb-filtermsg h5 {margin-bottom: 7px;}
+    .tb-filtermsg .tb-inputicon {width: 100%;}
+    .tb-messageuser{display: none;}
+    .tb-message > .row [class^=col-]:last-child{border-left: 0;}
+    .tb-messageopen{
+        .tb-messagelist{display: none;}
+        .tb-messageuser{display: flex;}
+    }
+    .tb-savelisting{
+        .tb-deatlswithimg figure{margin: 0 0 10px;}
+    }
+    .tb-dropdownholder{
+        min-width: 250px;
+        .tb-distance{padding: 26px 7px 29px;}
+    }
+    .tb-sort{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .tb-byadons{
+        .tb-dhb-mainheading__rightarea{
+            flex-flow: row nowrap;
+            align-items: center;
+            em{margin: 0;}
+        }
+    }
+    .tb-requestarea [aria-expanded=false] ~ .tb-readmorebtn:before{
+        height: 36px;
+        top: -36px;
+    }
+    .tb-billinginfo{
+        .form-group-half{width: 100%;}
+    }
+    .tb-sortv2{margin-top: 30px;}
+    .tb-postservicev2{
+        .tb-savebtn span{
+            width: 100%;
+            padding: 0;
+            + .tb-btn{
+                order: 10;
+                margin: 10px 0 0;
+            }
+        }
+    }
+    .tb-addonpopup{
+        .tb-savebtn{
+            width: auto;
+            margin-left: auto;
+        }
+    }
+    .tb-featurelist li{
+        width: 100%;
+        &:nth-child(odd){background-color: $lightest;}
+        &:nth-child(even){background-color: transparent;}
+    }
+    .tb-ordercontent .tb-additionalservices li{width: 100%;}
+    .tb-tabbitem__list .tb-itemlinks {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .tb-savelisting .tb-itemlinks .tb-switchservice {
+        padding-top: 16px;
+    }
+    .tb-itemlinks .tb-switchservice, .tb-itemlinks .tb-tabicon {
+        width: 100%;
+    }
+    .tb-savelisting .tb-itemlinks .tb-startingprice {
+        flex-direction: row;
+        align-items: center;
+        padding-left: 0;
+    }
+    .tb-tabbitem__list .tb-itemlinks .tb-switchservice, .tb-tabbitem__list .tb-itemlinks .tb-tabicon {
+        margin: 0;
+        padding-left: 0;
+        border-left: 0;
+        border-top: 1px solid $border-color;
+    }
+    .tb-itemlinks .tb-startingprice{padding-bottom: 9px;}
+    .tb-postservicev2 .tb-addservice-steps li:not(:last-child):after{display: none;}
+    .form-group-3half,
+    .tb-postservice .form-group-half{
+        width: 100% !important;
+    }
+    .tb-packages li{
+        width: 100%;
+        &:nth-child(n){border-left: 1px solid $border-color;}
+        &:nth-child(n+3){border-top: 0;}
+    }
+    .tk-popularservices{
+        .splide__pagination{
+            bottom: -34px;
+        }
+    }
+    .tb-uploadcontent{
+        .tb-profileform__content{
+            flex-direction: column;
+            .tb-titleinput{
+                flex: 1;
+                padding-top: 10px;
+                &:empty{
+                    display: none;
+                }
+            }
+        }
+    }
+    .tk-feedbackslider {margin-left: 30px;}
+    .tk-easyoperate{
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    .tk-profeesonitem{
+        margin: 0 auto;
+        width: 100%;
+    }
+    .tb-pagination .prev,
+    .tb-pagination .next{margin: 0;}
+    .tb-tasksitem__btn{
+        width: 100%;
+        padding-top: 20px;
+    }
+    .tk-package-list li{width: 50%;}
+    .tb-deactivate-wrapper{
+        .tb-profileform__content{
+            flex-wrap: wrap;
+            ~ .tb-profileform__content{
+                .tb-titleinput{padding-top: 10px;}
+            }
+        }
+        .tb-titleinput{
+            flex: auto;
+            padding: 0 0 8px;
+        }
+    }
+    .tk-trendingserviceslider_content figure figcaption span img{width: 100%;}
+    .tb-main-bg .tb-addcommentblogv2.tb-addcommentblog .tb-addcomment{
+        padding-left: 50px;
+        padding-right: 30px;
+    }
+    .tb-pricingcontainertwo .tb-pricingitems li{
+        width: auto;
+        .tb-pricingtitle{
+            width: 100%;
+        }
+    }
+    .tb-addservice-step-complete:after{right: 20px;}
+    .tb-postservicev2 .tb-addservice-step span{padding-left: 34px;}
+    .tb-addservice-steps li + li{margin-top: 0;}
+    .tb-postservicev2 .tb-addservice-steps li:not(:first-child) .tb-addservice-step span{padding-left: 34px;}
+    .tb-profile-settings-box{
+        .tb-profileform__holder{
+            .tb-dhbbtnarea{
+                align-items: flex-start;
+            }
+        }
+    }
+    .tk-bannerinfo .tk-bannerinfo_search.tk-appendinput .tk-searcbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .tk-bannerinfo .tk-bannerinfo_search.tk-appendinput .tk-searcbar .tk-select{
+        width: 100%;
+    }
+    .tk-bannerinfo .tk-appendinput .tk-inputicon {
+        max-width: 100%;
+    }
+    .tk-bannerinfo .tk-bannerinfo_search .tk-searcbar .tk-darkbtn {
+        width: 100%;
+    }
+    .tk-hirring-img li {
+        width: 50%;
+    }
+    .tk-newproject-list{
+        flex-wrap: wrap;
+    }
+    .tk-postproject-new{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .tk-hire-freelancer{
+        li{
+            width: 100%;
+        }
+    }
+    .tk-template-serach .tk-inputicon{
+        width: 100%;
+    }
+    .tk-counterinfo_list li,
+    .tk-activities-hourly .tk-counterinfo_list li {
+        max-width: 100%;    
+    }
+    .tk-activities-hourly .tk-counterinfo_list li:nth-child(n+2){box-shadow: inset 0 -1px 0px $border-color;}
+    .tk-counterinfo_list li:not(:last-child){
+        box-shadow: inset 0 -1px 0px $border-color;
+    }
+    .tk-price span, .tk-price h4{
+        text-align: left;
+    }
+    .tk-projectsstatus_head{
+        flex-direction: column;
+    }
+    .tk-projectsstatus_budget{
+        margin-left: 0;
+        margin-top: 10px;
+        strong{
+            text-align: left;
+        }
+        .tk-projectsstatus_option{
+            top: 30px;
+            right: 30px;
+        }
+    }
+    .tk-timecards_head{
+        flex-direction: column;
+        align-items: flex-start;
+        h5{
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+        .tk-actionselect{
+            margin-left: 0;
+            padding-left: 0;   
+            width: 100%;
+        }
+    }
+    .tk-timeslot_save{
+        flex-direction: column;
+        align-items: initial;
+        span.tk-btn-solid{
+            margin-left: 0;
+            margin-top: 20px;
+        }
+    }
+    .tk-checkoutinfo {
+        flex-direction: column;
+        align-items: flex-start;
+        .tk-checkoutdetail {
+            margin: 10px 0 0;
+            h6{
+                margin: 0 0 10px;
+            }
+        }
+    }
+    .tb-dhb-mainheading{
+        flex-direction: column;
+        align-items: flex-start;
+        .tb-sortby{
+            margin-left: 0;
+            margin-top: 10px;
+            width: 100%;
+        }
+    }
+}
+@media (max-width:640px){
+    .tb-contentbanner__title h1 em{display: none;}
+    .tb-loginconatiner .tb-popupcontainer {
+        max-width: initial;
+        width: 95.2%
+    }
+    .tb-communityinfo {
+        max-width: 250px;
+        padding-right: 47px;
+        padding-left: 47px;
+    }
+    .tb-bannerdropholder{width: 100%;}
+    .tb-commingsoon__footer .col-7 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .tb-topfreelancers{
+        min-height: 100%;
+    }
+    .tb-dots .owl-dots{
+        bottom:-15px;
+    }
+    .tk-bannerheight.tk-bannerv2{
+        margin-top: -236px;
+        padding-top: 350px;
+    }
+}
+@media (max-width: 600px) {
+    .tk-popularservices.tk-sliderarrow{
+        .splide__arrows{
+            .splide__arrow--prev {left: 12px;}
+            .splide__arrow--next {right: 12px;}
+        }
+    }
+  }
+@media (max-width:575px){
+   
+    .tb-requestarea .tb-additonolservices:last-child .tb-additionolinfo{padding: 20px;}
+    .tb-requestarea .tb-additonolservices .tb-additionolinfo .tb-addcomment {margin: 20px 0 0;}
+    .tk-about-image figure figcaption{
+        left: 0;
+    }
+    .tk-clients-wrapper_three .tk-clients{
+        margin: 0 -12px;
+    }
+    .tk-categoriestab{
+        margin: 0 0 30px;
+    }
+    .tk-category .tk-category_list .tk-category_item{
+        max-width: 50%;
+    }
+    .tk-faq_input{
+        .tk-placeholderholder{
+            .form-control{padding-left: 56px;}
+        }
+        .tk-inputappend{
+            padding: 0;
+            position: relative;
+            & > i{
+                top: 0;
+                left: 20px;
+                z-index: 9;
+                position: absolute;
+                line-height: 48px;
+            }
+            & > a{
+                padding-left: 20px;
+            }
+            .tk-inputappend_right{
+                margin: 0;
+                .tk-btn-solid-lg{border-radius: 0 0 $radius $radius;}
+            }
+        }
+    }
+    .splide__pagination__page{
+        margin: 0 4px !important;
+    }
+    .tb-searchresult-section .tb-filterselect {width: 100%;}
+    .tb-headerwrap,
+    .tb-homebanner,
+    .tb-main,
+    .tb-communityarea,
+    .tb-customerfeedmain,
+    .tb-appfeaturesection,
+    .tb-fixedheader .tb-headerwrap{
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .tb-communityinfo {
+        max-width: 242px;
+        padding-right: 44px;
+        padding-left: 44px;
+    }
+    .tb-demanding-section{padding-bottom: 70px;}
+    .tb-footercontent{
+        [class^='col-']:not(:first-child){padding-top: 47px;}
+    }
+    .tb-intensionlist__num{
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .tb-creativehuman{
+        padding-bottom: 100px;
+        .tb-dots .owl-dots{bottom: -20px;}
+    }
+    .tb-savelisting .tb-itemlinks .tb-startingprice span {
+        margin-left: 4px;
+    }
+    .tb-extrascompleted .tb-tabitemextras {
+        min-width: 100%;
+        margin: 15px 0 0px;
+    }
+    .tb-popupbtnarea{
+        flex-direction: column;
+        align-items: flex-start;
+        a{margin-top: rem(10);}
+    }
+    .tb-savelisting{
+        .tb-tabicon{
+            padding-bottom: 0;
+            line-height: 1;
+            a{line-height: 1;}
+        }
+    }
+    .tb-dropdownholder{
+        min-width: 100%;
+        .tb-distance{padding: 26px 30px 29px;}
+    }
+    .tb-switchservice{padding-bottom: 17px;}
+    [data-scroll] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+    .splitting .char:after{opacity: 1;}
+    .tb-headerinput,
+    .tb-headerinputbtn{
+        margin-left: 20px;
+        padding-left: 20px;
+    }
+    .tb-formlogin .tb-popupbtnarea{flex-direction: row;}
+    .tb-requestarea [aria-expanded=false] ~ .tb-readmorebtn:before {
+        height: 66px;
+        top: -66px;
+    }
+    .tk-banner .tk-about_content{
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+    .tb-main-bg .tb-postservice > .row{padding: 0 15px;}
+    .tb-addonpopup .tb-savebtn,
+    .tb-addonspopup .tb-savebtn{
+        em{
+            width: 100%;
+            text-align: left;
+        }
+        span + .tb-btn,
+        em + .tb-btn{margin: 10px 0 0;}
+    }
+    .tb-resvsionbtn-holder{
+        .form-group-half{
+            width: 100%;
+            padding-right: 0;
+        }
+    }
+    .tk-easyoperate{
+        padding:20px 12px;
+    }
+    .tk-banner_title .tk-inputappend{
+        flex-wrap: wrap;
+    }
+    .tk-inputappend_right{
+        width: 100%;
+        margin: 10px 0 0;
+       .tk-btn-solid-lg{
+            width: 100%;
+        }
+    }
+    .tk-feedbackslider {margin-left: 12px;}
+    .tk-feedbackitem {
+        max-width: 446px;
+        flex-direction: column;
+    }
+    .tk-feedbackitem figure{margin: 0 0 20px !important;}
+    .tk-banner_contenttwo .tk-banner_title form{margin-bottom: -153px;}
+    .tk-clients{
+        margin-right: 0;
+        margin-left: 0;
+        li{
+            padding-right: 12px;
+            padding-left: 12px;
+        }
+    }
+    .tk-professionolslider{
+        padding-bottom: 42px;
+    }
+    .tk-faqsslider{
+        padding-bottom: 60px;
+        margin-right: -12px;
+        margin-left: -12px;
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+    .tk-inputappend {flex-wrap: wrap;}
+    .tb-project-chat-form .tb-resvsionbtn-holder .form-group-half{
+        padding-right: 10px;
+    }
+    .tb-resvsionbtn-holder .form-group-half ~ .form-group-half{padding-top: 0;}
+    .tk-trendingserviceslider.tk-sliderarrow .splide__arrow--prev{left: 5px;}
+    .tk-trendingserviceslider.tk-sliderarrow .splide__arrow--next{right: 5px;}
+    .tk-trendingserviceslider.tk-sliderarrow .splide__arrow{
+        width: 50px;
+        height: 50px;
+        &::before{
+            font-size: 20px;
+        }
+    }
+    .tk-mobile-wrapper{
+        padding:0;
+    }
+    .sc-services-slider{
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+    .tb-addonpopup .tb-savebtn,
+    .tb-addonspopup .tb-savebtn{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .tb-addonspopup .form-group-title,.tb-addonpopup .tb-formlogin .form-group-title{padding: 0;}
+    .tb-requestarea .tb-additonolservices .tb-additionolinfo{
+        .tb-addcomment {
+            margin: 0;
+        }
+    }
+    .tk-mainlistvtwo li:nth-child(n+3) {margin: 10px 0 0;}
+    .tk-mainlistvtwo li {width: 100%;}
+    .tk-mainlistvtwo li + li {margin: 10px 0 0;}
+}
+@media (max-width:568px){
+    .tk-hirring-img li {
+        width: 100%;
+    }
+    .tk-project-detail{
+        width: 100%;
+        a{
+            width: 100%;
+            justify-content: center;
+        }
+    }
+    .tb-count__content{width: 50%;}
+    .tb-commingsoonimg{height: 1080px;}
+    .tb-communityinfo {
+        max-width: 239px;
+        padding-right: 42px;
+        padding-left: 42px;
+    }
+    .tb-loginicon {
+        ul{
+            flex-direction: column;
+            li{
+                width: 100%;
+            }
+        }
+    }
+    .tb-additionalservices-title{
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        h6{
+            padding-right: 20px;
+        }
+    }
+    .tk-betaversion-info{
+        .tk-project-tag{
+            display: block;
+            margin-left: 0;
+            margin-top: 5px;
+            width: 95px;
+        }
+    }  
+    .tk-project-box-two {
+        flex-direction: column;
+    }
+    .tk-projectbtns{
+        width: 100%;
+        a{
+            width: 100%;
+        }
+    }
+    .tk-project-detail{
+        margin-left: 0;
+        a{
+            margin-left: 0;
+            justify-content: center;
+        }
+        .tk-invite-bidbtn{
+            margin-top: 10px;
+            margin-left: 0;
+        }
+    }
+    .tk-proactivity_file{
+        flex-direction: column;
+        align-items: flex-start;
+        .tb-download-attachment{
+            margin-top: 10px;
+        }
+    }
+    .tk-project-share{
+        margin-bottom: 15px;
+    }
+}
+@media (max-width:480px){
+    .tk-serviesbann__content{padding: 20px;}
+    .tb-postservice .tb-addservices-steps .tb-postserviceformbtn,
+    .tb-postservice .tb-addservices-steps .tb-postservicebtn{
+        padding-top: 20px !important;
+    }
+    .am-registration-terms .tb-btn{
+        margin: 0;
+    }
+    .tk-price .tk-project-detail > a + a{
+        margin: 20px 0 0;
+    }
+    .tk-educationpopup .tb-combine-group .tb-calendar {
+      width: 100%;
+    }
+    .tb-bestservicedetail__user .tb-asideprostatus{
+        flex-direction: column;
+        align-items: flex-start;
+        & > figure{
+            margin: 0 0 20px;
+        }
+    }
+    .tb-additionalservices__content{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .tb-packagewrap + .tk-addiservicesinfo{
+        padding: 20px 20px 0;
+        margin: 20px -20px 0;
+    }
+    .tk-timecards_head .tk-actionselect{
+        flex-direction: column;
+        align-items: flex-start;
+        .tk-timecards_total{
+            padding-right: 0;
+            padding-bottom: 10px;
+        }
+    }
+    .tk-completed-proposal .tk-hire-freelancer-info{
+        padding-left: 0;
+        padding-top: 10px;
+    }
+    .tk-timecard-table td{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .tk-timecard-table tbody > tr > td p{max-width: 100%;}
+    .tk-timeslot_list li{
+        width: 50%;
+    }
+    .tk-actionselect > span{
+        padding-right: 10px;
+    }
+    .tk-project-table-content{
+        .tk-btn-solid {
+            margin-top: 10px;   
+        }
+    }
+    .tk-working-rate .tk-project-price,
+    .tk-profile-view .tk-project-table-content{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .tk-profile-view a{
+        margin-left: 0;
+    }
+    .tk-profile-view h4{
+        padding: 10px 0;
+    }
+    .tk-working-rate .tk-project-price > span{
+        padding-top: 10px;
+    }
+    .tk-project-detail{
+        flex-direction: column;
+        align-items: flex-start;
+        .tk-likev2{
+            margin-bottom: 10px;
+        }
+    }
+    .tk-subcategory .tk-category_list .tk-category_item,
+    .tk-category_list ul li{
+        max-width: 100%;
+    }
+    .tk-category_list ul li .tk-bestservice{
+        width: 100%;
+    }
+    .tk-bannervfive{
+        padding:20px 0;
+    }
+    .tk-exploretalent span {
+        max-width: 100%;
+        margin: 10px 0 0;
+    }
+    .tb-dhb-mainheading__rightarea em{
+        order: -1;
+        padding: 0;
+        flex: auto;
+    }
+    .tk-togglebtmmenu {
+        padding: 10px;
+    }
+    .tk-profeesonitem{
+        max-width: 100%;
+    }
+    .tb-packages{
+        &__plan{
+            padding: 20px;
+        }
+        &__buy,
+        &__text{
+            padding: 10px 20px;
+        }
+    }
+    .tb-popupbtnarea .tb-checkterm{padding: 0 0 5px;}
+    .tb-headerinputopen{
+        flex-wrap: wrap;
+        .tb-logo{flex: auto;}
+    }
+    .tb-headerwrapv2 .tb-logo{
+        width: 100%;
+        position: relative;
+        &:before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -15px;
+            width: calc(100% + 30px);
+            height: 1px;
+            background-color: $border-colorv2;
+        }
+    }
+    .tb-headerv2 .tb-headerinput{
+        margin: 0;
+        padding: 0;
+    }
+    .tb-headerv2 .tb-headerinputbtn{
+        padding: 0 10px 0 0;
+        margin: 0;
+    }
+    .tb-headerinput:before,
+    .tb-headerinputbtn:before{content: none;}
+    .tb-contentbanner {width: auto;}    
+    .tb-contentbanner__title h1,
+    .tb-letters span{font-size: 37px;}
+    .tb-animatedtitle{max-height: 44px;}
+    .tb-letters span{line-height: 38px;}
+    .tb-loginconatiner .tb-popuptitle, .tb-loginfooterinfo a,
+    .tb-insightmain,
+    .tb-switchaccount,
+    .tb-bestservice__content,
+    .tb-bannerdrop,
+    .tb-bannerdrop__list,
+    .tb-trend__content .tb-cards__title,
+    .tb-intensionlist__num,
+    .tb-freelancerawards,
+    .tb-explorelisting,
+    .tb-dhb-box,
+    .tb-blogprofileuser,
+    .tb-printable,
+    .tb-pricing__content,
+    .tb-requestarea .tb-profile-steps,
+    .tb-additonoltitle,
+    .tb-additonolservices .tb-additionolinfo,
+    .tb-taskcountdown,
+    .tb-bestservicedetail__list,
+    .tb-blogtags,
+    .tb-asidebox,
+    .tb-ratingreview,
+    .tb-popuptitle,
+    .tb-hiretasksidebar .tb-formlogin,
+    .tb-additionalchecklist,
+    .tb-filterdropdownarea,
+    .tb-communitybanner__textarea,
+    .tb-overleymodel,
+    .tb-commingsoon,
+    .tb-distance,
+    .tb-submitreview,
+    .tb-postservicev2 .tb-themeform,
+    .tb-tabfilteritem,
+    .tb-tabfilter,
+    .tb-filtermsg,
+    .tb-messagelist__content,
+    .tb-messageuserabove,
+    .tb-messageareaholder,
+    .tb-messageuserbelow,
+    .tb-addservice-title,
+    .tb-disputemain,
+    .tb-extrasarticles,
+    .tb-disputearea .tb-extrasarticles + .tb-extrasarticles,
+    .tb-sarticlesbtnsarea,
+    .tb-additionolinfo,
+    .tb-invoice-table.tb-table > tbody > tr td,
+    .tb-profilestatuses li,
+    .tb-taskcompleted,
+    .tb-joincommunity,
+    .tb-payoutmethodpopup .tb-radio .payoutlists,
+    .tb-cropimg,
+    .tb-cropimgpopup .tb-dhb-mainheading__rightarea,
+    .tb-billinginfo fieldset,
+    .tb-educationdetail li,
+    .tb-sortv2,
+    .tb-main-bg .tb-postservice > .row > [class^=col-],
+    .tb-profileform__title,
+    .tb-profileform__detail,
+    .tb-ordercontent,
+    .tb-taskdeadline .tb-asidebox.tb-additionolinfo,
+    .tb-asideholder_title,
+    .tb-asideholderv2 .tb-additionalinput,
+    .tb-asideholderv2 .tb-planslist,
+    .tb-featurelist li,
+    .tb-buyer-insights .tb-asidebox,
+    .tb-faq__title,
+    .tb-faq__title,
+    .tb-faq__content .tb-sectiontitle,
+    .tb-uploadcontent,
+    .tk-feedbackinfo,
+    .tk-easyoperate,
+    .tk-blogs-section,
+    .tk-checkoutinfo,
+    .tk-servicedetail .tk-box,
+    .tk-asideboxsm,
+    .tk-pakagedetail,
+    .tk-asideboxv2,
+    .tk-asideboxv2 ~ .tk-featuredlisted,
+    .tk-walletsystem,
+    .tb-asideholder .tb-asidebox,
+    .tb-addtaskfile .tb-uploadarea,
+    .table > tbody > tr > td,
+    .tk-package-plan,
+    .tb-dhb-profile-settings .tb-tabtasktitle,
+    .tb-dhb-box-wrapper .tb-profileform__holder,
+    .tb-profile-settings-box .tb-tabtasktitle,
+    .tk-accordion_info,
+    .tk-status-holder,
+    .tk-project-type,
+    .tk-attechment-content .tb-uploadarea,
+    .tk-attechment-content,
+    .tk-hire-freelancer_content,
+    .tk-template-list_content,
+    .tk-template-serach,
+    .tk-prouserslist a,
+    .tk-projectsstatus_head,
+    .tk-proactivity,
+    .tk-uploadfile-doc,
+    .tk-uploadfile-doc .tk-upload-resume,
+    .tk-proinvoices,
+    .tk-projectsactivity .tk-nav-tabs li button,
+    .tk-projectsinfo,
+    .tk-statusview,
+    .tk-statusview_alert,
+    .tk-add-price-slots,
+    .tk-counterinfo_list li,
+    .tk-timecards{
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .tk-login_title{
+        padding: 20px 20px 30px;
+    }
+    .tk-login-content,
+    .tk-question-section,
+    .modal .modal-body,
+    .tb-bestservicedetail__user{
+        padding: 20px;
+    }
+    .tk-betaversion-wrap,
+    .tk-project-box{padding: 20px;}
+    .tb-syncthumbnail{
+        padding-left: 19px;
+        padding-right: 19px;
+    }
+    .tb-main-bg .tb-singleservice-tile{
+        padding: 0 19px 19px;
+    }
+    .tb-main-bg .tk-project-box .tb-singleservice-tile{padding: 0;}
+    .tb-servicedetailtitle{padding: 19px 19px 20px;}
+    .tb-tabasidebar .tb-sidebarpkg{
+        padding: 20px 20px 10px;
+    }
+    .tb-share-section{
+        padding: 0 20px 20px;
+    }
+    .tb-tasksitem,
+    .tk-projectbox .tk-project-box,
+    .tb-main-bg .tb-servicedetailcontent .tb-singleservice-tile{padding: 19px;}
+    .tb-radioholder{padding-left: 12px !important;}
+    .tb-savebtn span{
+        max-width: unset;
+        width: 100%;
+        padding-bottom: 10px;
+        + .tb-btn{
+            margin: 0;
+            order: 10;
+        }
+    }
+    .tb-tabs .nav-item {
+        width: calc(100% / 2);
+        &:nth-child(even){
+            .nav-link{border-right: 0;}
+        }
+    }
+    .form-group-half,
+    .tb-bestservicedetail__list > li{width: 100%;}
+    .tb-actionbtn a{padding-left: 0;}
+    .tb-langslider div{font-size: 80px;}
+    .tb-topfreelancers{
+        padding-left: 15px;
+        padding-right: 15px;
+        figure{display: none;}
+    }
+    .tk-reviews .tb-sectiontitle{padding: 20px 20px 0;}
+    .tk-reviews .tb-addcommentblog .tb-addcomment{padding: 20px;}
+    .tb-communityarea{padding-bottom: 80px;}
+    .tb-communitymid{position: static;}
+    .tb-comunnitygrid{
+        position: static;
+        transform: none;
+        margin: 30px 0 0;
+    }
+    .tb-communitymid .tb-communityinfo{
+        &:before,
+        &:after{content: none;}
+    }
+    .tb-communityinfo{
+        max-width: initial;
+        width: 100%;
+    }
+    .mCSB_inside > .mCSB_container{margin-right: 0;}
+    .tb-bannerimg:after {
+        width: 322px;
+        height: 322px;
+    }
+    .tb-intensionmain .tb-btnarea{
+        flex-direction: column;
+        align-items: flex-end;
+        h5{padding-block-end: 5px;}
+    }
+    .tb-blogimg {
+        flex-direction: column;
+        align-items: flex-start;
+        & figure{
+            margin: 0 0 20px;
+        }
+    }
+    .tk-reviews .tb-addcommentblog .tb-addcomment .tb-description{padding-left: 0;}
+    .tb-blogcmntinfo {
+        margin-top: 10px;
+    }
+    .tb-blogcommentsholderchild + a {
+        width: 95% !important;
+    }
+    .tb-addcommentblog .tb-addcomment .tb-description {
+        padding-left: 0;
+    }
+    .tb-dhb-mainheading__rightarea a {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .tb-blogcommentsholdervthree + [data-readmore-toggle],
+    .tb-blogcommentsholdervfour + [data-readmore-toggle]{
+        margin-top: -38px;
+    }
+   
+    .tb-dhb-mainheading .tb-dhb-mainheading__rightarea {
+        margin: 0;
+        width: 100%;
+    }
+    .tb-savelisting > li {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .tb-extras .tb-tabitemextras{width: 100%;}
+    .tb-tabfilter {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .tb-combine-group{
+        flex-wrap: wrap;
+    }
+    .tb-dhb-box,
+    .tb-asidebox{
+        .tb-icondetails{
+            .tb-profilestatus li {
+                .tb-profiletime{width: 60%;}
+            }
+        }
+    }
+    .tb-subtotal{
+        .tb-subtotalbill {
+            width: 100%;
+            padding: 0 10px 0 0px;
+        }
+        .tb-sumtotal {
+            min-width: 100%;
+            padding: 14px 10px;
+        }
+    }
+    .tb-sarticlesbtnsarea{
+        .tb-articlebtns{flex-direction: column;}
+    }
+    .tb-tasksitem .tb-cards__title,
+    .tb-tasksitem__footer{padding-left: 0}
+    .tb-submitreview h4{width: auto;}
+    .tb-optionsbar{margin-bottom: 23px;}
+    .tb-loginicon .form-group-title{
+        width: 100%;
+        min-width: auto;
+        padding: 0 0 4px;
+    }
+    .tb-formlogin .tb-form-btn,
+    .tb-addonspopup .tb-form-btn{
+        flex-direction: column;
+        align-items: flex-start;
+        .tb-btn{margin: 0;}
+    }
+    .tb-form-btn{
+        .tb-btn{margin: 10px 0 0;}
+    }
+    .tb-formlogin .form-group,
+    .tb-addonspopup .form-group{display: inline-block;}
+    .tb-formlogin .tb-form-btn {
+        display: flex;
+        justify-content: center;
+    }
+    .tb-formlogin .form-group-title{margin-bottom: 4px;}
+    .tb-bestservicedetail__list .tb-sidebarcontent .tb-profileprogress{margin-bottom: 6px;}
+    .tb-formlogin{
+        .tb-eyeicon {
+            position: relative;
+            a{
+                position: absolute;
+                top: 53%;
+            }
+        }
+    }
+    .tb-deactivebtns{
+        flex-direction: column;
+        width: 100%;
+        .tb-btn{
+            min-width: auto;
+            width: 100%;
+            + .tb-btn{margin: 10px 0 0;}
+        }
+    }
+    .tb-combine-group .tb-calendar{
+        .form-control{border-radius: $radius $radius 0 0;}
+        + .tb-calendar .form-control{
+            border-top: 0;
+            border-left: 1px solid $border-color;
+            border-radius: 0 0 $radius $radius;
+        }
+    }
+    .tb-packages li{
+        width: 100%;
+        &:nth-child(n){border-left: 1px solid $border-color;}
+        &:nth-child(n+3){border-top: 0;}
+    }
+    .tb-additionalservices li{width: 100%;}
+    .tb-addcommentblogv2{
+        .tb-blogcmntinfonames{padding-top: 10px;}
+        .tb-blogcmntinfo{margin-top: 0;}
+        .tb-comentinfodetail > a{
+            flex-direction: column;
+            align-items: flex-start;
+            span{
+                padding-left: 0;
+                &:before{content: none;}
+            }
+        }
+    }
+    .tb-additionalservice{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .tb-bestservicedetail .tb-blogtags{
+        flex-wrap: wrap;
+        .tb-btn{
+           width: 100%;
+           margin-top: 10px;
+       }
+    }
+    .tb-pricingitems li{
+        width: 100%;
+        ~ li .tb-pricingitems__content{border-left: 1px solid $border-colorv2;}
+    }
+    .tb-overleymodel{
+        bottom: 757px;
+        transform: translateY(-50%);
+        max-width: 265px;
+    }
+    .tb-pricingitems li:last-child .tb-pricingitems__content{border-radius: 0;}
+    .tb-pricingitems li:nth-last-child(2) .tb-pricingitems__content{border-radius: 0 0 $radius $radius;}
+    .tb-filterdropdownbtn{
+        width: calc(100% + 30px);
+        margin: 11px 0 0 -15px;
+    }
+    .form-group .tb-dropdownholder{
+        min-width: auto;
+        width: calc(100% - 10px);
+    }
+    .tb-submitreview.tb-submitreviewv3 h4 {width: auto;}
+    .tb-loginicon {
+        ul{
+            flex-direction: row;
+            li{
+                width: 50%;
+            }
+        }
+    }
+    .tb-blogcommentsholdervthree[aria-expanded="false"] ~ .tb-readmorebtn::before,
+    .tb-blogcommentsholdervfour[aria-expanded="false"] ~ .tb-readmorebtn::before{
+        height: 44px;
+        top: -40px;
+    }
+    .tb-hiretaskpopup{
+        .tb-form-btn__content{
+            margin-left: 0;
+        }
+    }
+    .tb-userlogin{padding: 0;}
+    .tb-breadcrumb-wrap{margin-top: 30px;}
+    .tb-blogcommentsholderchild {padding-left: 15px;}
+    .tb-blogcommentsholderchild + [data-readmore-toggle] {margin-left: 15px;}
+    .tb-titleinput.tb-titleinputv2,
+    .tb-titleinput{padding: 0 0 6px;}
+    .tb-dhbheading__rightarea{padding-top: 10px;}
+    .tb-cards__title{padding-left: 5px;}
+    .tb-sales{
+        margin-right: -15px;
+        margin-left: -15px;
+        li{
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+    .tb-socialiconcolumn li a i{min-width: 31px;}
+    .tb-byadons{
+        .tb-dhb-mainheading__rightarea{
+            flex-wrap: wrap;
+        }
+    }
+    .tb-loginfooterinfo{
+        flex-direction: column;
+        a{
+            width: 100%;
+            + a{
+                border-top: 1px solid $border-colorv2;
+                border-left: 0;
+            }
+        }
+    }
+    .tb-headerinput,
+    .tb-headerinputbtn{
+        padding: 0 10px 0 0;
+        margin: 0;
+    }
+    .tb-popupcontainer{
+        .tb-form-btn{
+            .tb-checkbox,
+            .tb-checkterm{
+                + .tb-btn{margin-top: 10px;}
+            }
+            .tb-btn{margin-top: 0;}
+        }
+    }
+    .tb-payoutmethodpopup .payoutlists:after {left: 13px !important;}
+    .tb-loginconatiner{
+        height: 100%;
+        figure{height: 100%;}
+    }
+    .tb-cropimgpopup .tb-dhb-mainheading__rightarea em{padding: 0;}
+    .tb-dhbbtnareav2:before{
+        left: -15px;
+        width: calc(100% + 30px);
+    }
+    .tb-main-bg .tb-overleymodel{max-width: 245px;}
+    .tb-aside-wallet{
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+    }
+    .tb-ordertitlearea{
+        flex-direction: column;
+        align-items: flex-start;
+        img{margin: 0 0 5px;}
+    }
+    .tb-tags_links{
+        padding-left: 0;
+    }
+    .tb-singleservice-tile{
+        .tb-blogtags{
+            padding: 0;
+        }
+    }
+    .tb-postservicev2 .tb-uploadbar-content::before{padding-right: 15px;}
+    .tk-feedbackitem,
+    .tk-feedbackinfo{
+        max-width: initial;
+        width: 100%;
+    }
+    .tk-feedbackitem{padding-right: 12px;}
+    .tk-sliderarrow .splide__arrow{
+        width: 44px;
+        height: 44px;
+        &::before{font-size: 22px;}
+    }
+    .tb-seller-profile-two .tb-asidebox{
+        padding: 0 19px 19px;
+    }
+    .tk-exploremore li span{
+        padding-right: 15px;
+    }
+    .tk-additionalservicesvtwo .tk-form-checkbox{
+        flex-direction: column;
+    }
+    .tk-additionalservicesvtwo .tk-form-checkbox .tk-additionolinfo{
+        margin: 10px 0;
+    }
+    .tb-pagination {
+        ul{
+            margin: -3px;
+            li{
+                padding: 3px;
+                a,
+                span{
+                    width: 36px;
+                    line-height: 34px;
+                    font-size: rem(14);
+                }
+            }
+        } 
+    } 
+    .tk-package-list li{width: 100%;}
+    .tb-settingtabholder.tb-asidebox{padding: 0;}
+    .tk-bannerv2_title {
+        h1{font-size: rem(42);}
+        h2{font-size: rem(52);}
+      }
+      .tk-navbarv3{
+        padding-right: 0;
+        padding-left: 0;
+      }
+      .tb-sidebartabs.tb-asidebox{padding: 0;}
+      .tb-main-bg .tb-addcommentblogv2.tb-addcommentblog .tb-addcomment {
+        margin-left: 0;
+        padding: 100px 12px 30px 12px;
+    }
+     .tb-main-bg .tb-addcommentblogv2 .tb-blogimg figure{
+        margin: 15px 0 0 0;
+        left: 50px;
+        top: 0;
+    }
+    .tb-addservice-step-complete:after{right: 15px;}
+    .tb-postservicev2 .tb-addservice-step span,
+    .tb-postservicev2 .tb-addservice-steps li:not(:first-child) .tb-addservice-step span,
+    .tb-addon__content{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .tb-addon__content .tb-checkbox{
+        padding-right: 0;
+    }
+    .tb-addon__content{
+        flex-direction: column;
+        align-items: flex-start;
+        h5{padding: 10px 0 0 34px;}
+    }
+    .tb-earninginvoices .tb-earningcostvtwo{
+        width: 100%;
+        min-width: auto;
+    }
+    .tk-project-type{
+        flex-direction: column;
+        align-items: flex-start ;
+        > div{
+            margin-left: 0;
+            margin-top: 14px;
+        }
+    }
+    .tk-hire-freelancer_content{
+        flex-wrap: wrap;
+        > a{
+            margin-left: 0;
+            margin-top: 5px;
+        }
+    }
+    .tk-template-serach{
+        flex-direction: column;
+        align-items: flex-start;
+        a{
+            width: 100%;
+        }
+        form{
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+    .tk-contract-list{
+        min-width: 270px;
+    }
+    .tk-proactivity_list li{
+        flex-direction: column;
+    }
+    .tk-proposal{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .tk-proposal .tk-select{
+        margin-top: 20px;
+    }
+    .tk-milestones-input{
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        .tk-removeicon{
+            position: absolute;
+            right: -10px;
+            top: 10px;
+        }
+    }
+    .tk-addslots{
+        width: 80%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .tk-milestones-prices::before{
+        height: 236px;
+    }
+    .tk-addtime-slot li{
+        width: 50%;
+        height: auto;
+    }
+    .tk-projectprice .tk-sidebar-title .tk-project-tag{margin-top: -20px;}
+    .tb-paybtn {
+        display:block;
+        .tb_remove_payout{
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin: 10px 0 0;
+        }
+    }
+}
+@media (max-width:420px){
+    .tk-project-requirement > li{max-width: 100%;}
+    .tk-btnviewpro a.tk-btn-solid-lg{
+        padding: 0 15px;
+    }
+    .tb-pkgresponse__content{
+        padding: 20px;
+        align-items: center;
+        flex-direction: inherit;
+        h6{
+            order: 3;
+            margin: 0 0 0 auto;
+        }
+        span{
+            margin-left: 10px;
+        }
+    }
+    .tb-tasksitem__footer .tb-sales{
+        margin: 0;
+        gap: 20px 0;
+        flex-direction: column;
+        li{
+            padding: 0;
+            flex: 0 0 100%;
+        }
+    }
+    .tb-packages__text{flex-wrap: nowrap;}
+    .tk-projectsactivity .tk-nav-tabs li{
+        width: 100%;
+    }
+    .tk-bidbtn.tk-proposals-btn{
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 0;
+        button{
+            width: 100%;
+            + button{
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+    }
+    .tk-projectsactivity .tk-nav-tabs{padding-top: 0%;}
+    .tk-proactivity_img{margin-right: 10px;}
+    .tk-prouserslist a,.tk-projectsstatus_info{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .tk-prouserslist a img + h6{
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .tk-prouserslist a .tk-project-tag{
+        margin-top: 10px;
+    }
+    .tk-projectsstatus_img{
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .tk-category .tk-category_list .tk-category_item{max-width: 100%;}
+    .tk-sort .tk-actionselect > span{display: none;}
+    .sub-menu li:hover .sub-menu{top: 100%;}
+    .sub-menu .tb-menudropdown .sub-menu{
+        margin: 0 -10px 0 0;
+        right: 0;
+        top: 200%;
+    }
+    .tk-sortby + .tk-filtermenu {
+        margin-left: 10px;
+    }
+    .tb-headerv2 .tb-headerwrap{padding-bottom: 0;}
+    .tb-count__content{width: 100%;}
+    .tb-commingsoonimg{height: 1450px;}
+    .tb-contentbanner .tb-inputappendin .form-control{
+        padding-right: 20px;
+        border-radius: $radius $radius 0 0;
+    }
+    .tb-contentbanner .tb-inputappendin{
+        margin-bottom: 50px;
+        flex-wrap: wrap;
+        .tb-btn{
+            border-radius: 0 0 $radius $radius;
+            min-width: auto;
+            width: 100%;
+            top: 100%;
+            left: 0;
+        }
+    }
+    .tb-bannerdropholder{margin-top: 50px;}
+    .tb-bannerdrop__content{
+        flex-wrap: wrap;
+        img{margin: 0 0 6px;}
+    }
+    .tb-bannerdrop__text{width: 100%;}
+    .tb-bannerdrop__list li ~ li{padding-top: 16px;}
+    .tb-bannerimg:after {
+        width: 272px;
+        height: 272px;
+    }
+    .tb-userlogin:hover > .sub-menu {margin-top: 0;}
+    .tb-extras {
+        .tb-tabitemextras {width: 100%;}
+    }
+    .tb-icondetails {
+        margin-top: 5px;
+    }
+    .tab-taskcontent {
+        .tb-themeform{
+            min-width: 100%;
+        }
+    }
+    .wo-inputicon {
+        .tb-actionselect {
+            .tb-select{width: auto;}
+        }
+    }
+    .tb-profileform__title,
+    .tb-detail__content{
+        flex-direction: column;
+        align-items: flex-start;
+        .tb-onoff{
+            margin-left: 0;
+            margin-top: 5px;
+        }
+        .tb-detail__icon {
+            margin: 5px 0 0;
+        }
+        .tb-detail__title {
+            padding: 0;
+        }
+    }
+    .tb-detail__description{padding: 0;}
+    .tb-invoice-table td:before {min-width: 120px;}
+    .tb-loginfooterinfo a {
+        width: 100%;
+    }
+    .tb-loginfooterinfo a + a {
+        border-left: 0;
+        border-top: 1px solid $border-colorv2;
+    }
+    .tb-hiretasksidebar{
+        max-width: 315px;
+        .tb-popuptitle{flex-wrap: wrap;}
+        .tb-startingprice{
+            width: 100%;
+            margin-left: 0;
+            padding: 7px 0 0;
+        }
+    }
+    .tb-logo,
+    .tb-headerv2 .tb-logo{padding: 20px 0;}
+    .tb-headerv2 .tb-headerinputbtn{padding: 0 10px 0 0;}
+    .tb-commingsoon__content{
+        .tb-navbar{
+            margin-right: 10px;
+            + .tb-headerwrap__right{width: auto;}
+        }
+    }
+    .tb-fixedheader .tb-logo {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .tb-blogtags{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .tb-tagtittle{padding: 0 0 10px;}
+    .tb-messageuserabove__back{
+        margin: 15px 20px 0 0;
+        align-self: flex-start;
+    }
+    .tb-messageuserabove__title{
+        flex-direction: column;
+        align-items: flex-start;
+        figure{margin: 0 0 10px;}
+    }
+    .tb-messageuserabove__feature{align-self: flex-start;}
+    .tb-profileform__title--rightarea{margin-left: 0;}
+    .tb-pkgresponse{
+        flex-direction: column;
+        li{
+            width: 100%;
+            border-right: 0;
+        }
+    }
+    .tk-mainlistvtwo{
+        li{
+            width: 100%;
+            &:last-child{
+                padding-bottom: 0;
+            }
+        }
+    }
+    .tb-tabtasktitle{flex-wrap: wrap;}
+    .tb-profileform__title--rightarea{width: 100%;}
+    .tb-detail__content .tb-detail__icon{padding-left: 0;}
+    .tk-mainbtnlist {
+        li{ 
+            width: 100%;
+            a{width: 100%;}
+        }
+    }
+    .tk-explore-categories li{width: 50%;}
+    .tk-explore-content{width: 100%;}
+}
+@media (max-width:380px){
+    .tk-navbarv3 .tk-navbarbtn{width: auto;}
+    .tk-aboutusauthor{
+        flex-direction: column;
+        figure{margin: 0 0 20px !important;}
+    }
+    .tk-authorinfo{text-align: center;}
+}
+@media (max-width:375px){
+    .tb-contentbanner__title{
+        br{display: none;}
+    }
+    .tb-uploadfile-list .tb-actionbtn{width: 100%;}
+    .tb-uploadfile-list{flex-wrap: wrap;}
+    .tb-uploadfile-list .tb-bar-handle{padding: 14px;}
+    .tb-asideprostatusv2{
+        margin: 0 0 20px;
+        flex-direction: column;
+        & > a{
+            margin: 0 0 10px;
+        }
+        .tb-userStatus__content{margin-bottom: 0;}
+    }
+    .tb-profilebtnarea-wrapper{width: 100%;}
+    .tb-userStatus__content{margin-bottom: 10px;}
+    .tb-actionselect{
+        flex-direction: column;
+        align-items: start;
+    }
+    .tb-comentinfodetail a h5{padding: 0 10px 0 0;}
+    .tb-blogimg figure img{max-width: unset;}
+    .tb-bannerimg:after {
+        width: 222px;
+        height: 222px;
+    }
+    .tb-freelancerawards h2{font-size: 48px;}
+    .tb-actionselect{
+        flex-direction: row !important;
+        align-items: center !important;
+    }
+    .wo-inputheight{width: 100%;}
+    .tb-dhb-mainheading .tb-sortby{
+        width: 100%;
+        .tb-themeform .tb-themeform__wrap{
+            width: 100%;
+            .wo-inputicon{
+                .tb-actionselect{ > span{margin-bottom: 0;}}
+            }
+            .wo-inputheight {
+                .form-control{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .tb-table {
+        .tb-bordertags {
+            margin: 0;
+        }
+    }
+    .tb-blogcommentsholdervone div.tb-addcommenthalfvtwo{margin: 0 0 0 30px;}
+    .tb-earninginvoices{ 
+        flex-wrap: wrap;
+        .tb-earningcostvtwo {
+            min-width: 50%;
+            width: 100%;
+            padding: 5px;
+        }
+    }
+    .tb-printshaer{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        .btn-sm{margin-left: 0;}
+    }
+    .tb-shareinvoice{
+        width: 100%;
+        margin: 0 0 10px;
+    }
+    .tb-loginicon ul li{width: 100%;}
+    .tb-blogtags__content{
+        flex-direction: column;
+        .tb-tagtittle{padding: 0 0 4px;}
+    }
+    .tb-singleservice-tile .tb-blogtags{
+        flex-direction: column;
+        .tb-tagtittle{padding: 0 0 5px;}
+    }
+    .tb-uploadbarappend{
+        border: 0;
+        border-top: 1px solid $border-colorv2;
+        border-bottom: 1px solid $border-colorv2;
+    }
+    .tb-commingsoonimg {height: 1480px;}
+    .tb-actionselect form{width: 100%;}
+    .wo-inputicon {
+        width: 100%;
+        .tb-actionselect {
+            width: 100%;
+            .tb-select{
+                width: 100%;
+                > *{
+                    width: 100% !important;
+                    min-width: initial;
+                }
+            }
+        }
+    }
+    .tk-walletsystem .tk-form-checkbox{
+        flex-direction: column;
+    }
+    .tk-walletsystem .tk-additionolinfo{
+        margin:10px 0 0;
+    }
+    .tb-addcomment .tb-blogimg figure img {
+        max-width: 100%;
+    }
+    .tk-explore-categories li{width: 100%;}
+    .tk-projectsstatus_budget .tk-projectsstatus_option{
+        right: 10px;
+    }
+}
+@media (max-width:360px){
+    .tk-bannerv2_title {
+        h1{font-size: rem(32);}
+        h2{font-size: rem(42);}
+      }
+    .tb-addservice-title{padding: 20px 10px;}
+    .tb-bannerimg:after {
+        width: 232px;
+        height: 232px;
+    }
+    .tb-langslider div {
+        font-size: 65px;
+    }
+    .tb-dropdownholder{
+        .tb-distance{padding: 26px 20px 29px;}
+    }
+}
+@media (max-width:340px){
+  
+    .tb-userfeedback{
+        img{
+            margin-bottom: 5px;
+        }
+    }
+    .tb-blogviewdates{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .tb-blogviewdates li ~ li{
+        margin-top: 15px;
+        padding-left: 0;
+    }
+    .tb-commingsoonimg {
+        height: 1520px;
+    }
+    .tb-pkgresponse li{
+        padding-right: 2.5px;
+        padding-left: 2.5px;
+    }
+    .tb-aside-button li .tb-btn{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+@media (max-width: 320px){
+    .tb-bannerimg:after {
+        width: 182px;
+        height: 182px;
+    }
+    .tb-commingsoonimg {height: 1550px;}
+}
+@media (max-width:1700px){
+    .tk-headerwrap .tk-appendinput{
+        max-width: 655px;
+    }
+}
+@media (max-width:1536px){
+    .tk-headerwrap .tk-appendinput:not(.tk-bannerinfo_search){
+        display: flex;
+    }
+}
+@media (max-width:640px){
+    .tk-headerwrap .tk-appendinput > button{width: 100%;}
+}

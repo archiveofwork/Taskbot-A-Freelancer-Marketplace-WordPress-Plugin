@@ -1,0 +1,195 @@
+/** ====== Contact-Us components ====== **/
+.tk-slider-section{
+    padding: 80px 0;
+    background-color: $lightest;
+}
+.tk-faq-holder{
+    margin:0;
+}
+.tk-faq-category{
+    @extend %flex;
+    overflow: hidden;
+    min-width: 254px;
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+    border-radius: $radius;
+    justify-content: center;
+    background-color: $clr-white;
+    figure{
+        margin-bottom: 0;
+        img{
+           margin: 0 auto;
+       }
+    }
+    &:after{
+        content: '';
+        position: absolute;
+        width: 0;
+        @extend %transitiontwo;
+        height: 3px;
+        left: 0;
+        bottom: 0;
+        background-color: $theme-color;
+    }
+    &:hover,
+    &-active{
+        &::after{
+            width: 100%;
+        }
+    }
+}
+.tk-faq_desp{
+    margin-top: 20px;
+    h5{
+        margin-bottom: 0;
+    }
+    span{
+        @extend %p15;
+        color:$text-gray;
+    }
+}
+.tk-faqsslider {
+    .splide__pagination{bottom: 0;}
+    filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.04)) drop-shadow(0px 3px 16px rgba(0, 0, 0, 0.04));
+    .splide__arrows {
+        .splide__arrow--prev {
+            left: -35px;
+            &:before{
+                font-size: 30px;
+            }
+        }
+        .splide__arrow--next {
+            right: -35px;
+            &:before{
+                font-size: 30px;
+            }
+        }
+    }
+}
+.tk-faq-search{
+    padding-bottom: 60px;
+    & > .tk-maintitle{
+        margin: 0 auto;
+        max-width: 856px;
+        h5{
+            @extend %h4;
+            font-weight: 600;
+        }
+        p{margin: 20px 0 0;}
+    }
+    .tk-inputappend > i{
+        color:$text-light;
+    }
+}
+.tb-faq-section{
+    &.tk-main-section{
+        padding-top:80px;
+        padding-bottom: 30px;
+        background-color: $clr-white;
+    }
+}
+.tk-blue-clr{
+    color: $theme-color;
+}
+.tk-faq_input{
+    .tk-inputappend{
+        padding: 20px;
+        margin: 0 auto;
+        max-width: 856px;
+        overflow: hidden;
+        .form-control{
+            border: 0;
+            box-shadow:none;
+        }
+    }
+    .tk-placeholderholder{
+        width: auto;
+        flex: auto;
+    }
+}
+.tk-acoridan_title{
+    h3{
+        margin-bottom: 0;
+        padding-bottom: 20px;
+    }
+}
+.tk-accordion{
+    padding-left: 0;
+    margin: 0;
+    li{
+        list-style-type: none;
+        cursor: pointer;
+        margin-bottom: 20px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    &_title{
+        padding:20px;
+        @extend %flex;
+        position:relative;
+        align-items: center;
+        border-radius: $radius;
+        background-color: $lightest;
+        &[aria-expanded="true"]{
+            border-radius: $radius $radius 0 0;
+            &:after{
+                content: "\e9a3";
+            }
+        }
+        &:after{
+            right: 20px;
+            color: $heading-font-color;
+            content: "\e9c0";
+            position:absolute;
+            font-size: rem(24);
+            @extend %transition;
+            align-self:flex-start;
+            line-height: em(26,24);
+            font-family: 'icomoon' !important;
+        }
+        h5{
+            margin-bottom: 0;
+            padding-right: 30px;
+        }
+    }
+    &_info{
+        cursor: default;
+        padding: 0 20px 20px;
+        background-color: $lightest;
+        border-radius: 0 0 $radius $radius;
+        p{
+            margin: 0;
+            ~ p{padding-top: 26px;}
+        }
+    }
+}
+.tk-question-section{
+    @extend %flex;
+    margin-top: 0;
+    padding: 40px;
+    margin-bottom: 80px;
+    align-items: center;
+    border-radius: $radius;
+    background-color: #0A1833;
+    justify-content: space-between;
+}
+.tk-faq-search_title{
+    h5{
+        color: $clr-white;
+        margin: 0;
+    }
+    h2{
+        margin: 0;
+        color: $theme-color;
+    }
+}
+.tk-question_desc{
+    padding-top: 20px;
+    max-width: 592px;
+    p{
+        color: $clr-white;
+        margin-bottom: 0;
+    }
+}

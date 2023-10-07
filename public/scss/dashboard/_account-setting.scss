@@ -1,0 +1,34 @@
+/** ====== Account Setting components ====== **/
+.te-dhb-box{
+    @extend %border;
+    border-radius: $radius;
+    padding: 30px 29px;
+    background-color: $clr-white;
+}
+.te-formcheckbox{
+    .te-titleinput{
+        flex: initial;
+        padding-top: 0;
+    }
+    .te-onoff{margin-left: auto;}
+    + .te-formcheckbox{padding-top: 20px;}
+    + .te-dhbbtnarea{padding-top: 30px;} 
+}
+.te-deactivebtns {
+    margin-top: 20px;
+    display: flex;
+    .te-btn{
+        min-width: 160px;
+        & + .te-btn{
+            margin-left: 10px;
+        } 
+    }
+}
+.btn-bglight {
+    background: $lightest;
+}
+.te-acountdeactive{
+    .modal-dialog {
+        max-width: 790px;
+    }
+}

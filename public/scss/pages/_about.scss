@@ -1,0 +1,221 @@
+/** ====== About components ====== **/
+.tk-sliderarrow {
+    position: relative;
+    .splide__arrow {
+        width: 70px;
+        height: 70px;
+        background: $clr-white;
+        border-radius: 50%;
+        box-shadow: $drop_shadows_medium;
+        z-index: 1;
+        opacity: 1;
+        &:hover {
+            opacity: 1;
+            &::before {
+                color: $heading-font-color;
+            }
+        }
+        svg {
+            display: none;
+        }
+    }
+    .splide__arrow--prev {
+        left: -35px;
+    }
+    .splide__arrow--next {
+        right: -35px;
+    }
+    .splide__arrow--next {
+        &::before {
+            color:$text-light;
+            font-size: 30px;
+            content: "\e930";
+            @extend %transition;
+            font-family: "icomoon" !important;
+        }
+    }
+    .splide__arrow--prev {
+        &::before {
+            color:$text-light;
+            font-size: 30px;
+            content: "\e92f";
+            @extend %transition;
+            font-family: "icomoon" !important;
+        }
+    }
+}
+.tk-about_content{
+    background: $clr-white;
+    .row{justify-content: center}
+}
+.splide__pagination{
+    display: flex;
+    margin-top: 40px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+.splide__pagination__page{
+    opacity: 1;
+    width: 10px;
+    height: 4px;
+    outline: none;
+    border-radius: 2px;
+    background: #dddddd;
+}
+.splide__pagination__page.is-active{
+    width: 20px ;
+    background: #1C1C1C;
+    transform: scale(1) 
+}
+.tk-aboutusauthor{
+    @extend %flex;
+    justify-content: center;
+    figure{
+        margin:  0 20px 0 0 !important;
+        img{
+            max-width: 60px;
+            border-radius: 50%;
+        }
+    }
+}
+.tk-authorinfo{
+    text-align: left;
+    h4{margin: 0;}
+    h6{
+        margin: 0;
+        color: $text-light;
+    }
+}
+.tk-aboutusclints{
+    background: $lightest;
+}
+.tk-aboutusimg{
+    margin: 0;
+    border-radius: $radius;
+    img{
+        width: 100%;
+        max-width: 593px !important;
+        border-radius: $radius !important;
+    }
+}
+.tk-aboutfeed{
+    padding: 100px 0;
+    background: $lightest;
+    .tk-feedbackslider{
+        padding: 0 0 0 255px;
+    }
+}
+.tk-profeesonolinfo{
+    h6{
+        margin: 0;
+        color:$text-gray;
+        font: normal 400 rem(16)/em(26,16) $body-font-family;
+    }
+    h4{
+        margin: 0;
+    }
+}
+.tk-profeesonitem{
+    margin:  0;
+    figure{
+        border-radius: $radius;
+        margin:  0 0 20px !important;
+        img{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: $radius;
+        }
+    }
+}
+.tk-professionolslider{
+    .splide__arrow{
+        top: 150px;
+    }
+}
+.tk-nav-signin{
+    img{
+        max-width: 60px;
+        border-radius: 50%;
+    }
+}
+.tk-nav-icons{
+    display: block;
+    position: relative;
+    color: $secondary-color;
+    line-height: 1 !important;
+    &:hover,
+    &:focus{
+        color: $secondary-color;
+    }
+    i{
+        font-size: rem(24);
+    }
+}
+.tb-header,
+.tk-header{
+    .tk-headerchatbtn a{
+        display: flex;
+        align-items: center;
+    }
+}
+.tk-remaining-notification{
+    right: -12px;
+    padding: 2px 7.68px;
+    position: absolute;
+    top: -12px;
+    color: $clr-white;
+    background: $red;
+    border-radius: 13px;
+    display: inline-block;
+    min-width: 22px;
+    min-height: 22px;
+    font: normal 700 11px/18px $heading-font-family;
+    text-align: center;
+}
+.tb-header .tk-remaining-notification{
+    top: -11px;
+    padding: 0;
+    right: -11px;
+    line-height: 22px;
+    text-align: center;
+}
+.tk-addwallet-popup{
+    .modal-dialog{
+        max-width: 420px;
+    }
+}
+.tk-validate{
+    padding-top: 20px;
+    display: flex;
+    em,p{
+        @extend %p16;
+        color:$text-light;
+        margin-bottom: 0;
+    }
+    em{
+        padding-right: 10px;
+        color: $red;
+    }
+}
+.tk-blue-clr{
+    color:$theme-color;
+}
+.tk-bglightest{
+    background: $lightest;
+}
+.tk-about-feedback{
+    .tk-main-section{
+        background-color: $lightest;
+    }
+}
+.tk-about-service{
+    .tk-main-section{padding-top: 0;}
+}
+.tk-about-us-opportunity{
+    .tk-main-title-holder{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

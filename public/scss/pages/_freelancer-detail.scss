@@ -1,0 +1,145 @@
+/** ====== Freelancer Detail components ====== **/
+.tb-profilebtnarea{padding-top: 24px;}
+.tb-repertbtn{
+    display: flex;
+    justify-content: center;
+    a{
+        padding: 0 13px;
+        position: relative;
+        i{
+            font-size: 16px;
+            padding-right: 7px;
+        }
+        &:after {
+            content: "|";
+            color: #ddd;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        & + a {
+            &::after{
+                display: none;
+            }
+        }
+    }
+}
+.tb-shareprofile {
+    margin: 20px 0 -2px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    color: #999;
+    font: 400 rem(14) $heading-font-family;
+    i{padding-right: 9px;}
+}
+.tb-repert-heart{
+    color: #ff5b00 !important;
+}
+.tb-freesingletitle{
+    h4{
+        @extend %h5;
+        margin: 0 0 20px;
+    }
+    p{
+        margin: 0;
+    }
+}
+.tb-familiritylang{
+    margin-bottom: -7px;
+    li{
+        list-style-type: none;
+        position: relative;
+        margin: 0 0 7px 13px;
+        h6{
+            margin:0;
+            display: flex;
+            justify-content: space-between;
+            span{
+                font: 400 rem(14)/em(22,14) $body-font-family;
+                color: $text-light;
+            }
+        }
+        &:before{
+            width: 3px;
+            height: 2px;
+            content: "";
+            background: #ddd;
+            position: absolute;
+            left: -13px;
+            top: 9px;
+        }
+        & + li{
+            margin: 0 0 7px 13px;
+        }
+    }
+    & li:last-child {
+        margin-bottom: 0;
+    }
+}
+.tb-socialiconcolumn{
+    justify-content: flex-start;
+    li{
+        list-style-type: none;
+        width: 50%;
+        &:nth-child(n){margin-right: 0;}
+        a{
+            display: inline-block;
+            font: 700 rem(14)/em(22,14) $heading-font-family;
+            color: $heading-font-color;
+            i{
+                display: inline-block;
+                min-width: 36px;
+            }
+        }
+    }
+}
+.tb-link{
+    i{color: #999;}
+}
+.tb-skilllist {
+    @extend %flex;
+    margin: -5px;
+        li{
+            padding: 5px;
+            list-style-type: none;
+            &:hover{
+                a{
+                    background-color: #ff5b00;
+                    color: #ffffff;
+                    border-color: #ff5b00;
+                }
+            }
+        a{
+            font: 400 rem(12)/em(14,12) $heading-font-family;
+            color: $text-gray;
+            padding: 8px 9px;
+            display: flex;
+            border-radius: $radius;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f7f7f7;
+            @extend %transition;
+        }
+    }
+}
+.tb-qualification{
+    padding-top: 5px;
+    span{
+        display: block;
+        font: 400 rem(14)/em(18,14) $body-font-family;
+    }
+    h5{margin: 2px 0;}
+}
+.tb-asidebox{
+    .tb-qualification{
+        ~ .tb-qualification{
+            margin-top: 14px;
+            border-top: 1px solid #eee;
+            padding-top: 17px;
+        }
+    }
+}
+.tb-freelancerinfo{
+    border-top:1px solid #eee;
+}

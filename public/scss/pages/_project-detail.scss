@@ -1,0 +1,1457 @@
+/** ====== Project Detail components ====== **/
+.tk-servicedetailtitle{
+    > h3{
+        margin-bottom: 0;
+    }
+    > .tk-featuretag{
+        margin-bottom: 10px;
+    }
+    .tk-blogviewdates {
+        gap: 10px 24px;
+        padding-top: 10px;
+        margin: 0 !important;
+        li{
+            color:$text-gray;
+            padding: 0;
+            @extend %p15;
+            font-weight: 600;
+            > i{
+                color:$text-gray;
+                font-size: 20px;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+.tk-project-wrapper{
+    .tk-blogviewdates {
+        gap: 10px 24px;
+        padding-top: 10px;
+        margin: 0 !important;
+        li{
+            padding: 0;
+            @extend %p15;
+            > i{
+                font-size: 16px;
+            }
+            span,
+            a{
+                color: $heading-font-color;
+            }
+            & > span{color:$text-gray;}
+        }
+    }
+    + .tk-project-wrapper{
+        margin-top: 20px;
+    }
+    .tk-blogviewdates li i{
+        color:$text-gray;
+        margin-right: 10px;
+    }
+}
+.tk-aboutprojectstep{
+    box-shadow: $drop_shadows_lightest;
+}
+aside{
+    .tk-project-wrapper{
+        + .tk-project-wrapper{
+            margin-top: 30px;
+        }
+    }
+}
+.tk-boxlg{
+    padding: 30px;
+}
+.tk-project-holder{
+    + .tk-project-holder{
+        margin-top: 30px;
+    }
+    & + .tk-project-description{margin-top: 20px;}
+    .tk-project-title{
+        margin-bottom: 20px;
+    }
+}
+.tk-project-title{
+    h4,h3{
+        margin-bottom: 0;
+    }
+}
+.tk-jobdescription{
+    p{
+        margin-bottom: 26px;
+        &:last-child{margin-bottom: 0;}
+    }
+    & > ul{
+        padding: 0;
+        margin:0 0 26px;
+        list-style: none;
+        li{
+            @extend %p16;
+            color: $heading-font-color;
+            position: relative;
+            padding-left: 28px;
+            list-style-type: none;
+            &:before{
+                top: 0;
+                left: 0;
+                content: "\f058";
+                position: absolute;
+                color: $bright-green;
+                font: 900 18px/26px "Font Awesome 5 Free";
+            }
+            & + li{
+                margin-top: 10px;
+            }
+        }
+    }
+}
+.tk-skillstags{
+    display: block;
+    .tk-tagtittle{
+        padding: 0 0 10px;
+        span{
+            @extend %h5;
+            font-weight: 600;
+        }
+    }
+    .tk-tags_links{
+        padding-left: 0;
+        margin: -5px;
+        li{
+            padding: 5px;
+        }
+    }
+    .tk-blog-tags{
+        border: 0;
+        padding: 5px 12px;
+        border-radius: 100px;
+        background: $lightest;
+        font: 600 rem(13)/em(22,13) $body_font_family;
+        &:hover{
+            color: #3377FF;
+            background-color: #EAF1FF;
+        }
+    }
+    + .tk-skillstags{
+        margin-top: 30px;
+    }
+}
+.tk-sidebar-title{
+    .tk-project-tag{
+        @extend %h6;
+        padding: 4px 12px;
+        & +  h3{
+            margin: 20px 0 0 0;
+        } 
+    }
+    > h3{
+        margin: 0;
+    } 
+    > em{
+        color:$text-light;
+        font-style: normal;
+        @extend %p15;
+        font-weight: 600;
+        display: inline-block;
+    }
+    > h5{
+        margin-bottom: 20px;
+    }
+}
+.tk-sidebarpkg__btn{
+    margin-top: 20px;
+    > span{
+        width: 100%;
+        display: flex;
+        color: $button-color;
+        + span{
+            margin-top: 10px;
+        }
+        a{
+            width: 100%;
+        }
+    }
+    .tb_saved_items{
+        &:hover{color: $heading-font-color;}
+    }
+}
+.tk-project-requirement{
+    @extend %flex;
+    padding: 0 19px 19px;
+    margin: -10px -29px 30px;
+    border-bottom: 1px solid $lightest_2;
+    > li{
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        max-width: 33.33%;
+        align-items: center;
+        list-style-type: none;
+        i{
+            flex: none;
+            z-index: 1;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            font-size: 24px;
+            color: #0A0F26;
+            position: relative;
+            border-radius: 4px;
+            align-items: center;
+            justify-content: center;
+            background-color: #f7f7fa;
+        }
+    }
+    &_content{
+        padding-left: 14px;
+        display: flex;
+        flex-direction: column-reverse;
+        > em{
+            display: block;
+            color: $text-gray;
+            letter-spacing: 0.5px;
+            font: 400 rem(14)/em(18,14) $body_font_family;
+        }
+        > a{
+            @extend %tiny_title;
+            color: $theme-color;
+            margin-left: 4px;
+        }
+    }
+    .tk-requirement-tags span{
+        font: 600 rem(16)/em(24,16) $body_font_family;
+    }
+}
+.tk-requirement-tags{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    span{
+        @extend %h6;
+        color: $heading-font-color;
+        margin-right: 4px;
+        &::after{
+            content: ',';
+            display: inline-block;
+        }
+        &:last-child{
+            margin-right: 0;
+            &::after{
+                display: none;
+            }
+        }
+    }
+    a{
+        @extend %p15;
+        font-weight: 600;
+    }
+}
+.tk-verified-title{
+    @extend %flex;
+    align-items: center;
+    img{
+        flex: none;
+        margin-right: 20px;
+        max-width: 70px;
+        border-radius: $radiusvtwo;
+    }
+    h6{
+        margin: 20px 0 0;
+    }
+    p{
+        margin: 20px 0 0 0;
+        @extend %p15;
+    }
+}
+.tb-description-area{
+    margin: 10px 0 0;
+    p{
+        margin: 0;
+    }
+}
+.tk-verified-info{
+    @extend %flex;
+    h5{
+        width: 100%;
+        display: flex;
+        margin-bottom: 0;
+        align-items: center;
+        a {
+            @extend %transition;
+        }
+    }
+    i{
+        color: $bright-green;
+        font-size: 16px;
+        display: inline-block;
+        margin-left: 10px;
+    }
+    > em{
+        @extend %p14;
+        display: block;
+    }
+    strong{
+        @extend h6;
+        width: 100%;
+        display: flex;
+        margin-bottom: 0;
+        color: $anchor-color;
+        align-items: center;
+    }
+    .tk-project-tag{
+        margin-bottom: 10px;
+    }
+}
+.tk-checkout-info{
+    padding:30px 0 0 0;
+    margin-bottom: 0;
+    li{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        list-style-type: none;
+        > span{
+            @extend %p15;
+            font-weight: 600;
+            text-align: right;
+            padding-left: 20px;
+        }
+        + li{
+            margin-top: 14px;
+        }
+    }
+}
+.tk-total-title{
+    flex: auto;
+    @extend %flex;
+    align-items: center;
+    & > i{
+        font-size: 16px;
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .tb-btn{
+        width: 100%;
+        margin: 6px 0 0;
+        i{
+            margin: 0 0 0 10px;
+            font-size: 16px !important;
+        }
+    }
+    em{
+        font-style: normal;
+        display: inline-block;
+        @extend %tiny_title;
+        
+    }
+}
+.tk-project-list{
+    margin-top: 16px;
+}
+.tk-relatedproject_title{
+    margin: 40px 0 -4px;
+    h3{margin: 0;}
+}
+.tk-blogviewdates.tk-projectinfo-list{
+    flex-direction: column;
+    padding-top: 20px;
+    li{
+        color: $text-gray;
+        font: 400 0.875rem/1.7142857143em "Open Sans", sans-serif;
+        i{
+            font-size: 16px;
+        }
+    }
+}
+.tk-projectinfo{
+    border-radius: $radius;
+    background-color: $clr-white;
+    border: 1px solid $border-color;
+    box-shadow: $drop_shadows_lightest;
+    &_title{
+        display: flex;
+        align-items: center;
+        img{
+            width: 100%;
+        }
+    }
+    .tk-checkout-info{
+        width: 100%;
+        padding-top: 20px;
+    }
+    .tk-total-title{
+        & > i {
+            color: #64748B;
+            font-size: 18px;
+        }
+        & > em{
+            color: rgba(0, 0, 0, 0.6);
+        }
+    }
+}
+.tk-project-price{
+    @extend %flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    h4{
+        color: $heading-font-color;
+    }
+    h4,h6{margin-bottom: 0;}
+}
+.tk-project-box-two{
+    @extend %flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:19px 20px;
+    .tk-project-share{
+        .tk-like{
+            margin-left: 0;
+            i{
+                padding-right: 10px;
+            }
+        }
+    }
+}
+.tk-project-share{
+    display: flex;
+    align-items: center;
+    a{
+        font-size: rem(20);
+        color:$text-light;
+    }
+    .tk-like{
+        position: relative;
+        top: 0;
+        margin-left: 30px;
+    }
+}
+.tk-Project-roadmap{
+    padding:20px 0 0 0;
+    li{
+        padding:19px 20px;
+        list-style-type: none;
+        border: 1px solid $lightest_2;
+        box-shadow: $drop_shadows_lightest;
+        border-radius: $radiusvtwo;
+        h5,p{
+            margin-bottom: 0;
+        }
+        + li{
+            margin-top: 10px;
+        }
+        h5{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            span{
+                @extend %h4;
+            }
+        }
+    }
+}
+.tk-budgetlist{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background: $lightest;
+    border-radius: $radiusvtwo;
+    li{
+        width: 100%;
+        @extend %flex;
+        align-items: center;
+        padding: 13px 20px;
+        justify-content: space-between;
+        
+        + li{
+            border-top: 1px dashed $lighter;
+        }
+    }
+    h6{
+        margin-bottom: 0;
+        font-weight: 600;
+    }
+    span{
+        @extend %p15;
+    }
+}
+.tk-totalamout{
+    @extend %flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left:20px;
+    padding-right: 20px;
+    width: 100%;
+    h5{
+        margin-bottom: 0;
+    }
+    span{
+        @extend %p15;
+        font-weight: 600;
+    }
+}
+.tk-comment-section{
+    width: 100%;
+    padding-top: 10px;
+    textarea.form-control{
+        height: 150px;
+    }
+}
+.tk-staric-title{
+    > * {
+        &::after{
+            content: '*';
+            color: $red;
+            display: inline-block;
+            margin-left: 6px;
+        }
+    }
+    h5{
+        margin-bottom: 0;
+    }
+}
+.tk-freelancer-content{
+    margin-top: 20px;
+    
+}
+.tk-freelanerinfo{
+    h6{
+        margin-bottom: 10px;
+    }
+    + .tk-freelanerinfo{
+        margin-top: 30px;
+    }
+}
+.tk-timeinfo{
+    @extend %flex;
+    align-items: center;
+    gap: 0 30px;
+    .form-check-label{
+        span{
+            color: $heading-font-color;
+        }
+    }
+}    
+.tk-skills{
+    @extend %flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 0;
+    li{
+        max-width: 258px;
+        width: 100%;
+        list-style-type: none;
+        .form-check-label span{
+            @extend %p15;
+            color: $heading-font-color;
+        }
+    }
+}
+.tk-upload-resume{
+    padding: 20px 18px;
+    border-radius: $radiusvtwo;
+    border: 1px solid $lightest_2;
+    width: 100%;
+}
+.tk-upload-list {
+    padding-left: 0;
+    margin-bottom: 0;
+    &:empty{
+        display: none;
+    }
+    li {
+        background-color: $lightest;
+        padding: 7.5px 20px;
+        border-radius: $radiusvtwo;
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        line-height: normal;
+        span {
+            @extend %p13;
+            z-index: 1;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            padding-right: 15px;
+        }
+        &:nth-child(3){
+            margin-bottom: 0;
+        }
+        .tb-remove{
+            font-size:rem(20);
+            color: $red;
+            i {
+                color: inherit;
+            }
+            &:hover{
+                color: $red;
+            }
+        }
+    }
+}
+.tk-uploading {
+    position: relative;
+    .tb-remove {
+        display: none;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: url(./../images/img-01.jpg);
+        border-radius: $radius;
+        -webkit-animation: tk-stripe 2s linear infinite;
+        animation: tk-stripe 2s linear infinite; 
+    }
+}
+.tk-uploading.taskbot-file-uploaded{
+    &::before{
+        display: none;
+    }
+    span{
+        @extend %p14;
+    }
+    .tb-remove {
+        display: block;
+    }
+}
+.tk-uploadphoto{
+    @extend %flex;
+    align-items: center;
+    p{
+        @extend %p13;
+        margin-bottom: 0;
+    }
+    input{display: none;}
+    span,label{
+        color: $anchor-color;
+        @extend %p13;
+        margin: 0;
+        display: inline-block;
+        cursor: copy; 
+        font-weight: inherit;
+        margin-left: 4px;
+    }
+}
+.tk-proposal-btn{
+    margin-top: 20px;
+    @extend %flex;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    a {
+        max-width: 418px;
+        width: 100%;
+    }
+}
+.tk-freelancers-list{
+    padding-left: 0;
+    > li{
+        @extend %flex;
+        align-items: center;
+        justify-content: space-between;
+        list-style-type: none;
+        border: 1px solid $lightest_2;
+        border-radius: $radiusvtwo;
+        background: $clr-white;
+        padding: 30px;
+        @extend %transition;
+        + li{
+            margin-top: 10px;
+        }
+        &:hover{
+            box-shadow: $drop_shadows_lightest;
+            .tk-invite-bidbtn{
+                background-color: $theme-color;
+                color: $clr-white;
+            }
+        }
+    }
+}
+.tk-freelancers-info{
+    @extend %flex;
+    align-items: center;
+    figure{
+        margin: 0 10px 0 0;
+        img{
+            border-radius: 50%;
+        }
+    }
+}
+.tk-freelancer-user{
+    a{
+        @extend %h6;
+        margin-bottom: 3px;
+    }
+    h5{
+        margin-bottom: 3px;
+        max-width: 470px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .tk-blogviewdatessm{
+        @extend %flex;
+        align-items: center;
+        gap : 30px;
+        margin: 0;
+        li{
+            padding: 0;
+            > span{
+                color:$text-light;
+            }
+        }
+    }
+}
+.tk-bidbtn{
+    a{
+        @extend %h6;
+        
+    }
+}
+.tk-invite-bidbtn{
+    border-radius: $radiusvtwo;
+    background-color: $lightest;
+    padding: 7px 24px;
+    @extend %transition;
+    color: $heading-font-color;
+    @extend %h6;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    cursor: pointer;
+    &:hover{
+        color: $button-color;
+    }
+    &[disabled]{
+        color: $text-light!important;
+        cursor: not-allowed;
+        background-color: $lightest !important;
+    }
+}
+.tb-invite-sent{
+    color: $text-light!important;
+    cursor: not-allowed;
+    background-color: $lightest !important;
+    padding: 7px 24px;
+    @extend %transition;
+    color: $heading-font-color;
+    @extend %h6;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+}
+.tk-projectdetail-img{
+    margin: 0 0 20px;
+    border-radius: $radius;
+    background: $dark-black;
+    iframe{
+        width: 100%;
+        display: block;
+        overflow: hidden;
+        border-radius: $radius;
+    }
+    img{
+        opacity: 0.6;
+        border-radius: $radius;
+    }
+}
+.tk-downloadbtn{
+    flex: none;
+    margin-left: auto;
+    padding-left: 20px;
+}
+.tk-betaversion-info-two{
+    h5{
+        margin-bottom: 0;
+    }
+    p{
+        margin: 8px 0 0 0;
+        @extend %p14;
+    }
+}
+.tk-paid-version{
+    .tk-betaversion-wrap{
+        flex-wrap: wrap;
+    }
+}
+.tk-paid-option{
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    margin: -5px;
+    padding-top: 20px;
+    flex:auto;
+    li{
+        padding: 5px;
+        display: block;
+        list-style-type: none;
+        line-height: inherit;
+        flex:0 0 50%;
+    }
+}
+.tk-projectpaid-list{
+    background: $clr-white;
+    border-radius: $radiusvtwo;
+    padding: 26px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    &::before{
+        content: "\f00c";
+        display: none;
+        color: $clr-white;
+        position: absolute;
+        right: -10px;
+        top: -10px;
+        height: 42px;
+        width: 42px;
+        padding: 11px 17px 12px 12px;
+        font-weight: 700;
+        border-radius: 50%;
+        font-size: rem(13);
+        font-family: "Font Awesome 5 Free";
+        background-color: $bright-green;
+    }
+    input{
+        display: none;
+    }
+    h6{
+        margin:20px 0 0 0;
+    }
+    span{
+        @extend %p15;
+        color: $heading-font-color;
+    }
+    &.active{
+        border: 2px solid $bright-green;
+        &::before{
+            display: block;
+        }
+    }
+}
+.tk-projectprice-option{
+    img{
+        
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+    }
+}
+.tk-add-price-show{
+    display: none;
+}
+.tk-add-price-slots{
+    width: 100%;
+    margin-top: 20px;
+    background: $clr-white;
+    border-radius: $radiusvtwo;
+    padding: 20px;
+    border: 1px solid $lightest_2;
+    .tk-label{
+        margin-bottom: 0;
+        @extend %flex;
+        align-items: center;
+        .tk-addicon{
+            display: flex;
+            margin-left: auto;
+            align-items: center;
+        }
+    }
+}
+.tk-price{
+    padding-left: 30px;
+    flex: none;
+    margin-left: auto;
+    h4{
+        margin-bottom: 0;
+    }
+    span,h4{
+        text-align: right;
+    }
+    span{
+        @extend %h6;
+        display: block;
+    }
+    .tk-featuretag{
+        width: 85px;
+        margin-left: auto;
+    }
+    .tk-btn-solid-lg-lefticon{
+        a{
+            color: $heading-font-color;
+        }
+    }
+}
+.tk-price-holder{
+    display: flex;
+    .tk-recommend{
+        padding-top: 0;
+    }
+}
+.tk-project-wrapper-two{
+    position: relative;
+    background-color: $clr-white;
+    border-radius: $radiusvtwo;
+    border: 1px solid $lightest_2;
+    & ~ .tk-project-wrapper-two{margin-top: 20px;}
+    &:hover{
+        box-shadow: $drop_shadows_lightest;
+        .tk-invite-bidbtn{
+            color: $button-color;
+            background: $theme-color;
+        }
+        .tk-canceled{
+            background: $red;
+        }
+    }
+}
+.tk-project-detail{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+    a{
+        border-radius: $radiusvtwo;
+        + a{
+            margin-left: 10px;
+        }
+    }
+    .tk-likev2{
+        padding: 0 24px;
+        i{
+            font-size: 20px;
+            padding-right: 10px
+        }
+        a{
+            @extend %h6;
+            display: flex;
+            align-items: center;
+        }
+    } 
+}
+.tk-hire-freelancer{
+    @extend %flex;
+    align-items: center;
+    padding-left: 0;
+    margin: -5px;
+    li{
+        width: 33.33%;
+        padding: 5px;
+        list-style-type: none;
+    }
+}
+.tk-freelancer-holder{
+    display: block;
+    margin-top: 20px;
+    .tk-tagtittle{
+        padding-bottom: 10px;
+        span{
+            @extend %h6;
+        }
+    }
+    .tk-tags_links{
+        margin: -5px;
+        padding-left: 0;
+        li{
+            padding: 5px;
+            a{
+                border-radius: $radiusvtwo;
+                background-color: $lightest;
+                &:hover{
+                    background-color: transparent;
+                    color: $heading-font-color;
+                }
+            }
+        }
+    }
+}
+.tk-hire-freelancer_content{
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    background-color: $lightest;
+    border-radius: $radiusvtwo;
+    img{
+        width: 42px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    > span{
+        margin-left: auto;
+        flex: none;
+    }
+}
+.tk-hire-freelancer-info{
+    padding-left: 20px;
+    h6{
+        margin-bottom: 0;
+        @extend %flex;
+        align-items: center;
+    }
+    > a{
+        @extend %p14;
+        font-weight: 600;
+        display: block;
+        flex: none;
+    }
+    .tk-blogviewdates{
+        margin: 0 !important;
+        padding-left: 10px;
+        flex-wrap: nowrap;
+        align-items: center;
+        em{
+            font-style: normal;
+            @extend %p14;
+            font-weight: 600;
+            padding-left: 6px;
+        }
+    }
+}
+.tk-proposal-list{
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    margin-bottom: 0;
+    li{
+        list-style-type: none;
+        > span{
+            @extend %h6;
+            font-weight: 600;
+        }
+        + li{
+            margin-left: -15px;
+        }
+        &:last-child{
+            margin-left: 0;
+        }
+        img{
+            border: 4px solid $clr-white;
+            border-radius: 50%;
+            background: $clr-white;
+            width: 38px;
+            object-fit: cover;
+        }
+    }
+}
+.tk-view-proposal{
+    @extend %h6;
+    @extend %flex;
+    align-items: center;
+    margin-left: 20px;
+    > i{
+        font-size: 20px;
+        padding-left: 6px;
+    }
+}
+.tk-edit-project{
+    @extend %h6;
+    @extend %flex;
+    padding: 7px 24px;
+    color:$text-light;
+    i{
+        padding-right: 10px;
+        font-size: 20px;
+    }
+    &:hover{
+        color:$text-light;
+    }
+}
+.tk-skillstags{
+    display: block;
+    .tk-tagtittle{
+        padding-bottom: 10px;
+    }
+    .tk-tags_links{
+        padding-left: 0;
+        margin: -5px;
+        li{
+            padding: 5px;
+            a{
+                border-radius: $radiusvtwo;
+            }
+        }
+    }
+    + .tk-skillstags{
+        margin-top: 30px;
+    }
+}
+.tk-project-tag{
+    color: $heading-font-color;
+    @extend %label_title;
+    display: inline-block;
+    padding: 1px 10px;
+    border: 1px solid $lighter;
+    border-radius: $radiusvtwo;
+}
+.tk-drafted{
+    background: $lightest;
+    color: $heading-font-color;
+    border: 0;
+}
+.tk-awaiting{
+    background-color: #64748B !important;
+    border: 0;
+    color: $clr-white !important;
+}
+.tk-canceled{
+    background: $red;
+    border: 0;
+    color: $clr-white !important;
+    &:hover,
+    &:focus{
+        background: $red !important;
+        color: $clr-white;
+    }
+}
+.tk-ongoing{
+    color: $clr-white !important;
+    background: $orange;
+    border: 0;
+}
+.tk-success-tag{
+    background-color: $bright-green !important;
+    color: $clr-white !important;
+    border: 0;
+    &:hover,
+    &:focus{
+        background-color: $bright-green;
+    }
+}
+.tk-alert-readbtn{
+    color: $red;
+    background-color: transparent;
+    @extend %h6;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    flex: none;
+    i{
+        font-size: rem(18);
+        padding-left: 6px;
+    }
+}
+// popup style
+.modal-dialog.tk-modal-default{
+    max-width: 540px;
+}
+.modal-dialog.tk-modal-sm{
+    max-width: 350px;
+}
+.tk-popup-content{
+    .tk-statusview_alert{
+        margin-top: 0;
+    }
+}
+.tk-popup-content-two{
+    padding: 14px;
+    .modal-body{
+        padding: 0;
+    }
+}
+.tk-wallet-popup{
+    display: flex;
+    &_img{
+        margin-right: 10px;
+    }
+    &_info{
+        h6,p{
+            margin-bottom: 0;
+        }
+        h6{
+            display: flex;
+            > i{
+                font-size: rem(20);
+                margin-left: auto;
+                cursor: pointer;
+            }
+        }
+        p{
+            @extend %p14;
+            color: $heading-font-color;
+        }
+        .tk-form-checkbox{
+            margin-top: 10px;
+            label{
+                @extend %p14;
+                span{color: $heading-font-color;}
+            }
+        }
+    }
+}
+.tk-popup-info{
+    margin-top: 30px;
+    h6{
+        margin-bottom: 0;
+        font-weight: 600;
+    }
+    p{
+        @extend %p15;
+        margin:10px 0 0;
+    }
+    button{
+        width: 100%;
+    }
+}
+.tk-user-content{
+    display: flex;
+    align-items: center;
+    img{
+        border-radius: 50%;
+    }
+}
+.tk-user-info{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    
+    span{
+        @extend %p15;
+        color:$text-light;
+    }
+    
+}
+.tk-project{
+    &-box{
+        padding: 29px;
+        & > p{
+            @extend %p15;
+        }
+        & > .tk-price-holder + p{
+            margin-top: 20px;
+        }
+        .tk-servicedetailtitle {
+            .tk-blogviewdates li {
+                color: $text-gray;
+                font-weight:400;
+            }
+        }
+        & + .tk-project-box{
+            box-shadow: inset 0px 1px 0px $lightest_2;
+        }
+        .tb-singleservice-tile{
+            margin-top: 20px;
+        }
+        .tb-blogtags,.tb-tagtittle{
+            display: block;
+        }
+        .tb-tagtittle{
+            padding-bottom: 10px;
+            span{
+                font-weight: 600;
+            }
+        }
+        .tb-tags_links{
+            margin: -5px;
+            padding-left: 0;
+            li{
+                padding: 5px;
+                span{
+                    border: 0;
+                    padding: 3px 12px;
+                    @extend %label_title;
+                    border-radius: $radiusvtwo;
+                    border: 1px solid $lightest;
+                    background-color: $lightest;
+                    &:hover{
+                        color: $heading-font-color;
+                        background-color: $clr-white;
+                        border-color: $border-color;
+                    }
+                }
+            }
+            .tb-selected__showmore{
+                a{
+                    @extend %label_title;
+                    color: $anchor-color;
+                }
+            }
+        }
+    }
+    &-option{
+        display: flex;
+        margin: 10px 0 0;
+        .tk-btn-solid-lg-lefticon{
+            width: auto;
+            height: auto;
+            min-width: auto;
+            margin-left: auto;
+            padding: 7px 24px;
+            color: $heading-font-color;
+            display: inline-block;
+            background-color: $lightest;
+            a{color: $heading-font-color;}
+            &:hover{
+                color: $button-color;
+                background-color: $theme-color_20_light !important;
+            }
+        }
+    }
+}
+.tk-saved-item{
+    &.tb_saveprojectlisting{
+        box-shadow: $drop_shadows_lightest;
+    }
+    margin-bottom: 0;
+    > li{
+        list-style-type: none;
+        + li{
+            margin-top: 30px;
+        }
+    }
+    .tb-singleservice-tile{
+        padding: 0;
+        border: 0;
+    }
+}
+.tb_saved_items{
+    @extend %h6;
+    color:$text-light;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    @extend %transition;
+}
+.tk-btnline.tb_saved_items{
+    color:$text-light;
+    i{
+        color:$text-light;
+    }
+}
+.tk-price-wrapper{
+    display: flex;
+    align-items: center;
+}
+// popup styling
+.tk-taskcomplete_popup{
+    .tb-titleinput{
+        padding-top: 0;
+    }
+}
+.tk-projectbox{
+    position: relative;
+    border-radius: $radius;
+    background-color: $clr-white;
+    border: 1px solid $border-color;
+    box-shadow: $drop_shadows_lightest;
+    & + .tk-projectinfo{
+        margin-top: 30px;
+    }
+    .tk-project-box{padding: 29px;}
+}
+.tk-projectprice{
+    text-align: center;
+    .tk-sidebar-title{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        & > h3{width: 100%;}
+        .tk-project-tag {
+            margin-top: -30px;
+            border-radius:  0 0 10px 10px;
+        }
+    }
+}
+.tk-project-tag.hourly{
+    border: 0;
+    color: $clr-white !important;
+    background-color: $bright-green !important;
+}
+aside .tk-project-requirement{
+    margin: -10px;
+    border: 0;
+    padding: 0;
+    & > li{
+        max-width: 100%;
+    }
+}
+.tk-contenthasfig{
+    .tk-featureRating{
+        margin: 0;
+        span.tk-featureRating__stars{
+            width: 84px;
+            padding-left: 0;
+        }
+        h6{
+            display: flex;
+            align-items: center;
+            font: 600 rem(15)/em(24,15) $body_font_family;
+            color: $heading-font-color;
+            em{
+                padding: 0;
+                color: #64748B;
+                font: 600 rem(15)/em(24,15) $body_font_family;
+            }
+        }
+        & > em{
+            color: #64748B;
+            padding-left: 6px;
+            font: 600 rem(15)/em(24,15) $body_font_family;
+        }
+    }
+    .tb-pkgresponse__content{
+        padding: 0;
+        flex-direction: inherit;
+        i{
+            color: #64748B;
+            margin-right: 10px;
+        }
+        h6{
+            margin: 0;
+            color: #64748B;
+            font: 600 rem(15)/em(24,15) $body_font_family;
+        }
+    }
+    .tb-rateviews3 li{
+        .tb_saved_items{
+            color: #64748B;
+            font: 600 rem(15)/em(24,15) $body_font_family;
+            span{
+                color: #64748B;
+            }
+        }
+        & i{
+            color: #64748B;
+            & + span{
+                color: #64748B;
+                font: 600 rem(15)/em(24,15) $body_font_family;
+            }
+        }
+    }
+}
+.tb-tabasidebar{
+    .tb-asideholder .tb-sidebarpkg{
+        padding: 19px;
+    }
+    & .tb-asideholder{
+        & + .tk-asideholder{
+            margin-top: 24px;
+        }
+    }
+    & .tk-asideholder{
+        border-radius: 4px;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08);
+        .tk-freelanlist{
+            border: 0;
+            padding: 19px;
+        }
+    }
+}
+.description-with-more{
+    overflow: hidden;
+}
+.tk-verified-title .description-with-more{margin-top: 20px;}
+.tk-verified-title .description-with-more p{
+    margin: 0;
+}

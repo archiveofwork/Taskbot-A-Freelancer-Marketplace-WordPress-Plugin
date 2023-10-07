@@ -1,0 +1,330 @@
+/** ====== button components ====== **/
+/** --- theme buttons --- **/
+.tb-btn,
+.tb-btnvtwo{
+    border:0;
+    z-index: 0;
+    height: 50px;
+    @extend %flex;
+    cursor: pointer;
+    padding: 0 20px;
+    overflow: hidden;
+    min-width: 160px;
+    position: relative;
+    @extend %transition;
+    align-items: center;
+    letter-spacing: 0.5px;
+    border-radius: $radius;
+    color: $button-color;
+    justify-content: center;
+    background-color: $theme-color;
+    font: 700 16px $heading-font-family;
+    & i{margin-right: 10px;}
+    &:hover,
+    &:focus{
+        outline: none;
+        color: $button-color;
+    } 
+    &:hover{
+        background-color: $theme-color_20_light;
+    }
+}
+.rippleholder{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    background: transparent;
+    &.is-active .ripplecircle{ animation: a-ripple .4s ease-in;}
+}
+.ripplecircle{
+    top: 50%;
+    width: 0;
+    height: 0;
+    left: 50%;
+    opacity: 0;
+    z-index: -1;
+    border-radius: 50%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.tb-btnvtwo{
+    color: $heading-font-color;
+    background-color:$theme-color;
+    &:hover,
+    &:focus{
+        color: $heading-font-color;
+    }
+}
+.tb-btnsmall{
+    height: 50px;
+    min-width: 50px;
+    font-size: 18px;
+}
+.tb-btnvthree{
+    color: $text-gray;
+    background-color: #f7f7f7;
+    &:hover,
+    &:focus{
+        outline: none;
+        color: $text-gray;
+    } 
+}
+.tb-plainbtn{
+    color: #999;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    &:hover,
+    &:focus{color: #999;}
+}
+// new button
+.tk-btn-line{
+    @extend %h6;
+    height: 40px;
+    padding: 0 24px;
+    cursor: pointer;
+    position: relative;
+    @extend %transition;
+    align-items: center;
+    display: inline-flex;
+    letter-spacing: 0.5px;
+    border-radius: $radius;
+    justify-content: center;
+    background-color: $clr-white;
+    color: $heading-font-color;
+    border: 2px solid $theme-color;
+    i{
+        font-size: rem(20);
+        padding-left: 10px;
+        color: $button-color;
+    }
+    &[disable]{
+        pointer-events: none;
+        color: $text-light!important;
+        border-color: $lighter !important;
+        background-color: $lighter !important;
+        i{color:$text-light;}
+    }
+    &:hover,
+    &:focus{
+        outline: none;
+        color: $button-color;
+        background-color: $theme-color_20_light;
+    }
+}
+button.tk-btn-line{cursor: pointer;}
+.tk-btn-line-sm{
+    @extend .tk-btn-line;
+    height: 34px;
+}
+.tk-btn-line-sm-lefticon{
+    @extend .tk-btn-line-sm;
+}
+.tk-btn-line-lg{
+    @extend .tk-btn-line;
+    height: 48px;
+}
+.tk-btn-line-lg-lefticon{
+    @extend .tk-btn-line-lg;
+    i{padding: 0 10px 0 0}
+}
+.tk-btn-line-lefticon{
+    @extend .tk-btn-line;
+    i{padding: 0 10px 0 0}
+}
+.tk-btn-solid{
+    border: 0;
+    color: $button-color;
+    @extend .tk-btn-line;
+    border-radius: $radiusvtwo;
+    background-color: $theme-color;
+}
+.tk-btn-solid-sm{
+    height: 34px;
+    @extend .tk-btn-solid;
+}
+.tk-btn-solid-sm-lefticon{
+    @extend .tk-btn-solid-sm;
+}
+.tk-btn-solid-lg{
+    @extend .tk-btn-solid;
+    height: 48px;
+}
+.tk-btn-solid-lg-lefticon{
+    @extend .tk-btn-solid-lg;
+    border-radius: $radiusvtwo;
+    i{
+        padding: 0 10px 0 0;
+        font-size: rem(20)
+    }
+}
+.tk-btn-solid-lefticon{
+    @extend .tk-btn-solid;
+    i{padding: 0 10px 0 0}
+}
+button,
+a{
+    &.tk-btnsolid-white{
+        background-color: $clr-white !important;
+        color: $heading-font-color !important;
+        &:hover,
+        &:focus{
+            outline: none;
+            background-color: $theme-color !important;
+            color: $button-color !important;
+        }
+    }
+    &.tk-btn-plain{
+        background: transparent !important;
+        color: $text-light!important;
+        text-align: center;
+        &:hover,
+        &:focus{
+            color: $text-light!important;
+            background: transparent !important;
+        }
+    }
+    &.tk-btn-yellow{
+        background-color: $theme-color !important;
+        color: $button-color !important;
+        i{color: $button-color !important;}
+        &:hover,
+        &:focus{
+            color: $button-color !important;
+            background-color: $theme-color_20_light !important;
+        }
+    }
+}
+.tk-btnsolid-white{
+    background-color: $clr-white !important;
+    color: $heading-font-color !important;
+    &:hover,
+    &:focus{
+        outline: none;
+        background-color: $theme-color !important;
+        color: $heading-font-color !important;
+    }
+}
+.tk-btn-plain{
+    background: transparent !important;
+    color: $text-light!important;
+    text-align: center;
+    &:hover,
+    &:focus{
+        color: $text-light!important;
+        background: transparent !important;
+    }
+}
+.tk-featuretag{
+    height: 18px;
+    color: $clr-white;
+    padding: 1px 5.74px;
+    display: inline-block;
+    background-color: $red;
+    border-radius: $radius;
+    text-transform: uppercase;
+    font: 700 rem(10)/em(16,10) $heading-font-family;
+ }
+ .tk-darkbtn{
+    background-color: $dark;
+    color: $clr-white;
+    i{color: $heading-font-color;}
+    &:hover,
+    &:focus{
+        color: $clr-white;
+        background-color: $dark;
+    }
+}
+.tb-go-dbbtn{
+  margin-top: 20px;
+}
+.tk-btnline{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid $lighter;
+    background-color: $clr-white;
+    color: $heading-font-color;
+    border-radius: $radiusvtwo;
+    padding: 9px 24px;
+    @extend %h6;
+    cursor: pointer;
+    @extend %transition;
+    i{
+        color: $heading-font-color;
+        padding-left: 0;
+        padding-right: 10px;
+        font-size: 20px;
+    }
+    &:hover,
+    &:focus{
+        background-color: $clr-white;
+        color: $heading-font-color;
+    }
+    &::before{
+        display: none
+    }
+}
+.tk-btn-solid-sm-lefticon{
+    @extend .tk-btn-solid-sm;
+}
+.tk-btn-solid-lg-lefticon{
+    @extend .tk-btn-solid-lg;
+    border-radius: $radiusvtwo;
+    i{
+        padding: 0 0 0 10px;
+        font-size: rem(20)
+    }
+}
+.tk-btn-solid-lefticon{
+    @extend .tk-btn-solid;
+    border-radius: $radiusvtwo;
+    i{
+        padding: 0 0 0 10px;
+        font-size: rem(20)
+    }
+}
+
+.tk-btn-yellow-lg{
+    @extend %h6;
+    padding: 11px 24px;
+    border-radius: 4px;
+    align-items: center;
+    @extend %transition;
+    display: inline-flex;
+    color: $heading-font-color;
+    background: $theme-color;
+    &:hover{
+        color: $heading-font-color;
+        background-color: $theme-color_20_light;
+    }
+    i{
+        margin-left: 10px;
+        font-size: rem(20);
+        display: inline-block;
+        line-height: em(20,20);
+    }
+}
+.tk-btn-solid-white{
+    gap: 10px;
+    z-index: 0;
+    color: #1C1C1C;
+    padding-top: 9px;
+    font-weight: 600;
+    position: relative;
+    padding: 11px 24px;
+    border-radius: 4px;
+    align-items: center;
+    line-height: 1.625em;
+    display: inline-flex;
+    justify-content: center;
+    background-color: #ffffff;
+    &:hover{
+        color: #1C1C1C;
+    }
+
+}

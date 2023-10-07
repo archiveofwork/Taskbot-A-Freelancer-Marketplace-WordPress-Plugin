@@ -1,0 +1,130 @@
+/** TABLE OF CONTENTS
+------------------------------------------------------------/
+1 - Abstracts
+        1.1 - # Sass Variables
+        1.2 - # Sass Functions
+        1.3 - # Sass Placeholders
+        1.4 - # Sass Loop Functions
+
+2 - Base
+        2.1 - # Base/normalize
+        2.2 - # Typography rules
+        2.3 - # Keyframes
+        2.4 - # Globalclasses
+        2.5 - # Socialicon
+
+3 - Components
+        3.1 - Buttons
+        3.2 - Form
+
+4 - layout
+        4.1 - Header
+
+5 - pages
+        5.1 - index
+        5.2 - indexvtwo
+        5.3 - indexvthree
+        5.4 - indexvfour
+        5.5 - indexvfive
+        5.6 - popups
+        5.7 - service-steps
+        5.8 - login
+        5.9 - service-result
+        5.10 - insights
+        5.11 - blog-detail
+        5.12 - 404
+        5.13 - service-detail
+        5.14 - tasks
+        5.15 - manageservices
+        5.16 - freelancer-detail
+        5.17 - freelancer-search-result
+        5.18 - invoice-detail
+        5.19 - db-diputelisting
+        5.20 - empty
+        5.21 - pricing
+        5.22 - db-billing-information
+        5.23- service-detailvtwo
+        5.24 - signup
+        5.25 - blog
+        5.26 - howitworks
+        5.27 - about
+        5.28 - blog-detailv2
+        5.29 - freelancer-list
+        5.30 - service-detailv2
+        5.31 - checkoutdetail
+        5.32 - contact-us
+        5.33 - notifications
+        5.34 - categories
+        5.35 - sub-categories
+        5.36 - post-a-project
+        5.37 - project-detail
+        5.38 - all-proporsal
+        5.39 - fixed-project-employerview
+        5.40 - projects-hourly-activity-freelancer-view
+
+6 - Responsive
+        6.1 - Responsive Sass file
+
+6 - Dashboard
+        7.1 - Dashboard Sass file
+
+/// END TABLE OF CONTENTS **/
+
+// 1 - Abstracts
+@import "abstracts/variables";
+@import "abstracts/functions";
+@import "abstracts/placeholders";
+@import "abstracts/loop";
+// 2 - Base
+@import "base/base";
+@import "base/globalclasses";
+@import "base/socialicon";
+@import "base/keyframes";
+@import "base/typography";
+// 3 - Components
+@import "components/button";
+@import "components/form";
+// 4 - Layout
+@import "layout/header";
+
+// 5 - Pages
+@import "pages/popups";
+@import "pages/index";
+@import "pages/service-steps";
+@import "pages/login";
+@import "pages/service-result";
+@import "pages/insights";
+@import "pages/blog-detail";
+@import "pages/404";
+@import "pages/service-detail";
+@import "pages/tasks";
+@import "pages/manageservices";
+@import "pages/freelancer-detail";
+@import "pages/freelancer-search-result";
+@import "pages/invoice-detail";
+@import "pages/db-diputelisting";
+@import "pages/empty";
+@import "pages/pricing";
+@import "pages/db-billing-information";
+@import "pages/service-detailvtwo";
+@import "pages/signup";
+@import "pages/indexv2";
+@import "pages/blog";
+@import "pages/howitworks";
+@import "pages/about";
+@import "pages/blog-detailv2";
+@import "pages/freelancer-list";
+@import "pages/service-detailv2";
+@import "pages/checkoutdetail";
+@import "pages/contact-us";
+@import "pages/notifications";
+@import "pages/categories";
+@import "pages/sub-categories";
+@import "pages/indexvfour";
+@import "pages/indexvthree";
+@import "pages/indexvfive";
+@import "pages/post-a-project";
+@import "pages/project-detail";
+@import "pages/all-proporsal";
+@import "pages/fixed-project-employerview";
+@import "pages/projects-hourly-activity-freelancer-view";

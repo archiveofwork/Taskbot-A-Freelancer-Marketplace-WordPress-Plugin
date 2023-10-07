@@ -1,0 +1,365 @@
+/** ====== Task Detail components ====== **/
+.te-orderrequest {
+    padding: 25px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    @extend %border-radius4;
+    .te-ordertitle {
+        flex-basis: 58%;
+    }
+}
+.te-ordertitle {
+    p {margin: 0;}
+}
+.te-btnlink {
+    color: $heading-font-color;
+    font: 600 rem(14)/em(15, 14) $heading-font-family;
+    &:hover {
+        color: $heading-font-color;
+    }
+}
+.btn-green {
+    background: #00cc8d !important;
+}
+
+.te-orderbtn {
+    @extend %flex;
+    align-items: center;
+    a {
+        &+a {
+            margin: 0 0 0 30px;
+        }
+    }
+}
+
+.te-additonoltitle {
+    padding: 23px 30px;
+    background-color: $clr-white;
+    border: 1px solid $border-color;
+    border-radius: $radius $radius 0 0;
+    -webkit-border-radius: $radius $radius 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    i {
+        @extend %transition;
+        display: inline-block;
+        cursor: pointer;
+    }
+    h5 {
+        font-weight: 400;
+        margin: 0;
+        span {
+            display: inline-block;
+            color: $text-light;
+            font: 400 rem(13)/em(15, 13) $heading-font-family;
+        }
+    }
+    .te-startingprice {
+        align-items: flex-start;
+    }
+}
+.te-additionolinfo {
+    background-color: $clr-white;
+    border: 1px solid $border-color;
+    border-top: 0;
+    padding: 30px;
+    div.te-addcomment {
+        margin: 0 20px 0 0px;
+
+        &+div.te-addcomment {
+            border-top: 1px solid $border-color;
+        }
+    }
+    .te-addcommenthalf {
+        margin-left: 46px;
+    }
+    & .te-planslist {
+        &+ul {
+            padding-top: 22px;
+        }
+    }
+    & .te-planslist:last-child {
+        border: 0;
+        li {
+            padding: 0;
+        }
+    }
+    .te-profilestatuses {
+        margin: 0;
+    }
+}
+
+.te-additionollist {
+    @extend %flex;
+    align-items: center;
+    justify-content: space-between;
+    li {
+        position: relative;
+        list-style-type: none;
+        margin: 0 0 0 13px;
+        h6 {
+            font: 700 rem(13)/em(15, 13) $body-font-family;
+            margin: 0;
+        }
+        span {
+            display: inline-block;
+            color: $text-light;
+            font: 400 rem(14)/em(15, 14) $body-font-family;
+        }
+    }
+    li:nth-child(n+3) {
+        margin: 30px 0 0 13px;
+    }
+    & li::after {
+        position: absolute;
+        content: '';
+        width: 3px;
+        height: 3px;
+        left: -13px;
+        top: 5px;
+        background:$text-light
+    }
+}
+.te-requestarea {
+    .te-additonolservices {
+        margin-top: 30px;
+        [aria-expanded="false"]{       
+               >  i{
+                    transform: rotate(-90deg);
+                    -webkit-transform: rotate(-90deg);
+    
+            }
+        }
+    }
+    .te-additonolservices:last-child {
+        margin-bottom: 0;
+    }
+    .te-profile-steps{
+        padding: 30px;
+        border: 1px solid $border-color;
+        background-color: $clr-white;
+        @extend %border-radius4;
+    }
+}
+
+.te-planslist {
+    border-bottom: 1px solid $border-color;
+    li {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 0 14px;
+        a{
+            display: block;
+            width: 100%;
+            h6 {
+                margin: 0;
+                font-weight: 400;
+                font-size: rem(13px);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                span {
+                    display: inline-block;
+                    color: $text-light;
+                    font: 400 rem(14)/em(15, 14) $body-font-family;
+                    em {
+                        font-size: rem(12px);
+                        vertical-align: middle;
+                        display: inline-block;
+                        margin: 0 0 0 3px;
+                    }
+                }
+            }
+        }
+    }
+    & li:last-child {
+        padding: 0 0 22px;
+    }
+}
+
+.te-taskdeadline {
+    background: $theme-color;
+    border-radius: 0 0 $radius $radius;
+    .te-actionselect {
+        background: $clr-white;
+        border-radius: $radius $radius $radius $radius;
+        min-width: 100%;
+        border: 0;
+        height: 50px;
+        margin: 15px 0 0;
+        padding: 10px 5px 10px 13px;
+        span {
+            font-size: rem(15);
+        }
+        .te-select {
+            .form-control {
+                font-size: rem(15);
+                border: 0;
+            }
+        }
+    }
+}
+
+.te-taskcountdown {
+    padding: 30px;
+    h6 {
+        color: $clr-white;
+        font-weight: 400;
+        margin: 0;
+    }
+    .te-countdownno {
+        margin-top: 7px;
+    }
+}
+
+.te-countdownno {
+    @extend %flex;
+    li {
+        position: relative;
+        list-style-type: none;
+        color: $clr-white;
+        margin-right: 27px;
+        font: 700 rem(16)/em(18, 16) $heading-font-family;
+        span {
+            margin: 0 0 0 5px;
+            display: inline-block;
+            font: 700 rem(22)/em(23, 22) $heading-font-family;
+        }
+    }
+    & li::after {
+        content: '/';
+        position: absolute;
+        right: -20px;
+        top: 2px;
+        color: #638ffa;
+        font-size: rem(22px);
+    }
+    & li:last-child::after {
+        display: none;
+    }
+    & li:last-child {
+        margin: 0;
+    }
+}
+
+.te-deadlinebtn {
+    .te-btnvtwo {
+        min-width: 40px;
+        line-height: 40px;
+        padding: 0 13px;
+    }
+}
+
+.te-raisedispute {
+    border-top: 3px solid #0244e6;
+    padding: 3px 0;
+    box-shadow: inset 0 1px #2e6bff;
+    -webkit-box-shadow: inset 0 1px #2e6bff;
+    a {
+        font-size: rem(13);
+    }
+}
+
+.te-modaldialog {
+    max-width: 600px;
+}
+
+.te-modal-header {
+    padding: 25px 30px;
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    align-items: center;
+    border-bottom: 1px solid $border-color;
+    h5 {
+        margin: 0;
+        font-weight: 400;
+    }
+    span {
+        color: $lighter;
+        display: inline-block;
+        font-size: rem(20px);
+    }
+}
+.te-radiolist {
+    li {
+       list-style: none;
+       ~ li{padding-top: 7px;}
+    }
+}
+.te-additonoltitleholder{
+    padding-top: 19px;
+    padding-bottom: 12px;
+    background: $clr-white;
+    .te-additonoltitle{
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+    }
+}
+.te-asidebox.te-additionolinfo{
+    border: 0;
+    border-top: 1px solid $border-color;
+}
+.te-asidebox.te-additonoltitle{
+    border: 0;
+    border-radius: 0;
+}
+.te-blogdatetitle {
+    background: $bg-light;
+    padding: 9px 20px;
+    border-radius: $radius;
+    display: flex;
+    align-items: center;
+        h5 {
+        align-items: center;
+        font-weight: 400;
+        margin: 0;
+    }
+}
+.te-additionolinfo .te-addcomment:last-child{
+    padding-bottom: 0;
+}
+.te-taskcompleted{
+    background: #63d594;
+    border-radius: 0 0 $radius $radius ;
+    padding: 25px 30px;
+    h5{
+        font-weight: 400;
+        color: $clr-white;
+        margin: 0 0 2px;
+    }
+    h3{
+        font: 700 rem(22)/em(28,22) $heading-font-family;
+        color: $clr-white;
+        margin: 0;
+        span{
+            display: inline-block;
+        }
+    }
+}
+
+.te-extrascompleted{
+    margin: 28px 152px 0 0;
+       .te-tabitemextras{
+        min-width: 115px;
+    }
+}
+.te-radiolist-column{
+    flex-direction: column;
+    align-items: flex-start;
+    label{
+        line-height: em(23,13);
+    }
+    .te-radio label:before{top: 2px;}
+    .te-radio label:after{top: 7px;}
+}
+.te-disputelist{
+    padding-top: 9px;
+    margin-bottom: -8px;
+}
