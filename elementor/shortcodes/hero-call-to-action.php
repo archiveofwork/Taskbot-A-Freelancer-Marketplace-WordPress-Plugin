@@ -143,9 +143,6 @@
                         'type'        => Controls_Manager::MEDIA,
                         'label'       => esc_html__('Banner image', 'taskbot'),
                         'description' => esc_html__('Add banner image.', 'taskbot'),
-                        'default' => [
-                            'url' => \Elementor\Utils::get_placeholder_image_src(),
-                        ],
                         'label_block' => true,
                     ]
                 );

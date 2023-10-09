@@ -134,9 +134,6 @@ if (!class_exists('Taskbot_about_us_feedback')) {
                             'type'          => Controls_Manager::MEDIA,
                             'label'         => esc_html__('Upload image', 'taskbot'),
                             'description'   => esc_html__('Upload image.(60x60)', 'taskbot'),
-                            'default' => [
-                                'url' => \Elementor\Utils::get_placeholder_image_src(),
-                            ],
                         ],
                         [
                             'name'          => 'user_name',
@@ -213,7 +210,7 @@ if (!class_exists('Taskbot_about_us_feedback')) {
                                                 </div>
                                             <?php } ?>
                                             <?php if (!empty($btn_text)) { ?>
-                                                <a href="<?php echo esc_url($button_link); ?>" class="tk-btn-solid-lg"><?php echo esc_html($btn_text); ?><i class="icon-user-check"></i></a>
+                                                <a href="<?php echo esc_url($button_link); ?>" class="tk-btn-solid-lg"><?php echo esc_html($btn_text); ?><i class="tb-icon-user-check"></i></a>
                                             <?php } ?>
                                         </div>
                                     </div>

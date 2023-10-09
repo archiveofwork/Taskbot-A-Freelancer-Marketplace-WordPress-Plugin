@@ -30,11 +30,11 @@ if( !empty($tb_custom_fields) || !empty($acf_fields) ){
                 
                 if (!empty($acf_field['label'])) {
                     if (!empty($acf_field['type']) && in_array($acf_field['type'], array('text', 'textarea', 'number'))) {
-                        echo do_shortcode('<li><span>' . esc_html($acf_field['label']) . '</span><em> (' . esc_html($plan_value) . ')</em></li>');
+                        echo do_shortcode('<li><span>' . esc_html($acf_field['label']) . '</span><em> ('.esc_html($plan_value).')</em></li>');
                     } else if (!empty($acf_field['type']) && $acf_field['type'] === 'url' && !empty($plan_value)) {
-                        echo do_shortcode('<li><span>' . esc_html($acf_field['label']) . '</span><em><a href="' . esc_url($plan_value) . '" target="_blank"> (' . esc_html($plan_value) . ')</a></em></li>');
+                        echo do_shortcode('<li><span>' . esc_html($acf_field['label']) . '</span><em><a href="' . esc_url($plan_value) . '" target="_blank"> ('.esc_html($plan_value).')</a></em></li>');
                     } else if (!empty($acf_field['type']) && $acf_field['type'] === 'email' && !empty($plan_value)) {
-                        echo do_shortcode('<li><span>' . esc_html($acf_field['label']) . '</span><em><a href="mailto:' . esc_attr($plan_value) . '" target="_blank"> (' . esc_html($plan_value) . ')</a></em></li>');
+                        echo do_shortcode('<li><span>' . esc_html($acf_field['label']) . '</span><em><a href="mailto:' . esc_attr($plan_value) . '" target="_blank"> ('.esc_html($plan_value).')</a></em></li>');
                     } else if (!empty($acf_field['type']) && in_array($acf_field['type'], array('checkbox'))) {
                         $class = !empty($plan_value) && $plan_value === 'yes' ? 'tb-available' : 'tb-unavailable';
                         echo do_shortcode('<li class="' . esc_attr($class) . '"><span>' . esc_html($acf_field['label']) . '</span></li>');

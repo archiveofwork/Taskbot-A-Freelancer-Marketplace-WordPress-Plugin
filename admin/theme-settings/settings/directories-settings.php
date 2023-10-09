@@ -12,24 +12,10 @@
 $theme_version 	= wp_get_theme();
 $datefomate_list= apply_filters('taskbot_get_list_date_format', '');
 $user_types     = apply_filters('taskbot_get_user_types','');
-$seller_view    = array('list' => esc_html__('List','taskbot'));
-$heading_styles = array();
-if(!empty($theme_version->get( 'TextDomain' )) 
-&& ( $theme_version->get( 'TextDomain' ) === 'taskup' || $theme_version->get( 'TextDomain' ) === 'taskup-child' )){
-  $seller_view['grid']  = esc_html__('Grid','taskbot');
-
-  $heading_styles = array(
-    'id'        => 'heading_style',
-    'type'      => 'select',
-    'title'     => esc_html__('Heading style?', 'taskbot'),
-    'desc'      => esc_html__('Select heading style', 'taskbot'),
-    'options'   => array(
-      'tb-heading-style-v1'         => esc_html__('Heading style 1', 'taskbot'),
-      'tb-heading-style-v2'         => esc_html__('Heading style 2', 'taskbot'),
-    ),
-    'default'   => 'tb-heading-style-v2',
-  );
-}
+$seller_view    = array(
+                        'list' => esc_html__('List','taskbot'),
+                        'grid' => esc_html__('Grid','taskbot')
+                      );
 
 
 Redux::setSection( $opt_name, array(
@@ -64,7 +50,6 @@ Redux::setSection( $opt_name, array(
                   'type'      => 'select',
                   'title'     => esc_html__('Cancel order', 'taskbot'),
                   'desc'      => esc_html__('Remove cancel order options from the ongoing orders page', 'taskbot'),
-                  'default'   => array('sellers_search_page','service_search_page','project_search_page'),
                   'default'   => 'no',
                   'options'   => array(
                     'yes'  	=> esc_html__('Yes', 'taskbot'),
@@ -274,7 +259,6 @@ Redux::setSection( $opt_name, array(
                   'project_search_page'  	=> esc_html__('Projects', 'taskbot'),
                 ),
               ),
-              $heading_styles
         )
 	)
 );
@@ -325,18 +309,18 @@ Redux::setSection( $opt_name, array(
           'desc'      => esc_html__('Please select login/reigistration type', 'taskbot'),
           'options'   => array(
             'pages'         => esc_html__('Pages', 'taskbot'),
-            'popup'         => esc_html__('POPUP', 'taskbot'),
+            'popup'         => esc_html__('Popup', 'taskbot'),
           ),
           'default'   => 'pages',
         ),
-				array(
-					'id'		  => 'popup_logo',
-					'type' 		=> 'media',
-					'url'		  => true,
-					'title' 	=> esc_html__('Add logo for POPUP', 'taskbot'),
-					'desc' 		=> esc_html__('Upload site logo for popup.', 'taskbot'),
-          'required'  => array('registration_view_type', '=', 'popup'),
-				),
+        array(
+            'id'		  => 'popup_logo',
+            'type' 		=> 'media',
+            'url'		  => true,
+            'title' 	=> esc_html__('Add logo for Popup', 'taskbot'),
+            'desc' 		=> esc_html__('Upload site logo for popup.', 'taskbot'),
+             'required'  => array('registration_view_type', '=', 'popup'),
+        ),
         array(
           'id'        => 'email_user_registration',
           'type'      => 'select',
@@ -380,6 +364,17 @@ Redux::setSection( $opt_name, array(
           'desc'      => esc_html__('Enable/disable switch user', 'taskbot')
         ),
         array(
+            'id'        => 'header_type_after_login',
+            'type'      => 'select',
+            'title'     => esc_html__('Header type after logged in', 'taskbot'),
+            'desc'      => esc_html__('Please select header type for frontend pages when logged in.', 'taskbot'),
+            'options'   => array(
+                'theme-header'         => esc_html__('Theme Header', 'taskbot'),
+                'taskbot-header'         => esc_html__('Taskbot Header', 'taskbot'),
+            ),
+            'default'   => 'theme-header',
+        ),
+        array(
           'id'        => 'login_redirect_buyer',
           'type'      => 'select',
           'title'     => esc_html__('Login/registration redirect for buyers', 'taskbot'),
@@ -393,7 +388,6 @@ Redux::setSection( $opt_name, array(
             'task'           => esc_html__('Task search page', 'taskbot'),
           ),
         ),
-
         array(
           'id'        => 'login_redirect_seller',
           'type'      => 'select',
@@ -406,6 +400,31 @@ Redux::setSection( $opt_name, array(
             'profile'     => esc_html__('Profile settings', 'taskbot'),
             'projects'    => esc_html__('Seller project page', 'taskbot'),
           ),
+        ),
+        array(
+          'id'        => 'user_restriction',
+          'type'      => 'switch',
+          'title'     => esc_html__('After logged in restrict user', 'taskbot'),
+          'default'   => false,
+          'desc'      => esc_html__('Enable/disable user to access front pages after login', 'taskbot')
+        ),
+        array(
+          'id'    	=> 'buyer_access_pages',
+          'type'  	=> 'select',
+          'title' 	=> esc_html__( 'Buyer restrict pages', 'taskbot' ),
+          'data'  	=> 'pages',
+          'multi'    => true,
+          'desc'      => esc_html__('Select restrict pages for buyer after logged in', 'taskbot'),
+          'required'  => array('user_restriction', '=', true),
+        ),
+        array(
+          'id'    	=> 'seller_access_pages',
+          'type'  	=> 'select',
+          'title' 	=> esc_html__( 'Seller restrict pages', 'taskbot' ),
+          'data'  	=> 'pages',
+          'multi'    => true,
+          'desc'      => esc_html__('Select restrict pages for seller after logged in', 'taskbot'),
+          'required'  => array('user_restriction', '=', true),
         ),
       )
 	)
@@ -439,6 +458,14 @@ $project_plan_icon_fields = array(
 		),
 		'default'  => 'publish',
 	),
+    array(
+        'id'    	=> 'project_edit_after_submit',
+        'type'  	=> 'switch',
+        'title' 	=> esc_html__( 'Edit submit project', 'taskbot' ),
+        'desc' 	=> esc_html__( 'Enable/Disable to edit submitted project before approval.', 'taskbot' ),
+        'required'  => array('project_status', '=', 'pending'),
+        'default'  	=> true,
+    ),
   array(
 		'id'       => 'hide_fixed_milestone',
 		'type'     => 'select',

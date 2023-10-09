@@ -21,7 +21,7 @@
     }
     .tk-navbar-right {
         .navbar-toggler {
-            background-color: $orange;
+            background-color: $theme-color;
         }  
     } 
 }
@@ -30,7 +30,7 @@
     .tk-select{
         i{ 
             border-radius: 50px;
-            background-color: $orange;
+            background-color: $theme-color;
         }
     }
     .select2-container--default .select2-selection--single,
@@ -64,9 +64,9 @@
         border-radius: $radius;
         background: #000000;
         img{
-            height: 220px;
-            border-radius: $radius !important;
             @extend %transition;
+            height: 220px !important;
+            border-radius: $radius !important;
         }
     }
     .tk-servicesabout{
@@ -127,13 +127,6 @@
             display: inline-block;
             font-style: normal;
             position: relative;
-            &::after{
-                content: url('../images/indexvthree/img-01.png');
-                position: absolute;
-                width: 100%;
-                left: -13px;
-                z-index: -1;
-            }
         }
     }
     p{
@@ -143,8 +136,8 @@
 .tk-menulist{
     background: $dark;
     padding: 0 30px;
-    @extend %flex;
     justify-content: center;
+    @extend %flex;
    
 }
 .tk-headervsix{

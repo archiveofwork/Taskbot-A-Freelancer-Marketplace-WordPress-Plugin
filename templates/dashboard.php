@@ -28,6 +28,11 @@ if( !is_user_logged_in() ){
 if( !empty($url_identity) && $user_identity != $url_identity ){
     $redirect_url   = taskbot_get_page_uri('dashboard');
 }
+
+if(empty($reference) && !empty($user_type) && $user_type === 'sellers'){
+    $redirect_url = Taskbot_Profile_Menu::taskbot_profile_menu_link('earnings', $user_identity, true, 'insights');
+}
+
 if( !empty($redirect_url) ){
     wp_redirect( $redirect_url );
     exit;
@@ -47,14 +52,14 @@ $is_verified    = !empty($is_verified) ? $is_verified : '';
 $app_task_base      = taskbot_application_access('task');
 $app_project_base   = taskbot_application_access('project');
 if( !empty($deactive_account) && $deactive_account == 1 ){ ?>
-    <section class="overflow-hidden tb-main-bg tb-main-section tb-deactived-account">
+    <section class="overflow-hiddentb-main-section tb-deactived-account">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
                     <div class="tb-deactived-popup">
                         <div class="tb-alertpopup">
                             <span class="tb-redbgbf tb-red">
-                                <i class="icon-slash"></i>
+                                <i class="tb-icon-slash"></i>
                             </span>
                             <h3><?php esc_html_e('Account deactivated','taskbot');?></h3>
                             <p><?php esc_html_e("You can not perform any action without restoring your account.Click “Restore my account” and let's get started","taskbot");?></p>
@@ -68,7 +73,7 @@ if( !empty($deactive_account) && $deactive_account == 1 ){ ?>
         </div>
     </section>
 <?php } else { ?>
-    <section class="overflow-hidden tb-main-bg tb-main-section">
+    <section class="overflow-hidden tb-main-section">
         <div class="container">
             <?php 
                 if( empty($mode) || $mode != 'verification' ){
@@ -151,7 +156,7 @@ if( !empty($deactive_account) && $deactive_account == 1 ){ ?>
                                         $args['order_id']   = !empty($_GET['id']) ? intval($_GET['id']) : "";
                                         ?>
                                         <div class="tb-invoicehead">
-                                            <span data-order_id="<?php echo intval($args['order_id']);?>" class="tb-download-pdf tb-btn"><i class="icon-download"></i><?php esc_html_e('Export PDF','taskbot');?></span>
+                                            <span data-order_id="<?php echo intval($args['order_id']);?>" class="tb-download-pdf tb-btn"><i class="tb-icon-download"></i><?php esc_html_e('Export PDF','taskbot');?></span>
                                         </div>
                                         <?php
                                         if(!empty($user_type ) && $user_type === 'buyers' ) {
@@ -167,7 +172,7 @@ if( !empty($deactive_account) && $deactive_account == 1 ){ ?>
                                         $args['order_id']   = !empty($_GET['id']) ? intval($_GET['id']) : "";
                                         ?>
                                         <div class="tb-invoicehead">
-                                            <span data-order_id="<?php echo intval($args['order_id']);?>" class="tb-download-pdf tb-btn"><i class="icon-download"></i><?php esc_html_e('Export PDF','taskbot');?></span>
+                                            <span data-order_id="<?php echo intval($args['order_id']);?>" class="tb-download-pdf tb-btn"><i class="tb-icon-download"></i><?php esc_html_e('Export PDF','taskbot');?></span>
                                         </div>
                                         <?php
                                         if(!empty($user_type ) && $user_type === 'buyers' ) {
@@ -198,7 +203,7 @@ if( !empty($deactive_account) && $deactive_account == 1 ){ ?>
             <div class="modal-content">
                 <div class="tb-popuptitle">
                     <h4 id="tb_project_ratingtitle"><?php esc_html_e('Complete task','taskbot');?></h4>
-                    <a href="javascript:void(0);" class="close"><i class="icon-x" data-bs-dismiss="modal"></i></a>
+                    <a href="javascript:void(0);" class="close"><i class="tb-icon-x" data-bs-dismiss="modal"></i></a>
                 </div>
                 <div class="modal-body tk-taskcomplete_popup" id="tb_taskcomplete_form"></div>
             </div>
@@ -225,19 +230,19 @@ if( !empty($deactive_account) && $deactive_account == 1 ){ ?>
                             <div class="tb-my-ratingholder">
                                 <ul id="tb_stars-{{data.order_id}}" class='tb-rating-stars tb_stars'>
                                     <li class='tb-star' data-value='1'  data-id="{{data.order_id}}">
-                                        <i class='icon-star fa-fw'></i>
+                                        <i class='tb-icon-star fa-fw'></i>
                                     </li>
                                     <li class='tb-star' data-value='2'  data-id="{{data.order_id}}">
-                                        <i class='icon-star fa-fw'></i>
+                                        <i class='tb-icon-star fa-fw'></i>
                                     </li>
                                     <li class='tb-star' data-value='3'  data-id="{{data.order_id}}">
-                                        <i class='icon-star fa-fw'></i>
+                                        <i class='tb-icon-star fa-fw'></i>
                                     </li>
                                     <li class='tb-star' data-value='4'  data-id="{{data.order_id}}">
-                                        <i class='icon-star fa-fw'></i>
+                                        <i class='tb-icon-star fa-fw'></i>
                                     </li>
                                     <li class='tb-star' data-value='5'  data-id="{{data.order_id}}">
-                                        <i class='icon-star fa-fw'></i>
+                                        <i class='tb-icon-star fa-fw'></i>
                                     </li>
                                 </ul>
                                 <input type="hidden" id="tb_task_rating-{{data.order_id}}" name="rating" value="1">
@@ -274,19 +279,19 @@ if( !empty($deactive_account) && $deactive_account == 1 ){ ?>
                             <div class="tb-my-ratingholder">
                                 <ul id="tb_stars-{{data.proposal_id}}" class='tb-rating-stars tb_stars'>
                                     <li class='tb-star' data-value='1'  data-id="{{data.proposal_id}}">
-                                        <i class='icon-star fa-fw'></i>
+                                        <i class='tb-icon-star fa-fw'></i>
                                     </li>
                                     <li class='tb-star' data-value='2'  data-id="{{data.proposal_id}}">
-                                        <i class='icon-star fa-fw'></i>
+                                        <i class='tb-icon-star fa-fw'></i>
                                     </li>
                                     <li class='tb-star' data-value='3'  data-id="{{data.proposal_id}}">
-                                        <i class='icon-star fa-fw'></i>
+                                        <i class='tb-icon-star fa-fw'></i>
                                     </li>
                                     <li class='tb-star' data-value='4'  data-id="{{data.proposal_id}}">
-                                        <i class='icon-star fa-fw'></i>
+                                        <i class='tb-icon-star fa-fw'></i>
                                     </li>
                                     <li class='tb-star' data-value='5'  data-id="{{data.proposal_id}}">
-                                        <i class='icon-star fa-fw'></i>
+                                        <i class='tb-icon-star fa-fw'></i>
                                     </li>
                                 </ul>
                                 <input type="hidden" id="tb_task_rating-{{data.proposal_id}}" name="rating" value="1">
@@ -318,19 +323,19 @@ if( !empty($deactive_account) && $deactive_account == 1 ){ ?>
                             <div class="tb-my-ratingholder">
                                 <ul id="tb_stars-{{data.proposal_id}}" class='tb-rating-stars tb_stars'>
                                     <li class='tb-star' data-value='1'  data-id="{{data.proposal_id}}">
-                                        <i class='icon-star fa-fw'></i>
+                                        <i class='tb-icon-star fa-fw'></i>
                                     </li>
                                     <li class='tb-star' data-value='2'  data-id="{{data.proposal_id}}">
-                                        <i class='icon-star fa-fw'></i>
+                                        <i class='tb-icon-star fa-fw'></i>
                                     </li>
                                     <li class='tb-star' data-value='3'  data-id="{{data.proposal_id}}">
-                                        <i class='icon-star fa-fw'></i>
+                                        <i class='tb-icon-star fa-fw'></i>
                                     </li>
                                     <li class='tb-star' data-value='4'  data-id="{{data.proposal_id}}">
-                                        <i class='icon-star fa-fw'></i>
+                                        <i class='tb-icon-star fa-fw'></i>
                                     </li>
                                     <li class='tb-star' data-value='5'  data-id="{{data.proposal_id}}">
-                                        <i class='icon-star fa-fw'></i>
+                                        <i class='tb-icon-star fa-fw'></i>
                                     </li>
                                 </ul>
                                 <span><?php esc_html_e('1','taskbot');?></span>
@@ -380,19 +385,19 @@ if( !empty($deactive_account) && $deactive_account == 1 ){ ?>
                             <div class="tb-my-ratingholder">
                                 <ul id="tb_stars-{{data.order_id}}" class='tb-rating-stars tb_stars'>
                                     <li class='tb-star' data-value='1'  data-id="{{data.order_id}}">
-                                        <i class='icon-star fa-fw'></i>
+                                        <i class='tb-icon-star fa-fw'></i>
                                     </li>
                                     <li class='tb-star' data-value='2'  data-id="{{data.order_id}}">
-                                        <i class='icon-star fa-fw'></i>
+                                        <i class='tb-icon-star fa-fw'></i>
                                     </li>
                                     <li class='tb-star' data-value='3'  data-id="{{data.order_id}}">
-                                        <i class='icon-star fa-fw'></i>
+                                        <i class='tb-icon-star fa-fw'></i>
                                     </li>
                                     <li class='tb-star' data-value='4'  data-id="{{data.order_id}}">
-                                        <i class='icon-star fa-fw'></i>
+                                        <i class='tb-icon-star fa-fw'></i>
                                     </li>
                                     <li class='tb-star' data-value='5'  data-id="{{data.order_id}}">
-                                        <i class='icon-star fa-fw'></i>
+                                        <i class='tb-icon-star fa-fw'></i>
                                     </li>
                                 </ul>
                                 <span><?php esc_html_e('1','taskbot');?></span>

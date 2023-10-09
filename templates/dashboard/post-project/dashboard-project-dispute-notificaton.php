@@ -77,7 +77,7 @@ if( !empty($seller_id) && $seller_id == $user_identity ){
                     <p><?php esc_html_e('Buyer has cancelled this order, if you think this is not good then you can create a dispute for this order', 'taskbot');?></p>
                 </div>
                 <div class="tb-orderbtn">
-                    <span id="taskrefundrequest" class="tb-btn btn-orange"><?php esc_html_e('Create dispute', 'taskbot');?></a>
+                    <span id="taskrefundrequest" class="tb-btn btn-orange"><?php esc_html_e('Create dispute', 'taskbot');?></span>
                 </div>
             </div>                   
         </div>

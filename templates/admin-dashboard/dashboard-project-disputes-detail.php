@@ -10,7 +10,7 @@
  * @since       1.0
 */
 
-global $current_user, $post;
+global $current_user, $post, $taskbot_settings;
 
 $reference		= !empty($_GET['ref'] ) ? $_GET['ref'] : '';
 $mode			= !empty($_GET['mode']) ? $_GET['mode'] : '';
@@ -105,7 +105,7 @@ if($user_type == 'sellers'){
 							<div class="tb-radiolist payoutlists">
 								<span class="tb-wininginfomain">
 									<span class="tb-wininginfo tb-greencheck">
-										<span class="icon-check"></span>
+										<span class="tb-icon-check"></span>
 										<i><?php esc_html_e('This dispute has been resolved', 'taskbot');?></i>
 									</span>
 								</span>
@@ -164,7 +164,7 @@ if($user_type == 'sellers'){
 									<ul class="tb-uploadbar tb-bars taskbot-fileprocessing taskbot-infouploading" id="taskbot-fileprocessing"></ul>
 									<div class="tb-uploadbox taskbot-dragdroparea" id="taskbot-droparea" >
 										<em>
-											<?php esc_html_e('You can upload jpg,jpeg,gif,png,zip,rar,mp3 mp4 and pdf only. Maks sure your file does not exceed 3mb.', 'taskbot');?>
+                                            <?php echo wp_sprintf( esc_html__( 'You can upload jpg,jpeg,gif,png,zip,rar,mp3 mp4 and pdf only. Make sure your file does not exceed %s mb.', 'taskbot'), $taskbot_settings['upload_file_size'] );?>
 											<label for="file2">
 												<span id="taskbot-attachment-btn-clicked">
 													<input id="file2" type="file" name="file">

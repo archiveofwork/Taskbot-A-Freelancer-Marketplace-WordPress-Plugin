@@ -311,7 +311,7 @@ if (!class_exists('Taskbot_sort_faqs')) {
 									<div class="tk-faq_input">
 										<form method="get" action="">
 											<div class="tk-inputappend">
-												<i class="icon-search"></i>
+												<i class="tb-icon-search"></i>
 												<div class="tk-placeholderholder">
 													<input type="text" name="faq_search" placeholder="<?php echo esc_attr($search_placeholder); ?>" value="<?php echo esc_attr($faq_search); ?>" class="form-control">
 												</div>

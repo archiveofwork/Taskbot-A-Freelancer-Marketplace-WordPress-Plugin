@@ -164,7 +164,7 @@
 }
 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
 .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
-    background-color: $theme-color;
+    background-color: $theme-color !important;
     border-radius: 2px;
     &:hover{opacity: 1;} 
 }

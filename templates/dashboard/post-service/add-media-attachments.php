@@ -63,7 +63,7 @@ if(isset($_downloadable) && $_downloadable == 'yes'){
                             <svg>
                                 <rect width="100%" height="100%"/>
                             </svg>
-                            <i class="icon-upload"></i>
+                            <i class="tb-icon-upload"></i>
                             <em>
                                 <?php echo wp_sprintf( '%1$s <br/> %2$s', esc_html__( 'You can upload media file format only.', 'taskbot'), esc_html__( 'make sure your file size does not exceed 15mb.', 'taskbot') );?>
                                 <label for="file1">
@@ -161,8 +161,8 @@ if(isset($_downloadable) && $_downloadable == 'yes'){
                                             <div class="tb-uploadbar-content">
                                                 <a href="javascript:void(0);" class="media-title-text"><?php echo esc_html($download['name']);?></a>
                                                 <div class="tb-actionbtn">
-                                                    <a href="javascript:void(0);" class="tb-addlink" ><i class="icon-edit-2"></i></a>
-                                                    <a href="javascript:void(0);" class="tb-trashlink"><i class="icon-trash-2"></i></a>
+                                                    <a href="javascript:void(0);" class="tb-addlink" ><i class="tb-icon-edit-2"></i></a>
+                                                    <a href="javascript:void(0);" class="tb-trashlink"><i class="tb-icon-trash-2"></i></a>
                                                 </div>
                                             </div>
                                             <div class="tb-uploadfile-list" v-show="isShowing">
@@ -179,7 +179,7 @@ if(isset($_downloadable) && $_downloadable == 'yes'){
                                                 </div>
                                                 <div class="tb-actionbtn">
                                                     <a href="javascript:void(0);" class="tb-checked"><i class="fa fa-check"></i></a>
-                                                    <a href="javascript:void(0);" class="tb-trashlink"><i class="icon-trash-2"></i></a>
+                                                    <a href="javascript:void(0);" class="tb-trashlink"><i class="tb-icon-trash-2"></i></a>
                                                 </div>
                                             </div>
                                         </li>
@@ -208,8 +208,8 @@ if(isset($_downloadable) && $_downloadable == 'yes'){
 
                         <a href="javascript:void(0);" class="media-title-text">{{{data.title}}}</a>
                         <div class="tb-actionbtn">
-                            <a href="javascript:void(0);" class="tb-addlink" ><i class="icon-edit-2"></i></a>
-                            <a href="javascript:void(0);" class="tb-trashlink"><i class="icon-trash-2"></i></a>
+                            <a href="javascript:void(0);" class="tb-addlink" ><i class="tb-icon-edit-2"></i></a>
+                            <a href="javascript:void(0);" class="tb-trashlink"><i class="tb-icon-trash-2"></i></a>
                         </div>
                     </div>
                     <div class="tb-uploadfile-list" v-show="isShowing">
@@ -225,7 +225,7 @@ if(isset($_downloadable) && $_downloadable == 'yes'){
                         </div>
                         <div class="tb-actionbtn">
                             <a href="javascript:void(0);" class="tb-checked"><i class="fa fa-check"></i></a>
-                            <a href="javascript:void(0);" class="tb-trashlink"><i class="icon-trash-2"></i></a>
+                            <a href="javascript:void(0);" class="tb-trashlink"><i class="tb-icon-trash-2"></i></a>
                         </div>
                     </div>
                 </li>

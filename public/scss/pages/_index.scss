@@ -594,6 +594,9 @@
 }
 .tb-icon-yellow{
 	color: #fddb5b !important;
+    &.fas{
+        font-family: "Font Awesome 5 Free" !important;
+    }
 }
 .tb-rateviews {
     margin: 0;

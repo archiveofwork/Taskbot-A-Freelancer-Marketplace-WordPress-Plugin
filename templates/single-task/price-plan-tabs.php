@@ -9,6 +9,7 @@
  * @subpackage Taskbot_/public
  */
 global $current_user, $taskbot_settings;
+extract($args);
 $post_id		= $product->get_id();
 $plans			= !empty($taskbot_plans_values) ? $taskbot_plans_values : array();
 $plans_count	= !empty($plans) && is_array($plans) ? count($plans) : 0;
@@ -76,6 +77,12 @@ if( !empty($plans) ){
 				$tab_contents	.='<h3>'.taskbot_price_format($price,'return').'</h3>';
 				$tab_contents	.='</div>';
 				$tab_contents	.='<p>'.esc_html($description).'</p>';
+				$tab_contents	.= '
+									<div class="tk-delivery-time">
+										<i class="tb-icon-gift"></i>
+										<h5>'.esc_html__("Delivery time", 'taskbot').'</h5>
+										<span>'.$delivery_time.'</span>
+									</div>';
 
 				if( !empty($acf_fields) || !empty($custom_fields['contents'])){
 					$counter_checked	= 0;
@@ -99,11 +106,12 @@ if( !empty($plans) ){
 					$tab_contents	.= !empty($custom_fields['contents']) ? $custom_fields['contents'] : '';
 					$tab_contents	.='</ul></div>';
 				}
+				
 
 				$tab_contents	.='';
 				$tab_contents	.='</div>';
 				$tab_contents	.='<div class="tb-sidebarpkg__btn">';
-				$tab_contents	.='<a href="javascript:void(0);" data-url="'.esc_url( $cart_url ).'" data-type="task_cart" class="tb-btn '.esc_attr($checkout_class).'">'.esc_html__('Hire me for a task','taskbot').'<i class="icon-arrow-right"></i></a>';
+				$tab_contents	.='<a href="javascript:void(0);" data-url="'.esc_url( $cart_url ).'" data-type="task_cart" class="tb-btn '.esc_attr($checkout_class).'">'.esc_html__('Hire me for a task','taskbot').'<i class="tb-icon-arrow-right"></i></a>';
 				$tab_contents	.='</div>';
 				$tab_contents	.='</div>';
 				$tab_contents	.='</div>';
@@ -123,7 +131,7 @@ if( !empty($plans) ){
 			<?php echo do_shortcode($tab_contents);?>
 			<?php if( !empty($plans_count) && $plans_count>1){ ?>
 				<div class="tb-share-section">
-					<span class="tb-recommend"><?php esc_html_e('Compare packages','taskbot');?><i class="icon-refresh-ccw"></i></span>
+					<span class="tb-recommend"><?php esc_html_e('Compare packages','taskbot');?><i class="tb-icon-refresh-ccw"></i></span>
 				</div>
 			<?php } ?>
 			<ul class="tb-pkgresponse">

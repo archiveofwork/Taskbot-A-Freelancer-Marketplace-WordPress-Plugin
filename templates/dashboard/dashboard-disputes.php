@@ -9,7 +9,7 @@
  * @version     1.0
  * @since       1.0
 */
-global $current_user, $wp_roles, $userdata, $post;
+global $current_user, $wp_roles, $userdata, $post, $taskbot_settings;
 
 $reference 		 = !empty($_GET['ref'] ) ? esc_html($_GET['ref']) : '';
 $mode 			 = !empty($_GET['mode']) ? esc_html($_GET['mode']) : '';
@@ -82,7 +82,7 @@ $taskbot_query = new WP_Query( apply_filters('taskbot_dispute_listings_args', $t
 						<fieldset>
 							<div class="tb-themeform__wrap">
 								<div class="form-group wo-inputicon wo-inputheight">
-									<i class="icon-search" id="dispute-search-btn"></i>
+									<i class="tb-icon-search" id="dispute-search-btn"></i>
 									<input type="text" id="dispute-search" name="search" value="<?php echo esc_attr($search);?>" class="form-control" placeholder="<?php esc_attr_e('Search task here', 'taskbot');?>">
 								</div>
 								<div class="wo-inputicon">
@@ -161,7 +161,7 @@ $taskbot_query = new WP_Query( apply_filters('taskbot_dispute_listings_args', $t
 						</td>
 						<td data-label="<?php esc_attr_e('options','taskbot');?>">
 							<span class="tb-tag-bordered">
-								<a href="<?php echo esc_url($dispute_detail_url);?>" class="tb-vieweye"><span class="icon-eye"></span> <?php esc_html_e('View', 'taskbot');?></a>
+								<a href="<?php echo esc_url($dispute_detail_url);?>" class="tb-vieweye"><span class="tb-icon-eye"></span> <?php esc_html_e('View', 'taskbot');?></a>
 							</span>
 						</td>
 					</tr>
@@ -169,10 +169,12 @@ $taskbot_query = new WP_Query( apply_filters('taskbot_dispute_listings_args', $t
 					</tbody>
 				</table>
 				<?php taskbot_paginate($taskbot_query); ?>					
-			<?php else: ?>
+			<?php else:
+                $image_url = !empty($taskbot_settings['empty_listing_image']['url']) ? $taskbot_settings['empty_listing_image']['url'] : TASKBOT_DIRECTORY_URI . 'public/images/empty.png';
+                ?>
 				<div class="tb-submitreview tb-submitreviewv3">
 					<figure>
-						<img src="<?php echo esc_url(TASKBOT_DIRECTORY_URI.'public/images/empty.png');?>" alt="<?php esc_attr_e('No disputes', 'taskbot');?>">
+						<img src="<?php echo esc_url($image_url);?>" alt="<?php esc_attr_e('No disputes', 'taskbot');?>">
 					</figure>
 					<h4><?php esc_html_e( 'There are no disputes against any task.', 'taskbot'); ?></h4>
 				</div>

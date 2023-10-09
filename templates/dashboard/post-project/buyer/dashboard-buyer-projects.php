@@ -126,7 +126,7 @@ if ( $taskbot_query->have_posts() ) :
                         </div>
                         <?php if( !empty($show_menu) ){?>
                             <div class="tk-projectsstatus_option">
-                                <a href="javascript:void(0);" data-id="<?php echo intval($post->ID);?>"><i class="icon-more-horizontal"></i></a>
+                                <a href="javascript:void(0);" data-id="<?php echo intval($post->ID);?>"><i class="tb-icon-more-horizontal"></i></a>
                                 <ul class="tk-contract-list tk-contract-list-<?php echo intval($post->ID);?>">
                                     <?php if( !empty($post_status) && $post_status != 'draft' && !empty($buyer_package_option) ){?>
                                         <?php if( !empty($is_featured) ){?>
@@ -151,7 +151,7 @@ if ( $taskbot_query->have_posts() ) :
                     <ul class="tk-template-view"> 
                         <?php do_action( 'taskbot_posted_date_html', $product );?>
                         <?php do_action( 'taskbot_location_html', $product );?>
-                        <?php do_action( 'taskbot_texnomies_html_v2', $product->get_id(),'expertise_level','icon-briefcase' );?>
+                        <?php do_action( 'taskbot_texnomies_html_v2', $product->get_id(),'expertise_level','tb-icon-briefcase' );?>
                         <?php do_action( 'taskbot_hiring_freelancer_html', $product );?>
                     </ul>
                     <?php do_action( 'taskbot_list_hiring_freelancer_html', $product->get_id() );?>
@@ -161,9 +161,13 @@ if ( $taskbot_query->have_posts() ) :
                         <?php do_action( 'taskbot_project_proposal_icons_html', $product->get_id(),3,'yes' );?>
                     </ul>
                     <div class="tk-project-detail">
-                        <?php if( !empty($product->get_status()) && in_array($product->get_status(),$status_array) && in_array($projecet_status,$status_array)){
-                            $project_creation   = !empty($create_project) && !empty($post->ID) ? $create_project.'?step=2&post_id='.intval($post->ID) : '';?>
-                            <a class="tk-edit-project" href="<?php echo esc_url($project_creation);?>"><i class="icon-edit-3"></i><?php esc_html_e('Edit project','taskbot');?></a>
+                        <?php
+                        $project_creation   = !empty($create_project) && !empty($post->ID) ? $create_project.'?step=2&post_id='.intval($post->ID) : '';
+
+                        if(get_post_status($post->ID) == 'pending' && $taskbot_settings['project_edit_after_submit']){ ?>
+                            <a class="tk-edit-project" href="<?php echo esc_url($project_creation);?>"><i class="tb-icon-edit-3"></i><?php esc_html_e('Edit project','taskbot');?></a>
+                        <?php }else if( !empty($product->get_status()) && in_array($product->get_status(),$status_array) && in_array($projecet_status,$status_array)){ ?>
+                            <a class="tk-edit-project" href="<?php echo esc_url($project_creation);?>"><i class="tb-icon-edit-3"></i><?php esc_html_e('Edit project','taskbot');?></a>
                         <?php } ?>
                         <a href="<?php echo get_the_permalink( $post );?>" class="tk-invite-bidbtn"><?php esc_html_e('View project','taskbot');?></a>
                     </div>
@@ -175,10 +179,11 @@ if ( $taskbot_query->have_posts() ) :
         <?php taskbot_paginate($taskbot_query); ?>
     <?php endif;
 else:
+    $image_url = !empty($taskbot_settings['empty_listing_image']['url']) ? $taskbot_settings['empty_listing_image']['url'] : TASKBOT_DIRECTORY_URI . 'public/images/empty.png';
     ?>
     <div class="tb-submitreview tb-submitreviewv3">
         <figure>
-            <img src="<?php echo esc_url(TASKBOT_DIRECTORY_URI.'public/images/empty.png')?>" alt="<?php esc_attr_e('Create project','taskbot');?>">
+            <img src="<?php echo esc_url($image_url)?>" alt="<?php esc_attr_e('Create project','taskbot');?>">
         </figure>
         <h6><a href="<?php echo esc_url($create_project);?>"> <?php esc_html_e('Create a project', 'taskbot'); ?> </a></h6>
     </div>

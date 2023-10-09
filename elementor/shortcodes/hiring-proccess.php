@@ -90,6 +90,24 @@ if (!class_exists('Taskbot_hiring_process')) {
             );
 
             $this->add_control(
+                'separator',
+                [
+                    'type'          => Controls_Manager::SWITCHER,
+                    'label'         => esc_html__('Separator', 'taskbot'),
+                    'label_on'      => esc_html__( 'Show', 'taskbot' ),
+                    'label_off'     => esc_html__( 'Hide', 'taskbot' ),
+                    'return_value'  => 'yes',
+                    'selectors' => [
+                        '{{WRAPPER}} .tk-maintitle:after' => 'content: "";',
+                    ],
+                    'prefix_class' => 'tk-title-separator-',
+                    'condition' => [
+                        'title!' => ' ',
+                    ],
+                ]
+            );
+
+            $this->add_control(
                 'description',
                 [
                     'type'          => Controls_Manager::TEXTAREA,
@@ -156,9 +174,6 @@ if (!class_exists('Taskbot_hiring_process')) {
                     'type'          => Controls_Manager::MEDIA,
                     'label'         => esc_html__('Upload top border image', 'taskbot'),
                     'description'   => esc_html__('Upload top border image. leave it empty to hide.', 'taskbot'),
-                    'default' => [
-                        'url' => \Elementor\Utils::get_placeholder_image_src(),
-                    ],
                 ]
             );
 
@@ -168,9 +183,6 @@ if (!class_exists('Taskbot_hiring_process')) {
                     'type'          => Controls_Manager::MEDIA,
                     'label'         => esc_html__('Upload bottom border image', 'taskbot'),
                     'description'   => esc_html__('Upload bottom border image. leave it empty to hide.', 'taskbot'),
-                    'default' => [
-                        'url' => \Elementor\Utils::get_placeholder_image_src(),
-                    ],
                 ]
             );
 

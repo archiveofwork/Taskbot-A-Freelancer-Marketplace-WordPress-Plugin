@@ -65,7 +65,7 @@ $taskbot_subtask_id = !empty($taskbot_subtask_id) ? $taskbot_subtask_id : 0;
 ?>
 <div class="tb-main-section">
     <div class="container">
-        <div class="row">
+        <div class="row gy-4">
             <?php taskbot_get_template_part('dashboard/dashboard', 'sellers-dispute-notificaton'); ?>
             <div class="col-lg-12">
                 <?php if (!empty($activity_id) && !empty($task_status) && $task_status === 'hired') { ?>
@@ -109,7 +109,7 @@ $taskbot_subtask_id = !empty($taskbot_subtask_id) ? $taskbot_subtask_id : 0;
                             <div class="tb-additonoltitle" data-bs-toggle="collapse" data-bs-target="#tb-additionolinfo" aria-expanded="true" role="button">
                                 <h5><?php esc_html_e('Additional add-ons:', 'taskbot'); ?> <span>
                                 <?php echo wp_sprintf( _n( '%s Addon requested', '%s Add-ons requested', count($product_data['subtasks']), 'taskbot' ), count($product_data['subtasks']) );?>    
-                               <i class="icon-chevron-down"></i>
+                               <i class="tb-icon-chevron-down"></i>
                             </div>
                             <div id="tb-additionolinfo" class="tb-addservices_details collapse show">
                                 <div class="tb-additionolinfo">
@@ -165,7 +165,7 @@ $taskbot_subtask_id = !empty($taskbot_subtask_id) ? $taskbot_subtask_id : 0;
                                                 </select>
                                             </div>
                                             <div class="tb-deadlinebtn">
-                                                <button type="submit" data-title="<?php echo esc_attr($task_title); ?>" data-order_id="<?php echo intval($order_id); ?>" data-task_id="<?php echo intval($task_id); ?>" class="tb-btnvtwo tb_task_action"><i class="icon-check"></i></button>
+                                                <button type="submit" data-title="<?php echo esc_attr($task_title); ?>" data-order_id="<?php echo intval($order_id); ?>" data-task_id="<?php echo intval($task_id); ?>" class="tb-btnvtwo tb_task_action"><i class="tb-icon-check"></i></button>
                                             </div>
                                         </div>
                                     </div>
@@ -225,7 +225,7 @@ $taskbot_subtask_id = !empty($taskbot_subtask_id) ? $taskbot_subtask_id : 0;
                 <div class="modal-content">
                     <div class="tb-popuptitle">
                         <h4><?php esc_html_e('Reject revision request', 'taskbot'); ?></h4>
-                        <a href="javascript:void(0);" class="close"><i class="icon-x" data-bs-dismiss="modal"></i></a>
+                        <a href="javascript:void(0);" class="close"><i class="tb-icon-x" data-bs-dismiss="modal"></i></a>
                     </div>
                     <div class="modal-body">
                         <textarea class="form-control" name="rejection_reason" placeholder="<?php esc_attr_e('Enter description', 'taskbot'); ?>"></textarea>
@@ -244,7 +244,9 @@ if (!empty($task_status) && $task_status === 'hired' || $task_status === 'cancel
     $script = "
     jQuery(document).on('ready', function($){
         taskbot_countdown_by_date('" . esc_js($tb_order_date) . "'," . esc_js($gmt_offset) . ");
-        jQuery('#tb_order_status').select2();
+        jQuery('#tb_order_status').select2({
+           theme: 'default tk-select2-dropdown'
+        });
     });
     ";
     wp_add_inline_script('taskbot', $script, 'after');
@@ -254,7 +256,7 @@ if (!empty($task_status) && $task_status === 'hired' || $task_status === 'cancel
             <div class="modal-content">
                 <div class="tb-popuptitle">
                     <h4><?php echo esc_html($taskbot_refund_title); ?></h4>
-                    <a href="javascript:void(0);" class="close"><i class="icon-x" data-bs-dismiss="modal"></i></a>
+                    <a href="javascript:void(0);" class="close"><i class="tb-icon-x" data-bs-dismiss="modal"></i></a>
                 </div>
                 <div class="modal-body">
                     <div class="tb-popupbodytitle">

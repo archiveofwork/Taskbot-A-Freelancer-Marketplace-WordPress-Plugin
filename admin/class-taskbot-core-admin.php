@@ -185,7 +185,6 @@ class Taskbot_Admin {
 			'accept' 		=> esc_html__('Accept', 'taskbot'),
 			'reject' 		=> esc_html__('Reject', 'taskbot'),
 			'select_option'	=> esc_html__('Select an option', 'taskbot'),
-			'reason'		=> esc_html__('Please add reason why you want to reject user uploaded documents?', 'taskbot'),
 		);
 
 		wp_localize_script($this->plugin_name, 'admin_scripts_vars', $data );

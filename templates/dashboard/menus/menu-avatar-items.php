@@ -62,7 +62,7 @@ if( !empty($id) && $id === 'wallet' ){
             <i class="<?php echo esc_attr($icon_class);?>"></i>
         <?php } ?>
         <span><?php echo esc_html($title)?> <strong><?php taskbot_price_format($user_balance);?></strong></span>
-        <a href="javascript:void(0);" data-bs-target="#tbcreditwallet" data-bs-toggle="modal"><em class="icon-credit-card"></em></a>
+        <a href="javascript:void(0);" data-bs-target="#tbcreditwallet" data-bs-toggle="modal"><em class="tb-icon-credit-card"></em></a>
     </li>
 <?php } else if( !empty($id) && $id === 'balance' ){
     $account_blance             = taskbot_account_details($user_identity,array('wc-completed'),'completed');
@@ -75,7 +75,7 @@ if( !empty($id) && $id === 'wallet' ){
             <i class="<?php echo esc_attr($icon_class);?>"></i>
         <?php } ?>
         <span><?php echo esc_html($title)?> <strong><?php taskbot_price_format($available_withdraw_amount);?></strong></span>
-        <a href="<?php Taskbot_Profile_Menu::taskbot_profile_menu_link($reference, $user_identity)?>"><em class="icon-credit-card"></em></a>
+        <a href="<?php Taskbot_Profile_Menu::taskbot_profile_menu_link($reference, $user_identity)?>"><em class="tb-icon-credit-card"></em></a>
     </li>
 <?php } else { ?>
     <li class="<?php echo esc_attr($class); ?>" <?php echo ($data_attr_list); ?>>

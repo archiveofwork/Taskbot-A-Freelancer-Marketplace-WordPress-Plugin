@@ -95,6 +95,7 @@ jQuery(document).ready(function($){
 			let _this	= $(this);
 			let id		= _this.data('id');
 			$('#tb-reject-task').modal('show'); //show model for reject feedback
+			$('#tb-reject-task').removeClass('hidden'); //show model for reject feedback
 			$('#tb_submit_reject_task').attr( 'data-tb_task_id',id); //set attribute value by task id
 		});
 
@@ -105,6 +106,7 @@ jQuery(document).ready(function($){
 			let _this	= $(this);
 			let id		= _this.data('id');
 			$('#tb-reject-project').modal('show'); //show model for reject feedback
+			$('#tb-reject-project').removeClass('hidden'); //show model for reject feedback
 			$('#tb_submit_reject_project').attr( 'data-tb_project_id',id); //set attribute value by project id
 		});
 
@@ -610,7 +612,7 @@ jQuery(document).ready(function($){
 					var response = jQuery.parseJSON(ajax_response.response);
 
 					if (response.type === 'success') {
-						var successIcon = '<a href="javascript:void(0);"><i class="icon-check-circle"></i></a>';
+						var successIcon = '<a href="javascript:void(0);"><i class="tb-icon-check-circle"></i></a>';
 						jQuery('#thumb-' + file.id + ' .taskbot-filedesciption .taskbot-filedesciption__icon').append(successIcon);
 						jQuery('#thumb-' + file.id).removeClass('taskbot-uploading');
 						jQuery('#thumb-' + file.id).addClass('taskbot-file-uploaded');
@@ -672,14 +674,14 @@ jQuery(document).ready(function($){
 
 	//Alert the notification
 	function StickyAlert($title='',$message='',data){
-		var $icon	= 'icon-check';
+		var $icon	= 'tb-icon-check';
 		var $class	= 'dark';
 
 		if(data.classList === 'success'){
-			$icon	= 'icon-check';
+			$icon	= 'tb-icon-check';
 			$class	= 'green';
 		}else if(data.classList === 'danger'){
-			$icon	= 'icon-x';
+			$icon	= 'tb-icon-x';
 			$class	= 'red';
 		}
 

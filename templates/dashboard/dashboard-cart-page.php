@@ -248,9 +248,9 @@ if( !empty($current_user->ID) && intval($post_author) == $current_user->ID ){
                             </div>
                             <?php
                                 if(!empty($admin_commision_buyers )){
-                                    $processing_fee =  $price_package/$admin_commision_buyers;
-                                    $price_package    = $price_package + $processing_fee;
-                                    $list_html    = $list_html.'<li><span>' . $commission_text . '</span><em>' . taskbot_price_format($processing_fee, 'return') . '</em></li>';
+                                    $processing_fee     =  ($price_package/100) * $admin_commision_buyers;
+                                    $price_package      = $price_package + $processing_fee;
+                                    $list_html          = $list_html.'<li><span>' . $commission_text . '</span><em>' . taskbot_price_format($processing_fee, 'return') . '</em></li>';
                                 }
                             ?>
 
@@ -287,7 +287,7 @@ if( !empty($current_user->ID) && intval($post_author) == $current_user->ID ){
                                 </div>
                                 <div class="tk-btnwallet">
                                     <a href="javascript:void(0);" class="tk-btn-solid-lg-lefticon" data-id="<?php echo intval($product_id); ?>" id="tb_btn_cart">
-                                        <i class="icon-lock"></i>
+                                        <i class="tb-icon-lock"></i>
                                         <?php esc_html_e('Proceed to secure checkout', 'taskbot'); ?>
                                     </a>
                                 </div>

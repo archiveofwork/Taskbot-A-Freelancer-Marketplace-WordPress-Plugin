@@ -315,9 +315,17 @@ $search_project_page        = !empty($taskbot_settings['tpl_project_search_page'
 $hide_product_cat           = !empty($taskbot_settings['hide_product_cat']) ? $taskbot_settings['hide_product_cat'] : array();
 $sort_by                    = !empty($sorting) ? sanitize_text_field($sorting) : "";
 
-$min_product_price          = !empty($project_search_min_price) ? $project_search_min_price : 10;
-$max_product_price          = !empty($max_product_price) ? $max_product_price : 5000;
+$min_product_price          = !empty($min_product_price) ? $min_product_price : 0;
+$max_product_price          = !empty($max_product_price) ? $max_product_price : 0;
 $listing_type               = !empty($taskbot_settings['projects_listing_view']) ? $taskbot_settings['projects_listing_view'] : 'left';
+
+$listing_param = isset($_GET['view_style']) ? $_GET['view_style'] : '';
+if(isset($listing_param) && $listing_param == 'v2'){
+    $listing_type = 'top';
+}elseif (isset($listing_param) && $listing_param == 'v1'){
+    $listing_type = 'left';
+}
+
 $theme_version 	            = wp_get_theme();
 get_header();
 if( !empty($listing_type) && $listing_type === 'top' ){
@@ -339,12 +347,10 @@ if( !empty($listing_type) && $listing_type === 'top' ){
     $grid_arg['min_product_price']  = $min_product_price;
     $grid_arg['max_product_price']  = $max_product_price;
     
-    if(!empty($theme_version->get( 'TextDomain' )) && ( $theme_version->get( 'TextDomain' ) === 'taskup' || $theme_version->get( 'TextDomain' ) === 'taskup-child' )){
-        get_template_part( 'template-parts/find', 'projects', $grid_arg);
-    }
+    include taskbot_load_template( 'templates/search-projects/search-projects-v2' );
 } else {
 ?>
-    <section class="tk-main-section tk-searchproject ">
+    <section class="tk-main-section tb-main-bg tk-searchproject ">
         <div class="container">
             <div class="row gy-4">
                 <div class="col-lg-12">
@@ -356,7 +362,7 @@ if( !empty($listing_type) && $listing_type === 'top' ){
                         <?php } ?>
                         <?php do_action('taskbot_project_price_sortby_filter_theme', $sort_by); ?>
                         <div class="tk-filtermenu">
-                            <a href="javascript:();" class="tk-filtericon"><i class="icon-sliders"></i></a>
+                            <a href="javascript:();" class="tk-filtericon"><i class="tb-icon-sliders"></i></a>
                         </div>
                     </div>
                 </div>
@@ -501,7 +507,7 @@ if( !empty($listing_type) && $listing_type === 'top' ){
                                     if( is_user_logged_in() && !empty($user_type) && $user_type === 'sellers' ){
                                         $proposal_args = array(
                                             'post_type' 	    => 'proposals',
-                                            'post_status'       => array('drafted','pending'),
+                                            'post_status'       => 'any',
                                             'posts_per_page'    => -1,
                                             'author'            => $current_user->ID,
                                             'meta_query'        => array(
@@ -554,7 +560,7 @@ if( !empty($listing_type) && $listing_type === 'top' ){
                                                     <ul class="tk-template-view"> 
                                                         <?php do_action( 'taskbot_posted_date_html', $product );?>
                                                         <?php do_action( 'taskbot_location_html', $product );?>
-                                                        <?php do_action( 'taskbot_texnomies_html_v2', $product->get_id(),'expertise_level','icon-briefcase' );?>
+                                                        <?php do_action( 'taskbot_texnomies_html_v2', $product->get_id(),'expertise_level','tb-icon-briefcase' );?>
                                                         <?php do_action( 'taskbot_hiring_freelancer_html', $product );?>
                                                         <li><div class="tk-likev2"><?php do_action( 'taskbot_project_saved_item', $product->get_id(), '','_saved_projects', 'list' );?></div></li>
                                                     </ul>

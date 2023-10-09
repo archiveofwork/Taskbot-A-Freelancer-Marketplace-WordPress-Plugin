@@ -28,7 +28,7 @@ if(!empty($taskbot_subtask)){?>
                     <div class="tb-additionalservices__content">
                         <div class="tb-additionalservices-title">
                             <h6><?php echo esc_html(get_the_title($taskbot_subtask_id));?></h6>
-                            <?php echo apply_filters( 'the_content', get_the_content(null, false, $taskbot_subtask_id));?>                        
+                            <?php echo get_post_field('post_content', $taskbot_subtask_id);?>
                         </div>
                         <div class="tb-additionalservice-price">
                             <h5><?php taskbot_price_format($price);?></h5>

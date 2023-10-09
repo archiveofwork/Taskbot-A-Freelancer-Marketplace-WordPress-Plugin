@@ -75,7 +75,7 @@ $identity_verified		= !empty($identity_verified) ? $identity_verified : 0;
 										<svg>
 											<rect width="100%" height="100%"/>
 										</svg>
-										<i class="icon-upload"></i>
+										<i class="tb-icon-upload"></i>
 										<em>
 											<?php echo wp_sprintf( '%1$s <br/> %2$s', esc_html__( 'You can upload media file format only.', 'taskbot'), esc_html__( 'make sure your file size does not exceed 15mb.', 'taskbot') );?>
 											<label for="file1">

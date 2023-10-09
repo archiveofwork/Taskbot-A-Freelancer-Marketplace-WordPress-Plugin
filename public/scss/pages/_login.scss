@@ -1,5 +1,5 @@
 /** ====== Login Component ====== **/
-.tb-loginconatiner{
+.tk-loginconatiner{
     height: 100vh;
     position: relative;
     display: flex;
@@ -20,15 +20,15 @@
         }
     }
 }
-.tb-popupcontainer{
+.tk-popupcontainer{
     background: #fff;
     max-width: 600px;
     border-radius: 6px;
     position: relative;
-    .tb-formlogin{
+    .tk-formlogin{
         .form-group-title{flex: 0 0 136px;}
     }
-    .tb-popuptitle{
+    .tk-popuptitle{
         padding-top: 22px;
         padding-bottom: 22px;
         h4{
@@ -37,15 +37,23 @@
         }
     }
 }
-.tb-popupcontainervtwo{
-    .tb-loginfooterinfo{
+.tk-popupcontainervtwo{
+    .tk-loginfooterinfo{
         background: #f7f7f7;
         a{
             width: 100%;
         }
     }
 }
-.tb-popupcontainer .tb-loginfooterinfo a{
+.tk-popupcontainer .tk-loginfooterinfo a{
     background: #f7f7f7;
     border-radius: 0 0 6px 6px;
+}
+.tk-loginconatiner{
+    .tk-popupcontainer{
+        max-width: 100%;
+        padding: 30px 15px;
+        border-radius: 0px;
+        background: transparent;
+    }
 }

@@ -26,7 +26,7 @@ $search_keyword     = !empty($_GET['keyword']) ? esc_html($_GET['keyword']) : ''
 $seller_type        = !empty($_GET['seller_type']) ? $_GET['seller_type'] : array();
 $english_level      = !empty($_GET['english_level']) ? $_GET['english_level'] : array();
 $hourly_rate_start  = !empty( $_GET['min_price'] ) ? intval($_GET['min_price']) : 0;
-$hourly_rate_end    = !empty( $_GET['max_price'] ) ? intval($_GET['max_price']) : 0;
+$hourly_rate_end    = !empty( $_GET['max_price'] ) ? intval($_GET['max_price']) : 5000;
 $seller_location    = !empty($_GET['location']) ? esc_html($_GET['location']) : '';
 $state              = !empty($_GET['state']) ? esc_html($_GET['state']) : '';
 $sorting            = !empty($_GET['sort_by']) ? esc_attr($_GET['sort_by']) : '';
@@ -222,7 +222,7 @@ if( !empty($listing_type) && $listing_type === 'top' ){
     $grid_arg['hourly_rate_end']    = $hourly_rate_end;
     $grid_arg['seller_location']    = $seller_location;
     $grid_arg['english_level']      = $english_level;
-    if(!empty($theme_version->get( 'TextDomain' )) && ( $theme_version->get( 'TextDomain' ) === 'taskup' || $theme_version->get( 'TextDomain' ) === 'taskup-child' )){
+    if(!empty($theme_version->get( 'TextDomain' )) && ( $theme_version->get( 'TextDomain' ) === 'taskbot' || $theme_version->get( 'TextDomain' ) === 'taskup-child' )){
         get_template_part( 'template-parts/find', 'sellers', $grid_arg);
     }    
 } else {
@@ -237,7 +237,7 @@ if( !empty($listing_type) && $listing_type === 'top' ){
                             <h3><?php echo sprintf(esc_html__('%s search result(s)','taskbot'), $total_posts) ?></h3>
                             <?php do_action('taskbot_project_price_sortby_filter_theme', $sorting); ?>
                             <div class="tk-filtermenu">
-                                <a href="javascript:();" class="tk-filtericon"><i class="icon-sliders"></i></a>
+                                <a href="javascript:();" class="tk-filtericon"><i class="tb-icon-sliders"></i></a>
                             </div>
                         </div>
                     </div>

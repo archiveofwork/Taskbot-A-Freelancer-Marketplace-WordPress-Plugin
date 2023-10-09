@@ -22,12 +22,12 @@ $total_posts		= array_sum($posts_count);
 $dispute_percentage	= taskbot_disppute_date_query_count('disputes');
 $percentChange		= !empty($dispute_percentage['percentChange']) ? $dispute_percentage['percentChange'] : '0';
 $change				= !empty($dispute_percentage['change']) ? $dispute_percentage['change'] : 'decrease';
-$change_class		= 'icon-chevron-left';
-$changearrow_class	= 'icon-arrow-down';
+$change_class		= 'tb-icon-chevron-left';
+$changearrow_class	= 'tb-icon-arrow-down';
 
 if ($change == 'increase') {
-	$change_class		= 'icon-chevron-right';
-	$changearrow_class	= 'icon-arrow-up';
+	$change_class		= 'tb-icon-chevron-right';
+	$changearrow_class	= 'tb-icon-arrow-up';
 }
 ?>
 <div class="tb-admindispute">

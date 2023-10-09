@@ -29,10 +29,11 @@
         text-align: center;
         display: inline-block;
         img{
-            width: 100%;
+            width: 40px;
             display: block;
-            max-width: 40px;
+            object-fit: cover;
             border-radius: 50%;
+            height: 40px !important;
         }
         i{
             color:$text-light;
@@ -245,7 +246,7 @@
         box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.04), 0px 3px 16px rgba(0, 0, 0, 0.04);
         &:after,
         &:before{
-            top: -9px;
+            top: -10px;
             right: 30px;
             width: 21px;
             content: '';
@@ -379,6 +380,7 @@
             color: $secondary-color;
         }
         li{
+            margin: 0 !important;
             line-height: inherit;
             list-style-type: none;
             padding: 0 22px 0 10px;

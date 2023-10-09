@@ -104,7 +104,7 @@ if( !empty($proposal_type) && $proposal_type === 'milestone'){
             <ul class="tk-blogviewdates">
                 <?php do_action( 'taskbot_posted_date_html', $product );?>
                 <?php do_action( 'taskbot_location_html', $product );?>
-                <?php do_action( 'taskbot_texnomies_html_v2', $product->get_id(),'expertise_level','icon-briefcase' );?>
+                <?php do_action( 'taskbot_texnomies_html_v2', $product->get_id(),'expertise_level','tb-icon-briefcase' );?>
                 <?php do_action( 'taskbot_hiring_freelancer_html', $product );?>
             </ul>
         </div>
@@ -131,13 +131,13 @@ if( !empty($proposal_type) && $proposal_type === 'milestone'){
                 <ul class="nav nav-tabs tk-nav-tabs" id="projectActivitiesTabs" role="tablist">
                     <li>
                         <button class="active" id="project-activities-tab" data-bs-toggle="tab" data-bs-target="#project-activities" aria-controls="project-activities" aria-selected="true">
-                            <i class="icon-folder"></i> 
+                            <i class="tb-icon-folder"></i> 
                             <?php esc_html_e('Project activity','taskbot');?>
                         </button>
                     </li>
                     <li>
                         <button class="" id="proposal-invoices-tab" data-bs-toggle="tab" data-bs-target="#proposal-invoices" aria-controls="proposal-invoices" aria-selected="false">
-                            <i class="icon-file-text"></i>
+                            <i class="tb-icon-file-text"></i>
                             <?php esc_html_e('Invoices','taskbot');?>
                         </button>
                     </li>

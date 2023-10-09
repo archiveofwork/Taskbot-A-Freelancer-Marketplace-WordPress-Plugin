@@ -1,23 +1,23 @@
 <?php
-    /**
-     * Shortcode
-     *
-     *
-     * @package    Taskbot
-     * @subpackage Taskbot/admin
-     * @author     Amentotech <theamentotech@gmail.com>
-     */
+/**
+ * Shortcode
+ *
+ *
+ * @package    Taskbot
+ * @subpackage Taskbot/admin
+ * @author     Amentotech <theamentotech@gmail.com>
+ */
 
-    namespace Elementor;
+namespace Elementor;
 
-    if (!defined('ABSPATH')) {
-        exit;
-    }
+if (!defined('ABSPATH')) {
+    exit;
+}
 
-    if (!class_exists('Taskbot_mobileApp_section')) {
+if (!class_exists('Taskbot_mobileApp_section')) {
 
-        class Taskbot_mobileApp_section extends Widget_Base
-        {
+    class Taskbot_mobileApp_section extends Widget_Base
+    {
         /**
          *
          * @since    1.0.0
@@ -30,43 +30,43 @@
         }
 
         /**
-        *
-        * @since    1.0.0
-        * @access   static
-        * @var      title
-        */
+         *
+         * @since    1.0.0
+         * @access   static
+         * @var      title
+         */
         public function get_title()
         {
             return esc_html__('Mobile apps', 'taskbot');
         }
 
         /**
-        *
-        * @since    1.0.0
-        * @access   public
-        * @var      icon
-        */
+         *
+         * @since    1.0.0
+         * @access   public
+         * @var      icon
+         */
         public function get_icon()
         {
             return 'eicon-device-mobile';
         }
 
         /**
-        *
-        * @since    1.0.0
-        * @access   public
-        * @var      category of shortcode
-        */
+         *
+         * @since    1.0.0
+         * @access   public
+         * @var      category of shortcode
+         */
         public function get_categories()
         {
             return ['taskbot-elements'];
         }
 
         /**
-        * Register category controls.
-        * @since    1.0.0
-        * @access   protected
-        */
+         * Register category controls.
+         * @since    1.0.0
+         * @access   protected
+         */
         protected function register_controls()
         {
             $posts  = taskbot_elementor_get_posts(array('page'));
@@ -138,9 +138,6 @@
                     'type'        => Controls_Manager::MEDIA,
                     'label'       => esc_html__('Mobile image', 'taskbot'),
                     'description' => esc_html__('Add mobile image.', 'taskbot'),
-                    'default' => [
-                        'url' => \Elementor\Utils::get_placeholder_image_src(),
-                    ],
                 ]
             );
 
@@ -148,11 +145,11 @@
         }
 
         /**
-        * Render shortcode
-        *
-        * @since 1.0.0
-        * @access protected
-        */
+         * Render shortcode
+         *
+         * @since 1.0.0
+         * @access protected
+         */
         protected function render(){
             $settings             = $this->get_settings_for_display();
             $title                = !empty($settings['title']) ? $settings['title'] : '';
@@ -177,11 +174,11 @@
                                         </div>
                                     <?php } ?>
                                     <?php if (!empty($btn_text) && !empty($button_link)) { ?>
-                                        <a href="<?php echo esc_url($button_link); ?>" class="tk-btn-solid-lg tk-btn-yellow"><?php echo esc_html($btn_text) ?><i class="icon-download"></i></a>
+                                        <a href="<?php echo esc_url($button_link); ?>" class="tk-btn-solid-lg tk-btn-yellow"><?php echo esc_html($btn_text) ?><i class="tb-icon-download"></i></a>
                                     <?php } ?>
                                     <?php if (!empty($short_description)) { ?>
                                         <div class="tk-appcompat">
-                                            <h6><i class="icon-bell"></i><?php echo do_shortcode($short_description) ?></h6>
+                                            <h6><i class="tb-icon-bell"></i><?php echo do_shortcode($short_description) ?></h6>
                                         </div>
                                     <?php } ?>
                                 </div>
@@ -197,7 +194,7 @@
                     </div>
                 </div>
             </div>
-        <?php
+            <?php
         }
     }
 

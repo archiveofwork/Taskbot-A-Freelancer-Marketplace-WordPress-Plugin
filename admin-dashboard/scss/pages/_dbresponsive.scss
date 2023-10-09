@@ -428,7 +428,7 @@
         background: #fff;
         visibility: visible;
         box-shadow: none;
-        border-radius: 0;
+        border-radius: 4px;
         padding: 0;
         li{
             border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -514,7 +514,9 @@
                 background: transparent;
             }
         }
-        .tb-downloadbtn{width: 100%;}
+        .tb-downloadbtn{
+            width: 100%;
+        }
         .tb-inputheight{
             max-width: 100%;
         }
@@ -775,7 +777,6 @@
         left: 64px;
     }    
 }
-
 @media (max-width: 480px){
     .tb-extrasarticles ,.tb-disputemain ,.tb-blogcmntinfov2,.tb-planslistcontainer, .tb-additonoltitle,.tb-dbbox{
         padding-top: 22px;
@@ -890,14 +891,6 @@
     .tb-chartloading .tb-chartbox__title a{position: absolute;}
     .tb-frontendsite{
         padding-left: 15px;
-        > a{
-           flex-direction: column;
-           align-items: flex-start;
-           > i{
-               order: -1;
-               padding: 0 0 10px;
-           }
-       }
     }
     .tb-messageuserabove__title{
         flex-direction: column;
@@ -925,11 +918,6 @@
     .tb-inputheight{
         width: 100%;
         margin: 0;
-    }
-    .tb-disputesicons{
-        flex-direction: column;
-        align-items: flex-start;
-        figure{margin: 0 0 10px;}
     }
     .tb-userbar__leftbar{
         width: 100%;
@@ -982,7 +970,7 @@
     }
     .lightpick__month-title-bar{margin-bottom: 10px;}
 }
-@media (max-width:375px) {
+@media (max-width: 375px) {
     .tb-notidropdown {
         right: 0;
         left: -50px;

@@ -22,17 +22,17 @@
 <div class="tk-counterinfo">
     <ul class="tk-counterinfo_list">
         <li>
-            <strong class="tk-counterinfo_escrow"><i class="icon-clock"></i></strong>
+            <strong class="tk-counterinfo_escrow"><i class="tb-icon-clock"></i></strong>
             <span><?php esc_html_e('Total escrow amount','taskbot');?></span>
             <h5><?php taskbot_price_format($hired_balance);?> </h5>
         </li>
         <li>
-            <strong class="tk-counterinfo_earned"><i class="icon-briefcase"></i></strong>
+            <strong class="tk-counterinfo_earned"><i class="tb-icon-briefcase"></i></strong>
             <span><?php esc_html_e('Total amount spent','taskbot');?></span>
             <h5><?php taskbot_price_format($earned_balance);?></h5>
         </li>
         <li>
-            <strong class="tk-counterinfo_remaining"><i class="icon-dollar-sign"></i></strong>
+            <strong class="tk-counterinfo_remaining"><i class="tb-icon-dollar-sign"></i></strong>
             <span><?php esc_html_e('Remaining project budget','taskbot');?></span>
             <h5><?php taskbot_price_format($remaning_balance);?></h5>
         </li>
@@ -74,7 +74,7 @@
                             </div>
                             <?php if( !empty($status) && $status === 'decline' && !empty($value['decline_reason'])){?>
                                 <div class="tk-statusview_alert">
-                                    <span><i class="icon-info"></i><?php esc_html_e('The employer declined this milestone invoice. Read the comment below and try again','taskbot');?></span>
+                                    <span><i class="tb-icon-info"></i><?php esc_html_e('The employer declined this milestone invoice. Read the comment below and try again','taskbot');?></span>
                                     <p><?php echo esc_html($value['decline_reason']);?></p>
                                 </div>
                             <?php } ?>
@@ -90,7 +90,7 @@
                                             <div class="tk-popup_title">
                                                 <h5><?php esc_html_e('Add decline reason below','taskbot');?></h5>
                                                 <a href="javascrcript:void(0)" data-bs-dismiss="modal">
-                                                    <i class="icon-x"></i>
+                                                    <i class="tb-icon-x"></i>
                                                 </a>
                                             </div>
                                             <div class="modal-body tk-popup-content">
@@ -103,7 +103,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="tk-popup-terms form-group">
-                                                                <button type="button" data-id="<?php echo intval($proposal_id);?>" data-status="decline" data-key="<?php echo esc_attr($key);?>" class="tk-btn-solid-lg tb_decline_milestone"><?php esc_html_e('Submit question now','taskbot');?><i class="icon-arrow-right"></i></button>
+                                                                <button type="button" data-id="<?php echo intval($proposal_id);?>" data-status="decline" data-key="<?php echo esc_attr($key);?>" class="tk-btn-solid-lg tb_decline_milestone"><?php esc_html_e('Submit question now','taskbot');?><i class="tb-icon-arrow-right"></i></button>
                                                             </div>
                                                         </div>
                                                     </fieldset>

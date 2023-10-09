@@ -764,9 +764,6 @@ if (!function_exists('taskbot_save_buyer_settings')) {
         $old_country    = get_post_meta( $profile_id, 'country', true );
         $old_location   = get_post_meta( $profile_id, 'location',true );
         
-        
-        //$response   = taskbot_process_geocode_info($zipcode,$country);
-        
 
         if(empty($taskbot_settings['enable_zipcode']) ){
             update_post_meta($post_id,'longitude',0);
@@ -1024,7 +1021,7 @@ if (!function_exists('taskbot_saved_items')) {
 
         if (empty($_POST['id']) || !is_user_logged_in(  ) ){
             $json['type']       = 'error';
-            $json['message'] 	  = esc_html__('Please login to mark task as favorite ','taskbot');
+            $json['message'] 	  = esc_html__('Please login to mark task as favorite','taskbot');
             wp_send_json( $json );
         }
 
@@ -1430,6 +1427,7 @@ if (!function_exists('taskbot_service_checkout')) {
 
         $data           = !empty($_POST['data']) ? $_POST['data'] : array();
         parse_str($data,$data);
+
         $wallet         = !empty($data['wallet']) ? esc_html($data['wallet']) : 0;
         $product_id     = !empty($data['id']) ? intval($data['id']) : 0;
         $task           = !empty($data['product_task']) ? $data['product_task'] : '';
@@ -1537,6 +1535,36 @@ if ( !function_exists( 'taskbot_processing_fee_calculation' ) ) {
 		return $settings;
 	}
 }
+
+///**
+// * Package checkout
+// *
+// * @throws error
+// * @author Amentotech <theamentotech@gmail.com>
+// * @return
+// */
+//if ( !function_exists( 'taskbot_processing_fee_calculation' ) ) {
+//	function taskbot_processing_fee_calculation($type='',$price=0) {
+//        global $current_user,$taskbot_settings;
+//        $admin_commision_buyers     =  !empty($taskbot_settings['admin_commision_buyers']) ? $taskbot_settings['admin_commision_buyers'] : 0;
+//
+//		$settings	        = array();
+//        $commision_type     = 'percentage';
+//
+//		if(!empty($commision_type) && $commision_type == 'percentage' ){
+//			$percentage		= !empty($admin_commision_buyers) ? $admin_commision_buyers : 0;
+//			$commission 	= $price/100 * $percentage;
+//			$price 			= $price + $commission;
+//		}else{
+//			$price 	= $price;
+//		}
+//
+//		$settings['commission_amount']	= !empty( $commission )  ? $commission : 0.0;
+//		$settings['total_amount']		= $price;
+//
+//		return $settings;
+//	}
+//}
 
 /**
  * Package checkout
@@ -1755,7 +1783,7 @@ if (!function_exists('taskbot_get_tasks_total')) {
             $json['processing_fee_val'] 		= 0;
             $json['processing_fee_title'] 		= $commission_text;
             if(!empty($admin_commision_buyers )){
-                $processing_fee =  $total_price/$admin_commision_buyers;
+                $processing_fee = ( $total_price/100 ) * $admin_commision_buyers;
                 $total_price    = $total_price + $processing_fee;
 
                 $json['processing_fee_val'] = $processing_fee;
@@ -2047,7 +2075,7 @@ if (!function_exists('taskbot_tk_rating_view')) {
             <?php if( !empty($post_title) ){?>
                 <h4><?php echo esc_html($post_title);?></h4>
             <?php } ?>
-            <a href="javascript:void(0);" class="close"><i class="icon-x" data-bs-dismiss="modal"></i></a>
+            <a href="javascript:void(0);" class="close"><i class="tb-icon-x" data-bs-dismiss="modal"></i></a>
         </div>
         <div class="modal-body">
             <div class="tb-excfreelancerpopup__content">
@@ -2104,7 +2132,7 @@ if (!function_exists('taskbot_tk_cancelled_view')) {
             <?php if( !empty($post_title) ){?>
                 <h4><?php echo esc_html($post_title);?></h4>
             <?php } ?>
-            <a href="javascript:void(0);" class="close"><i class="icon-x" data-bs-dismiss="modal"></i></a>
+            <a href="javascript:void(0);" class="close"><i class="tb-icon-x" data-bs-dismiss="modal"></i></a>
         </div>
         <div class="modal-body">
             <div class="tb-excfreelancerpopup__content">

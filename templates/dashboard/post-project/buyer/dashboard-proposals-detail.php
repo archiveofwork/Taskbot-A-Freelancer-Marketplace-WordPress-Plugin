@@ -66,7 +66,7 @@ if( empty($project_type) ||$project_type === 'fixed') {
             <ul class="tk-blogviewdates">
                 <?php do_action( 'taskbot_posted_date_html', $product );?>
                 <?php do_action( 'taskbot_location_html', $product );?>
-                <?php do_action( 'taskbot_texnomies_html_v2', $product->get_id(),'expertise_level','icon-briefcase' );?>
+                <?php do_action( 'taskbot_texnomies_html_v2', $product->get_id(),'expertise_level','tb-icon-briefcase' );?>
                 <?php do_action( 'taskbot_hiring_freelancer_html', $product );?>
             </ul>
         </div>
@@ -178,7 +178,7 @@ if( empty($project_type) ||$project_type === 'fixed') {
             <?php } ?>
 
             <?php if((in_array('wp-guppy/wp-guppy.php', apply_filters('active_plugins', get_option('active_plugins'))) || in_array('wpguppy-lite/wpguppy-lite.php', apply_filters('active_plugins', get_option('active_plugins')))) ){?>
-                <button class="tk-btnline tb_proposal_chat" data-reciver_id="<?php echo intval($product_author_id);?>"><i class="icon-message-square"></i><?php esc_html_e('Start chat','taskbot');?></button>
+                <button class="tk-btnline tb_proposal_chat" data-reciver_id="<?php echo intval($product_author_id);?>"><i class="tb-icon-message-square"></i><?php esc_html_e('Start chat','taskbot');?></button>
             <?php } ?>
 
             <?php if( 
@@ -197,7 +197,7 @@ if( empty($project_type) ||$project_type === 'fixed') {
         <div class="tk-popup_title">
             <h5><?php esc_html_e('Add decline reason below','taskbot');?></h5>
             <a href="javascrcript:void(0)" data-bs-dismiss="modal">
-                <i class="icon-x"></i>
+                <i class="tb-icon-x"></i>
             </a>
         </div>
         <div class="modal-body tk-popup-content">
@@ -210,7 +210,7 @@ if( empty($project_type) ||$project_type === 'fixed') {
                             </div>
                         </div>
                         <div class="tk-popup-terms form-group">
-                            <button type="button" class="tk-btn-solid-lg tb_decline_proposal" data-id="<?php echo intval($proposal_id);?>"><?php esc_html_e('Submit question now','taskbot');?><i class="icon-arrow-right"></i></button>
+                            <button type="button" class="tk-btn-solid-lg tb_decline_proposal" data-id="<?php echo intval($proposal_id);?>"><?php esc_html_e('Submit question now','taskbot');?><i class="tb-icon-arrow-right"></i></button>
                         </div>
                     </div>
                 </fieldset>

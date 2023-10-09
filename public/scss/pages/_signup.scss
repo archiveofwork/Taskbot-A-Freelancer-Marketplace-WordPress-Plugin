@@ -85,9 +85,17 @@
         }
         .tb-checkterm{
             width: 100%;
-            .tb-btn{width: 100%;}
+            .tb-btn{
+                width: 100%;
+                &:hover,
+                &:focus{
+                    color: $button-color;
+                    background-color: $theme-color_20_light;
+                }
+            }
         }
         .tk-sginup-btn{
+            padding: 0;
             display: flex;
             justify-content: center;
         }
@@ -246,6 +254,7 @@
         }
     }
     .tk-loginconatiner{
+        padding: 0;
         min-height: unset;
     }
     .tk-popupcontainer{
@@ -256,6 +265,7 @@
     }
     .tk-login-content{
         padding: 0;
+        .form-control{border-radius: 4px;}
     }
     
 }

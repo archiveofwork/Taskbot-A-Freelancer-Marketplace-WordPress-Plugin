@@ -40,7 +40,7 @@ $unread_message = taskbot_post_count('notification','publish',$meata_keys);
 
 <div class="tk-notidropdowns asdasd">
     <a class="tk-nav-icons tb-notifyheader" data-url="<?php Taskbot_Profile_Menu::taskbot_profile_menu_link('notifications', $current_use_id, false, 'listing');?>" href="javascript:void(0);">
-        <i class="icon-bell"></i>
+        <i class="tb-icon-bell"></i>
         <?php if(!empty($unread_message) ){?><em class="tk-remaining-notification tk-notfy-counter"><?php echo intval($unread_message);?></em><?php } ?>
         <span><?php esc_html_e('Notifications','taskbot');?></span>
     </a>
@@ -67,7 +67,7 @@ $unread_message = taskbot_post_count('notification','publish',$meata_keys);
             } else { ?>
                 <li class="tk-noti_empty">
                     <span>
-                        <i class="icon-bell-off"></i>
+                        <i class="tb-icon-bell-off"></i>
                     </span>
                     <em><?php esc_html_e('No notification available','taskbot');?></em>
                 </li>

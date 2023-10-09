@@ -9,7 +9,7 @@
  * @version     1.0
  * @since       1.0
  */
-global $current_user;
+global $current_user,$taskbot_settings;
 
 $show_posts		= get_option('posts_per_page') ? get_option('posts_per_page') : 10;
 $paged 			= ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
@@ -93,7 +93,7 @@ if ( $taskbot_query->have_posts() ) :
                     <ul class="tk-template-view"> 
                         <?php do_action( 'taskbot_posted_date_html', $product );?>
                         <?php do_action( 'taskbot_location_html', $product );?>
-                        <?php do_action( 'taskbot_texnomies_html_v2', $product->get_id(),'expertise_level','icon-briefcase' );?>
+                        <?php do_action( 'taskbot_texnomies_html_v2', $product->get_id(),'expertise_level','tb-icon-briefcase' );?>
                         <?php do_action( 'taskbot_hiring_freelancer_html', $product );?>
                     </ul>
 					<?php if( !empty($post_status) && $post_status === 'completed' ){ ?>
@@ -150,11 +150,11 @@ if ( $taskbot_query->have_posts() ) :
         <?php taskbot_paginate($taskbot_query); ?>
     <?php endif;
 else:
-
+    $image_url = !empty($taskbot_settings['empty_listing_image']['url']) ? $taskbot_settings['empty_listing_image']['url'] : TASKBOT_DIRECTORY_URI . 'public/images/empty.png';
     ?>
     <div class="tb-submitreview tb-submitreviewv3">
         <figure>
-            <img src="<?php echo esc_url(TASKBOT_DIRECTORY_URI.'public/images/empty.png')?>" alt="<?php esc_attr_e('Explore all projects','taskbot');?>">
+            <img src="<?php echo esc_url($image_url)?>" alt="<?php esc_attr_e('Explore all projects','taskbot');?>">
         </figure>
         <h6><a href="<?php echo esc_url($find_project);?>"> <?php esc_html_e('Explore all projects', 'taskbot'); ?> </a></h6>
     </div>

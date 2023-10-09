@@ -47,7 +47,7 @@ $milestone_total= isset($args['milestone_total']) ? esc_attr($args['milestone_to
         </strong>
         <?php if( !empty($proposal_status) && in_array($proposal_status,array('hired')) ){?>
             <div class="tk-projectsstatus_option">
-                <a href="javascript:void(0);"><i class="icon-more-horizontal"></i></a>
+                <a href="javascript:void(0);"><i class="tb-icon-more-horizontal"></i></a>
                 <ul class="tk-contract-list">
                     <li>
                         <span id="taskrefundrequest"><?php esc_html_e('Raise a dispute','taskbot');?></span>
@@ -67,7 +67,7 @@ $milestone_total= isset($args['milestone_total']) ? esc_attr($args['milestone_to
         <div class="modal-content">
             <div class="tb-popuptitle">
                 <h4><?php esc_html_e('Create refund request', 'taskbot') ?></h4>
-                <a href="javascript:void(0);" class="close"><i class="icon-x" data-bs-dismiss="modal"></i></a>
+                <a href="javascript:void(0);" class="close"><i class="tb-icon-x" data-bs-dismiss="modal"></i></a>
             </div>
             <div class="modal-body">
                 <div class="tb-popupbodytitle">
@@ -118,7 +118,7 @@ $milestone_total= isset($args['milestone_total']) ? esc_attr($args['milestone_to
            <div class="tk-popup_title">
                <h5><?php esc_html_e('Add new milestone','taskbot');?></h5>
                <a href="javascrcript:void(0)" data-bs-dismiss="modal">
-                   <i class="icon-x"></i>
+                   <i class="tb-icon-x"></i>
                </a>
            </div>
             <div class="modal-body tk-popup-content">
@@ -126,7 +126,7 @@ $milestone_total= isset($args['milestone_total']) ? esc_attr($args['milestone_to
                     <fieldset>
                         <div class="tk-themeform__wrap">
                         	<label class="tk-label"><?php esc_html_e('How many milestones you want to add?','taskbot');?>
-                                <a href="javascript:void(0)" class="tk-addicon" id="tb-add-milestone"><?php esc_html_e('Add milestone','taskbot');?><i class="icon-plus"></i></a>
+                                <a href="javascript:void(0)" class="tk-addicon" id="tb-add-milestone"><?php esc_html_e('Add milestone','taskbot');?><i class="tb-icon-plus"></i></a>
                             </label>
                             <div id="tb-list-milestone" class="tk-dragslots">                                
                             </div>
@@ -152,7 +152,7 @@ $milestone_total= isset($args['milestone_total']) ? esc_attr($args['milestone_to
                         <div class="tk-placeholderholder">
                             <input type="text" name="milestone[{{data.id}}][title]" class="form-control tk-themeinput" placeholder="<?php esc_attr_e('Enter title','taskbot');?>">
                         </div>
-                        <a href="javascript:;" data-id="{{data.id}}" class="tb-remove-milestone tk-removeicon"><i class="icon-trash-2"></i></a>
+                        <a href="javascript:;" data-id="{{data.id}}" class="tb-remove-milestone tk-removeicon"><i class="tb-icon-trash-2"></i></a>
                     </div>
                     <div class="tk-placeholderholder">
                         <textarea class="form-control tk-themeinput" name="milestone[{{data.id}}][detail]" placeholder="<?php esc_attr_e('Enter description', 'taskbot');?>"></textarea>

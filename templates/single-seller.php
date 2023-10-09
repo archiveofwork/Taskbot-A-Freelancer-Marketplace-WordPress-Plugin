@@ -27,7 +27,7 @@ while (have_posts()) : the_post();
     }
    
     ?>
-    <div class="tb-main-section">
+    <div class="tb-main-section tb-main-bg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-xl-4">

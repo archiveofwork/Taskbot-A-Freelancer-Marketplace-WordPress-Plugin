@@ -76,8 +76,8 @@ $education_array	= array();
 											<?php } ?>
 										</div>
 										<div class="tb-detail__icon">
-											<a href="javascript:void(0);" data-id="<?php echo intval($user_identity);?>" data-type="edit" data-key="<?php echo intval($key);?>" class="tb-edit tb_show_education"><i class="icon-edit-2"></i></a>
-											<a href="javascript:void(0);" data-id="<?php echo intval($user_identity);?>" data-key="<?php echo intval($key);?>" class="tb-delete tb_remove_edu"><i class="icon-trash-2"></i></a>
+											<a href="javascript:void(0);" data-id="<?php echo intval($user_identity);?>" data-type="edit" data-key="<?php echo intval($key);?>" class="tb-edit tb_show_education"><i class="tb-icon-edit-2"></i></a>
+											<a href="javascript:void(0);" data-id="<?php echo intval($user_identity);?>" data-key="<?php echo intval($key);?>" class="tb-delete tb_remove_edu"><i class="tb-icon-trash-2"></i></a>
 										</div>
 									</div>
 								</li>
@@ -135,7 +135,7 @@ $education_array	= array();
 		<div class="modal-content">
 			<div class="tb-popuptitle">
 				<h4><?php esc_html_e('Add/edit educational details','taskbot');?></h4>
-				<a href="javascript:void(0);" class="close"><i class="icon-x" data-bs-dismiss="modal"></i></a>
+				<a href="javascript:void(0);" class="close"><i class="tb-icon-x" data-bs-dismiss="modal"></i></a>
 			</div>
 			<div class="modal-body" id="tb_add_education_frm"></div>
 		</div>

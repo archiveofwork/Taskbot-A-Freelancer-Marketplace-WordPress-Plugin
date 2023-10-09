@@ -97,7 +97,7 @@ if(empty($taskbot_order_completed) ){
 								</a>
 							<?php } ?>
 							<div class="tb-profilebtnarea-wrapper">
-								<a id="profile-avatar-btn" class="tb-btn" href="javascript:void(0);"><span class="icon-edit-2"></span><?php esc_html_e('Change avatar','taskbot');?></a>
+								<a id="profile-avatar-btn" class="tb-btn" href="javascript:void(0);"><span class="tb-icon-edit-2"></span><?php esc_html_e('Change avatar','taskbot');?></a>
 							</div>
 						</div>
 						<div class="tb-icondetails">
@@ -130,7 +130,7 @@ if(empty($taskbot_order_completed) ){
 							<?php do_action( 'taskbot_texnomies_static_html', $linked_profile,'languages',esc_html__('Languages','taskbot') );?>
 							<?php if(!empty($hide_languages ) && $hide_languages == 'no'){ do_action( 'taskbot_texnomies_static_html', $linked_profile,'tb_english_level',esc_html__('English level','taskbot') );}?>
 							<div class="tb-profilebtnarea">
-								<a href="<?php echo get_the_permalink($linked_profile);?>"  class="tb-btn" ><?php esc_html_e('Public profile preview','taskbot');?></a>
+								<a href="<?php echo get_the_permalink($linked_profile);?>" target="_blank" class="tb-btn" ><?php esc_html_e('Public profile preview','taskbot');?></a>
 							</div>
 						</div>
 					</div>

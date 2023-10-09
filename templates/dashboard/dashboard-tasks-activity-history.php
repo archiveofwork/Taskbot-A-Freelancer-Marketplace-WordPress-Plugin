@@ -8,7 +8,7 @@
  * @package    Taskbot
  * @subpackage Taskbot_/public
  */
-global  $current_user;
+global  $current_user,$taskbot_settings;
 
 if ( !class_exists('WooCommerce') ) {
 	return;
@@ -129,7 +129,7 @@ $comments = get_comments( $args );
                                 <ul class="tb-uploadbar tb-bars taskbot-fileprocessing taskbot-infouploading" id="taskbot-fileprocessing"></ul>
                                 <div class="tb-uploadbox taskbot-dragdroparea" id="taskbot-droparea" >
                                     <em>
-                                        <?php echo wp_sprintf( '%1$s %2$s', esc_html__( 'You can upload jpg,jpeg,gif,png,zip,rar,mp3 mp4 and pdf only.', 'taskbot'), esc_html__( 'Make sure your file does not exceed 3mb.', 'taskbot') );?>
+                                        <?php echo wp_sprintf( esc_html__( 'You can upload jpg,jpeg,gif,png,zip,rar,mp3 mp4 and pdf only. Make sure your file does not exceed %s mb.', 'taskbot'), $taskbot_settings['upload_file_size'] );?>
                                         <label for="file1">
                                             <span id="taskbot-attachment-btn-clicked">
                                                 <input id="file1" type="file" name="file">

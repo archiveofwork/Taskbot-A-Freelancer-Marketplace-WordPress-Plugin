@@ -37,7 +37,7 @@ if (!class_exists('Taskup_feature_project')) {
          */
         public function get_title()
         {
-            return esc_html__('Featured projects', 'taskup-core');
+            return esc_html__('Featured projects', 'taskbot');
         }
 
         /**
@@ -85,7 +85,7 @@ if (!class_exists('Taskup_feature_project')) {
             $this->start_controls_section(
                 'content_section',
                 [
-                    'label'     => esc_html__('Content', 'taskup-core'),
+                    'label'     => esc_html__('Content', 'taskbot'),
                     'tab'       => Controls_Manager::TAB_CONTENT,
                 ]
             );
@@ -93,8 +93,8 @@ if (!class_exists('Taskup_feature_project')) {
                 'sub_title',
                 [
                     'type'        => Controls_Manager::TEXT,
-                    'label'       => esc_html__('Add sub title', 'taskup-core'),
-                    'description' => esc_html__('Add sub title. leave it empty to hide.', 'taskup-core'),
+                    'label'       => esc_html__('Add sub title', 'taskbot'),
+                    'description' => esc_html__('Add sub title. leave it empty to hide.', 'taskbot'),
                     'label_block' => true,
                 ]
             );
@@ -103,24 +103,43 @@ if (!class_exists('Taskup_feature_project')) {
                 'title',
                 [
                     'type'          => Controls_Manager::TEXT,
-                    'label'         => esc_html__('Add title', 'taskup-core'),
-                    'description'   => esc_html__('Add title. leave it empty to hide.', 'taskup-core'),
+                    'label'         => esc_html__('Add title', 'taskbot'),
+                    'description'   => esc_html__('Add title. leave it empty to hide.', 'taskbot'),
                 ]
             );
+
+            $this->add_control(
+                'separator',
+                [
+                    'type'          => Controls_Manager::SWITCHER,
+                    'label'         => esc_html__('Separator', 'taskbot'),
+                    'label_on'      => esc_html__( 'Show', 'taskbot' ),
+                    'label_off'     => esc_html__( 'Hide', 'taskbot' ),
+                    'return_value'  => 'yes',
+                    'selectors' => [
+                        '{{WRAPPER}} .tk-maintitle:after' => 'content: "";',
+                    ],
+                    'prefix_class' => 'tk-title-separator-',
+                    'condition' => [
+                        'title!' => ' ',
+                    ],
+                ]
+            );
+
             $this->add_control(
                 'listing_type',
                 [
                     'type'      	=> Controls_Manager::SELECT,
-                    'label' 		=> esc_html__('Show project by', 'taskup-core'),
-                    'description' 	=> esc_html__('Select type to list project by categories or specific', 'taskup-core'),
+                    'label' 		=> esc_html__('Show project by', 'taskbot'),
+                    'description' 	=> esc_html__('Select type to list project by categories or specific', 'taskbot'),
                     'default' 		=> '',
                     'options' 		=> [
-                                            '' 			=> esc_html__('Select project listing type', 'taskup-core'),
-                                            'random' 	=> esc_html__('Random from all categories', 'taskup-core'),
-                                            'recent' 	=> esc_html__('Recent from all categories', 'taskup-core'),
-                                            'categories_random' 	=> esc_html__('Random by categories', 'taskup-core'),
-                                            'categories_recent' 	=> esc_html__('Recent by categories', 'taskup-core'),
-                                            'ids' 	                => esc_html__('By IDs', 'taskup-core'),
+                                            '' 			=> esc_html__('Select project listing type', 'taskbot'),
+                                            'random' 	=> esc_html__('Random from all categories', 'taskbot'),
+                                            'recent' 	=> esc_html__('Recent from all categories', 'taskbot'),
+                                            'categories_random' 	=> esc_html__('Random by categories', 'taskbot'),
+                                            'categories_recent' 	=> esc_html__('Recent by categories', 'taskbot'),
+                                            'ids' 	                => esc_html__('By IDs', 'taskbot'),
                                         ]
                 ]
             );
@@ -128,7 +147,7 @@ if (!class_exists('Taskup_feature_project')) {
             $this->add_control(
                 'show_posts',
                 [
-                    'label' => esc_html__( 'Number of projects', 'taskup-core' ),
+                    'label' => esc_html__( 'Number of projects', 'taskbot' ),
                     'type'  => Controls_Manager::SLIDER,
                     'size_units'    => [ 'posts' ],
                     'condition'		=> ['listing_type!'=> 'ids'],
@@ -149,8 +168,8 @@ if (!class_exists('Taskup_feature_project')) {
                 'product_categories',
                 [
                     'type'          => Controls_Manager::SELECT2,
-                    'label'         => esc_html__('Categories?', 'taskup-core'),
-                    'desc'          => esc_html__('Select categories to display.', 'taskup-core'),
+                    'label'         => esc_html__('Categories?', 'taskbot'),
+                    'desc'          => esc_html__('Select categories to display.', 'taskbot'),
                     'options'       => $categories,
                     'condition'		=> ['listing_type'=> ['categories_random','categories_recent']],
                     'multiple'      => true,
@@ -162,8 +181,8 @@ if (!class_exists('Taskup_feature_project')) {
                 [
                     'type'      	=> Controls_Manager::TEXTAREA,
                     'condition'		=> ['listing_type'=> 'ids'],
-                    'label' 		=> esc_html__('Services by ID', 'taskup-core'),
-                    'description' 	=> esc_html__('You can add comma separated ID\'s for the services to show specific services. Leave it empty to use above settings', 'taskup-core'),
+                    'label' 		=> esc_html__('Services by ID', 'taskbot'),
+                    'description' 	=> esc_html__('You can add comma separated ID\'s for the services to show specific services. Leave it empty to use above settings', 'taskbot'),
                 ]
             );
 
@@ -171,8 +190,8 @@ if (!class_exists('Taskup_feature_project')) {
                 'btn_text',
                 [
                     'type'          => Controls_Manager::TEXT,
-                    'label'         => esc_html__('Add button text', 'taskup-core'),
-                    'description'   => esc_html__('Add button text. leave it empty to hide.', 'taskup-core'),
+                    'label'         => esc_html__('Add button text', 'taskbot'),
+                    'description'   => esc_html__('Add button text. leave it empty to hide.', 'taskbot'),
                 ]
             );
 
@@ -180,8 +199,8 @@ if (!class_exists('Taskup_feature_project')) {
                 'btn_link',
                 [
                     'type'          => Controls_Manager::SELECT2,
-                    'label'         => esc_html__('Select page', 'taskup-core'),
-                    'desc'          => esc_html__('Select page for button URL.', 'taskup-core'),
+                    'label'         => esc_html__('Select page', 'taskbot'),
+                    'desc'          => esc_html__('Select page for button URL.', 'taskbot'),
                     'options'       => $pages,
                     'multiple'      => false,
                     'label_block'   => true,
@@ -265,7 +284,7 @@ if (!class_exists('Taskup_feature_project')) {
                 $project_data      = new \WP_Query(apply_filters('taskup_freelancer_search_filter', $query_args));
                 $total_posts     = $project_data->found_posts;
                 ?>
-            	<div class="tk-main-section-two">
+            	<div class="tk-main-section-three">
                     <div class="container">
                         <div class="row justify-content-center">
                             <?php if(!empty($title) || !empty($description)){?>
@@ -284,7 +303,7 @@ if (!class_exists('Taskup_feature_project')) {
                                         <?php } ?>
                                         <?php if( !empty($btn_text) ){?>
                                             <div class="tk-btn2-wrapper">
-                                                <a href="<?php echo esc_url($btn_link);?>" class="tk-sectionbtn"><?php echo esc_html($btn_text);?><i class="icon icon-grid"></i></a>
+                                                <a href="<?php echo esc_url($btn_link);?>" class="tk-sectionbtn"><?php echo esc_html($btn_text);?><i class="tb-icon-grid"></i></a>
                                             </div>
                                         <?php } ?>
                                     </div>
@@ -370,7 +389,7 @@ if (!class_exists('Taskup_feature_project')) {
                                                          <ul class="tk-template-view"> 
                                                             <?php do_action( 'taskbot_posted_date_html', $product );?>
                                                             <?php do_action( 'taskbot_location_html', $product );?>
-                                                            <?php do_action( 'taskbot_texnomies_html_v2', $product->get_id(),'expertise_level','icon-briefcase' );?>
+                                                            <?php do_action( 'taskbot_texnomies_html_v2', $product->get_id(),'expertise_level','tb-icon-briefcase' );?>
                                                             <?php do_action( 'taskbot_hiring_freelancer_html', $product );?>
                                                         </ul>
                                                     </div>

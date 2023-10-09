@@ -81,9 +81,6 @@ if (!class_exists('Taskbot_how_it_work')) {
                     'type'        => Controls_Manager::MEDIA,
                     'label'       => esc_html__('Dispaly image', 'taskbot'),
                     'description' => esc_html__('Add display image.', 'taskbot'),
-                    'default' => [
-                        'url' => \Elementor\Utils::get_placeholder_image_src(),
-                    ],
                 ]
             );
             $this->add_control(
@@ -223,9 +220,6 @@ if (!class_exists('Taskbot_how_it_work')) {
                     'type'        => Controls_Manager::MEDIA,
                     'label'       => esc_html__('Select icon', 'taskbot'),
                     'description' => esc_html__('Add icon.(63x53)', 'taskbot'),
-                    'default' => [
-                        'url' => \Elementor\Utils::get_placeholder_image_src(),
-                    ],
                     'condition'		=> ['type'=> 'rating']
                 ]
             );
@@ -290,7 +284,7 @@ if (!class_exists('Taskbot_how_it_work')) {
 										$nofollow               = !empty($settings['description_link']['nofollow']) ? ' rel="nofollow"' : '';
 										$description_link       = !empty($settings['description_link']['url']) ? $settings['description_link']['url'] : '';
 										$description_link_text  = !empty($settings['description_link_text']) ? $settings['description_link_text'] : '';
-										$link_                  = '<a href="' . esc_url($description_link) . '"' . do_shortcode($target).do_shortcode($nofollow) . '><span class="icon-link-2"></span>'. esc_html($description_link_text) .'</a>';
+										$link_                  = '<a href="' . esc_url($description_link) . '"' . do_shortcode($target).do_shortcode($nofollow) . '><span class="tb-icon-link-2"></span>'. esc_html($description_link_text) .'</a>';
 										if (!empty($description_link_text)) { ?>
 											<div class="tk-mainlink">
 												<?php if(!empty($description_link_text)) { ?>

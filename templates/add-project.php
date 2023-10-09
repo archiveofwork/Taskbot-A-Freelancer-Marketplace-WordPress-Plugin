@@ -17,7 +17,6 @@ $page_temp          = (isset($_GET['page_temp'])) ? esc_attr($_GET['page_temp'])
 $post_url			= taskbot_get_page_uri('add_project_page');
 $allow_project		= false;
 $product			= array();
-
 if(($user_type == 'buyers') ||  (!empty($user_type) && $user_type == 'buyers' && $allow_project)){
 	$allow_project	= true;
 	if(!empty($post_id)){

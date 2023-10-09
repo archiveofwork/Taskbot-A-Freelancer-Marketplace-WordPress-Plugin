@@ -15,17 +15,17 @@
 <div class="tk-counterinfo">
     <ul class="tk-counterinfo_list">
         <li>
-            <strong class="tk-counterinfo_escrow"><i class="icon-clock"></i></strong>
+            <strong class="tk-counterinfo_escrow"><i class="tb-icon-clock"></i></strong>
             <span><?php esc_html_e('Total escrow amount','taskbot');?></span>
             <h5><?php taskbot_price_format($hired_balance);?> </h5>
         </li>
         <li>
-            <strong class="tk-counterinfo_earned"><i class="icon-briefcase"></i></strong>
+            <strong class="tk-counterinfo_earned"><i class="tb-icon-briefcase"></i></strong>
             <span><?php esc_html_e('Total earned amount','taskbot');?></span>
             <h5><?php taskbot_price_format($earned_balance);?></h5>
         </li>
         <li>
-            <strong class="tk-counterinfo_remaining"><i class="icon-dollar-sign"></i></strong>
+            <strong class="tk-counterinfo_remaining"><i class="tb-icon-dollar-sign"></i></strong>
             <span><?php esc_html_e('Remaining project budget','taskbot');?></span>
             <h5><?php taskbot_price_format($remaning_balance);?></h5>
         </li>
@@ -63,7 +63,7 @@
                             <?php if( !empty($proposal_status) && $proposal_status === 'hired' ){?>
                                 <?php if( !empty($status) && $status === 'decline' && !empty($value['decline_reason'])){?>
                                     <div class="tk-statusview_alert">
-                                        <span><i class="icon-info"></i><?php esc_html_e('The employer declined this milestone invoice. Read the comment below and try again','taskbot');?></span>
+                                        <span><i class="tb-icon-info"></i><?php esc_html_e('The employer declined this milestone invoice. Read the comment below and try again','taskbot');?></span>
                                         <p><?php echo esc_html($value['decline_reason']);?></p>
                                     </div>
                                 <?php } ?>

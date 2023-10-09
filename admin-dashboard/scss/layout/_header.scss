@@ -121,37 +121,40 @@
         }
     }
 }
-.sub-menu{
-    right: 0;
-    margin: 0;
-    top: 100px;
-    width: 220px;
-    opacity: 0;
-    background: #fff;
-    position: absolute;
-    visibility: hidden;
-    font-family: $heading-font-family; 
-    -webkit-box-shadow: 0 10px 30px 0 rgba(18,54,82,0.2);
-    box-shadow: 0 10px 30px 0 rgba(18,54,82,0.2);
-    border-radius: 6px;
-    z-index: 1;
-    padding:10px;
-    @extend %transition;
-    li{
-        width: 100%;
-        @extend %flex;
-        position: relative;
+.tk-themenav,
+.tb-manageprojects{
+    .sub-menu{
+        right: 0;
+        margin: 0;
+        top: 100px;
+        width: 220px;
+        opacity: 0;
+        background: #fff;
+        position: absolute;
+        visibility: hidden;
+        font-family: $heading-font-family; 
+        -webkit-box-shadow: 0 10px 30px 0 rgba(18,54,82,0.2);
+        box-shadow: 0 10px 30px 0 rgba(18,54,82,0.2);
+        border-radius: 6px;
+        z-index: 1;
+        padding:10px;
         @extend %transition;
-        &:hover a{background: #f7f7f7}
-        & a{
-            @extend %transition;
+        li{
             width: 100%;
-            display: block;
-            padding: 10px 20px;
-            font-size: rem(13);
-            border-radius:$radius;
-            border-radius: 4px;
-            text-align: left;
+            @extend %flex;
+            position: relative;
+            @extend %transition;
+            &:hover a{background: #f7f7f7}
+            & a{
+                @extend %transition;
+                width: 100%;
+                display: block;
+                padding: 10px 20px;
+                font-size: rem(13);
+                border-radius:$radius;
+                border-radius: 4px;
+                text-align: left;
+            }
         }
     }
 }

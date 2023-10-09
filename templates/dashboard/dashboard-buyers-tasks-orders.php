@@ -159,7 +159,7 @@ $count_post 		= $query->found_posts;
                     <fieldset>
                         <div class="tb-themeform__wrap ">
                             <div class="form-group wo-inputicon">
-                                <i class="icon-search"></i>
+                                <i class="tb-icon-search"></i>
                                 <input type="text" name="search_keyword" class="form-control" value="<?php echo esc_attr($search_keyword) ?>" placeholder="<?php esc_attr_e('Search orders here','taskbot');?>">
                             </div>
                         </div>

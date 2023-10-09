@@ -50,7 +50,7 @@ $privacy_link           = !empty($tpl_privacy) ? '<a target="_blank" href="'.get
                                                     </span>
                                                 </label>
                                             </div>
-                                            <a class="tb-paypalcontent" data-payout_methods_title="<?php echo esc_attr($pay_val['title']); ?>" href="javascript:void(0)"><i class="icon-chevron-right"></i></a>
+                                            <a class="tb-paypalcontent" data-payout_methods_title="<?php echo esc_attr($pay_val['title']); ?>" href="javascript:void(0)"><i class="tb-icon-chevron-right"></i></a>
                                         </div>
                                         <div id="tb-paypal1" class="tb-steppaypal">
                                             <fieldset>

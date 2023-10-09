@@ -43,7 +43,7 @@ if (!class_exists('Taskbot_PageTemplaterLoader')) {
                 'templates/add-task.php' 	            => esc_html__('Add task','taskbot'),
                 'templates/add-project.php' 	        => esc_html__('Add Project','taskbot'),
                 'templates/submit-proposal.php' 	    => esc_html__('Submit proposal','taskbot'),
-                'templates/search-freelancer.php' 	    => esc_html__('Search sellers','taskbot'),
+                'templates/search-seller.php' 	        => esc_html__('Search sellers','taskbot'),
                 'templates/search-projects.php' 	    => esc_html__('Search projects','taskbot'),
                 'templates/pricing-plans.php' 	        => esc_html__('Pricing plans','taskbot')
             );

@@ -93,7 +93,7 @@ $date_format    = get_option( 'date_format' );
                 <fieldset>
                     <div class="tb-themeform__wrap">
                         <div class="form-group tb-inputicon tb-inputheight tb-dbholder border-0">
-                            <i class="icon-search"></i>
+                            <i class="tb-icon-search"></i>
                             <input type="text" name="search_keyword" class="form-control" value="<?php echo esc_attr($search_keyword) ?>"  placeholder="<?php esc_attr_e('Search project listing','taskbot');?>">
                         </div>
                         <div class="tb-actionselect">
@@ -172,13 +172,13 @@ $date_format    = get_option( 'date_format' );
                                 <ul class="tb-tabicon tb-invoicecon">
                                     <li>
                                         <?php if( !empty($post_status) && in_array($post_status,array('pending','publish'))){ ?>
-                                            <a href="javascript:void(0)" class="tb-canceled tb_rejected_project_model" data-id="<?php echo esc_attr(intval($post->ID)); ?>"><span class="icon-x"></span>&nbsp;<?php esc_attr_e('Reject project','taskbot');?></a>
+                                            <a href="javascript:void(0)" class="tb-canceled tb_rejected_project_model" data-id="<?php echo esc_attr(intval($post->ID)); ?>"><span class="tb-icon-x"></span>&nbsp;<?php esc_attr_e('Reject project','taskbot');?></a>
                                         <?php } if( !empty($post_status) && in_array($post_status,array('pending','rejected'))){ ?>
-                                            <a href="javascript:void(0);" class="tb-publish tb_publish_project" data-id="<?php echo intval($post->ID);?>"><span class="icon-check"></span>&nbsp;<?php esc_attr_e('Approve project','taskbot');?></a>
+                                            <a href="javascript:void(0);" class="tb-publish tb_publish_project" data-id="<?php echo intval($post->ID);?>"><span class="tb-icon-check"></span>&nbsp;<?php esc_attr_e('Approve project','taskbot');?></a>
                                         <?php } ?>
                                     </li>
-                                    <li class="tb-delete"><div href="javascript:void(0);" class="tb-red tb_remove_task" data-id="<?php echo intval($post->ID);?>"><span class="icon-trash"></span></div> </li>
-                                    <li> <a href="<?php echo get_the_permalink( $post );?>" target="_blank"><span class="icon-eye tb-gray"></span></a> </li>
+                                    <li class="tb-delete"><div href="javascript:void(0);" class="tb-red tb_remove_task" data-id="<?php echo intval($post->ID);?>"><span class="tb-icon-trash"></span></div> </li>
+                                    <li> <a href="<?php echo get_the_permalink( $post );?>" target="_blank"><span class="tb-icon-eye tb-gray"></span></a> </li>
                                 </ul>
                             </td>
                         </tr>
@@ -198,7 +198,7 @@ $date_format    = get_option( 'date_format' );
         <div class="modal-content">
             <div class="tb-popuptitle">
             <h4><?php esc_html_e('Reject project approval request', 'taskbot'); ?></h4>
-            <a href="javascript:void(0);" class="close"><i class="icon-x" data-bs-dismiss="modal"></i></a>
+            <a href="javascript:void(0);" class="close"><i class="tb-icon-x" data-bs-dismiss="modal"></i></a>
             </div>
             <div class="modal-body">
             <form class="tb-themeform">

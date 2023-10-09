@@ -129,7 +129,7 @@ $page_url 			= Taskbot_Profile_Menu::taskbot_profile_menu_link($reference, $user
 												}
 												?>
 											<ul class="tb-tabicon">
-												<li><a href="<?php echo get_the_permalink($post->ID); ?>"><span class="icon-external-link bg-gray"></span></a></li>
+												<li><a href="<?php echo get_the_permalink($post->ID); ?>"><span class="tb-icon-external-link bg-gray"></span></a></li>
 												<?php if (!empty($product)) {?>
 														<li><?php do_action('taskbot_saved_item', $post->ID, $linked_profile, '_saved_tasks','list');?></li>
 													<?php } else {
@@ -191,7 +191,7 @@ $page_url 			= Taskbot_Profile_Menu::taskbot_profile_menu_link($reference, $user
 													<ul class="tk-template-view"> 
 														<?php do_action( 'taskbot_posted_date_html', $product );?>
 														<?php do_action( 'taskbot_location_html', $product );?>
-														<?php do_action( 'taskbot_texnomies_html_v2', $product->get_id(),'expertise_level','icon-briefcase' );?>
+														<?php do_action( 'taskbot_texnomies_html_v2', $product->get_id(),'expertise_level','tb-icon-briefcase' );?>
 														<?php do_action( 'taskbot_hiring_freelancer_html', $product );?>
 														<li><div class="tk-likev2"><?php do_action( 'taskbot_project_saved_item', $product->get_id(), '','_saved_projects', 'list' );?></div></li>
 													</ul>

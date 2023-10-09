@@ -175,7 +175,7 @@ if(!empty($hide_fixed_milestone) && $hide_fixed_milestone === 'yes'){
 													</ul>
 													<div class="tk-add-price-slots <?php echo esc_attr($milestone_content_class);?>">
 														<label class="tk-label"><?php esc_html_e("How many milestones you want to add?","taskbot");?>
-															<a href="javascript:void(0)" class="tk-addicon" id="tb-add-milestone"><?php esc_html_e("Add milestone","taskbot");?> <i class="icon-plus"></i></a>
+															<a href="javascript:void(0)" class="tk-addicon" id="tb-add-milestone"><?php esc_html_e("Add milestone","taskbot");?> <i class="tb-icon-plus"></i></a>
 														</label>
 														<div id="tb-list-milestone">
 															<?php if( !empty($all_milestone) ){
@@ -195,7 +195,7 @@ if(!empty($hide_fixed_milestone) && $hide_fixed_milestone === 'yes'){
 																					<div class="tk-placeholderholder">
 																						<input type="text" value="<?php echo esc_attr($title);?>" name="milestone[<?php echo esc_attr($key);?>][title]" class="form-control tk-themeinput" placeholder="<?php esc_attr_e('Enter title','taskbot');?>">
 																					</div>
-																					<a href="javascript:;" data-id="<?php echo esc_attr($key);?>" class="tb-remove-milestone tk-removeicon"><i class="icon-trash-2"></i></a>
+																					<a href="javascript:;" data-id="<?php echo esc_attr($key);?>" class="tb-remove-milestone tk-removeicon"><i class="tb-icon-trash-2"></i></a>
 																				</div>
 																				<div class="tk-placeholderholder">
 																					<textarea class="form-control tk-themeinput" name="milestone[<?php echo esc_attr($key);?>][detail]" placeholder="<?php esc_attr_e('Enter description', 'taskbot');?>"><?php echo do_shortcode($detail);?></textarea>
@@ -246,9 +246,9 @@ if(!empty($hide_fixed_milestone) && $hide_fixed_milestone === 'yes'){
 								</div>
 								<ul class="tk-project-requirement">
 									<?php do_action( 'taskbot_total_hiring_freelancer_html', $product->get_id() );?>
-									<?php do_action( 'taskbot_texnomies_html', $product->get_id(),'expertise_level',esc_html__('Expertise','taskbot'),'icon-briefcase tk-darkred-icon' );?>
-									<?php do_action( 'taskbot_texnomies_html', $product->get_id(),'languages',esc_html__('Languages','taskbot'),'icon-book-open tk-yellow-icon' );?>
-									<?php do_action( 'taskbot_texnomies_html', $product->get_id(),'duration',esc_html__('Project duration','taskbot'),'icon-calendar tk-green-icon' );?>
+									<?php do_action( 'taskbot_texnomies_html', $product->get_id(),'expertise_level',esc_html__('Expertise','taskbot'),'tb-icon-briefcase tk-darkred-icon' );?>
+									<?php do_action( 'taskbot_texnomies_html', $product->get_id(),'languages',esc_html__('Languages','taskbot'),'tb-icon-book-open tk-yellow-icon' );?>
+									<?php do_action( 'taskbot_texnomies_html', $product->get_id(),'duration',esc_html__('Project duration','taskbot'),'tb-icon-calendar tk-green-icon' );?>
 									<?php do_action( 'taskbot_after_project_requirements', $product->get_id());?>
 								</ul>
 							</div>
@@ -273,7 +273,7 @@ if(!empty($hide_fixed_milestone) && $hide_fixed_milestone === 'yes'){
 					<div class="tk-placeholderholder">
 						<input type="text" name="milestone[{{data.id}}][title]" class="form-control tk-themeinput" placeholder="<?php esc_attr_e('Enter title','taskbot');?>">
 					</div>
-					<a href="javascript:;" data-id="{{data.id}}" class="tb-remove-milestone tk-removeicon"><i class="icon-trash-2"></i></a>
+					<a href="javascript:;" data-id="{{data.id}}" class="tb-remove-milestone tk-removeicon"><i class="tb-icon-trash-2"></i></a>
 				</div>
 				<div class="tk-placeholderholder">
 					<textarea class="form-control tk-themeinput" name="milestone[{{data.id}}][detail]" placeholder="<?php esc_attr_e('Enter description', 'taskbot');?>"></textarea>

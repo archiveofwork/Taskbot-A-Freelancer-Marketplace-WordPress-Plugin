@@ -128,7 +128,7 @@ class Taskbot_Notifications {
 		$button_html	= $this->taskbot_notification_button($post_id,$settings,$show_option); 
 		$content_html	= $this->taskbot_notification_content($post_id,$settings); 
 		$admin_comments	= !empty($settings['admin_comments']) ? $settings['admin_comments'] : '';
-		
+
 		ob_start();
 		?>
 		<div class="tk-notification">
@@ -491,7 +491,7 @@ class Taskbot_Notifications {
 			if( !empty($image_src[0]) ){
 				$image_link	= '<img src="'.esc_url($image_src[0]).'" alt="'.esc_attr('Notification','taskbot').'">';
 			} else {
-				$image_link	= '<i class="icon-bell"></i>';
+				$image_link	= '<i class="tb-icon-bell"></i>';
 			}
 		} else if( !empty($image_type) && $image_type === 'profile'){
 			$linked_profile	= get_post_meta( $post_id, 'linked_profile', true );
@@ -503,7 +503,7 @@ class Taskbot_Notifications {
 			if( !empty($image_src) ){
 				$image_link	= '<img src="'.esc_url($image_src).'" alt="'.esc_attr('Notification','taskbot').'">';
 			} else {
-				$image_link	= '<i class="icon-bell"></i>';
+				$image_link	= '<i class="tb-icon-bell"></i>';
 			}
 			
 		} else if( !empty($image_type) && $image_type === 'buyer_image'){
@@ -517,7 +517,7 @@ class Taskbot_Notifications {
 			if( !empty($image_src) ){
 				$image_link	= '<img src="'.esc_url($image_src).'" alt="'.esc_attr('Notification','taskbot').'">';
 			} else {
-				$image_link	= '<i class="icon-bell"></i>';
+				$image_link	= '<i class="tb-icon-bell"></i>';
 			}
 
 			$image_link	= '<img src="'.esc_url($image_src).'" alt="'.esc_attr('Notification','taskbot').'">';
@@ -532,7 +532,7 @@ class Taskbot_Notifications {
 			if( !empty($image_src) ){
 				$image_link	= '<img src="'.esc_url($image_src).'" alt="'.esc_attr('Notification','taskbot').'">';
 			} else {
-				$image_link	= '<i class="icon-bell"></i>';
+				$image_link	= '<i class="tb-icon-bell"></i>';
 			}
 
 		}else if( !empty($image_type) && $image_type === 'sender_image'){
@@ -547,7 +547,7 @@ class Taskbot_Notifications {
 			if( !empty($image_src) ){
 				$image_link	= '<img src="'.esc_url($image_src).'" alt="'.esc_attr('Notification','taskbot').'">';
 			} else {
-				$image_link	= '<i class="icon-bell"></i>';
+				$image_link	= '<i class="tb-icon-bell"></i>';
 			}
 		}
 		return $image_link;

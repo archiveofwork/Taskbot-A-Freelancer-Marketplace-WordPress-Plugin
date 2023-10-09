@@ -128,7 +128,7 @@ if(!empty($theme_version->get( 'TextDomain' )) && ( $theme_version->get( 'TextDo
 			array(
 				'id'       => 'search_result',
 				'type'     => 'select',
-				'title'    => esc_html__('Select defult search type', 'taskbot'), 
+				'title'    => esc_html__('Select default search type', 'taskbot'),
 				'options'  => array(
 					'sellers_search_page'		=> esc_html__('Sellers','taskbot'),
 					'service_search_page'		=> esc_html__('Services','taskbot'),

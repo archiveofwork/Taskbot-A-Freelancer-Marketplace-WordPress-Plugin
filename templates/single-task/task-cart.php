@@ -38,12 +38,12 @@ if( !empty($plans) ){
 			<div class="tb-tasktotal">
 				<h5><?php esc_html_e('Add task details','taskbot');?></h5>
 			</div>
-			<a href="javascript:void(0);" class="close"><i class="icon-x" data-bs-dismiss="modal"></i></a>
+			<a href="javascript:void(0);" class="close"><i class="tb-icon-x" data-bs-dismiss="modal"></i></a>
 		</div>
 	</div>
 	<div class="tb-addformtask">
 		<div class="tb-packages__plan">
-			<h6><em data-tippy-content="<?php esc_attr_e('Attachments','taskbot');?>" class="tippy icon-info"></em> <?php esc_html_e('Total task budget','taskbot');?></h6>
+			<h6><em data-tippy-content="<?php esc_attr_e('Attachments','taskbot');?>" class="tippy tb-icon-info"></em> <?php esc_html_e('Total task budget','taskbot');?></h6>
 			<h4 id="tb_total_price"><?php taskbot_price_format($total_price);?></h4>
 		</div>
 		<form class="tb-themeform tb-sidebarform" id="tb_cart_form">

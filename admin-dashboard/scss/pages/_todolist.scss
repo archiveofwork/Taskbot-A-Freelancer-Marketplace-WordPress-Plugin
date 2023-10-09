@@ -26,8 +26,10 @@
     figure{
         margin: 0;
         img{
-            flex: none;
-            max-width: 40px;
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 4px;
         }
         & + a{margin-left: 15px;}
     }
@@ -221,4 +223,12 @@
 }
 .tk-success-tag:hover, .tk-success-tag:focus {
     background-color: #22C55E;
+}
+.tb-todolist{
+    .tb-tabfilteritem{
+        border-radius: 0 0 4px 4px;
+    }
+    .tb-table{
+        border-radius: 4px 4px 0 0;
+    }
 }

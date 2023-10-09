@@ -133,6 +133,8 @@
                     .tk-project-table-content{
                         img{
                             width: 48px;
+                            height: 48px;
+                            object-fit: cover;
                         }
                     }
                 }
@@ -175,6 +177,7 @@
     img{
         border-radius: 50%;
         width: 60px;
+        height: 60px;
         object-fit: cover;
     }
     .tk-blogviewdates{

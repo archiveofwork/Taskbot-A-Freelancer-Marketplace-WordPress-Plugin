@@ -20,7 +20,6 @@ $taskbot_args = array(
     'author'            => $current_user->ID,
     'orderby'           => 'date',
     'order'             => 'DESC',
-    'post_status'       => 'any',
     'tax_query'         => array(
         array(
             'taxonomy' => 'product_type',
@@ -44,12 +43,12 @@ $taskbot_query = new WP_Query( apply_filters('taskbot_project_listings_args', $t
     </div>
     <div class="col-lg-12">
         <div class="tk-template-serach">
-            <a href="<?php echo esc_url($post_url);?>" class="tk-btnline"><i class=" icon-chevron-left"></i><?php esc_html_e('Go back','taskbot');?></a>
+            <a href="<?php echo esc_url($post_url);?>" class="tk-btnline"><i class=" tb-icon-chevron-left"></i><?php esc_html_e('Go back','taskbot');?></a>
             <form method="get">
                 <div class="tk-inputicon">
                     <input type="hidden" name="page_temp" value="projects">
                     <input type="text" name="search" class="form-control" value="<?php echo esc_attr($search);?>" placeholder="<?php esc_attr_e('Search project here', 'taskbot');?>">
-                    <i class="icon-search"></i>
+                    <i class="tb-icon-search"></i>
                 </div>
             </form>
         </div>
@@ -68,7 +67,7 @@ $taskbot_query = new WP_Query( apply_filters('taskbot_project_listings_args', $t
                         <ul class="tk-template-view"> 
                             <?php do_action( 'taskbot_posted_date_html', $product );?>
                             <?php do_action( 'taskbot_location_html', $product );?>
-                            <?php do_action( 'taskbot_texnomies_html_v2', $product->get_id(),'expertise_level','icon-briefcase' );?>
+                            <?php do_action( 'taskbot_texnomies_html_v2', $product->get_id(),'expertise_level','tb-icon-briefcase' );?>
                             <?php do_action( 'taskbot_hiring_freelancer_html', $product );?>
                         </ul>
                     </div>
@@ -82,10 +81,12 @@ $taskbot_query = new WP_Query( apply_filters('taskbot_project_listings_args', $t
         </ul>
         <?php
             taskbot_paginate($taskbot_query);
-        else: ?>
+        else:
+            $image_url = !empty($taskbot_settings['empty_listing_image']['url']) ? $taskbot_settings['empty_listing_image']['url'] : TASKBOT_DIRECTORY_URI . 'public/images/empty.png';
+            ?>
             <div class="tb-submitreview tb-submitreviewv3">
                 <figure>
-                    <img src="<?php echo esc_url(TASKBOT_DIRECTORY_URI.'public/images/empty.png')?>" alt="<?php esc_attr_e('add project','taskbot');?>">
+                    <img src="<?php echo esc_url($image_url)?>" alt="<?php esc_attr_e('add project','taskbot');?>">
                 </figure>
                 <h4><?php esc_html_e( 'No projects found', 'taskbot'); ?></h4>
                 <h6><a href="<?php echo esc_url($post_url);?>"> <?php esc_html_e('Add new project', 'taskbot'); ?> </a></h6>

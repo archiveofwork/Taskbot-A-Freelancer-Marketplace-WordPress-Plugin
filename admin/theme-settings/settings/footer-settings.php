@@ -44,7 +44,14 @@ if(!empty($theme_version->get( 'TextDomain' )) && ( $theme_version->get( 'TextDo
 					'title'    => esc_html__( 'Copyright text', 'taskbot' ),
 					'desc'     => esc_html__( '', 'taskbot' ),
 					'default'  => 'Copyright © All rights reserved. 2022',
-				)
+				),
+                array(
+                    'id'        => 'taskup_footer_shape_divider',
+                    'type'      => 'switch',
+                    'title'     => esc_html__('Footer Shape Divider', 'taskbot'),
+                    'default'   => true,
+                    'desc'      => esc_html__('Enable/disable footer top shape divider.', 'taskbot')
+                ),
 			)
 		)
 	);

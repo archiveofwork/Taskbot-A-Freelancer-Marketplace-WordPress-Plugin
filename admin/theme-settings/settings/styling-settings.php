@@ -23,7 +23,7 @@ Redux::setSection(
         'type'      => 'color',
         'title'     => esc_html__('Primary color', 'taskbot'),
         'subtitle'  => esc_html__('Add primary color', 'taskbot'),
-        'default'   => '#FCCF14',
+        'default'   => '#fdd943',
       ),
       array(
         'id'        => 'tb_secondary_color',

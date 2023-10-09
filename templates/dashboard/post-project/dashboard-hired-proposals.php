@@ -23,7 +23,7 @@ if( !empty($proposals)){ ?>
     <div class=" tk-proposal">
         <div class="tk-propposal_title">
             <h5><?php esc_html_e('Hired freelancers','taskbot');?><span>(<?php echo intval($count_proposals);?>)</span></h5>
-            <a href="javascript:void(0)" class="tk-propsal-list-show"><i class ="icon-plus"></i></a>
+            <a href="javascript:void(0)" class="tk-propsal-list-show"><i class ="tb-icon-plus"></i></a>
         </div>
     </div>
 </div>

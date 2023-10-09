@@ -16,6 +16,7 @@ global $current_user, $taskbot_settings, $userdata, $post;
 $reference 		 	= !empty($_GET['ref']) ? $_GET['ref'] : '';
 $mode 			 	= !empty($_GET['mode']) ? $_GET['mode'] : '';
 $user_identity 	 	= intval($current_user->ID);
+$user_data_set   = get_userdata($user_identity);
 $id 			 	= !empty($args['id']) ? $args['id'] : '';
 $user_type		 	= apply_filters('taskbot_get_user_type', $user_identity);
 $post_id 		 	= taskbot_get_linked_profile_id($user_identity, '', $user_type);
@@ -33,8 +34,8 @@ $billing_postcode	= get_user_meta($user_identity, 'billing_postcode', true);
 $billing_email		= get_user_meta($user_identity, 'billing_email', true);
 $phone_country		= get_user_meta($user_identity, 'billing_telephone_country', true);
 
-$billing_first_name	= !empty($billing_first_name) ? $billing_first_name : '';
-$billing_last_name	= !empty($billing_last_name) ? $billing_last_name : '';
+$billing_first_name	= !empty($billing_first_name) ? $billing_first_name : $user_data_set->first_name;
+$billing_last_name	= !empty($billing_last_name) ? $billing_last_name : $user_data_set->last_name;
 
 $billing_company	= !empty($billing_company) ? $billing_company : '';
 $billing_address_1	= !empty($billing_address_1) ? $billing_address_1 : '';

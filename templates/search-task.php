@@ -260,6 +260,14 @@ $hide_product_cat   = !empty($taskbot_settings['hide_product_cat']) ? $taskbot_s
 $sort_by            = !empty($sorting) ? sanitize_text_field($sorting) : "";
 $task_listing_type  = !empty($taskbot_settings['task_listing_type']) ? $taskbot_settings['task_listing_type'] : 'v1';
 $listing_type       = !empty($taskbot_settings['task_listing_view']) ? $taskbot_settings['task_listing_view'] : 'left';
+
+$listing_param = isset($_GET['view_style']) ? $_GET['view_style'] : '';
+if(isset($listing_param) && $listing_param == 'v2'){
+    $listing_type = 'top';
+}elseif (isset($listing_param) && $listing_param == 'v1'){
+    $listing_type = 'left';
+}
+
 get_header();
 if( !empty($listing_type) && $listing_type === 'top' ){
     $theme_version 	                = wp_get_theme();
@@ -279,9 +287,7 @@ if( !empty($listing_type) && $listing_type === 'top' ){
     $grid_arg['min_product_price']  = $min_product_price;
     $grid_arg['max_product_price']  = $max_product_price;
     
-    if(!empty($theme_version->get( 'TextDomain' )) && ( $theme_version->get( 'TextDomain' ) === 'taskup' || $theme_version->get( 'TextDomain' ) === 'taskup-child' )){
-        get_template_part( 'template-parts/find', 'tasks', $grid_arg);
-    }    
+    include taskbot_load_template( 'templates/search-task/search-tasks-v2' ); 
 } else {
 ?>
     <section class="tk-main-section tk-searchresult">
@@ -296,7 +302,7 @@ if( !empty($listing_type) && $listing_type === 'top' ){
                         <?php } ?>
                         <?php do_action('taskbot_price_sortby_filter_theme', $sort_by); ?>
                         <div class="tk-filtermenu">
-                            <a href="javascript:();" class="tk-filtericon"><i class="icon-sliders"></i></a>
+                            <a href="javascript:();" class="tk-filtericon"><i class="tb-icon-sliders"></i></a>
                         </div>
                     </div>
                 </div>
@@ -433,7 +439,7 @@ if( !empty($task_listing_type) && $task_listing_type === 'v1' ){
         lazyLoad:false,
         navClass: ['tk-prev', 'tk-next'],
         navContainerClass: 'tk-search-slider-nav',
-        navText: ['<i class=\"icon-chevron-left\"></i>', '<i class=\"icon-chevron-right\"></i>'],
+        navText: ['<i class=\"tb-icon-chevron-left\"></i>', '<i class=\"tb-icon-chevron-right\"></i>'],
     });
 
     setTimeout(function(){owl_task.trigger('refresh.owl.carousel');}, 3000);

@@ -98,7 +98,7 @@ $dispute_id     = !empty($dispute_id) ? $dispute_id : 0;
                                 <h5><?php esc_html_e('Additional services','taskbot');?>
                                     <span><?php echo wp_sprintf( _n( '%s Addon requested', '%s Add-ons requested', count($product_data['subtasks']), 'taskbot' ), count($product_data['subtasks']) );?></span>
                                 </h5>
-                                <i class="icon-chevron-down"></i>
+                                <i class="tb-icon-chevron-down"></i>
                             </div>
                             <div id="tb-additionolinfo" class="tb-addservices_details collapse show">
                                 <div class="tb-additionolinfo">
@@ -135,7 +135,7 @@ $dispute_id     = !empty($dispute_id) ? $dispute_id : 0;
                                             <span><?php taskbot_price_format($seller_shares); ?></span>
                                         </div>
                                         <?php if( !empty($order_details['subtasks']) || !empty($admin_shares) ){?>
-                                            <i class="icon-chevron-down"></i>
+                                            <i class="tb-icon-chevron-down"></i>
                                         <?php } ?>
                                     </div>
                                 </div>
@@ -235,7 +235,7 @@ $dispute_id     = !empty($dispute_id) ? $dispute_id : 0;
         <div class="modal-content">
             <div class="tb-popuptitle">
                 <h4><?php esc_html_e('Create refund request', 'taskbot') ?></h4>
-                <a href="javascript:void(0);" class="close"><i class="icon-x" data-bs-dismiss="modal"></i></a>
+                <a href="javascript:void(0);" class="close"><i class="tb-icon-x" data-bs-dismiss="modal"></i></a>
             </div>
             <div class="modal-body">
                 <div class="tb-popupbodytitle">

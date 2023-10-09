@@ -48,7 +48,7 @@ foreach( $taskbot_menu_list as $key => $val ){
                 <?php  if( !empty($key) && $key === 'inbox' && (in_array('wp-guppy/wp-guppy.php', apply_filters('active_plugins', get_option('active_plugins'))) || in_array('wpguppy-lite/wpguppy-lite.php', apply_filters('active_plugins', get_option('active_plugins')))) ){ ?>
                     <?php if(!empty($messages_count) ){?><em class="tk-remaining-notification"><?php echo esc_html($messages_count);?></em><?php } ?>
                 <?php } ?>
-            </sapn>
+            </span>
             
         </a>
     </li>

@@ -1335,7 +1335,7 @@ if( !function_exists('taskbotSubmitProposal') ){
             
             if( !empty($taskbot_user_proposal) ){
                 $json['type']           = 'error';
-                $json['message_desc']   = esc_html__('You have already submit proposal for this project','taskbot');
+                $json['message_desc']   = esc_html__('You have already submitted a proposal for this project.','taskbot');
                 if( empty($type) ){
                     wp_send_json( $json );
                 }else {
@@ -1593,7 +1593,7 @@ if( !function_exists('taskbot_project_proposal_icons_html') ){
             <?php }
             } 
             if( !empty($show_link) && is_user_logged_in() && $show_link === 'yes' ){ ?>
-                <li><a class="tk-view-proposal" href="<?php Taskbot_Profile_Menu::taskbot_profile_menu_link('proposals', $current_user->ID, '', 'listing',$post_id);?>"><?php esc_html_e('View all proposals','taskbot');?><i class="icon-chevron-right"></i></a></li>
+                <li><a class="tk-view-proposal" href="<?php Taskbot_Profile_Menu::taskbot_profile_menu_link('proposals', $current_user->ID, '', 'listing',$post_id);?>"><?php esc_html_e('View all proposals','taskbot');?><i class="tb-icon-chevron-right"></i></a></li>
         <?php }
         } else { ?>
             <li><span><?php esc_html_e('No proposals received','taskbot');?></span></li>
@@ -1942,7 +1942,7 @@ if (!function_exists('taskbot_proposal_order_budget_details')) {
 								<i><?php esc_html_e('Total project budget', 'taskbot');?></i>
 								<span><?php taskbot_price_format($order_price);  ?></span>
 							</div>
-							<i class="icon-chevron-down"></i>
+							<i class="tb-icon-chevron-down"></i>
 						</div>
 					</div>
 				</div>

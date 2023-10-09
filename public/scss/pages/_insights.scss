@@ -435,6 +435,7 @@
 .page-template-dashboard main.tb-main{
     padding: 0;
 }
+
 .tk-themeaccordion{
     &_info{
         p{
@@ -458,7 +459,7 @@
             content: "\e9c0";
             margin-left: auto;
             line-height: 20px;
-            font-family: 'icomoon'
+            font-family: 'taskbot-icons'
         }
         &[aria-expanded="true"]{
             &:after{content: "\e9a3";}
@@ -515,3 +516,116 @@
         max-width: 100%;
    } 
 }
+.tb-seller-counter{
+    margin-bottom: 30px;
+}
+.tb-seller-counter-list {
+    padding: 0;
+    display: flex;
+    margin: -10px;
+    flex-wrap: wrap;
+    li{
+        width: 100%;
+        padding: 10px;
+        max-width: 33.33%;
+        position: relative;
+        margin-bottom: 10px;
+        list-style-type: none;
+        &::after{
+            left: 20px;
+            height: 10px;
+            content: " ";
+            position: absolute;
+            border-style: solid;
+            background: $clr-white;
+            width: calc(100% - 40px);
+            border-color: $lightest_2;
+            border-radius: 0 0 4px 4px;
+            border-width: 0px 1px 1px 1px;
+            box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.03);
+        }
+        &:hover{
+            a{
+                color: $heading-font-color !important;
+                background-color: $theme-color !important;
+            }
+            .tb-icon-watermark{
+                i{
+                    right: -20px;
+                    bottom: -30px;
+                    position: absolute;
+                }
+            }
+        }
+    }
+}
+.tb-counter-content {
+    z-index: 1;
+    width: 100%;
+    padding: 20px;
+    overflow: hidden;
+    min-height: 138px;
+    position: relative;
+    border-radius: $radius;
+    background-color: $clr-white;
+    border: 1px solid $lightest_2;
+    box-shadow: $drop_shadows_light;
+    h3{
+        height: 30px;
+        margin-bottom: 0;
+        letter-spacing: 0.5px;
+        color: $heading-font-color;
+    }
+    strong{
+        display: block;
+        color: $black_opacity_60;
+    }
+}
+.tb-icon-blue {
+    color: $anchor-color;
+} 
+.tb-icon-green {
+    color: $bright-green;
+}
+.tb-icon-yellow {
+    color: $pale-yellow;
+}
+.tb-icon-red {
+    color: $red;
+}
+.tb-icon-orange {
+    color: $orange;
+} 
+.tb-icon-purple {
+    color: $blazing-purple;
+} 
+.tb-counter-icon-button{
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: space-between;
+    i{
+        font-size: 24px;
+    }
+    a{
+        padding: 4px 12px;
+        border-radius: 4px;
+        color: $decent-grey;
+        background: $lightest;
+        transition: all 0.3s ease-in-out;
+        font: 600 rem(14)/em(24,14) $body-font-family;
+    }
+}
+.tb-icon-watermark{
+    i{
+        z-index: -1;
+        right: -50px;
+        bottom: -50px;
+        color: $lightest;
+        font-size: 110px;
+        position: absolute;
+        transition: all .3s ease-in-out;
+    }
+}
+
+  

@@ -279,7 +279,7 @@
         position: absolute;
         top: 32px;
         right: 25px;
-        font-family: "icomoon";
+        font-family: "taskbot-icons";
         font-size: 20px;
         display: inline-block;
         color:$text-light;
@@ -406,6 +406,7 @@
     }
 }
 .tk-walletamount{
+    flex: none;
     align-self: center;
     margin-left: auto;
     span{

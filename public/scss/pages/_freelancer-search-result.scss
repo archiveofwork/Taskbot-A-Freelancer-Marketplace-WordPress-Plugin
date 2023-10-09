@@ -122,6 +122,7 @@
 .tb-freelancersearch{
     .tb-bestservice{
         box-shadow: none;
+        border-radius: 4px;
         + .tb-bestservice{margin-top: 20px}
     }
     .tb-bestservicedetail{
@@ -156,9 +157,6 @@
     }
 }
 // Search Task
-.tk-tasks-listv2{
-    .tb-pagination{padding-top: 10px;}
-}
 .tk-topservice{
     padding: 9px;
     overflow: hidden;
@@ -377,7 +375,6 @@
 }
 .tk-featureRating {
     margin-top: 14px;
-    z-index: 111;
     display: flex;
     align-items: center;
     flex-wrap: wrap;

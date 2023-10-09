@@ -963,7 +963,7 @@ address{margin-bottom: 0;}
         padding: 0;
     }
 }
-.tk-yellow{color: $primary_color_02_base !important;}
+.tk-yellow{color: #FCCF14 !important;}
 .tk-orange{color: $orange !important;}
 .tk-anchor{color: $theme-color !important;}
 .tk-lightest_bg{background-color: $lightest !important;}
@@ -987,6 +987,7 @@ address{margin-bottom: 0;}
     }
     .tk-maintitle{padding-bottom: 0;}
 }
+
 .tk-maintitle{
     padding-bottom: 30px;
     h5,
@@ -1356,7 +1357,7 @@ address{margin-bottom: 0;}
     }
     &::after{
         content: "\e992";
-        font-family: "icomoon" !important;
+        font-family: "taskbot-icons" !important;
         display: inline-block;
         font-size: 20px;
         font-weight: 400;

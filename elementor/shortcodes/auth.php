@@ -91,10 +91,7 @@ if( !class_exists('Taskbot_Authentication') ){
 				'bg_image',
 				[
 					'label' => esc_html__( 'Background image', 'taskbot' ),
-					'type'  => Controls_Manager::MEDIA,
-					'default' => [
-						'url' => \Elementor\Utils::get_placeholder_image_src(),
-					],
+					'type'  => Controls_Manager::MEDIA
 				]
 			);
 
@@ -105,9 +102,6 @@ if( !class_exists('Taskbot_Authentication') ){
 				'type' => Controls_Manager::MEDIA,
 				'label' => __( 'Choose logo', 'taskbot' ),
 				'description' => esc_html__('Add logo. leave it empty to hide.', 'taskbot'),
-				'default' => [
-					'url' => \Elementor\Utils::get_placeholder_image_src(),
-				],
 				]
 			);
 

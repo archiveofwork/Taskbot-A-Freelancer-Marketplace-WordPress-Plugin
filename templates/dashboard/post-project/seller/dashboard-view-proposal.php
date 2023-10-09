@@ -22,11 +22,11 @@
                 <ul class="tk-template-view"> 
                     <?php do_action( 'taskbot_posted_date_html', $product );?>
                     <?php do_action( 'taskbot_location_html', $product );?>
-                    <?php do_action( 'taskbot_texnomies_html_v2', $product->get_id(),'expertise_level','icon-briefcase' );?>
+                    <?php do_action( 'taskbot_texnomies_html_v2', $product->get_id(),'expertise_level','tb-icon-briefcase' );?>
                     <?php do_action( 'taskbot_hiring_freelancer_html', $product );?>
                 </ul>
             </div>
-            <a href="javascript:void(0)" class="tk-sidebar-close"><i class="icon-x"></i></a>
+            <a href="javascript:void(0)" class="tk-sidebar-close"><i class="tb-icon-x"></i></a>
         </div>
     </div>
 </div>

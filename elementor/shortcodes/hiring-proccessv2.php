@@ -100,9 +100,6 @@ if (!class_exists('Taskbot_hiring_processv2')) {
                             'type'          => Controls_Manager::MEDIA,
                             'label'         => esc_html__('Upload image', 'taskbot'),
                             'description'   => esc_html__('Upload step image.', 'taskbot'),
-                            'default' => [
-                                'url' => \Elementor\Utils::get_placeholder_image_src(),
-                            ],
                         ],
                         [
                             'name'          => 'button_text',
@@ -119,6 +116,7 @@ if (!class_exists('Taskbot_hiring_processv2')) {
                     ]
                 ]
             );
+
             $this->add_control(
                 'title',
                 [
@@ -214,7 +212,7 @@ if (!class_exists('Taskbot_hiring_processv2')) {
                                                         <p><?php echo esc_html($details);?></p>
                                                     <?php } ?>
                                                     <?php if( !empty($step_button_text) ){?>
-                                                        <a href="<?php echo esc_url($step_button_link);?>"><?php echo esc_html($step_button_text);?> <i class="icon-chevron-right"></i></a>
+                                                        <a href="<?php echo esc_url($step_button_link);?>"><?php echo esc_html($step_button_text);?> <i class="tb-icon-chevron-right"></i></a>
                                                     <?php } ?>
                                                 </div>
                                                 <?php if( !empty($image) ){?>

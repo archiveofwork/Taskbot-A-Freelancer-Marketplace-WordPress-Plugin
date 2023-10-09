@@ -55,6 +55,29 @@ $taskbot_plan_icon_fields = array(
 		'default'  => true,
 		'desc'     => esc_html__( 'Allow tags while creating task', 'taskbot' )
 	),
+    array(
+        'id'       => 'task_description_length_option',
+        'type'     => 'switch',
+        'title'    => esc_html__( 'Enable/disable task description length', 'taskbot' ),
+        'default'  => false,
+        'desc'     => esc_html__( 'Enable/disable to add minimum and maximum description length while creating a task', 'taskbot' )
+    ),
+    array(
+        'id' => 'task_description_length',
+        'type' => 'slider',
+        'title' => __('Task description length', 'taskbot'),
+        'desc' => __(' Define the minimum and maximum task description word length', 'taskbot'),
+        'default' => array(
+            1 => 50,
+            2 => 500,
+        ),
+        'min' => 0,
+        'step' => 5,
+        'max' => 1000,
+        'display_value' => 'select',
+        'handles' => 2,
+        'required'  => array('task_description_length_option', '=', true),
+    ),
 	array(
 		'id'    	=> 'hide_product_cat',
 		'type'  	=> 'select',

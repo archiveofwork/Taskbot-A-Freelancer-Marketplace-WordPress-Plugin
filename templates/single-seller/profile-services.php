@@ -48,7 +48,7 @@ $taskbot_query = new WP_Query( apply_filters('taskbot_service_listings_args', $t
 							<a href="<?php echo get_the_permalink($post_id);?>">
 								<?php echo esc_html($user_name);?>
 								<?php if( !empty($is_verified) && $is_verified === 'yes'){?>
-									<i class="icon-check-circle" <?php echo apply_filters('taskbot_tooltip_attributes', 'verified_user');?>></i>
+									<i class="tb-icon-check-circle" <?php echo apply_filters('taskbot_tooltip_attributes', 'verified_user');?>></i>
 								<?php } ?>
 							</a>
 						<?php } ?>

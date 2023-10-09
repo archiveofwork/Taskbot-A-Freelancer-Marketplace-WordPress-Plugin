@@ -14,7 +14,7 @@
 global $taskbot_settings;
 $identity   = !empty($args['identity']) ? $args['identity'] : "";
 $order_id   = !empty($args['order_id']) ? $args['order_id'] : "";
-$site_logo  = !empty($taskbot_settings['defaul_site_logo']['url']) ? $taskbot_settings['defaul_site_logo']['url'] : '';
+$site_logo  = !empty($taskbot_settings['invoice_logo']['url']) ? $taskbot_settings['invoice_logo']['url'] : '';
 
 
 /* if order Id empty */

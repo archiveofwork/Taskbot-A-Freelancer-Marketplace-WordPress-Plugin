@@ -77,8 +77,9 @@ class Taskbot_Public {
         if( !is_page_template( 'templates/admin-dashboard.php') ) {
 			wp_register_style( 'bootstrap', plugin_dir_url( __FILE__ ) . 'css/bootstrap.min.css', array(), $this->version, 'all' );
             wp_register_style( 'fontawesome', plugin_dir_url( __FILE__ ) . 'css/fontawesome/all.min.css', array(), $this->version, 'all' );
-            wp_register_style( 'feather-icons', plugin_dir_url( __FILE__ ) . 'css/feather-icons.css', array(), $this->version, 'all' );
+            wp_register_style( 'taskbot-icons', plugin_dir_url( __FILE__ ) . 'css/taskbot-icons.css', array(), $this->version, 'all' );
             wp_register_style( 'owl.carousel', plugin_dir_url( __FILE__ ) . 'css/owl.carousel.min.css', array(), $this->version, 'all' );
+            wp_register_style( 'nouislider', plugin_dir_url( __FILE__ ) . 'css/nouislider.min.css', array(), $this->version, 'all' );
             wp_register_style( 'jquery-general', plugin_dir_url( __FILE__ ) . 'css/jquery-general.css', array(), $this->version, 'all' );
             wp_register_style( 'venobox', plugin_dir_url( __FILE__ ) . 'css/venobox.min.css', array(), $this->version, 'all' );
             wp_register_style( 'datetimepicker', plugin_dir_url( __FILE__ ) . 'css/datetimepicker.css', array(), $this->version, 'all' );
@@ -92,7 +93,7 @@ class Taskbot_Public {
             wp_register_style( 'taskbot-rtl-styles', plugin_dir_url( __FILE__ ) . 'css/rtl.css', array(), $this->version, 'all' );
 
 
-            //Default theme font famlies
+            //Default theme font families
             $font_families	= array();
             $font_families[] = 'Urbanist:400,500,600,700,900';
             $font_families[] = 'Playfair+Display:700';
@@ -108,8 +109,10 @@ class Taskbot_Public {
 		    wp_enqueue_style('taskbot-fonts-enqueue' , esc_url_raw($theme_fonts), array () , null);
 
             wp_enqueue_style( 'bootstrap' );
+            wp_enqueue_style( 'nouislider' );
+            wp_enqueue_style( 'select2' );
             wp_enqueue_style( 'fontawesome' );
-            wp_enqueue_style( 'feather-icons' );
+            wp_enqueue_style( 'taskbot-icons' );
             wp_enqueue_style( 'jquery-general' );
             wp_enqueue_style( 'mCustomScrollbar' );
             wp_enqueue_style( 'jquery-confirm' );
@@ -153,6 +156,8 @@ class Taskbot_Public {
             wp_register_script( 'popper', plugin_dir_url( __FILE__ ) . 'js/vendor/popper-core.js', array( 'jquery' ), $this->version, true );
 		    wp_register_script( 'tippy', plugin_dir_url( __FILE__ ) . 'js/vendor/tippy.js', array( 'jquery' ), $this->version, true );
             wp_register_script('owl.carousel', plugin_dir_url( __FILE__ ) . 'js/vendor/owl.carousel.min.js', array(), $this->version, true);
+            wp_register_script('nouislider', plugin_dir_url( __FILE__ ) . 'js/vendor/nouislider.min.js', array(), $this->version, true);
+            wp_register_script('particles', plugin_dir_url( __FILE__ ) . 'js/vendor/particles.min.js', array(), $this->version, true);
             wp_register_script('mCustomScrollbar', plugin_dir_url( __FILE__ ) . 'js/vendor/jquery.mCustomScrollbar.concat.min.js', array(), $this->version, true);
             wp_register_script('sortable', plugin_dir_url( __FILE__ ) . 'js/vendor/sortable.min.js', array(), $this->version, true);
             wp_register_script('tagify', plugin_dir_url( __FILE__ ) . 'js/vendor/tagify.min.js', array(), $this->version, true);           
@@ -176,6 +181,8 @@ class Taskbot_Public {
 
             wp_enqueue_script('bootstrap');
             wp_enqueue_script('jquery.ui.touch-punch');
+            wp_enqueue_script('nouislider');
+            wp_enqueue_script('select2');
             wp_enqueue_script('readmore');
             wp_enqueue_script('popper');
             wp_enqueue_script('tippy');
@@ -184,8 +191,6 @@ class Taskbot_Public {
 
             if( is_page_template( 'templates/dashboard.php') || is_page_template( 'templates/add-task.php') || is_page_template( 'templates/add-project.php') || is_page_template( 'templates/search-task.php') || is_page_template( 'templates/search-projects.php') ) {
                 wp_enqueue_script('plupload');
-                wp_enqueue_style( 'select2' );
-                wp_enqueue_script('select2');
                 wp_enqueue_script( 'linkify' );
                 wp_enqueue_script( 'linkify-jquery' );
 
@@ -300,7 +305,6 @@ class Taskbot_Public {
                 'deactivate_account_message'    => esc_html__('Are you sure, you want to deactivate this account?', 'taskbot'),
                 'edu_date_error_title'          => esc_html__('Education','taskbot'),
                 'load_more'                     => esc_html__('Load more','taskbot'),
-                'show_less'                     => esc_html__('Show Less','taskbot'),
                 'edu_date_error'                => esc_html__('Please add a vaild dates','taskbot'),
                 'upload_max_images'             => esc_html__('Please upload files up to ','taskbot'),
                 'date_format'                   => $date_format,
@@ -345,7 +349,7 @@ class Taskbot_Public {
                 'current_user_key'              => $current_user_key,
                 'remove_project'                => esc_html__('Remove project', 'taskbot'),
                 'remove_project_message'        => esc_html__('Are you sure, you want to remove this project?', 'taskbot'),
-                'languages_option'              => esc_html__('Select languages from the list', 'taskbot'),
+                'languages_option'              => esc_html__('Select languages', 'taskbot'),
                 'skills_option'                 => esc_html__('Select skills from the list', 'taskbot'),
                 'seller_skills_option'          => esc_html__('Select seller skills from the list', 'taskbot'),
                 'expertise_level_option'        => esc_html__('Select expertise level', 'taskbot'),
@@ -403,8 +407,6 @@ class Taskbot_Public {
         ){
             wp_enqueue_style('splide');
             wp_enqueue_script('splide');
-            wp_enqueue_style('splide');
-            wp_enqueue_script('splide');
         }
 
         if($widget_name === 'taskbot_element_services_slider'){
@@ -427,6 +429,10 @@ class Taskbot_Public {
             wp_enqueue_script('google-signin-gconnect-js');
         }
 
+        if($widget_name === 'taskup_mailchimp'){
+            wp_enqueue_script('particles');
+        }
+
         return $content;
     }
 }
@@ -440,7 +446,7 @@ if (!function_exists('taskbot_delete_wp_user')) {
 	function taskbot_delete_wp_user($user_id)
 	{        
         $seller_profile = get_user_meta($user_id, '_linked_profile', true);
-        $buyer_profile  = get_user_meta($id, '_linked_profile_buyer', true);
+        $buyer_profile  = get_user_meta($user_id, '_linked_profile_buyer', true);
 		if (!empty($buyer_profile)) {
 			wp_delete_post($buyer_profile, true);
 		}

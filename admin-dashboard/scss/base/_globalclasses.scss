@@ -98,6 +98,7 @@ address{margin-bottom: 0;}
         @extend %transition;
         text-align:center;
         line-height: 42px;
+        border-radius: 4px;
         border:1px solid $border-color;
         color: #999;
         background-color: #fff;
@@ -233,12 +234,13 @@ address{margin-bottom: 0;}
     width: auto;
     a,
     span{
+        border-radius: 4px;
         padding: 4px 11.79px;
         font: 500 rem(12)/em(14,12) $body-font-family;
         border:1px solid #fddb5b;
         text-transform: capitalize;
         color: $body-font-color;
-        display: inline-block;
+        flex: none;
     }
 }
 .tb-canceled{
@@ -748,6 +750,7 @@ address{margin-bottom: 0;}
 }
 .tb-dbholder{
     @extend %border;
+    border-radius: 4px;
     background-color: #fff;
     .tb-tabfilter{
         border-top: 0;
@@ -778,6 +781,7 @@ address{margin-bottom: 0;}
 .tb-dbboxtitle{
     padding-top: 26px;
     padding-bottom: 26px;
+    border-radius: 10px 10px 0 0;
     h5{
        font: 700 rem(18)/em(26,18) $heading-font-family;
        margin: 0;

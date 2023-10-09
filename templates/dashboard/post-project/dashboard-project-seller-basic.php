@@ -51,7 +51,7 @@ do_action('taskbot_project_completed_form',$args);
         </strong>
         <?php if( !empty($proposal_status) && in_array($proposal_status,array('hired','cancelled')) ){?>
             <div class="tk-projectsstatus_option">
-                <a href="javascript:void(0);"><i class="icon-more-horizontal"></i></a>
+                <a href="javascript:void(0);"><i class="tb-icon-more-horizontal"></i></a>
                 <ul class="tk-contract-list">
                     <?php if( !empty($proposal_status) && $proposal_status === 'hired' ){?>
                         <?php if( !empty($complete_option) && $complete_option === 'yes' ){?>
@@ -78,7 +78,7 @@ do_action('taskbot_project_completed_form',$args);
         <div class="modal-content">
             <div class="tb-popuptitle">
                 <h4><?php esc_html_e('Create refund request', 'taskbot') ?></h4>
-                <a href="javascript:void(0);" class="close"><i class="icon-x" data-bs-dismiss="modal"></i></a>
+                <a href="javascript:void(0);" class="close"><i class="tb-icon-x" data-bs-dismiss="modal"></i></a>
             </div>
             <div class="modal-body">
                 <div class="tb-popupbodytitle">

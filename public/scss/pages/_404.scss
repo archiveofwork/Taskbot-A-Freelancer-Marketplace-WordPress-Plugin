@@ -8,3 +8,16 @@
         margin-bottom: 36px;
     }
 }
+.tk-errorpage{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .tu-formtheme{
+        width: 100%;
+    }
+}
+.tk-notfound-title{
+    h4,p,h2{
+        text-align: center;
+    }
+}

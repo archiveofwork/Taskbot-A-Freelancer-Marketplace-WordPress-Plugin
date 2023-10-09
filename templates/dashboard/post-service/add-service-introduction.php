@@ -137,7 +137,6 @@ $country_class = "form-group-half";
             <div class="form-group form-group_vertical">
                 <label class="form-group-title"><?php esc_html_e('Task introduction', 'taskbot'); ?></label>
                 <textarea class="form-control" name="taskbot_service[post_content]" placeholder="<?php esc_attr_e('Enter description', 'taskbot'); ?>"><?php echo do_shortcode($service_content);?></textarea>
-                <span class="form-characters"><?php esc_html_e('max 500 characters', 'taskbot'); ?></span>
             </div>
             <div class="form-group form-group_vertical">
                 <label class="form-group-title"><?php esc_html_e('Tags', 'taskbot'); ?>:</label>
@@ -159,6 +158,7 @@ $script = "
     jQuery(document).on('ready', function(){
         if ( $.isFunction($.fn.select2) ) {
             jQuery('.tb-service-select2').select2({
+                theme: 'default tk-select2-dropdown',
                 multiple: true,
                 placeholder: scripts_vars.service_type
             });

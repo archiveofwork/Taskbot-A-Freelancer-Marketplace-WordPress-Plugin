@@ -61,6 +61,14 @@
                 return ['taskbot-elements'];
             }
 
+            public function get_style_depends() {
+                return [ 'splide'];
+            }
+
+            public function get_script_depends() {
+                return [ 'splide'];
+            }
+
             /**
             * Register category controls.
             * @since    1.0.0
@@ -89,6 +97,24 @@
                         'label'       => esc_html__('Title', 'taskbot'),
                         'description' => esc_html__('Add title. leave it empty to hide.', 'taskbot'),
                         'label_block' => true,
+                    ]
+                );
+
+                $this->add_control(
+                    'separator',
+                    [
+                        'type'          => Controls_Manager::SWITCHER,
+                        'label'         => esc_html__('Separator', 'taskbot'),
+                        'label_on'      => esc_html__( 'Show', 'taskbot' ),
+                        'label_off'     => esc_html__( 'Hide', 'taskbot' ),
+                        'return_value'  => 'yes',
+                        'selectors' => [
+                            '{{WRAPPER}} .tk-maintitle:after' => 'content: "";',
+                        ],
+                        'prefix_class' => 'tk-title-separator-',
+                        'condition' => [
+                            'title!' => ' ',
+                        ],
                     ]
                 );
     
@@ -355,7 +381,7 @@
                                                                         <h5>
                                                                             <a href="<?php echo get_the_permalink($linked_profile_id); ?>"><?php echo esc_html($user_name); ?></a>
                                                                             <?php if( !empty($verified_user) && $verified_user === 'yes' ){?>
-                                                                                <i class="icon-check-circle tk-green"></i>
+                                                                                <i class="tb-icon-check-circle tk-green"></i>
                                                                             <?php } ?>
                                                                         </h5>
                                                                     <?php } ?>
@@ -363,7 +389,7 @@
                                                                     <?php do_action('taskbot_service_rating_count_theme_v2', $product); ?>
                                                                     <?php do_action('taskbot_service_item_starting_price_theme', $product); ?>
                                                                     <?php do_action( 'taskbot_saved_item_theme', $product->get_id(),'','_saved_tasks' );?>
-                                                                    <a href="<?php the_permalink();?>" class="tk-btn-solid-lg"><?php esc_html_e('Hire me for your task','taskbot');?>&nbsp;<i class="icon-arrow-right"></i></a>
+                                                                    <a href="<?php the_permalink();?>" class="tk-btn-solid-lg"><?php esc_html_e('Hire me for your task','taskbot');?>&nbsp;<i class="tb-icon-arrow-right"></i></a>
                                                                 </div>
                                                             </div>
                                                         <?php } ?>
@@ -376,7 +402,7 @@
                                 </div>
                                 <?php if( !empty($layout_type) && $layout_type === 'v2' && !empty($button_text)){?>
                                     <div class="tk-btn-wrapper">
-                                        <a href="<?php echo esc_url($button_link);?>" class="tk-btn-line-lg tk-btn-plain"><?php echo esc_html($button_text);?><i class="icon-chevron-right"></i></a>
+                                        <a href="<?php echo esc_url($button_link);?>" class="tk-btn-line-lg tk-btn-plain"><?php echo esc_html($button_text);?><i class="tb-icon-chevron-right"></i></a>
                                     </div>
                                 <?php } ?>
                             <?php }?>

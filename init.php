@@ -16,7 +16,7 @@
  * Plugin Name:       Taskbot - Freelance and Jobs Marketplace
  * Plugin URI:        https://codecanyon.net/user/amentotech/portfolio
  * Description:       Taskbot is a Freelancer Marketplace WordPress plugin to post task and projects. This system would allow the sellers and buyers to register and create their profiles in a few simple steps. Sellers can create the task and get online orders for the posted task.
- * Version:           5.9
+ * Version:           6.0
  * Author:            Amentotech Private Limited
  * Author URI:        https://codecanyon.net/user/amentotech/portfolio/
  * Text Domain:       taskbot
@@ -47,7 +47,7 @@ if( !function_exists( 'taskbot_load_last' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'TASKBOT_VERSION', '5.9' );
+define( 'TASKBOT_VERSION', '6.0' );
 define( 'TASKBOT_DIRECTORY', plugin_dir_path( __FILE__ ));
 define( 'TASKBOT_DIRECTORY_URI', plugin_dir_url( __FILE__ ));
 define( 'TASKBOT_ACTIVE_THEME_DIRECTORY', get_stylesheet_directory());
@@ -104,6 +104,11 @@ require plugin_dir_path( __FILE__ ) . 'import-users/class-readcsv.php';
 require plugin_dir_path( __FILE__ ) . 'includes/migration.php';
 include taskbot_load_template( 'import-users/class-import-user' );
 require plugin_dir_path( __FILE__ ) . 'widgets/class-footer-info.php';
+require plugin_dir_path( __FILE__ ) . 'widgets/class-footer-app-info.php';
+require plugin_dir_path( __FILE__ ) . 'widgets/class-footer-contact-info.php';
+require plugin_dir_path( __FILE__ ) . 'widgets/class-nav-menu-widget.php';
+require plugin_dir_path( __FILE__ ) . 'widgets/class-recent-posts.php';
+require plugin_dir_path( __FILE__ ) . 'widgets/class-news-letters.php';
 
 include taskbot_load_template( 'libraries/mailchimp/class-mailchimp' );
 require plugin_dir_path( __FILE__ ) . 'libraries/mailchimp/class-mailchimp-oath.php';

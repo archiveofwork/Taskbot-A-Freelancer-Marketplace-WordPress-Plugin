@@ -97,7 +97,7 @@ while (have_posts()) : the_post();
 	$vid_url		= !empty($product_data['video_url']) ? esc_url($product_data['video_url']) : '';
 		
 	?>
-	<section class="tb-main overflow-hidden tb-main-bg">
+	<section class="tb-main-section overflow-hidden tb-main-bg">
 		<div class="container">
 			<?php
 				if( empty($allow_user) ){
@@ -181,7 +181,7 @@ while (have_posts()) : the_post();
 												<p><?php echo sprintf(esc_html__('Download project helping material provided by “%s”','taskbot'),$user_name);?></p>
 											</div>
 											<div class="tk-downloadbtn">
-												<span class="tk-btn-solid-lefticon <?php echo esc_attr($download_class);?>" data-id="<?php echo intval($product->get_id());?>" data-order_id=""><?php esc_html_e('Download files','taskbot');?> <i class="icon-download"></i></span>
+												<span class="tk-btn-solid-lefticon <?php echo esc_attr($download_class);?>" data-id="<?php echo intval($product->get_id());?>" data-order_id=""><?php esc_html_e('Download files','taskbot');?> <i class="tb-icon-download"></i></span>
 											</div>
 										</div>
 									</div>
@@ -219,9 +219,9 @@ while (have_posts()) : the_post();
                                     </div>
                                     <ul class="tk-project-requirement">
                                        <?php do_action( 'taskbot_total_hiring_freelancer_html', $product->get_id() );?>
-									   <?php do_action( 'taskbot_texnomies_html', $product->get_id(),'expertise_level',esc_html__('Expertise','taskbot'),'icon-briefcase tk-darkred-icon' );?>
-                                       <?php do_action( 'taskbot_texnomies_html', $product->get_id(),'languages',esc_html__('Languages','taskbot'),'icon-book-open tk-yellow-icon' );?>
-                                       <?php do_action( 'taskbot_texnomies_html', $product->get_id(),'duration',esc_html__('Project duration','taskbot'),'icon-calendar tk-green-icon' );?>
+									   <?php do_action( 'taskbot_texnomies_html', $product->get_id(),'expertise_level',esc_html__('Expertise','taskbot'),'tb-icon-briefcase tk-darkred-icon' );?>
+                                       <?php do_action( 'taskbot_texnomies_html', $product->get_id(),'languages',esc_html__('Languages','taskbot'),'tb-icon-book-open tk-yellow-icon' );?>
+                                       <?php do_action( 'taskbot_texnomies_html', $product->get_id(),'duration',esc_html__('Project duration','taskbot'),'tb-icon-calendar tk-green-icon' );?>
 									   <?php do_action( 'taskbot_after_project_requirements', $product->get_id());?>
                                     </ul>
                                 </div>

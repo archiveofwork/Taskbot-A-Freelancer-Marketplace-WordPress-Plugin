@@ -12,7 +12,7 @@
 
 global $current_user;
 $user_identity = $current_user->ID;
-$icon           = 'icon-server';
+$icon           = 'tb-icon-server';
 $account_blance = taskbot_account_details($user_identity,array('wc-completed'),'hired');
 $page_url       = Taskbot_Profile_Menu::taskbot_profile_menu_link('earnings', $user_identity, true);
 ?>

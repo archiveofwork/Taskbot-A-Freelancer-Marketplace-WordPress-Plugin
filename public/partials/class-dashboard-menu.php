@@ -18,6 +18,7 @@ if (!class_exists('Taskbot_Profile_Menu')) {
         public function __construct() {
 
 			add_action('taskbot_process_headers_menu', array(__CLASS__, 'taskbot_profile_menu'));
+			add_action('taskbot_process_headers_sub_menu', array(__CLASS__, 'taskbot_profile_sub_menu'));
         }
 
 		/**
@@ -40,16 +41,16 @@ if (!class_exists('Taskbot_Profile_Menu')) {
 				'dashboard'	=> array(
 					'title' 	=> esc_html__('Dashboard', 'taskbot'),
 					'class'		=> 'tb-dashboard',
-					'icon'		=> 'icon-archive',
+					'icon'		=> 'tb-icon-archive',
 					'type'		=> 'none',
-					'ref'		=> 'dashboard',
+					'ref'		=> 'earnings',
 					'mode'		=> 'insights',
 					'sortorder'	=> 1,
 				),
 				'disputes'	=> array(
 					'title' 	=> esc_html__('Disputes', 'taskbot'),
 					'class'		=> 'tb-dispute',
-					'icon'		=> 'icon-alert-circle',
+					'icon'		=> 'tb-icon-alert-circle',
 					'type'		=> 'none',
 					'ref'		=> 'disputes',
 					'mode'		=> 'listing',
@@ -58,7 +59,7 @@ if (!class_exists('Taskbot_Profile_Menu')) {
 				'earings'	=> array(
 					'title' 	=> esc_html__('Manage earnings', 'taskbot'),
 					'class'		=> 'tb-earnings',
-					'icon'		=> 'icon-credit-card',
+					'icon'		=> 'tb-icon-credit-card',
 					'type'		=> 'none',
 					'ref'		=> 'earnings',
 					'mode'		=> 'manage',
@@ -67,7 +68,7 @@ if (!class_exists('Taskbot_Profile_Menu')) {
 				'task'	=> array(
 					'title' 	=> esc_html__('Manage task', 'taskbot'),
 					'class'		=> 'tb-tasks',
-					'icon'		=> 'icon-activity',
+					'icon'		=> 'tb-icon-activity',
 					'type'		=> 'none',
 					'ref'		=> 'task',
 					'mode'		=> 'listing',
@@ -76,7 +77,7 @@ if (!class_exists('Taskbot_Profile_Menu')) {
 				'projects'	=> array(
 					'title' 	=> esc_html__('Manage projects', 'taskbot'),
 					'class'		=> 'tb-tasks',
-					'icon'		=> 'icon-grid',
+					'icon'		=> 'tb-icon-grid',
 					'type'		=> 'none',
 					'ref'		=> 'projects',
 					'mode'		=> 'listing',
@@ -85,7 +86,7 @@ if (!class_exists('Taskbot_Profile_Menu')) {
 				'logout'	=> array(
 					'title' 	=> esc_html__('Logout', 'taskbot'),
 					'class'		=> 'tb-notification',
-					'icon'		=> 'icon-power',
+					'icon'		=> 'tb-icon-power',
 					'ref'		=> 'logout',
 					'mode'		=> '',
 					'type'		=> 'none',
@@ -96,7 +97,7 @@ if (!class_exists('Taskbot_Profile_Menu')) {
 				$taskbot_menu_list['inbox']	= array(
 					'title' 	=> esc_html__('Inbox', 'taskbot'),
 					'class'		=> 'tb-dispute',
-					'icon'		=> 'icon-message-square',
+					'icon'		=> 'tb-icon-message-square',
 					'type'		=> 'none',
 					'ref'		=> 'inbox',
 					'mode'		=> 'listing',
@@ -111,41 +112,108 @@ if (!class_exists('Taskbot_Profile_Menu')) {
 			global $taskbot_settings,$taskbot_notification,$current_user;
 			$app_task_base      = taskbot_application_access('task');
 			$app_project_base   = taskbot_application_access('project');
+
 			$taskbot_menu_list = array(
+				'find-projects'	=> array(
+					'title' => esc_html__('Explore all projects', 'taskbot'),
+					'class'		=> 'tb-find-projects',
+					'icon'		=> '',
+					'ref'		=> 'find-project',
+					'mode'		=> '',
+					'sortorder'	=> 3,
+					'type'		=> 'sellers',
+				),
+			);
+
+			$user_type		 = apply_filters('taskbot_get_user_type', $current_user->ID );
+			
+			if( !empty($user_type) && $user_type === 'buyers'){
+				$taskbot_menu_list['find-task']	= array(
+					'title' 	=> esc_html__('Find tasks', 'taskbot'),
+					'class'		=> 'tb-search-task',
+					'icon'		=> '',
+					'sortorder'	=> 0,
+					'ref'		=> 'find-task',
+					'mode'		=> '',
+					'type'		=> 'buyers'
+				);
+
+				$taskbot_menu_list['find-sellers']	= array(
+					'title' 	=> esc_html__('Find sellers', 'taskbot'),
+					'class'		=> 'tb-search-seller',
+					'icon'		=> '',
+					'sortorder'	=> 0,
+					'ref'		=> 'find-sellers',
+					'mode'		=> '',
+					'type'		=> 'buyers'
+				);
+			}
+
+
+			if( empty($app_project_base) ){
+				unset($taskbot_menu_list['find-projects']);
+			}
+			
+			if( empty($app_task_base) ){
+				unset($taskbot_menu_list['find-task']);
+			}
+
+			if(!empty($taskbot_notification['notify_module'])){
+				$taskbot_menu_list['notifications']	= array(
+					'title' 	=> '',
+					'class'		=> 'tb-menu-notifications',
+					'icon'		=> '',
+					'type'		=> 'none',
+					'ref'		=> 'notifications',
+					'mode'		=> '',
+					'sortorder'	=> 6,
+				);
+			}
+
+			if((in_array('wp-guppy/wp-guppy.php', apply_filters('active_plugins', get_option('active_plugins'))) || in_array('wpguppy-lite/wpguppy-lite.php', apply_filters('active_plugins', get_option('active_plugins'))))){
+				$taskbot_menu_list['inbox']	= array(
+					'title' 	=> esc_html__('', 'taskbot'),
+					'class'		=> 'tb-inbox',
+					'icon'		=> 'tb-icon-message-square',
+					'type'		=> 'none',
+					'ref'		=> 'inbox',
+					'mode'		=> '',
+					'sortorder'	=> 7,
+				);
+			}
+
+			
+			$taskbot_menu_list 	= apply_filters('taskbot_filter_dashboard_menu', $taskbot_menu_list);
+			return $taskbot_menu_list;
+		}
+
+		public static function taskbot_get_dashboard_sub_menu() {
+			global $taskbot_settings,$taskbot_notification,$current_user;
+			$app_task_base      = taskbot_application_access('task');
+			$app_project_base   = taskbot_application_access('project');
+			$taskbot_menu_list = array(
+				'earnings'	=> array(
+					'title' 	=> esc_html__('Insights', 'taskbot'),
+					'class'		=> 'tb-earnings',
+					'icon'		=> 'tb-icon-layers',
+					'type'		=> 'sellers',
+					'ref'		=> 'earnings',
+					'mode'		=> '',
+					'sortorder'	=> 1,
+				),
 				'manageprojects'	=> array(
 					'title' 	=> esc_html__('Manage projects', 'taskbot'),
-					'class'		=> 'tb-manageprojects',
-					'icon'		=> '',
+					'class'		=> 'tb-projectlistings',
+					'icon'		=> 'tb-icon-external-link',
 					'type'		=> 'buyers',
-					'ref'		=> '',
-					'mode'		=> '',
+                    'ref'		=> 'projects',
+                    'mode'		=> 'listing',
 					'sortorder'	=> 2,
-					'submenu'	=> apply_filters('taskbot_dasboard_projects_menu_filter', array(
-							'create_project'	=> array(
-								'title' 	=> esc_html__('Create a new project', 'taskbot'),
-								'class'		=> 'tb-project-creation',
-								'icon'		=> '',
-								'ref'		=> 'create_project',
-								'mode'		=> '',
-								'sortorder'	=> 2,
-								'type'		=> 'buyers',
-							),
-							'projectlistings'	=> array(
-								'title' => esc_html__('My projects', 'taskbot'),
-								'class'	=> 'tb-projectlistings',
-								'icon'	=> '',
-								'ref'		=> 'projects',
-								'mode'		=> 'listing',
-								'sortorder'	=> 3,
-								'type'		=> 'buyers',
-							),
-						)
-					),
 				),
 				'manage-projects'	=> array(
 					'title' 	=> esc_html__('Manage projects', 'taskbot'),
 					'class'		=> 'tb-manageprojects',
-					'icon'		=> '',
+					'icon'		=> 'tb-icon-external-link',
 					'type'		=> 'sellers',
 					'ref'		=> '',
 					'mode'		=> '',
@@ -175,7 +243,7 @@ if (!class_exists('Taskbot_Profile_Menu')) {
 				'managetasks'	=> array(
 					'title' 	=> esc_html__('Manage task', 'taskbot'),
 					'class'		=> 'tb-managetask',
-					'icon'		=> '',
+					'icon'		=> 'tb-icon-file-text',
 					'type'		=> 'sellers',
 					'ref'		=> '',
 					'mode'		=> '',
@@ -212,25 +280,33 @@ if (!class_exists('Taskbot_Profile_Menu')) {
 						)
 					),
 				),
-				'earnings'	=> array(
-					'title' 	=> esc_html__('Earnings', 'taskbot'),
-					'class'		=> 'tb-earnings',
-					'icon'		=> '',
-					'type'		=> 'sellers',
-					'ref'		=> 'earnings',
-					'mode'		=> '',
-					'sortorder'	=> 4,
-				),
 				'myorders'	=> array(
 					'title' 	=> esc_html__('Manage task', 'taskbot'),
 					'class'		=> 'tb-myorders',
-					'icon'		=> '',
+					'icon'		=> 'tb-icon-file-text',
 					'type'		=> 'buyers',
 					'ref'		=> 'tasks-orders',
-					'mode'		=> '',
+					'mode'		=> 'listing',
 					'sortorder'	=> 5,
 				),
-
+				'disputes'		=> array(
+					'title' 	=> esc_html__('Disputes', 'taskbot'),
+					'class'		=> 'tb-disputes',
+					'icon'		=> 'tb-icon-refresh-ccw',
+					'ref'		=> 'disputes',
+					'mode'		=> 'listing',
+					'sortorder'	=> 5,
+					'type'		=> 'none',
+				),
+				'invoices'	=> array(
+					'title' 	=> esc_html__('Invoices', 'taskbot'),
+					'class'		=> 'tb-invoices',
+					'icon'		=> 'tb-icon-shopping-bag',
+					'ref'		=> 'invoices',
+					'mode'		=> 'listing',
+					'sortorder'	=> 6,
+					'type'		=> 'none',
+				),
 			);
 
 			if( empty($app_project_base) ){
@@ -241,42 +317,6 @@ if (!class_exists('Taskbot_Profile_Menu')) {
 			if( empty($app_task_base) ){
 				unset($taskbot_menu_list['myorders']);
 				unset($taskbot_menu_list['managetasks']);
-			}
-
-			if(!empty($taskbot_notification['notify_module'])){
-				$taskbot_menu_list['notifications']	= array(
-					'title' 	=> '',
-					'class'		=> 'tb-menu-notifications',
-					'icon'		=> '',
-					'type'		=> 'none',
-					'ref'		=> 'notifications',
-					'mode'		=> '',
-					'sortorder'	=> 6,
-				);
-			}
-			if((in_array('wp-guppy/wp-guppy.php', apply_filters('active_plugins', get_option('active_plugins'))) || in_array('wpguppy-lite/wpguppy-lite.php', apply_filters('active_plugins', get_option('active_plugins'))))){
-				$taskbot_menu_list['inbox']	= array(
-					'title' 	=> esc_html__('', 'taskbot'),
-					'class'		=> 'tb-inbox',
-					'icon'		=> 'icon-message-square',
-					'type'		=> 'none',
-					'ref'		=> 'inbox',
-					'mode'		=> '',
-					'sortorder'	=> 7,
-				);
-			}
-
-			$user_type		 = apply_filters('taskbot_get_user_type', $current_user->ID );
-			if( !empty($user_type) && $user_type === 'buyers'){
-				$taskbot_menu_list['find-task']	= array(
-					'title' 	=> esc_html__('Find tasks', 'taskbot'),
-					'class'		=> 'tb-search-task',
-					'icon'		=> '',
-					'sortorder'	=> 0,
-					'ref'		=> 'find-task',
-					'mode'		=> '',
-					'type'		=> 'buyers'
-				);
 			}
 
 			if( empty($app_task_base) ){
@@ -313,7 +353,7 @@ if (!class_exists('Taskbot_Profile_Menu')) {
 				'profile'	=> array(
 					'title' 	=> esc_html__('View profile', 'taskbot'),
 					'class'		=> 'tb-view-profile',
-					'icon'		=> 'icon-external-link',
+					'icon'		=> 'tb-icon-external-link',
 					'data-attr'		=> array('target'=> '_blank'),
 					'type'		=> 'sellers',
 					'ref'		=> 'profile',
@@ -323,9 +363,9 @@ if (!class_exists('Taskbot_Profile_Menu')) {
 				'dashboard'	=> array(
 					'title' 	=> esc_html__('Dashboard', 'taskbot'),
 					'class'		=> 'tb-dashboard',
-					'icon'		=> 'icon-layers',
+					'icon'		=> 'tb-icon-layers',
 					'type'		=> 'none',
-					'ref'		=> 'dashboard',
+					'ref'		=> 'earnings',
 					'mode'		=> 'insights',
 					'sortorder'	=> 1,
 				),
@@ -333,34 +373,17 @@ if (!class_exists('Taskbot_Profile_Menu')) {
 				'settings'	=> array(
 					'title' 	=> esc_html__('Settings', 'taskbot'),
 					'class'		=> 'tb-account-settings',
-					'icon'		=> 'icon-settings',
+					'icon'		=> 'tb-icon-settings',
 					'sortorder'	=> 4,
 					'ref'		=> 'dashboard',
 					'mode'		=> 'profile',
 					'type'		=> 'none',
 				),
-				'disputes'		=> array(
-					'title' 	=> esc_html__('Disputes', 'taskbot'),
-					'class'		=> 'tb-disputes',
-					'icon'		=> 'icon-refresh-ccw',
-					'ref'		=> 'disputes',
-					'mode'		=> 'listing',
-					'sortorder'	=> 5,
-					'type'		=> 'none',
-				),
-				'invoices'	=> array(
-					'title' 	=> esc_html__('Invoices', 'taskbot'),
-					'class'		=> 'tb-invoices',
-					'icon'		=> 'icon-shopping-bag',
-					'ref'		=> 'invoices',
-					'mode'		=> 'listing',
-					'sortorder'	=> 6,
-					'type'		=> 'none',
-				),
+				
 				'saveditems'	=> array(
 					'title' 	=> esc_html__('Saved items', 'taskbot'),
 					'class'		=> 'tb-saveditems',
-					'icon'		=> 'icon-heart',
+					'icon'		=> 'tb-icon-heart',
 					'ref'		=> 'saved',
 					'mode'		=> 'listing',
 					'sortorder'	=> 7,
@@ -369,7 +392,7 @@ if (!class_exists('Taskbot_Profile_Menu')) {
 				'logout'		=> array(
 					'title' 	=> esc_html__('Logout', 'taskbot'),
 					'class'		=> 'tb-logout',
-					'icon'		=> 'icon-power',
+					'icon'		=> 'tb-icon-power',
 					'ref'		=> 'logout',
 					'mode'		=> '',
 					'sortorder'	=> 9,
@@ -386,7 +409,7 @@ if (!class_exists('Taskbot_Profile_Menu')) {
 				$taskbot_menu_list['packages']	= array(
 					'title' 	=> esc_html__('Packages', 'taskbot'),
 					'class'		=> 'tb-earnings',
-					'icon'		=> 'icon-package',
+					'icon'		=> 'tb-icon-package',
 					'ref'		=> 'packages',
 					'mode'		=> '',
 					'sortorder'	=> 3,
@@ -398,7 +421,7 @@ if (!class_exists('Taskbot_Profile_Menu')) {
 				$taskbot_menu_list['packages']	= array(
 					'title' 	=> esc_html__('Packages', 'taskbot'),
 					'class'		=> 'tb-earnings',
-					'icon'		=> 'icon-package',
+					'icon'		=> 'tb-icon-package',
 					'ref'		=> 'packages',
 					'mode'		=> '',
 					'sortorder'	=> 3,
@@ -413,7 +436,7 @@ if (!class_exists('Taskbot_Profile_Menu')) {
 				$taskbot_menu_list['verification']	= array(
 					'title' 	=> esc_html__('Identity verification', 'taskbot'),
 					'class'		=> 'tb-earnings'.' '.$identity_verified,
-					'icon'		=> 'icon-user-check',
+					'icon'		=> 'tb-icon-user-check',
 					'ref'		=> 'dashboard',
 					'mode'		=> 'verification',
 					'sortorder'	=> 3,
@@ -421,11 +444,14 @@ if (!class_exists('Taskbot_Profile_Menu')) {
 				);
 			}
 
+            $user_type		 = apply_filters('taskbot_get_user_type', $current_user->ID );
+
 			if( !empty($switch_user) ){
 				$taskbot_menu_list['switch']	= array(
-					'title' 	=> esc_html__('Switch profile', 'taskbot'),
+//					'title' 	=> esc_html__('Switch profile', 'taskbot'),
+                    'title' 	=> $user_type === 'buyers' ? __('Switch to seller','taskbot') : __('Switch to buyer','taskbot'),
 					'class'		=> 'tb-earnings tb_switch_user',
-					'icon'		=> 'icon-repeat',
+					'icon'		=> 'tb-icon-repeat',
 					'data-attr'		=> array('data-id'=> $current_user->ID),
 					'ref'		=> '',
 					'mode'		=> '',
@@ -469,7 +495,7 @@ if (!class_exists('Taskbot_Profile_Menu')) {
 					'dashboard/menus/menus.php', $taskbot_menu_args
 				);
 			} else if(is_admin()){
-			//current_user_can('administrator')
+				//current_user_can('administrator')
 			} else {
 				taskbot_get_template(
 					'dashboard/menus/primary-menu.php'
@@ -478,6 +504,40 @@ if (!class_exists('Taskbot_Profile_Menu')) {
 
             $data	= ob_get_clean();
 			echo apply_filters( 'taskbot_profile_menu', $data );
+        }
+
+		/**
+		 * Profile sub menu
+		 *
+		 * @throws error
+		 * @author Amentotech <theamentotech@gmail.com>
+		 * @return
+		 */
+        public static function taskbot_profile_sub_menu() {
+            global $current_user, $wp_roles, $userdata, $post;
+			$user_identity 	 = intval($current_user->ID);
+
+			$url_identity = $user_identity;
+			if (isset($_GET['identity']) && !empty($_GET['identity'])) {
+				$url_identity = intval($_GET['identity']);
+			}
+
+			$taskbot_user_role = apply_filters('taskbot_get_user_type', $user_identity);
+			ob_start();
+
+			if($taskbot_user_role == 'sellers' || $taskbot_user_role == 'buyers'){
+				$taskbot_menu_args = array(
+					'user_identity'		=> $user_identity,
+					'taskbot_user_role'	=> $taskbot_user_role,
+				);
+
+				//manage services template
+				taskbot_get_template(
+					'dashboard/menus/sub-menus.php', $taskbot_menu_args
+				);
+			}
+            $data	= ob_get_clean();
+			echo apply_filters( 'taskbot_profile_sub_menus', $data );
         }
 
 		/**

@@ -13,7 +13,7 @@
 global $current_user,$taskbot_settings;
 $user_id                    = !empty($_GET['identity']) ? intval($_GET['identity']) : 0;
 $user_identity              = $current_user->ID;
-$icon                       = 'icon-shopping-cart';
+$icon                       = 'tb-icon-shopping-cart';
 $account_blance             = taskbot_account_details($user_identity,array('wc-completed'),'completed');
 $withdrawn_amount           = taskbot_account_withdraw_details($user_identity,array('pending','publish'));
 $available_withdraw_amount = $account_blance - $withdrawn_amount;
@@ -45,7 +45,7 @@ $privacy_link           = !empty($tpl_privacy) ? '<a target="_blank" href="'.get
             <div class="tb-modalcontent modal-content">
                 <div class="tb-popuptitle">
                     <h4><?php esc_html_e('Withdraw money', 'taskbot'); ?></h4>
-                    <a href="javascript:void(0);" class="close"><i class="icon-x" data-bs-dismiss="modal"></i></a>
+                    <a href="javascript:void(0);" class="close"><i class="tb-icon-x" data-bs-dismiss="modal"></i></a>
                 </div>
                 <div class="modal-body">
                     <form class="tb-themeform tb-formlogin tb-withdrawform">
@@ -102,7 +102,7 @@ $privacy_link           = !empty($tpl_privacy) ? '<a target="_blank" href="'.get
             <div class="tb-modalcontent modal-content">
                 <div class="tb-popuptitle">
                     <h4><?php esc_html_e('Withdraw money','taskbot'); ?></h4>
-                    <a href="javascript:void(0);" class="close"><i class="icon-x" data-bs-dismiss="modal"></i></a>
+                    <a href="javascript:void(0);" class="close"><i class="tb-icon-x" data-bs-dismiss="modal"></i></a>
                 </div>
                 <div class="modal-body">
                     <h4><?php esc_html_e('Select any payment method before withdrawal request','taskbot'); ?></h4>

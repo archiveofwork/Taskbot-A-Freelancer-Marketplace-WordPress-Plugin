@@ -200,12 +200,12 @@
                                         <form action="<?php echo esc_url($search_result);?>" method="GET" id="tk-header-form-<?php echo intval($flag);?>" class="tk-theme-form">
                                             <div class="tk-searcbar">
                                                 <div class="tk-inputicon">
-                                                    <span><i class="icon-search"></i></span>
+                                                    <span><i class="tb-icon-search"></i></span>
                                                     <input type="text" name="keyword" class="form-control" placeholder="<?php esc_attr_e('What are you looking for?','taskbot');?>">
                                                 </div>
                                                 <?php if( !empty($search_item) && empty( $type_one ) ){?>
                                                     <div class="tk-select">
-                                                        <i class="icon-layers"></i>
+                                                        <i class="tb-icon-layers"></i>
                                                         <select id="tk-list-type-<?php echo intval($flag);?>" data-placeholderinput="<?php esc_attr_e('Select list','taskbot');?>" data-placeholder="<?php esc_attr_e('Select list type','taskbot');?>" class="form-control">
                                                             <option label="<?php esc_attr_e('Select search type','taskbot');?>"></option>
                                                             <?php foreach($search_item as $key => $value){
@@ -272,6 +272,7 @@
                     $script_video = '
                         jQuery(document).ready(function () {
                             jQuery("#tk-list-type-' . esc_js($flag) . '").select2({
+                                theme: "default tk-select2-dropdown",
                                 minimumResultsForSearch: Infinity
                             });
                             jQuery(document).on("change","#tk-list-type-' . esc_js($flag) . '",function(e){

@@ -40,6 +40,12 @@ $post_status= !empty($post_id) ? get_post_status( $post_id ) : '';
             $steps_class    = 'service-steps';
 
             if( !empty($post_id)){
+                if( !empty($step) && $step > $key ) {
+                    $step_url = add_query_arg(array(
+                        'post' => $post_id,
+                        'step' => $key,
+                    ), $page_url);
+                }
                 $steps_class    = 'service-steps service-steps-draft';
             }
             

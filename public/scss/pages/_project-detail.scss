@@ -377,6 +377,8 @@ aside{
     }
     .tk-checkout-info{
         width: 100%;
+        margin:0;
+        padding:0;
         padding-top: 20px;
     }
     .tk-total-title{
@@ -394,6 +396,7 @@ aside{
     align-items: center;
     justify-content: space-between;
     padding-top: 20px;
+    text-transform: capitalize;
     h4{
         color: $heading-font-color;
     }
@@ -648,6 +651,12 @@ aside{
         width: 100%;
     }
 }
+@media (min-width: 768px){
+    .tk-freelancers-list > .tb-bestservice .tb-bestservicedetail__user{
+        gap: 20px;
+        flex-wrap: nowrap;
+    }
+}
 .tk-freelancers-list{
     padding-left: 0;
     > li{
@@ -880,6 +889,7 @@ aside{
     span,h4{
         text-align: right;
     }
+    & > span{text-transform: capitalize;}
     span{
         @extend %h6;
         display: block;
@@ -985,6 +995,7 @@ aside{
     border-radius: $radiusvtwo;
     img{
         width: 42px;
+        height: 42px;
         border-radius: 50%;
         object-fit: cover;
     }
@@ -1041,6 +1052,7 @@ aside{
             border-radius: 50%;
             background: $clr-white;
             width: 38px;
+            height: 38px;
             object-fit: cover;
         }
     }
@@ -1241,6 +1253,7 @@ aside{
             box-shadow: inset 0px 1px 0px $lightest_2;
         }
         .tb-singleservice-tile{
+            padding: 0;
             margin-top: 20px;
         }
         .tb-blogtags,.tb-tagtittle{
@@ -1300,9 +1313,6 @@ aside{
     }
 }
 .tk-saved-item{
-    &.tb_saveprojectlisting{
-        box-shadow: $drop_shadows_lightest;
-    }
     margin-bottom: 0;
     > li{
         list-style-type: none;
@@ -1350,6 +1360,7 @@ aside{
     }
     .tk-project-box{padding: 29px;}
 }
+.tk-otherproject .tk-project-box{min-height: 335px;}
 .tk-projectprice{
     text-align: center;
     .tk-sidebar-title{
@@ -1378,6 +1389,7 @@ aside .tk-project-requirement{
 }
 .tk-contenthasfig{
     .tk-featureRating{
+        z-index: 1;
         margin: 0;
         span.tk-featureRating__stars{
             width: 84px;

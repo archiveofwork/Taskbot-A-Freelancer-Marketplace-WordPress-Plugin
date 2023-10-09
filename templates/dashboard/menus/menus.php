@@ -22,7 +22,7 @@ array_multisort($list_sortorder, SORT_ASC, $taskbot_menu_list);
 ?>
 <nav class="tb-navbar navbar-expand-xl">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#tenavbar" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation','taskbot');?>">
-        <i class="icon-menu"></i>
+        <i class="tb-icon-menu"></i>
     </button>
     <div id="tenavbar" class="collapse navbar-collapse">
         <ul class="navbar-nav tb-navbarnav">

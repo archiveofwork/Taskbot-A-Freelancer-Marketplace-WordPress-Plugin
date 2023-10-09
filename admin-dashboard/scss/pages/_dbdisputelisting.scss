@@ -175,6 +175,7 @@
 // }
 .tb-table {
     margin: 0;
+    border-radius: 4px;
     background-color: #fff;
     border-collapse: separate;
     border-spacing: 0;
@@ -505,6 +506,7 @@
 .tb-asideboxvtwo{
     @extend %flex ; 
     align-items: flex-start;
+    border-radius: 0 0 10px 10px;
 }
 .tb-admindispute{
     margin: 0 15px 0 0;

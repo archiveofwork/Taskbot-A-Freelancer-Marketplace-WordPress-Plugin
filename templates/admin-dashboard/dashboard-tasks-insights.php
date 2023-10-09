@@ -45,14 +45,14 @@ $total_posted			= !empty($total_tasks_count) ? $total_tasks_count	- ($previous_m
 $total_posted_array		= $total_posted.','.$previous_month.','.$current_month.','.$total_tasks_count;
 $posted_string			= '"'.esc_html__('Start','taskbot').'","'.esc_html__('Last Month','taskbot').'","'.esc_html__('This month','taskbot').'","';
 $total_posted_string	= $posted_string.esc_html__('Total posted tasks','taskbot').'"';
-$change_class			= 'icon-chevron-left';
-$changearrow_class		= 'icon-arrow-down';
+$change_class			= 'tb-icon-chevron-left';
+$changearrow_class		= 'tb-icon-arrow-down';
 $green_calss			= '';
 
 if ($change == 'increase') {
 	$green_calss		= 'fr-goodresult';
-	$change_class		= 'icon-chevron-right';
-	$changearrow_class	= 'icon-arrow-up';
+	$change_class		= 'tb-icon-chevron-right';
+	$changearrow_class	= 'tb-icon-arrow-up';
 }
 
 $ongoing_arg  = array(
@@ -91,14 +91,14 @@ $totalongoning_posted			= !empty($ongoing_tasks_count) ? $ongoing_tasks_count	- 
 $ongoningtotal_posted_array		= $totalongoning_posted.','.$ongoningprevious_month.','.$ongoningcurrent_month.','.$ongoing_tasks_count;
 $ongoningtotal_posted_string	= $posted_string.esc_html__('Total Ongoing tasks','taskbot').'"';
 
-$ongoningchange_class		= 'icon-chevron-left';
-$ongoningchangearrow_class	= 'icon-arrow-down';
+$ongoningchange_class		= 'tb-icon-chevron-left';
+$ongoningchangearrow_class	= 'tb-icon-arrow-down';
 $ongoninggreen_calss		= '';
 
 if ($ongoningchange == 'increase') {
 	$ongoninggreen_calss		= 'fr-goodresult';
-	$ongoningchange_class		= 'icon-chevron-right';
-	$ongoningchangearrow_class	= 'icon-arrow-up';
+	$ongoningchange_class		= 'tb-icon-chevron-right';
+	$ongoningchangearrow_class	= 'tb-icon-arrow-up';
 }
 
 $cancelled_arg  = array(
@@ -136,14 +136,14 @@ $cancelledprevious_month	= !empty($cancelled_tasks_percentage['previous_month'])
 $totalcancelled_posted				= !empty($cancelled_tasks_count) ? $cancelled_tasks_count	- ($cancelledprevious_month+$cancelledcurrent_month) :0;
 $cancelledtotal_posted_array		= $totalcancelled_posted.','.$cancelledprevious_month.','.$cancelledcurrent_month.','.$cancelled_tasks_count;
 $cancelledtotal_posted_string		= $posted_string.esc_html__('Total ongoing tasks','taskbot').'"';
-$cancelledchange_class		= 'icon-chevron-left';
-$cancelledchangearrow_class	= 'icon-arrow-down';
+$cancelledchange_class		= 'tb-icon-chevron-left';
+$cancelledchangearrow_class	= 'tb-icon-arrow-down';
 $cancelledgreen_calss		= '';
 
 if ($cancelledchange == 'increase') {
 	$cancelledgreen_calss		= 'fr-goodresult';
-	$cancelledchange_class		= 'icon-chevron-right';
-	$cancelledchangearrow_class	= 'icon-arrow-up';
+	$cancelledchange_class		= 'tb-icon-chevron-right';
+	$cancelledchangearrow_class	= 'tb-icon-arrow-up';
 }
 ?>
 <div class="col-xl-4 tb-chartboxholder">

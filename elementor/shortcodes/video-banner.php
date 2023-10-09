@@ -103,9 +103,6 @@
                         'type'          => Controls_Manager::MEDIA,
                         'label'         => esc_html__('Display image', 'taskbot'),
                         'description'   => esc_html__('Add display image.', 'taskbot'),
-                        'default' => [
-                            'url' => \Elementor\Utils::get_placeholder_image_src(),
-                        ],
                     ]
                 );
 
@@ -192,7 +189,7 @@
                                         <div class="tk-rightareainfo">
                                             <?php if (!empty($video_url)) { ?>
                                                 <a class="venobox-<?php echo intval($flag); ?>" data-vbtype="video" data-gall="gall" href="<?php echo esc_url($video_url); ?>" data-autoplay="true">
-                                                    <i class="icon-play tk-playicon"></i>
+                                                    <i class="tb-icon-play tk-playicon"></i>
                                                 </a>
                                             <?php } ?>
                                             <?php if (!empty($fig_title)) { ?>

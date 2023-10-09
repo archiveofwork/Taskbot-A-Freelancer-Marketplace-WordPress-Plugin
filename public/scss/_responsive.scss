@@ -205,6 +205,20 @@
 @media (max-width:1366px) and (min-width:992px){
     .tb-headerwrap{padding: 0;}
 }
+@media (max-width:1199px){
+    .tb-header ~ .tk-headerbottom{
+        padding: 15px 0;
+    }
+    .tk-seller-tabs{
+        position: relative;
+        .tb-navbarbtm{
+            position: unset;
+            .navbar-collapse{
+                top: 56px;
+            }
+        }
+    }
+}
 @media (max-width:1199px) and (min-width:992px){
     .tb-asideprostatusv2 > a{
         margin-right: 0;
@@ -240,8 +254,103 @@
     }
     .tb-langslider div {font-size: 5rem;}
     .tk-feedbackslider {margin-left: 42px;}
-} 
+}
+@media (min-width: 1199px) {
+   .tk-mega-menu > a:after{
+        right: auto;
+        width: auto;
+        font-size: 18px;
+        content: "\e92e";
+        font-weight: 600;
+        margin-left: auto;
+        padding-left: 5px;
+        position: relative;
+        font-family: 'taskbot-icons';
+    }
+    .tk-mega-menu-wrapper{
+        left: 0;
+        top: 80px;
+        margin: 0;
+        padding: 0;
+        opacity: 0;
+        width: max-content;
+        z-index: 1051;
+        border-radius: 4px;
+        position: absolute;
+        background-color: #fff;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+        -webkit-box-shadow: 0px 2px 4px rgb(0 0 0 / 4%), 0px 8px 16px rgb(0 0 0 / 8%);
+        box-shadow: 0px 2px 4px rgb(0 0 0 / 4%), 0px 8px 16px rgb(0 0 0 / 8%);
+    }
+    .tk-mega-menu:hover > .tk-mega-menu-wrapper {
+        top: 100%;
+        opacity: 1;
+        visibility: visible;
+    }
+    .tk-header-two .tk-navbarbtn .tk-btn-solid-lg {
+        color: #fff !important;
+        background: transparent !important;
+    }
+}
 @media (max-width:1199px){
+    .tb-navbarbtm {
+        position: relative;
+        width: 100%;
+    }
+    .tk-seller-tabs {
+        padding: 10px 0;
+        gap: 10px;
+        .tk-seller-tabs{
+            padding: 0;
+        }
+        .navbar-toggler{
+            width: 40px;
+            height: 40px;
+            font-size: 18px;
+        }
+        .tb-navbarnav{
+            margin: 0;
+            .navbar-collapse{
+                border-radius: 0 0 10px 10px;
+            }
+            li{
+                width: 100%;
+                ~ li{
+                    border: 0 !important;
+                }
+                > a{
+                    width: 100%;
+                }
+                &.menu-item-has-children{
+                    .sub-menu{
+                        width: 100%;
+                        border: 0;
+                        > li{
+                            width: 100%;
+                            margin: 0;
+                            > a{
+                                width: 100%;
+                            }
+                        }
+                        &::after,
+                        &::before{
+                            display: none;
+                        }
+                    }
+                    .tk-dropdowarrow{
+                        width: 20px;
+                        height: 20px;
+                        background: $theme-color;
+                        i{
+                            line-height: 20px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
     .tk-navbar-right .navbar-collapse .tk-navbarbtn span.tk-btn-solid-lg{
         margin: 0;
         width: 100%;
@@ -253,12 +362,15 @@
         letter-spacing: 0.5px;
         justify-content: center;
         border-radius: 0 0 4px 4px;
-        color: var(--themefontcolor);
-        background-color: var(--themecolor);
+        color: $heading-font-color;
+        background-color: $theme-color;
         border-top: 1px solid rgba(0,0,0,0.1);
         font: 700 16px/48px "Urbanist", sans-serif;
         box-shadow: inset 0 3px rgb(255 255 255 / 5%);
         -webkit-box-shadow: inset 0 3px rgb(255 255 255 / 5%);
+    }
+    .tk-navbar-right .navbar-collapse .tk-navbarbtn a.tk-btn{
+        background-color: $theme-color;
     }
     .tk-project-requirement > li{max-width: 50%;}
     .tb-tasksitem__footer{
@@ -270,6 +382,37 @@
             flex: 0 0 50%;
         }
     }
+    .tk-dropdowarrow,
+    .at-dropdowarrow{
+        top: 10px;
+        right: 20px;
+        color: #0A0F26;
+        z-index: 99999;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        position: absolute;
+        border-radius: 4px;
+        text-align: center;
+        background: $theme-color;
+        display: block;
+    }
+    .tk-dropdowarrow i,
+    .at-dropdowarrow i{
+        display: block;
+        line-height: 26px;
+        font-size: 16px;
+        transition: all 0.3s ease-in-out;
+    }
+    .tk-menuopen > .tk-dropdowarrow i {
+        transform: rotate(90deg);
+    }
+    .tk-menuopen{
+        .tk-menuopen > .tk-dropdowarrow i {
+            transform: rotate(90deg);
+        }
+
+    } 
     .tk-project-holder .tk-betaversion-wrap{
         flex-direction: column;
         align-items: flex-start;
@@ -318,6 +461,29 @@
             padding: 15px 20px;
         }
         & ~ li{border-top: 1px solid $border-color;}
+    }
+    .tb-dashboard-header{
+        .tb-navbarnav > li > a{
+            color: $secondary-color;
+            &:hover{
+                color: $secondary-color;
+            }
+            &:focus{
+                color: $secondary-color;
+            }
+        }
+        .tk-nav-icons{
+            color:$secondary-color;
+            &:hover{
+                color:$secondary-color;
+            }
+            &:focus{
+                color:$secondary-color;
+            }
+        }
+    }
+    .tk-seller-tabs .tb-navbarnav li > a.active{
+        border:none;
     }
     .tb-insightcontainerv2 .tk-hire-freelancer li{
         width: 100%;
@@ -401,7 +567,13 @@
         }
     }
     .tb-user-menu .tk-notidropdowns + .tk-navbarbtn{
-        height: calc(100vh - 115px);
+        height: calc(100vh - 94px);
+        .sub-menu{
+            margin: 0;
+            border: 0;
+            border-radius: 0;
+            box-shadow: none !important;
+        }
     }
     .tk-headerchatbtn,
     .tb-inbox,
@@ -492,7 +664,6 @@
             width: 100%;
             flex-direction: column;
             align-items: flex-start;
-            border-bottom: 1px solid $border-color;
             li{
                 padding: 0;
                 width: 100%;
@@ -501,6 +672,22 @@
                     border-top:1px solid $border-color;
                 }
             }
+        }
+    }
+    .tk-header .tk-header_wrap .navbar-toggler{
+        background: $theme-color;
+    }
+    .tk-navbarbtn .tk-btn-solid-lg{
+        background: $theme-color !important;
+        border-color: $theme-color !important;
+    }
+    .tk-main-notiwrap .sub-menu-holder,
+    .sub-menu-holder{
+        .sub-menu{
+            border: 0;
+            margin: 0;
+            height: 100%;
+            max-width:100%;
         }
     }
     .tb-orderdetailswrap{
@@ -780,6 +967,13 @@
         padding-left: 0;
         padding-top: 20px;
     }
+    .tk-ourexperience{
+        .tk-sectionapptitle{
+            flex-wrap: nowrap;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
 }
 @media (max-width:1199px) and (min-width:992px){
     .tk-paid-option{
@@ -825,6 +1019,15 @@
         flex-direction: column;
         padding-bottom: 10px;
     }
+
+    .tb-profile-area-wrapper{
+        .tb-asideprostatusv2{
+            align-items: flex-start;
+            padding:0;
+            margin: 0;
+        }
+    }
+
     .tb-rateviewsv2{padding-top: 30px;}
     .tb-blogcommentsholderchild{padding-left: 30px;}
     .tb-bestservicedetail__list .tb-sidebarcontent .tb-profileprogress{width: auto;}
@@ -881,6 +1084,29 @@
     .tb-customerfeedback.tb-slimdots .owl-dots{transform: translate(90px, -5px);}
 }
 @media (max-width:991px){
+    .tb-postservicev2 .tb-addservice-steps li:not(:last-child):after{display: none;}
+    .tb-addservice-steps li{width: 100%;}
+    .tb-extras{
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0;
+        .tb-tabitemextras {
+           width: 33.33%;
+           min-width: auto;
+           float: none;
+           margin: 15px 0 0;
+           & + .tb-tabitemextras {margin: 25px 0 0 0px;}
+       }
+    }
+    .tb-dhb-mainheading.tb-dhb-mainheadingv2{
+        gap: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .tb-taskdeadline.tb-asideholder{
+        margin: 20px 0 0;
+    }
+    .tk-project-table-status .tb-table tbody tr{border: 0;}
     .tk-serviesbann__content{padding: 30px;}
     .tu-notfound-img {
         display: none;
@@ -983,6 +1209,9 @@
             order: 10;
             text-align: left;
         }
+    }
+    .tk-layout-v1 .row .tk-main-title-holder{
+        align-items: center;
     }
     .tb-invoice-table.tb-table > tbody > tr{
         td{
@@ -1255,10 +1484,10 @@
     }
     .tb-navtabs .nav-link{width: 100%;}
     .tb-postservicev2 .tb-addservice-step span{ 
-        padding-left:15px;
+        padding-left:34px;
         padding-right:15px;
     }
-    .tb-addservice-step-complete:after{right: 0;}
+    .tb-addservice-step-complete:after{right: 20px;}
     .tb-packages li{
         width: 50%;
         &:last-child{
@@ -1309,7 +1538,6 @@
         padding-right: 30px;
         padding-left: 30px;
     }
-    .tb-postservicev2 .tb-addservice-steps li:not(:first-child) .tb-addservice-step span{padding-left: 24px;}
     .tb-hide-acf-label{
         display: block;
     }
@@ -1397,6 +1625,27 @@
     .tb-custom-fields .tb-remove-field {
         margin: 10px 0 0;
       }
+
+    .tk-main-section-three .tk-main-title-holder{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .tk-btn2-wrapper {
+            margin-top: 30px;
+        }
+    }
+
+    .tb-profile-area-wrapper{
+        .tb-asideprostatusv2{
+            flex-direction: column;
+            align-items: flex-start;
+            padding:0;
+            margin: 0;
+            > a{
+                margin-bottom: 20px;
+            }
+        }
+    }
 }
 @media (max-width:991px) and (min-width:768px){
     .tb-packages li{
@@ -1425,6 +1674,51 @@
     }
 }
 @media (max-width:767px){
+    .tb-savelisting .tb-tabbitem__list .tb-itemlinks .tb-tabicon{
+        padding-bottom: 0;
+    }
+    .tb-sortby .tb-actionselect2 .tk-select2-dropdown.select2-container{min-width: 190px;}
+    .tb-seller-counter-list{
+        li{
+            max-width: 50%;
+        }
+    }
+    .text-center .tk-maintitle:after {
+        left: 0;
+        margin-left: 0px;
+    }
+    .tk-popular-categories .tk-main-title-holder {
+        justify-content: flex-start;
+    }
+    .tk-ourexperience .tk-sectionapptitle .tk-maintitle:after {
+        left: 0;
+        margin-left: 0;
+    }
+    .tb-uploadcontent{
+        .tb-dhbbtnarea{
+            margin-left: 0;
+            justify-content: flex-start;
+            width: 100%;
+        }
+    }
+    .tk-bannerv3 .tk-formsearch .tk-fc-wrap {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .tk-hirring-img{
+        flex-wrap: wrap;
+    }
+    .tk-maintitle{
+        h1,h2,h3,h4,h5,h6{
+            text-align: left !important;
+        }
+    }
+    .tk-main-details,
+    .tk-main-description{
+        p{
+            text-align: left !important;
+        }
+    }
     .tk-project-box .tk-price{
         display: flex;
         flex-wrap: wrap;
@@ -1625,8 +1919,6 @@
     .taskbot-faqlistitem{
         .tb-uploadcontent .tb-profileform__content .tb-titleinput{padding-top: 0;}
     }
-    .tb-addservice-steps li{width: 100%;}
-    .tb-addservice-steps li + li{margin: 15px 0 0 0;}
     .tb-uploadbar-list{
         .tb-uploadbar-content{
             flex-direction: row;
@@ -1736,15 +2028,8 @@
         }
     }
     .tb-extras{
-        flex-wrap: wrap;
-        align-items: center;
-        margin: 0;
         .tb-tabitemextras {
            width: 50%;
-           min-width: auto;
-           float: none;
-           margin: 15px 0 0;
-           & + .tb-tabitemextras {margin: 25px 0 0 0px;}
        }
     }
     .tb-startingprice {align-items: self-end;}
@@ -1943,6 +2228,12 @@
         }
     }
     .tb-bestservicedetail__user{
+        .tk-bidbtn{
+            margin-left: 0;
+            width: 100%;
+            & .tk-invite-bidbtn,
+            & .tb-invite-sent{width: 100%;}
+        }
         flex-wrap: wrap;
         .tb-asideprostatus > figure{
             max-width: 110px;
@@ -2082,7 +2373,6 @@
         border-top: 1px solid $border-color;
     }
     .tb-itemlinks .tb-startingprice{padding-bottom: 9px;}
-    .tb-postservicev2 .tb-addservice-steps li:not(:last-child):after{display: none;}
     .form-group-3half,
     .tb-postservice .form-group-half{
         width: 100% !important;
@@ -2148,8 +2438,6 @@
             width: 100%;
         }
     }
-    .tb-addservice-step-complete:after{right: 20px;}
-    .tb-postservicev2 .tb-addservice-step span{padding-left: 34px;}
     .tb-addservice-steps li + li{margin-top: 0;}
     .tb-postservicev2 .tb-addservice-steps li:not(:first-child) .tb-addservice-step span{padding-left: 34px;}
     .tb-profile-settings-box{
@@ -2293,12 +2581,107 @@
     }
   }
 @media (max-width:575px){
-   
+    .tk-faq-search > .tk-maintitle p {
+        text-align: left;
+    }
+    .tk-articles-posts {
+        .tk-main-title-holder{
+            align-items: flex-start !important;
+            .tk-maintitle::after {
+                left: 0;
+                margin-left: 0;
+            }
+        }
+    }
+    .tk-bannerv2_title{
+        h1, h2{
+            text-align: left;
+        }
+    }
+    .tk-bannerv3_title h1,
+    .tk-bannerinfo_title h1,
+    .tk-bannerv3_title strong,
+    .tk-bannervfive .tk-bannerinfo .tk-bannerinfo_title h1 {
+        font-size: 32px !important;
+    }
+    .tk-talents-search_title,
+    .tk-talents-search_content{
+        padding: 15px;
+    }
+    .tb-singleservice-tile,
+    .tu-joinnow,
+    .tb-faq__title,
+    .tk-slider-content,
+    .tk-blog-main{
+        padding: 15px !important;
+    }
+    .tk-aboutusauthor{
+        align-items: start;
+    }
+    .tb-seller-skills{
+        .tb-singleservice-tile{
+            padding: 0 !important;
+        }
+    }
+    .tk-authorinfo{
+        h4,h6{
+            text-align: left !important;
+        }
+    }
+    .tb-singleservice-tile.tk-reviews{
+        padding: 0 !important;
+    }
+    .tk-mainlink{
+        a{
+            gap: 10px;
+            align-items: start;
+            flex-direction: column;
+        }
+    }
+    .tk-bannerv3_title{
+        p,
+        h1,
+        strong{
+            text-align: left;
+        }
+    }
+    .tk-sevicesinfo{
+        padding: 0;
+    }
+    .tk-category_childlist{
+        li{
+            padding: 10px;
+        }
+    }
+    .tk-blogs-section{
+        padding: 10px 0 0 !important;
+    }
+    .tk-bestservice__content{
+        padding: 0 10px 10px;
+    }
+    .tk-bannerinfo_tag{
+        gap: 10px;
+        flex-direction: column;
+    }
     .tb-requestarea .tb-additonolservices:last-child .tb-additionolinfo{padding: 20px;}
     .tb-requestarea .tb-additonolservices .tb-additionolinfo .tb-addcomment {margin: 20px 0 0;}
     .tk-about-image figure figcaption{
         left: 0;
     }
+    .tk-subtitle{
+        h4{
+            text-align: left !important;
+        }
+    }
+    .tk-popular-categories .tk-main-title-holder{
+        justify-content: flex-start;
+    }
+    .tk-counter{
+        flex-wrap: wrap;
+    }
+    .tk-category_item{
+		display: block !important;
+	}
     .tk-clients-wrapper_three .tk-clients{
         margin: 0 -12px;
     }
@@ -2495,6 +2878,9 @@
     .tk-mainlistvtwo li:nth-child(n+3) {margin: 10px 0 0;}
     .tk-mainlistvtwo li {width: 100%;}
     .tk-mainlistvtwo li + li {margin: 10px 0 0;}
+    .tk-formsearch .tk-inputicon i {
+        left: 10px;
+    }
 }
 @media (max-width:568px){
     .tk-hirring-img li {
@@ -2538,6 +2924,7 @@
         }
     }  
     .tk-project-box-two {
+        align-items: start;
         flex-direction: column;
     }
     .tk-projectbtns{
@@ -2569,16 +2956,59 @@
     }
 }
 @media (max-width:480px){
+    .tk-hire-freelancer_content .tk-hire-freelancer-info{
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .tb-active-option .tk-project-type::after{
+        top: -15px;
+        color: #fff;
+        width: 30px;
+        right: -15px;
+        height: 30px;
+        background: #22C55E;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 30px;
+        position: absolute;
+    }
+    .tb-sidebartabs__pkgtitle{
+        flex-direction: column;
+        & > li{
+            max-width: 100%;
+            text-align: center;
+            & > a{justify-content: center;}
+        }
+    }
     .tk-serviesbann__content{padding: 20px;}
     .tb-postservice .tb-addservices-steps .tb-postserviceformbtn,
     .tb-postservice .tb-addservices-steps .tb-postservicebtn{
         padding-top: 20px !important;
+    }
+    .tk-banneruser-info{
+        gap: 10px;
+        flex-direction: column;
+    }
+    .tk-themebanner_list{
+        align-items: start;
+        flex-direction: column;
+        li{
+            width: 100%;
+            a{
+                width: 100%;
+            }
+        }
     }
     .am-registration-terms .tb-btn{
         margin: 0;
     }
     .tk-price .tk-project-detail > a + a{
         margin: 20px 0 0;
+    }
+    .tb-seller-counter-list{
+        li{
+            max-width: 100%;
+        }
     }
     .tk-educationpopup .tb-combine-group .tb-calendar {
       width: 100%;
@@ -2706,6 +3136,13 @@
     .tb-headerv2 .tb-headerinputbtn{
         padding: 0 10px 0 0;
         margin: 0;
+    }
+    .tk-easyinfotitle{
+        gap: 10px;
+        flex-direction: column;
+        i{
+            margin: 0;
+        }
     }
     .tb-headerinput:before,
     .tb-headerinputbtn:before{content: none;}
@@ -2854,7 +3291,7 @@
     .tk-projectbox .tk-project-box,
     .tb-main-bg .tb-servicedetailcontent .tb-singleservice-tile{padding: 19px;}
     .tb-radioholder{padding-left: 12px !important;}
-    .tb-savebtn span{
+    .tb-savebtn span:not(.tb-btn){
         max-width: unset;
         width: 100%;
         padding-bottom: 10px;
@@ -3181,6 +3618,7 @@
     }
     .tk-additionalservicesvtwo .tk-form-checkbox{
         flex-direction: column;
+        align-items: flex-start;
     }
     .tk-additionalservicesvtwo .tk-form-checkbox .tk-additionolinfo{
         margin: 10px 0;
@@ -3307,6 +3745,17 @@
             width: 100%;
             text-align: center;
             margin: 10px 0 0;
+        }
+    }
+    .tk-hire-freelancer_content{
+        gap: 10px;
+        align-items: start;
+        flex-direction: column;
+        .tk-hire-freelancer-info{
+            padding: 0;
+        }
+        > span{
+            margin-left: 0;
         }
     }
 }
@@ -3522,6 +3971,11 @@
         figure{margin: 0 0 20px !important;}
     }
     .tk-authorinfo{text-align: center;}
+    .tk-btnviewpro{
+        gap: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 @media (max-width:375px){
     .tb-contentbanner__title{
@@ -3699,4 +4153,7 @@
 }
 @media (max-width:640px){
     .tk-headerwrap .tk-appendinput > button{width: 100%;}
+}
+@media (max-width:1199px) and (min-width:992px){
+    .tb-seller-counter-list li{max-width: 50%;}
 }

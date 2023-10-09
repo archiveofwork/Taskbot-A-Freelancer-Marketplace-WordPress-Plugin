@@ -94,7 +94,7 @@ $count_post = $query->found_posts;
 	}else{?>
 		<ul class="tk-noti_wrap tk-empty-notifications">
 			<li class="tk-noti_empty">
-				<span><i class="icon-bell-off"></i></span>
+				<span><i class="tb-icon-bell-off"></i></span>
 				<em><?php esc_html_e('No notifications available','taskbot');?></em>
 			</li>
 		</ul>

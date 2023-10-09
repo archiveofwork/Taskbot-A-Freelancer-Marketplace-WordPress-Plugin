@@ -286,7 +286,7 @@ if( !empty($project_multilevel_cat) && $project_multilevel_cat === 'enable' ){
                                 <div class="tk-attechment-wrapper">
                                     <div class="tk-attechment-tittle">
                                         <h6 data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo"><?php esc_html_e('Add media / attachments (optional)','taskbot');?></h6>
-                                        <i class="icon-plus" role="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo"></i>
+                                        <i class="tb-icon-plus" role="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo"></i>
                                     </div>
                                     <div id="flush-collapseTwo" class=" collapse" data-bs-parent="#attechmentacordian">
                                         <div class="tk-attechment-content">
@@ -342,7 +342,7 @@ if( !empty($project_multilevel_cat) && $project_multilevel_cat === 'enable' ){
                                                                                     <input type="hidden" class="attachment_url" name="attachments[<?php echo intval($attachment_id);?>][file]" value="<?php echo esc_url($url);?>">
                                                                                     <input type="hidden" name="attachments[<?php echo intval($attachment_id);?>][id]" value="<?php echo intval($attachment_id);?>">
                                                                                     <input type="hidden" name="attachments[<?php echo intval($attachment_id);?>][name]" value="<?php echo esc_attr($name);?>">
-                                                                                    <em class="tb-remove"><a href="javascript:void(0)"  class="tb-remove-document" data-attachment_id="<?php echo intval($attachment_id);?>"><i class="icon-trash-2"></i></a></em>
+                                                                                    <em class="tb-remove"><a href="javascript:void(0)"  class="tb-remove-document" data-attachment_id="<?php echo intval($attachment_id);?>"><i class="tb-icon-trash-2"></i></a></em>
                                                                                 </div>
                                                                             </li>
                                                                 <?php }}}?>
@@ -373,7 +373,7 @@ if( !empty($project_multilevel_cat) && $project_multilevel_cat === 'enable' ){
                 <div class="tk-projectbtns">
                     <a href="javascript:void(0)" class="tk-btn-solid-lg-lefticon tb-save-project" data-step_id="2" data-project_id="<?php echo intval($post_id);?>">
                         <?php esc_html_e('Save & continue','taskbot');?>
-                        <i class="icon-chevron-right"></i>
+                        <i class="tb-icon-chevron-right"></i>
                     </a>
                 </div>
             </div>
@@ -385,7 +385,7 @@ if( !empty($project_multilevel_cat) && $project_multilevel_cat === 'enable' ){
         <div class="tb-filedesciption">
             <span><a href="#" data-href="{{data.url}}" class="venobox-gallery">{{data.name}}</a></span>
             <input type="hidden" class="attachment_url" name="attachments[{{data.attachment_id}}]" value="{{data.url}}">
-            <em class="tb-remove"><a href="javascript:void(0)" class="tb-remove-document"><i class="icon-trash-2"></i></a></em>
+            <em class="tb-remove"><a href="javascript:void(0)" class="tb-remove-document"><i class="tb-icon-trash-2"></i></a></em>
         </div>
         <div class="progress">
             <div class="progress-bar uploadprogressbar" style="width:0%"></div>
@@ -399,6 +399,7 @@ $scripts	= "
         'use strict';
         removeMilestone();
         jQuery('.tb-select-cat').select2({
+            theme: 'default tk-select2-dropdown',
             allowClear: true,
         });
         jQuery('input[type=radio][name=project_type]').change(function() {
@@ -418,6 +419,7 @@ $scripts	= "
         });
         
         jQuery('.tb-location-type').select2({
+            theme: 'default tk-select2-dropdown',
             allowClear: true,
             placeholder: scripts_vars.select_location
         });

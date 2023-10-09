@@ -170,9 +170,6 @@
                         'type'          => Controls_Manager::MEDIA,
                         'label'         => esc_html__('Upload banner image', 'taskbot'),
                         'description'   => esc_html__('leave it empty to hide.', 'taskbot'),
-                        'default' => [
-                            'url' => \Elementor\Utils::get_placeholder_image_src(),
-                        ],
                     ]
                 );
 
@@ -208,7 +205,7 @@
                         'after'                 => '',
                         'link_before'           => '',
                         'link_after'            => '',
-                        'items_wrap'            => '<a class="tk-togglebtmmenu"><span class="icon-menu"></span></a><ul id="%1$s" class="%2$s">%3$s</ul>',
+                        'items_wrap'            => '<a class="tk-togglebtmmenu"><span class="tb-icon-menu"></span></a><ul id="%1$s" class="%2$s">%3$s</ul>',
                     );
                     $defaults['menu']   = $top_menu;
                     $menu_html  = wp_nav_menu($defaults);

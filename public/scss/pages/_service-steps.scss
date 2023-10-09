@@ -520,7 +520,7 @@
         }
         &::after{
             content: "\e930";
-            font-family: icomoon;
+            font-family: taskbot-icons;
             color: $text-gray;
             font-size: 20px;
             margin-left: auto;
@@ -621,7 +621,7 @@
     &:after{
         font-size: 14px;
         content: "\ea15";
-        font-family: icomoon;
+        font-family: taskbot-icons;
     }
     &:hover{
         color: #fff;
@@ -789,6 +789,7 @@
     border-radius: $radius;
     > em{
         flex: none;
+        font-style: normal;
         label{
             display: inline;
             margin: 0;
@@ -799,8 +800,10 @@
     }
     .form-control{
         border: 0;
-        &:focus , &:hover{
-            box-shadow: none;
+        &:focus, 
+        &:hover{
+            border: 0 !important;
+            box-shadow: none !important;
         }
     }
 }

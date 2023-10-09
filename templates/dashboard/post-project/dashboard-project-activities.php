@@ -1,4 +1,6 @@
 <?php
+global $taskbot_settings;
+
 $proposal_id    = !empty($args['proposal_id']) ? intval($args['proposal_id']) : 0;
 $project_id     = !empty($args['project_id']) ? intval($args['project_id']) : 0;
 $seller_id      = !empty($args['seller_id']) ? intval($args['seller_id']) : 0;
@@ -46,7 +48,7 @@ $comments = get_comments( $args );
                     <div class="tk-upload-resume" id="taskbot-upload-attachment">
                         <ul class="tk-upload-list" id="taskbot-fileprocessing"></ul>
                         <div class="tk-uploadphoto taskbot-dragdroparea" id="taskbot-droparea" >
-                            <p><?php echo wp_sprintf( '%1$s %2$s', esc_html__( 'You can upload jpg,jpeg,gif,png,zip,rar,mp3 mp4 and pdf only.', 'taskbot'), esc_html__( 'Make sure your file does not exceed 3mb.', 'taskbot') );?></p>
+                            <p><?php echo wp_sprintf( esc_html__( 'You can upload jpg,jpeg,gif,png,zip,rar,mp3 mp4 and pdf only. Make sure your file does not exceed %s mb.', 'taskbot'), $taskbot_settings['upload_file_size'] );?></p>
                             <span id="taskbot-attachment-btn-clicked">
                                 <input id="taskbot-attachment-btn-clicked" type="file" name="file">
                                 <?php esc_html_e('Click here to upload', 'taskbot');?>
@@ -66,6 +68,6 @@ $comments = get_comments( $args );
     <li id="thumb-{{data.id}}" class="tk-uploading">
         <span>{{data.name}}</span>
         <input type="hidden" class="attachment_url" name="attachments[{{data.attachment_id}}]" value="{{data.url}}">
-        <em class="tb-remove"><a href="javascript:void(0)" class="taskbot-remove-attachment tb-remove-attachment"><i class="icon-trash-2"></i></a></em>
+        <em class="tb-remove"><a href="javascript:void(0)" class="taskbot-remove-attachment tb-remove-attachment"><i class="tb-icon-trash-2"></i></a></em>
     </li>
 </script>

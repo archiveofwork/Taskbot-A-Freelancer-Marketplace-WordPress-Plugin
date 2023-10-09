@@ -107,9 +107,6 @@
                         'type'        => Controls_Manager::MEDIA,
                         'label'       => esc_html__('Display image', 'taskbot'),
                         'description' => esc_html__('Add display image.', 'taskbot'),
-                        'default' => [
-                            'url' => \Elementor\Utils::get_placeholder_image_src(),
-                        ],
                     ]
                 );
 
@@ -210,7 +207,7 @@
                                         </ul>
                                     <?php } ?>
                                     <?php if (!empty($btn_text) && ( is_admin() || !is_user_logged_in() )) { ?>
-                                        <a href="<?php echo esc_url($button_link); ?>" class="tk-btn-solid-lg"><?php echo esc_html($btn_text) ?> <i class="icon-user-check"></i></a>
+                                        <a href="<?php echo esc_url($button_link); ?>" class="tk-btn-solid-lg"><?php echo esc_html($btn_text) ?> <i class="tb-icon-user-check"></i></a>
                                     <?php } ?>
                                 </div>
                             </div>

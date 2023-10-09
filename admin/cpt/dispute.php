@@ -65,7 +65,6 @@ if (!class_exists('Taskbot_Dispute')) {
                 'publicly_queryable' 	=> false,
                 'exclude_from_search' 	=> true,
                 'hierarchical' 			=> false,
-				'show_in_menu' 			=> true,
                 'menu_position' 		=> 10,
                 'rewrite' 				=> array('slug' => 'dispute', 'with_front' => true),
                 'show_in_menu' 			=> 'edit.php?post_type=sellers',

@@ -90,7 +90,6 @@ class Taskbot_Admin_CPT_Seller {
 			'label'                 => esc_html__( 'Sellers', 'taskbot' ),
 			'description'           => esc_html__( 'All sellers.', 'taskbot' ),
 			'labels'                => apply_filters('taskbot_product_taxonomy_duration_labels', $labels),
-			'supports'              => array( 'title','editor','author','excerpt','thumbnail' ),
 			'taxonomies'            => array( 'languages'),
 			'public' 				=> true,
 			'supports' 				=> array('title','editor','author','excerpt','thumbnail'),

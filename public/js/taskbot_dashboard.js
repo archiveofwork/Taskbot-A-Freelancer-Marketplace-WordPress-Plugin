@@ -1,5 +1,5 @@
 (function( $ ) {
-	
+
 	'use strict';
 	var loader_html	= '<div class="tb-preloader-section"><div class="tb-preloader-holder"><div class="tb-loader"></div></div></div>';
 	var image_crop = '';
@@ -425,7 +425,7 @@ $(function() {
 		let id	= jQuery(this).data('id');
 		e.preventDefault();        
 		jQuery.confirm({
-			icon: 'icon-trash',
+			icon: 'tb-icon-trash',
 			title: scripts_vars.active_account,
 			content: scripts_vars.active_account_message,
 			closeIcon: true,
@@ -506,6 +506,7 @@ $(function() {
 	$(document).on('click', '#tk-add_milestone', function (e) {
 		jQuery(".tk-contract-list").slideUp();
 		jQuery('#tbaddmilestone').modal('show');
+		jQuery('#tbaddmilestone').removeClass('hidden');
 		e.preventDefault();
 	});
 
@@ -517,6 +518,7 @@ $(function() {
 		$('#taskbot-popup').html(load_download_item);
 		jQuery(".tk-contract-list").slideUp();
 		jQuery('#taskbot-popup').modal('show');
+		jQuery('#taskbot-popup').removeClass('hidden');
 		e.preventDefault();
 	});
 	
@@ -1133,7 +1135,7 @@ $(function() {
 	jQuery(document).on('click', '.tb-cancel-identity', function (e) {
 		e.preventDefault();        
 		jQuery.confirm({
-			icon: 'icon-trash',
+			icon: 'tb-icon-trash',
 			title: scripts_vars.cancel_verification,
 			content: scripts_vars.cancel_verification_message,
 			closeIcon: true,
@@ -1270,6 +1272,7 @@ $(function() {
 		jQuery('#taskbot-taskaddon-popup').find('.tb-popuptitle h4').html(heading);
 		jQuery('#taskbot-taskaddon-popup').find('#taskbot-model-body').html(load_subtask_popup);
 		jQuery('#taskbot-taskaddon-popup').modal('show');
+		jQuery('#taskbot-taskaddon-popup').removeClass('hidden');
 		$('.tb-preloader-section').remove();
 		e.preventDefault();
 	});
@@ -1365,6 +1368,7 @@ $(function() {
 						jQuery('#taskbot-taskaddon-popup').find('#taskbot-model-body').html(load_subtask_popup);
 						jQuery('#taskbot-taskaddon-popup').find('.tb-popuptitle h4').html(heading);
 						jQuery('#taskbot-taskaddon-popup').modal('show');
+						jQuery('#taskbot-taskaddon-popup').removeClass('hidden');
 					}
 					$('.tb-preloader-section').remove();
 
@@ -1465,6 +1469,7 @@ $(function() {
 			if (response.type === 'success') {
 				jQuery('#tb_tk_viewrating').html(response.html);
 				jQuery('#tb_excfreelancerpopup').modal('show');
+				jQuery('#tb_excfreelancerpopup').removeClass('hidden');
 			} else {
 				StickyAlert(response.message, response.message_desc, {classList: 'danger', autoclose: 5000});
 			}
@@ -1485,6 +1490,7 @@ $(function() {
 		jQuery('#tb_taskcomplete_form').html(load_task);
 		jQuery('#tb_ratingtitle').html(title);
 		jQuery('#tb_completetask').modal('show');
+		jQuery('#tb_completetask').removeClass('hidden');
 		tb_rating_options();
 	});
 
@@ -1504,6 +1510,7 @@ $(function() {
 			jQuery('#tb_taskcomplete_form').html(load_task);
 			jQuery('#tb_ratingtitle').html(title);
 			jQuery('#tb_completetask').modal('show');
+			jQuery('#tb_completetask').removeClass('hidden');
 			tb_rating_options();
 		} else if( status == 'cancelled' ) {
 			var counter 	= Math.floor((Math.random() * 999999) + 999);
@@ -1513,6 +1520,7 @@ $(function() {
 			jQuery('#tb_taskcomplete_form').html(load_task);
 			jQuery('#tb_ratingtitle').html(title);
 			jQuery('#tb_completetask').modal('show');
+			jQuery('#tb_completetask').removeClass('hidden');
 			tb_rating_options();
 		}
 	});
@@ -1530,6 +1538,7 @@ $(function() {
 		jQuery('#tb_taskcomplete_form').html(load_task);
 		jQuery('#tb_ratingtitle').html(title);
 		jQuery('#tb_completetask').modal('show');
+		jQuery('#tb_completetask').removeClass('hidden');
 		tb_rating_options();
 	});
 
@@ -1570,6 +1579,7 @@ $(function() {
 
 		jQuery('#tb_taskcomplete_form').html(load_task);
 		jQuery('#tb_completetask').modal('show');
+		jQuery('#tb_completetask').removeClass('hidden');
 		jQuery('#tb_ratingtitle').html(title);
 		jQuery('#tb_without_feedback').hide();
 		tb_rating_options();
@@ -1588,6 +1598,7 @@ $(function() {
 
 		jQuery('#tb_taskcomplete_form').html(load_task);
 		jQuery('#tb_completetask').modal('show');
+		jQuery('#tb_completetask').removeClass('hidden');;
 		jQuery('#tb_ratingtitle').html(title);
 		jQuery('#tb_without_feedback').hide();
 		tb_rating_options();
@@ -1617,6 +1628,7 @@ $(function() {
 
 					if ( $.isFunction($.fn.select2) ) {
 						jQuery('#tb-service-level2').select2({
+							theme: "default tk-select2-dropdown",
 							placeholder: {
 								id: '', // the value of the option
 								text: scripts_vars.choose_sub_category
@@ -1662,11 +1674,13 @@ $(function() {
 					jQuery('#tb_category_level3').html(response.categories);
 					if ( $.isFunction($.fn.select2) ) {
 						jQuery('.tb-service-select2').select2({
+							theme: "default tk-select2-dropdown",
 							multiple: true,
 							placeholder: placeholder
 						});
 
 						jQuery('.tb-service-select-single').select2({
+							theme: "default tk-select2-dropdown",
 							placeholder: placeholder,
 							allowClear: true
 						});
@@ -1691,7 +1705,7 @@ $(function() {
 	$(document).on('click', '.tb_project_remove', function (e) {
 		let project_id      = jQuery(this).data('id');
 		jQuery.confirm({
-			icon: 'icon-trash',
+			icon: 'tb-icon-trash',
 			title: scripts_vars.remove_project,
 			content: scripts_vars.remove_project_message,
 			closeIcon: true,
@@ -1742,7 +1756,7 @@ $(function() {
 	$(document).on('click', '.tb-subtask-delete', function (e) {
 		let subtask_id   	= $(this).attr('data-subtask_id');
 		jQuery.confirm({
-			icon: 'icon-trash',
+			icon: 'tb-icon-trash',
 			title: scripts_vars.remove_subtask,
 			content: scripts_vars.remove_subtask_message,
 			closeIcon: true,
@@ -1858,7 +1872,7 @@ $(function() {
 	$(document).on('click', '.taskbot-faq-delete', function (e) {
 		let faq_key = $(this).data('faq_key');
 		jQuery.confirm({
-			icon: 'icon-trash',
+			icon: 'tb-icon-trash',
 			title: scripts_vars.remove_faq,
 			content: scripts_vars.remove_faq_message,
 			closeIcon: true,
@@ -1891,7 +1905,7 @@ $(function() {
 	$(document).on('click', '.taskbot-service-delete', function (e) {
 		let service_id = $(this).attr('data-id');
 		jQuery.confirm({
-			icon: 'icon-trash',
+			icon: 'tb-icon-trash',
 			title: scripts_vars.remove_task,
 			content: scripts_vars.remove_task_message,
 			closeIcon: true,
@@ -2034,10 +2048,12 @@ $(function() {
 				// Make drop-down select2
 				if ( $.isFunction($.fn.select2) ) {
 					jQuery('.tb-select select').select2({
+						theme: "default tk-select2-dropdown",
 						minimumResultsForSearch: Infinity
 					});
 					// Make multiple drop-down select2
 					jQuery('.tb-select select[multiple]').select2({
+						theme: "default tk-select2-dropdown",
 						multiple: true,
 						placeholder: scripts_vars.select_option
 					});
@@ -2181,7 +2197,7 @@ $(function() {
 			ProjectUploader.bind('FileUploaded', function (up, file, ajax_response) {
 				var response = jQuery.parseJSON(ajax_response.response);
 				if (response.type === 'success') {
-					var successIcon = '<a href="javascript:void(0);"><i class="icon-check-circle"></i></a>';
+					var successIcon = '<a href="javascript:void(0);"><i class="tb-icon-check-circle"></i></a>';
 					jQuery('#thumb-' + file.id + ' .taskbot-filedesciption .taskbot-filedesciption__icon').append(successIcon);
 					jQuery('#thumb-' + file.id).removeClass('taskbot-uploading');
 					jQuery('#thumb-' + file.id).removeClass('tb-uploading');
@@ -2279,7 +2295,7 @@ $(function() {
 
 		if ( typeof plupload === 'object' ) {
 			var sys_upload_nonce = scripts_vars.sys_upload_nonce;
-			
+
 			var ProjectUploaderArguments = {
 					browse_button: btnID, // this can be an id of a DOM element or the DOM element itself
 					file_data_name: type,
@@ -2300,7 +2316,7 @@ $(function() {
 					}
 				};
 			var ProjectUploader = new plupload.Uploader(ProjectUploaderArguments);
-			
+
 			ProjectUploader.init();
 			//bind
 			ProjectUploader.bind('FilesAdded', function (up, files) {
@@ -2381,7 +2397,7 @@ $(function() {
 		previewID   : 'tb-profile-upload-attachment-preview',
 		templateID  : 'load-profile-image',
 		_type       : 'true',
-		filetype    : scripts_vars.default_image_extensions ? scripts_vars.default_image_extensions :'jpg,jpeg,gif,png',
+		filetype    : 'jpg,jpeg,gif,png',
 		isCropped   : true,
 		defaultTemplateID : 'load-default-image',
 	}
@@ -2394,7 +2410,7 @@ $(function() {
 		previewID   : 'tb-profile-upload-attachment-preview',
 		templateID  : 'load-profile-image',
 		_type       : 'true',
-		filetype    : scripts_vars.default_image_extensions ? scripts_vars.default_image_extensions :'jpg,jpeg,gif,png',
+		filetype    : 'jpg,jpeg,gif,png',
 		isCropped   : true,
 		defaultTemplateID : 'load-default-image',
 	}
@@ -2408,6 +2424,7 @@ $(function() {
 		let load_profile_avatar = wp.template('load-profile-avatar');
 		jQuery('#taskbot-modal-popup #taskbot-model-body').html(load_profile_avatar);
 		jQuery('#taskbot-modal-popup').modal('show');
+		jQuery('#taskbot-modal-popup').removeClass('hidden');
 		
 		setTimeout(function() {
 			image_crop = jQuery('#crop_img_area').croppie({
@@ -2794,6 +2811,7 @@ $(function() {
 		jQuery('#tb_add_education_frm').append(load_education);
 		init_datepicker_max(counter,'tb-start-pick','tb-end-pick');
 		jQuery('#tb_educationaldetail').modal('show');
+		jQuery('#tb_educationaldetail').removeClass('hidden');
 	});
 
 	// deactive account
@@ -2881,7 +2899,7 @@ $(function() {
 		let key		= _this.attr('data-key');  
 		let cache 	= false;     
 		jQuery.confirm({
-			icon: 'icon-trash',
+			icon: 'tb-icon-trash',
 			title: scripts_vars.remove_paymentmethod,
 			content: scripts_vars.remove_paymentmethod_message,
 			closeIcon: true,

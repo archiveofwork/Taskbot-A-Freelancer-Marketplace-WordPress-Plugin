@@ -115,12 +115,52 @@
         padding-right: 0;
         padding-left: 0;
       }
+      .tb-todolist .table thead tr, .tb-payout .table thead tr {
+        position: absolute;
+        top: -9999px;
+        right: -9999px;
+        left: auto;
+    }
+}
+@media (max-width: 991px) {
+  .tb-todolist .table thead tr, .tb-payout .table thead tr {
+    top: -9999px;
+    right: -9999px;
+    left: auto;
+  }
+  .tb-disputetable .table thead tr {
+    top: -9999px;
+    right: -9999px;
+    left: auto;
+  }
+}
+@media (max-width: 767px) {
+  .tb-table td:before {
+    min-width: 35% !important;
+    margin-right: 0px !important;
+    margin-left: 20px !important;
+  }
+  .tb-disputes-col{
+    padding: 0 !important;
+  }
+  .tb-subwrapper .theme-container{
+    padding: 0;
+  }
+}
+@media (max-width: 576px) {
+  .tb-subwrapper {
+    padding-left: 15px;
+    padding-right: 79px;
+  }
 }
 @media (max-width: 480px) {
     .tb-frontendsite {
         padding-right: 0;
         padding-left: 0;
         width: 100%;
+      }
+      .tb-subwrapper {
+        padding-left: 15px !important;
       }
       .tb-todolist .table td::before {
         width: auto;
@@ -131,4 +171,17 @@
     .tb-subwrapper {
         padding-left: 59px;
     }
+    .tb-todolist .tb-table > tbody > tr td ul {
+      flex-wrap: wrap;
+  }
+}
+.tb-sidebarwrapperholder {
+  margin-right: 0px;
+}
+.tb-btnmenutoggle a {
+  margin-right: 0;
+  margin-left: -24px;
+}
+.tb-tasks-image figure {
+  margin: 0;
 }

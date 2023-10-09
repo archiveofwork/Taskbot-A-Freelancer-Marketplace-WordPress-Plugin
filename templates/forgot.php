@@ -59,7 +59,7 @@ if( !empty($view_type) && $view_type === 'popup' ){
                                 </div>
                             </div>
                             <div class="tk-popup-terms">
-                                <button type="submit" name="submit" class="tk-btn-solid-lg btn-reset-pass"><?php esc_html_e('Reset Password','taskbot');?><i class="icon-arrow-right"></i></button>
+                                <button type="submit" name="submit" class="tk-btn-solid-lg btn-reset-pass"><?php esc_html_e('Reset Password','taskbot');?><i class="tb-icon-arrow-right"></i></button>
                             </div>
                         <?php } else {?>
                             <?php do_action('taskbot_forgot_password_fields_before');?>
@@ -69,7 +69,7 @@ if( !empty($view_type) && $view_type === 'popup' ){
                                 </div>
                             </div>
                             <div class="tk-popup-terms">
-                                <button type="submit" name="submit" class="tk-btn-solid-lg btn-forget-pass"><?php esc_html_e('Send reset link','taskbot');?><i class="icon-arrow-right"></i></button>
+                                <button type="submit" name="submit" class="tk-btn-solid-lg btn-forget-pass"><?php esc_html_e('Send reset link','taskbot');?><i class="tb-icon-arrow-right"></i></button>
                             </div>
                         <?php } ?>
                         <div class="tk-lost-password">

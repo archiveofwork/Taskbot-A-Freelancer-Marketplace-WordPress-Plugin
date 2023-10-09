@@ -11,7 +11,7 @@
 */
 global $current_user;
 $user_identity = $current_user->ID;
-$icon = 'icon-briefcase';
+$icon = 'tb-icon-briefcase';
 $total_amount   = 0;
 
 if( function_exists('taskbot_account_withdraw_details') ){

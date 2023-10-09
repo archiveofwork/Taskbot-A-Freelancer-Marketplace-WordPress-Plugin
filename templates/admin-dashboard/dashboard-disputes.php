@@ -10,7 +10,7 @@
  * @since       1.0
 */
 
-global $current_user, $wp_roles, $userdata, $post;
+global $current_user, $wp_roles, $userdata, $post, $taskbot_settings;
 
 $reference 		 = !empty($_GET['ref'] ) ? $_GET['ref'] : '';
 $mode 			 = !empty($_GET['mode']) ? $_GET['mode'] : '';
@@ -70,12 +70,12 @@ $dispute_percentage	= taskbot_disppute_date_query_count('disputes');
 $percentChange		= !empty($dispute_percentage['percentChange']) ? $dispute_percentage['percentChange'] : '0';
 $change				= !empty($dispute_percentage['change']) ? $dispute_percentage['change'] : 'decrease';
 
-$change_class		= 'icon-chevron-left';
-$changearrow_class	= 'icon-arrow-down';
+$change_class		= 'tb-icon-chevron-left';
+$changearrow_class	= 'tb-icon-arrow-down';
 
 if($change == 'increase'){
-	$change_class		= 'icon-chevron-right';
-	$changearrow_class	= 'icon-arrow-up';
+	$change_class		= 'tb-icon-chevron-right';
+	$changearrow_class	= 'tb-icon-arrow-up';
 }
 $search_status	= !empty($status) && !is_array($status) ? $status : '';
 ?>
@@ -101,7 +101,7 @@ $search_status	= !empty($status) && !is_array($status) ? $status : '';
 				<fieldset>
 					<div class="tb-themeform__wrap">
 						<div class="form-group tb-inputicon tb-inputheight tb-dbholder">
-							<i class="icon-search"></i>
+							<i class="tb-icon-search"></i>
 							<input type="text" class="form-control" name="search" onkeyup="tablecellsearch()" id="myInputTwo" autocomplete="off" placeholder="<?php esc_attr_e('Search dispute listing', 'taskbot');?>">
 						</div>
 						<?php echo esc_attr($search_status);?>
@@ -174,7 +174,7 @@ $search_status	= !empty($status) && !is_array($status) ? $status : '';
 						</td>
 						<td data-label="<?php esc_attr_e('Action','taskbot');?>">
 							<span class="tb-tag-bordered">
-								<a href="<?php echo esc_url($dispute_url);?>" class="tb-vieweye"><span class="icon-eye"></span> <?php esc_html_e('View', 'taskbot');?></a>
+								<a href="<?php echo esc_url($dispute_url);?>" class="tb-vieweye"><span class="tb-icon-eye"></span> <?php esc_html_e('View', 'taskbot');?></a>
 							</span>
 						</td>				
 					</tr>
@@ -187,10 +187,12 @@ $search_status	= !empty($status) && !is_array($status) ? $status : '';
 				</div>
 			<?php }?>
 		</div>
-	<?php else: ?>
+	<?php else:
+        $image_url = !empty($taskbot_settings['empty_listing_image']['url']) ? $taskbot_settings['empty_listing_image']['url'] : TASKBOT_DIRECTORY_URI . 'public/images/empty.png';
+        ?>
 		<div class="tb-submitreview tb-submitreviewv3">
 			<figure>
-				<img src="<?php echo esc_url(TASKBOT_DIRECTORY_URI.'public/images/empty.png');?>" alt="<?php esc_attr_e( 'There are no disputes against any task.', 'taskbot'); ?>">
+				<img src="<?php echo esc_url($image_url);?>" alt="<?php esc_attr_e( 'There are no disputes against any task.', 'taskbot'); ?>">
 			</figure>
 			<h4><?php esc_html_e( 'There are no disputes against any task.', 'taskbot'); ?></h4>
 		</div>

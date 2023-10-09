@@ -308,8 +308,8 @@ if (!function_exists('taskbot_paginate')) {
                         'end_size'     => 2,
                         'mid_size'     => 1,
                         'prev_next'    => true,
-                        'prev_text'    => do_shortcode('<i class="icon-chevron-left"></i>'),
-                        'next_text'    => do_shortcode('<i class="icon-chevron-right"></i>'),
+                        'prev_text'    => do_shortcode('<i class="tb-icon-chevron-left"></i>'),
+                        'next_text'    => do_shortcode('<i class="tb-icon-chevron-right"></i>'),
                         'add_args'     => false
                     ));
                     ?>

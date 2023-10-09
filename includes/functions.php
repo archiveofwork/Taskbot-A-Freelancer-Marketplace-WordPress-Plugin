@@ -517,14 +517,15 @@ if ( ! function_exists( 'taskbot_dashboard_page_uri' ) ) {
  */
 if ( ! function_exists( 'taskbot_auth_redirect_page_uri' ) ) {
     function taskbot_auth_redirect_page_uri( $redirect_type = '', $user_id='' ) {
-		global	$taskbot_settings;
+		global	$taskbot_settings, $current_user;
 		$user_type	= apply_filters('taskbot_get_user_type', $user_id );
+        $user_identity  = $current_user->ID;
 
 		if( !empty($redirect_type) && ($redirect_type === 'login') && $user_type === 'sellers'){
 			$login_redirect	= !empty($taskbot_settings['login_redirect_seller']) ? $taskbot_settings['login_redirect_seller'] : 'home';
 
 			if(!empty($login_redirect) && $login_redirect == 'dashboard'){
-				$redirect		= taskbot_get_page_uri('dashboard');
+                $redirect		= Taskbot_Profile_Menu::taskbot_profile_menu_link('earnings', $user_id, true, 'insights');
 			}else if(!empty($login_redirect) && $login_redirect == 'profile'){
 				$redirect		= Taskbot_Profile_Menu::taskbot_profile_menu_link('dashboard', $user_id, true, 'profile');
 			}else if(!empty($login_redirect) && $login_redirect == 'projects'){
@@ -537,7 +538,7 @@ if ( ! function_exists( 'taskbot_auth_redirect_page_uri' ) ) {
 			$login_redirect	= !empty($taskbot_settings['login_redirect_buyer']) ? $taskbot_settings['login_redirect_buyer'] : 'home';
 
 			if(!empty($login_redirect) && $login_redirect == 'dashboard'){
-				$redirect		= taskbot_get_page_uri('dashboard');
+                $redirect		= Taskbot_Profile_Menu::taskbot_profile_menu_link('earnings', $user_id, true, 'insights');
 			}else if(!empty($login_redirect) && $login_redirect == 'profile'){
 				$redirect		= Taskbot_Profile_Menu::taskbot_profile_menu_link('dashboard', $user_id, true, 'profile');
 			}else if(!empty($login_redirect) && $login_redirect == 'freelancer'){
@@ -626,6 +627,8 @@ if (!function_exists('taskbot_get_profile_type')) {
 if ( !function_exists( 'taskbot_get_user_avatar' ) ) {
 	function taskbot_get_user_avatar( $sizes = array(), $user_identity = '' ) {
 		global	$taskbot_settings;
+        $width = '100';
+        $height = '100';
 		extract( shortcode_atts( array(
 			"width" => '100',
 			"height" => '100',
@@ -948,7 +951,7 @@ if(!function_exists('taskbot_process_geocode_results')) {
 				}
 
 				if ($addressType == "country") {
-					$geo_code_data['country']['long_name'] 	= $geo_data['address_components'][$i]['long_name'];
+					$geo_code_data['country']['long_name'] 		= $geo_data['address_components'][$i]['long_name'];
 					$geo_code_data['country']['short_name'] 	= $geo_data['address_components'][$i]['short_name'];
 				}
 
@@ -957,7 +960,7 @@ if(!function_exists('taskbot_process_geocode_results')) {
 					$geo_code_data['administrative_area_level_1']['short_name'] 	= $geo_data['address_components'][$i]['short_name'];
 				}
 
-				if ($addressType == "administrative_area_level_2") {
+				if ($addressType == "administrative_area_level_2" ) {
 					$geo_code_data['administrative_area_level_1']['long_name'] 		= $geo_data['address_components'][$i]['long_name'];
 					$geo_code_data['administrative_area_level_1']['short_name'] 	= $geo_data['address_components'][$i]['short_name'];
 				}
@@ -1408,7 +1411,7 @@ if (!function_exists('taskbot_order_budget_details')) {
 									?>
 							</span>
 							</div>
-							<i class="icon-chevron-down"></i>
+							<i class="tb-icon-chevron-down"></i>
 						</div>
 					</div>
 				</div>
@@ -1649,7 +1652,7 @@ if (!function_exists('taskbot_import_users_template')) {
 				</div>
 				<h3 class="theme-name">
 					<input id="upload-dummy-csv" type="file" name="users_csv" >
-					<label for="upload-dummy-csv" class="button button-primary upload-dummy-csv"><?php esc_html_e('Choose file','taskbot');?></lable>
+					<label for="upload-dummy-csv" class="button button-primary upload-dummy-csv"><?php esc_html_e('Choose file','taskbot');?></label>
 				</h3>
 				<div class="user-actions">
 					<input type="submit" class="button button-primary" value="<?php esc_attr_e('Import from file','taskbot');?>">
@@ -2092,7 +2095,7 @@ if (!function_exists('taskbot_count_proposals')) {
         $taskbot_posts  = !empty($taskbot_posts) && is_array($taskbot_posts) ? count($taskbot_posts) : 0;
 		?>
 		<li>
-			<i class="icon-file-text accountsicon"></i>
+			<i class="tb-icon-file-text accountsicon"></i>
 			<div class="tk-project-requirement_content">
 				<div class="tk-requirement-tags">
 					<span><?php echo esc_html(sprintf("%02d", $taskbot_posts));?></span>
@@ -2176,5 +2179,48 @@ if ( ! function_exists( 'wpguppy_get_post_image' ) ) {
 				}
 			}
 		}
+    }
+}
+
+if ( ! function_exists( 'is_taskbot_template' ) ) {
+    function is_taskbot_template(){
+
+        global $post;
+
+        $templates = array(
+            'templates/dashboard.php',
+            'templates/search-task.php',
+            'templates/add-task.php',
+            'templates/add-project.php',
+            'templates/submit-proposal.php',
+            'templates/search-seller.php',
+            'templates/search-projects.php',
+            'templates/pricing-plans.php',
+            'templates/single-task.php',
+            'templates/single-project.php',
+            'templates/add-offer.php',
+            'templates/single-seller.php',
+            'templates/single-buyer.php'
+        );
+
+        if (is_singular() && $post->post_type == 'product') {
+            $product = wc_get_product($post->ID);
+            $product_data = get_post_meta($post->ID, 'tb_service_meta', true);
+            $tb_product_type = get_post_meta($post->ID, 'tb_product_type', true);
+            if ($product->is_type('tasks') || !empty($product_data) || ($tb_product_type == 'tasks')) {
+                return true;
+            } else if ($product->is_type('projects') || $tb_product_type == 'projects') {
+                return true;
+            }
+        }
+
+        if ($post->post_type == 'sellers') {
+            return true;
+        } else if ($post->post_type == 'buyers') {
+            return true;
+        }
+
+        return is_page_template($templates);
+
     }
 }

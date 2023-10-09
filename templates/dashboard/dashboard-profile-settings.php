@@ -16,8 +16,11 @@ global $current_user, $taskbot_settings, $userdata, $post;
 $reference 		 = !empty($_GET['ref']) ? esc_html($_GET['ref']) : '';
 $mode 			 = !empty($_GET['mode']) ? esc_html($_GET['mode']) : '';
 $user_identity 	 = intval($current_user->ID);
+$user_data_set   = get_userdata($user_identity);
 $id 			 = !empty($args['id']) ? intval($args['id']) : '';
 $user_type		 = apply_filters('taskbot_get_user_type', $current_user->ID);
+$linked_profile	= taskbot_get_linked_profile_id($user_identity,'',$user_type);
+$user_name		= taskbot_get_username($linked_profile);
 $profile_id      = taskbot_get_linked_profile_id($user_identity, '', $user_type);
 $tb_post_meta   = get_post_meta($profile_id, 'tb_post_meta', true);
 $tb_post_meta   = !empty($tb_post_meta) ? $tb_post_meta : array();
@@ -37,8 +40,8 @@ $seller_type_term	= wp_get_object_terms($profile_id, 'tb_seller_type');
 $seller_type		= !empty($seller_type_term) ? $seller_type_term : array();
 $english_level_term	= wp_get_object_terms($profile_id, 'tb_english_level');
 $english_level		= !empty($english_level_term) ? $english_level_term : array();
-$first_name			= !empty($first_name) ? $first_name : '';
-$last_name			= !empty($last_name) ? $last_name : '';
+$first_name			= !empty($first_name) ? $first_name : $user_data_set->first_name;
+$last_name			= !empty($last_name) ? $last_name : $user_data_set->last_name;
 $hourly_rate		= get_post_meta($profile_id, 'tb_hourly_rate', true);
 $hourly_rate		= !empty($hourly_rate) ? $hourly_rate : '';
 $countries			= array();
@@ -65,6 +68,11 @@ if(!empty($taskbot_settings['enable_zipcode']) ){
 	$country_class = "form-group-half";
 }
 
+$width			= 300;
+$height			= 300;
+$avatar	= apply_filters(
+    'taskbot_avatar_fallback', taskbot_get_user_avatar(array('width' => $width, 'height' => $height), $linked_profile), array('width' => $width, 'height' => $height)
+);
 
 /* getting seller types */
 $seller_type_data         = taskbot_get_term_dropdown('tb_seller_type', false, 0, false);
@@ -76,9 +84,25 @@ $english_level_data       = taskbot_get_term_dropdown('tb_english_level', false,
 		<h2><?php esc_html_e('Profile settings', 'taskbot'); ?></h2>
 	</div>
 	<div class="tb-dhb-box-wrapper">
-		<div class="tb-tabtasktitle">
-			<h5><?php esc_html_e('Personal details', 'taskbot'); ?></h5>
-		</div>
+        <!--Profile Image-->
+        <div class="tb-asidebox tb-profile-area-wrapper" id="taskbot-droparea">
+            <div id="tb-asideprostatusv2" class="tb-asideprostatusv2">
+                <?php if( !empty($avatar) ){?>
+                    <a id="profile-avatar" href="javascript:void(0);" data-target="#cropimgpopup" data-toggle="modal">
+                        <figure>
+                            <img id="user_profile_avatar" src="<?php echo esc_url($avatar);?>" alt="<?php echo esc_attr($user_name);?>">
+                        </figure>
+                    </a>
+                <?php } ?>
+                <div class="tb-profile-content-area">
+                    <h4 class="tb-profile-content-title"><?php esc_html_e('Upload profile photo'); ?></h4>
+                    <p class="tb-profile-content-desc"><?php esc_html_e('Profile image should have jpg, jpeg, gif, png extension and size should not be more than 5MB'); ?></p>
+                    <div class="tb-profilebtnarea-wrapper">
+                        <a id="profile-avatar-btn" class="tb-btn" href="javascript:void(0);"><?php esc_html_e('Upload Photo','taskbot');?></a>
+                    </div>
+                </div>
+            </div>
+        </div>
 		<form class="tb-themeform tb-profileform" id="tb_save_settings">
 			<fieldset>
 				<div class="tb-profileform__holder">
@@ -161,7 +185,7 @@ $english_level_data       = taskbot_get_term_dropdown('tb_english_level', false,
 							<div class="form-group-half form-group_vertical">
 								<label class="form-group-title"><?php esc_html_e('English level', 'taskbot'); ?></label>
 								<span class="tb-select">
-									<select id="english_level" name="english_level" data-placeholderinput="<?php esc_html_e('Search English level', 'taskbot'); ?>" data-placeholder="<?php esc_attr_e('Choose English level', 'taskbot'); ?>">
+									<select id="english_level" name="english_level" data-placeholder="<?php esc_attr_e('Choose English level', 'taskbot'); ?>">
 										<option selected hidden disabled value=""><?php esc_html_e('English level', 'taskbot'); ?></option>
 										<?php if (is_array($english_level_data) && !empty($english_level_data)) {
 										$eng_level_term_id = isset($english_level[0]->term_id) ? $english_level[0]->term_id : '';
@@ -181,7 +205,7 @@ $english_level_data       = taskbot_get_term_dropdown('tb_english_level', false,
 								<div class="tk-select"> 
 									<?php 
 										$skills_args = array(
-											'class'         => 'tb-select2-cat tb-select2-skills',
+											'class'         => 'tb-select2-skills',
 											'taxonomy'      => 'skills',
 											'value_field'   => 'term_id',
 											'orderby'       => 'name',
@@ -195,7 +219,7 @@ $english_level_data       = taskbot_get_term_dropdown('tb_english_level', false,
 						<?php } ?>
 						<?php if(!empty($hide_languages ) && $hide_languages == 'no'){?>
 							<div class="form-group form-group_vertical">
-								<label class="tk-label"><?php esc_html_e('languages','taskbot');?></label>
+								<label class="tk-label"><?php esc_html_e('Languages, I can speak','taskbot');?></label>
 								<div class="tk-select"> 
 									<?php 
 										$languages_args = array(
@@ -229,32 +253,29 @@ $english_level_data       = taskbot_get_term_dropdown('tb_english_level', false,
 	</div>
 </div>
 <?php
+
+taskbot_get_template_part('profile', 'avatar-popup');
+
 $scripts	= "
 jQuery(document).ready(function($){
     'use strict';
+
 	// Make category drop-down select2 
-    jQuery('.tb-select2-languages').select2({
-        allowClear: true,
-        multiple: true,
-    });
     if ( $.isFunction($.fn.select2) ) {
         jQuery('.tb-select2-languages').select2({
+            theme: 'default tk-select2-dropdown',
             multiple: true,
             placeholder: scripts_vars.languages_option
         });
     }
-    jQuery('.tb-select2-languages').trigger('change');
-    jQuery('.tb-select2-skills').select2({
-        allowClear: true,
-        multiple: true,
-    });
+
     if ( $.isFunction($.fn.select2) ) {
         jQuery('.tb-select2-skills').select2({
+            theme: 'default tk-select2-dropdown',
             multiple: true,
             placeholder: scripts_vars.skills_option
         });
     }
-    jQuery('.tb-select2-skills').trigger('change');
 
     });";
     wp_add_inline_script('taskbot', $scripts, 'after');

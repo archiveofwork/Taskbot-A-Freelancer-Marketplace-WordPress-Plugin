@@ -69,6 +69,9 @@
         color: $text-light;
     }
 }
+.tb-icondetails .tb-tags .bg-new{
+    font: 400 rem(12)/em(26,12)  $body-font-family;
+}
 .tb-dhb-mainheading {
         > a{
             display: block;
@@ -169,7 +172,12 @@
         margin: 0 10px 0 0;
         background: #fcfcfc;
         border-radius: $radius;
-        img{border-radius: $radius;}
+        img{
+            width: 44px;
+            height: 44px;
+            object-fit: cover;
+            border-radius: $radius;
+        }
     }
     .tb-disablev2{
         pointer-events: none;
@@ -481,13 +489,16 @@
 .tb-taskcountdown {
     padding: 20px;
     h6 {
-        font: 600 rem(18)/em(28,18) $heading-font-family;
-        color: $clr-white;
         margin: 0;
+        color: $clr-white;
+        font: 600 rem(18)/em(28,18) $heading-font-family;
     }
     .tb-countdownno {
         padding:0;
         margin: 7px 0 0 0;
+    }
+    .select2-selection{
+        border: 0 !important;
     }
 }
 .tb-countdownno {
@@ -892,7 +903,7 @@
         display: flex;
         margin: 10px 0 0;
         align-items: center;
-        span {
+        span:not(.tb-preview){
             z-index: 1;
             color: $text-gray;
             overflow: hidden;
@@ -1007,19 +1018,19 @@
             border-radius: 50%;
             text-align: center;
             margin: 0 0 10px;
-            &.icon-pie-chart{
+            &.tb-icon-pie-chart{
                 color: #7357FB;
                 background:rgba(#7357FB, 0.1);
             }
-            &.icon-briefcase{
+            &.tb-icon-briefcase{
                 color: #18B99B;
                 background:rgba(#18B99B, 0.1);
             }
-            &.icon-server{
+            &.tb-icon-server{
                 color: #FF6167;
                 background:rgba(#FF6167, 0.1);
             }
-            &.icon-shopping-cart{
+            &.tb-icon-shopping-cart{
                 color: #D9A113;
                 background:rgba(#D9A113, 0.1);
             }
@@ -1152,7 +1163,7 @@
         box-shadow: $drop_shadows_lightest;
         border-radius:radius radius 0 0 ;
         & ~ .tb-submitreview  {
-            border-radius:radius radius 0 0 ;
+            border-radius: 0 0 4px 4px ;
         }
     }
     .tb-sortby{
@@ -1535,6 +1546,7 @@
         margin-left: auto;
         a {
             font-size: rem(16);
+            i{display: block;}
             ~a {
                 margin-left: 23px;
             }
@@ -1719,9 +1731,11 @@ ul{margin-bottom: 0;}
     align-items: center;
     padding: 4px 0 6px;
     img{
+        width: 32px;
+        height: 32px;
+        object-fit: cover;
         border-radius: 50%;
         margin-right: 10px;
-        max-width: 32px;
     }
     &__title{
         > h6{
@@ -1994,6 +2008,7 @@ div.tb-addcomment-child{
 .tb-payoutmethod{
     width: 100%;
     padding: 0;
+    margin: 0;
     margin-bottom: 0;
     > li{
         > input{

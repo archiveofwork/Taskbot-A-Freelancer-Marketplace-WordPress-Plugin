@@ -86,7 +86,7 @@ input:focus,
         position: absolute;
         font-size: 22px;
         pointer-events: none;
-        font-family: 'icomoon';
+        font-family: 'taskbot-icons';
         color: #676767;
     }
     & select{
@@ -194,7 +194,7 @@ form p span i {
             left: 0;
             position: absolute;
             font-size: rem(14px);
-            font-family: 'icomoon';
+            font-family: 'taskbot-icons';
             flex: none;
         }
         &:before {

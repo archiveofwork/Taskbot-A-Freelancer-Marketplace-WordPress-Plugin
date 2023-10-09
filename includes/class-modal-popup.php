@@ -53,7 +53,7 @@ if (!class_exists('Taskbot_Modal_Popup')) {
                     <div class="taskbot-modalcontent modal-content">
                         <div class="tb-popuptitle">
                             <h4></h4>
-                            <a href="javascript:void(0);" class="close"><i class="icon-x" data-bs-dismiss="modal"></i></a>
+                            <a href="javascript:void(0);" class="close"><i class="tb-icon-x" data-bs-dismiss="modal"></i></a>
                         </div>
                         <div id="taskbot-model-body" class="modal-body"></div>
                     </div>
@@ -65,7 +65,7 @@ if (!class_exists('Taskbot_Modal_Popup')) {
                     <div class="modal-content">
                         <div class="tb-popuptitle">
                         <h4><?php esc_html_e('Add credit to your wallet', 'taskbot'); ?></h4>
-                        <a href="javascript:void(0);" class="close"><i class="icon-x" data-bs-dismiss="modal"></i></a>
+                        <a href="javascript:void(0);" class="close"><i class="tb-icon-x" data-bs-dismiss="modal"></i></a>
                         </div>
                         <div class="modal-body">
                         <form class="tb-themeform">
@@ -76,7 +76,7 @@ if (!class_exists('Taskbot_Modal_Popup')) {
                             <div class="form-group">
                                 <span class="tb-btn"
                                 id="tb_submit_fund"><?php esc_html_e('Add funds now', 'taskbot'); ?><i
-                                    class="icon-arrow-right"></i></span>
+                                    class="tb-icon-arrow-right"></i></span>
                             </div>
                             </fieldset>
                         </form>
@@ -117,6 +117,7 @@ if (!class_exists('Taskbot_Modal_Popup')) {
                     $script = "
                     jQuery(document).on('ready', function(){
                         jQuery('#tk-pass-model').modal('show');
+                        jQuery('#tk-pass-model').removeClass('hidden');
                     });
                     ";
                     wp_add_inline_script( 'taskbot', $script, 'after' );
@@ -126,7 +127,7 @@ if (!class_exists('Taskbot_Modal_Popup')) {
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content tk-login-popup-content">
                             <div class="modal-body">
-                                <a href="javascript:void(0)" class="tk-loginclose-tag" data-bs-dismiss="modal"><i class="icon-x"></i></a>
+                                <a href="javascript:void(0)" class="tk-loginclose-tag" data-bs-dismiss="modal"><i class="tb-icon-x"></i></a>
                                 <?php echo do_shortcode('[taskbot_signin background="'.$bg_image.'" logo="'.$logo.'" tagline="'.$logintagline.'" ]');?>
                             </div>
                         </div>
@@ -136,7 +137,7 @@ if (!class_exists('Taskbot_Modal_Popup')) {
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content tk-signup-popup-content">
                             <div class="modal-body">
-                                <a href="javascript:void(0)" class="tk-loginclose-tag" data-bs-dismiss="modal"><i class="icon-x"></i></a>
+                                <a href="javascript:void(0)" class="tk-loginclose-tag" data-bs-dismiss="modal"><i class="tb-icon-x"></i></a>
                                 <?php echo do_shortcode('[taskbot_registration background="'.$bg_image.'" logo="'.$logo.'" tagline="'.$tagline.'" ]');?>
                             </div>
                         </div>
@@ -146,7 +147,7 @@ if (!class_exists('Taskbot_Modal_Popup')) {
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content tk-pass-popup-content">
                             <div class="modal-body">
-                                <a href="javascript:void(0)" class="tk-loginclose-tag" data-bs-dismiss="modal"><i class="icon-x"></i></a>
+                                <a href="javascript:void(0)" class="tk-loginclose-tag" data-bs-dismiss="modal"><i class="tb-icon-x"></i></a>
                                 <?php echo do_shortcode('[taskbot_forgot background="'.$bg_image.'" logo="'.$logo.'" tagline="'.$reset_pass_tagline.'" reset_pass_tagline="'.$after_reset_pass_tagline.'" ]');?>
                             </div>
                         </div>
@@ -161,7 +162,7 @@ if (!class_exists('Taskbot_Modal_Popup')) {
 
                         <div class="tb-popuptitle">
                             <h4><?php esc_html_e('Add new FAQ', 'taskbot'); ?></h4>
-                            <span class="close"><i class="icon-x" data-bs-dismiss="modal"></i></span>
+                            <span class="close"><i class="tb-icon-x" data-bs-dismiss="modal"></i></span>
                         </div>            
                         <div class="modal-body">
                             <form class="tb-themeform tb-formlogin">
@@ -206,7 +207,7 @@ if (!class_exists('Taskbot_Modal_Popup')) {
                 <div class="modal-content">
                     <div class="tb-popuptitle">
                     <h4><?php esc_html_e('Reject task approval request', 'taskbot'); ?></h4>
-                    <span class="close"><i class="icon-x" data-bs-dismiss="modal"></i></span>
+                    <span class="close"><i class="tb-icon-x" data-bs-dismiss="modal"></i></span>
                     </div>
                     <div class="modal-body">
                     <form class="tb-themeform">

@@ -34,7 +34,7 @@ if (!class_exists('Taskbot_Template_Functions')) {
             add_action('taskbot_service_item_queue', array($this, 'taskbot_service_item_queue'));
             add_action('taskbot_service_item_completed', array($this, 'taskbot_service_item_completed'));
             add_action('taskbot_service_item_cancelled', array($this, 'taskbot_service_item_cancelled'));
-            add_action('taskbot_user_hourly_starting_rate', array($this, 'taskbot_user_hourly_starting_rate'), 10, 2);
+            add_action('taskbot_user_hourly_starting_rate', array($this, 'taskbot_user_hourly_starting_rate'), 10, 3);
             add_action('taskbot_service_item_starting_price', array($this, 'taskbot_service_item_starting_price'));
             add_action('taskbot_service_item_starting_price_theme', array($this, 'taskbot_service_item_starting_price_theme'));
             add_action('taskbot_task_price_plans', array($this, 'taskbot_task_price_plans'));
@@ -260,7 +260,7 @@ if (!class_exists('Taskbot_Template_Functions')) {
                 <div class="tb-blogtags">
                     <?php if (!empty($heading)) { ?>
                         <div class="tb-tagtittle">
-                            <i class="icon icon-tag"></i>
+                            <i class="tb-icon-tag"></i>
                             <span>
                                 <?php echo esc_html($heading.":"); ?>
                             </span>
@@ -430,9 +430,9 @@ if (!class_exists('Taskbot_Template_Functions')) {
             $text           = !empty($saved_items) && in_array($post_id, $saved_items) ? esc_html__('Saved', 'taskbot') : esc_html__('Save', 'taskbot');
             ob_start();
             if (!empty($type) && $type == 'list') { ?>
-                <a href="javascript:void(0);" class="tb_saved_items <?php echo esc_attr($saved_class); ?>" data-action="<?php echo esc_attr($action); ?>" data-post_id="<?php echo intval($post_id); ?>" data-id="<?php echo intval($current_user->ID); ?>" data-type="<?php echo esc_attr($post_type);?>"><span class="icon-heart"></span></a>
+                <a href="javascript:void(0);" class="tb_saved_items <?php echo esc_attr($saved_class); ?>" data-action="<?php echo esc_attr($action); ?>" data-post_id="<?php echo intval($post_id); ?>" data-id="<?php echo intval($current_user->ID); ?>" data-type="<?php echo esc_attr($post_type);?>"><span class="tb-icon-heart"></span></a>
             <?php } else { ?>
-                <li> <a href="javascript:void(0);" class="tb_saved_items <?php echo esc_attr($saved_class); ?>" data-action="<?php echo esc_attr($action); ?>" data-post_id="<?php echo intval($post_id); ?>" data-id="<?php echo intval($current_user->ID); ?>" data-type="<?php echo esc_attr($post_type);?>"><span class="icon-heart"></span><?php echo esc_html($text);?> </a> </li>
+                <li> <a href="javascript:void(0);" class="tb_saved_items <?php echo esc_attr($saved_class); ?>" data-action="<?php echo esc_attr($action); ?>" data-post_id="<?php echo intval($post_id); ?>" data-id="<?php echo intval($current_user->ID); ?>" data-type="<?php echo esc_attr($post_type);?>"><span class="tb-icon-heart"></span><?php echo esc_html($text);?> </a> </li>
             <?php
             }
             echo ob_get_clean();
@@ -460,7 +460,7 @@ if (!class_exists('Taskbot_Template_Functions')) {
             <div class="tk-like">
                 <a href="javascript:void(0);" class="tb_saved_items <?php echo esc_attr($saved_class); ?>"
                 data-action="<?php echo esc_attr($action); ?>" data-post_id="<?php echo intval($post_id); ?>"
-                data-id="<?php echo intval($current_user->ID); ?>" data-type="tasks"><i class="icon-heart"></i>
+                data-id="<?php echo intval($current_user->ID); ?>" data-type="tasks"><i class="tb-icon-heart"></i>
                 </a>
             </div>
             <?php
@@ -505,7 +505,7 @@ if (!class_exists('Taskbot_Template_Functions')) {
             ob_start();
             if ($taskbot_featured) {
             ?>
-                <span class="tk-featureditem" <?php echo apply_filters('taskbot_tooltip_attributes', $type);?>><i class="icon icon-zap"></i></span>
+                <span class="tk-featureditem" <?php echo apply_filters('taskbot_tooltip_attributes', $type);?>><i class="tb-icon-zap"></i></span>
             <?php
             }
             echo ob_get_clean();
@@ -598,7 +598,7 @@ if (!class_exists('Taskbot_Template_Functions')) {
             if ($gallery_count > 1 && empty($video_url)) {
                 ob_start();
                 ?>
-                    <span class="tk-noofslides"><i class="icon-image"></i><?php echo esc_html($gallery_count); ?></span>
+                    <span class="tk-noofslides"><i class="tb-icon-image"></i><?php echo esc_html($gallery_count); ?></span>
                 <?php
                 echo ob_get_clean();
             }
@@ -781,7 +781,7 @@ if (!class_exists('Taskbot_Template_Functions')) {
             ob_start();
             ?>
                 <li>
-                    <i class="icon-eye"></i> <span><?php echo wp_sprintf( _n( '%s view', '%s views', $taskbot_service_views, 'taskbot' ), $taskbot_service_views );?></span>
+                    <i class="tb-icon-eye"></i> <span><?php echo wp_sprintf( _n( '%s view', '%s views', $taskbot_service_views, 'taskbot' ), $taskbot_service_views );?></span>
                 </li>
             <?php
             echo ob_get_clean();
@@ -804,7 +804,7 @@ if (!class_exists('Taskbot_Template_Functions')) {
             ob_start();
             ?>
                 <li>
-                    <span> <i class="icon-eye"></i> <em><?php echo wp_sprintf( _n( '%s view', '%s views', $taskbot_service_views, 'taskbot' ), $taskbot_service_views );?></em> </span>
+                    <span> <i class="tb-icon-eye"></i> <em><?php echo wp_sprintf( _n( '%s view', '%s views', $taskbot_service_views, 'taskbot' ), $taskbot_service_views );?></em> </span>
                 </li>
             <?php
             echo ob_get_clean();
@@ -826,7 +826,7 @@ if (!class_exists('Taskbot_Template_Functions')) {
                 $units_sold = !empty($units_sold) ? sprintf("%02d", $units_sold) : 0;
                 ob_start();
             ?>
-                <li><i class="icon-shopping-bag text-grey"></i><span><?php echo wp_sprintf( _n( '%s sale', '%s sales', $units_sold, 'taskbot' ), $units_sold );?></span></li>   
+                <li><i class="tb-icon-shopping-bag text-grey"></i><span><?php echo wp_sprintf( _n( '%s sale', '%s sales', $units_sold, 'taskbot' ), $units_sold );?></span></li>   
             <?php
                 echo ob_get_clean();
             }
@@ -873,7 +873,7 @@ if (!class_exists('Taskbot_Template_Functions')) {
             if ($task_status) {
                 ob_start();
             ?>
-                <li <?php echo do_shortcode($status_class);?>><i class="icon-clock"></i><span><?php echo esc_attr($label);?></span></li>   
+                <li <?php echo do_shortcode($status_class);?>><i class="tb-icon-clock"></i><span><?php echo esc_attr($label);?></span></li>   
             <?php
                 echo ob_get_clean();
             }
@@ -985,12 +985,23 @@ if (!class_exists('Taskbot_Template_Functions')) {
         {
             $product_id = $product->get_id();
             $taskbot_total_sales = $product->get_total_sales();
-            $taskbot_order_cancelled = taskbot_get_order_ids_by_product($product_id, array('wc-cancelled', 'wc-refunded', 'wc-failed'));
-            $taskbot_order_cancelled = (!empty($taskbot_order_cancelled) && is_array($taskbot_order_cancelled)) ? count($taskbot_order_cancelled) : 0;
-
+            $meta_array = array(
+                array(
+                    'key' => 'task_product_id',
+                    'value' => $product_id,
+                    'compare' => '=',
+                    'type' => 'NUMERIC'
+                ),
+                array(
+                    'key' => '_task_status',
+                    'value' => 'cancelled',
+                    'compare' => '=',
+                )
+            );
+            $taskbot_order_cancelled = taskbot_get_post_count_by_meta('shop_order', array('wc-cancelled', 'wc-refunded', 'wc-failed','wc-completed'), $meta_array);
             $taskbot_cancelled_order_percentage = 0;
-            if ($taskbot_total_sales > 0 && $taskbot_order_cancelled > 0) {
-                $taskbot_cancelled_order_percentage = ($taskbot_order_cancelled / 100) * $taskbot_total_sales;
+            if ($taskbot_total_sales > 0 && ($taskbot_order_cancelled) > 0) {
+                $taskbot_cancelled_order_percentage = ($taskbot_order_cancelled / $taskbot_total_sales) * 100;
             }
             ob_start();
             ?>
@@ -1017,11 +1028,11 @@ if (!class_exists('Taskbot_Template_Functions')) {
      * @author Amentotech <theamentotech@gmail.com>
      * @return
      */
-        public function taskbot_user_hourly_starting_rate($seller_id = '', $saved_key = 'tb_hourly_rate')
+        public function taskbot_user_hourly_starting_rate($seller_id = '', $tb_hourly_rate = 'tb_hourly_rate', $display_button = '')
         {
             if (!empty($seller_id)) {
-                $tb_hourly_rate = get_post_meta($seller_id, $saved_key, true);
-                if (!empty($tb_hourly_rate)) {
+                $tb_hourly_rate = get_post_meta($seller_id, 'tb_hourly_rate', true);
+                if (!empty($tb_hourly_rate) || !empty($display_button)) {
                     ob_start();
                     ?>
                     <div class="tb-startingprice">
@@ -1029,7 +1040,9 @@ if (!class_exists('Taskbot_Template_Functions')) {
                         <em>
                             <span><?php echo sprintf(esc_html__('%s /hr', 'taskbot'), taskbot_price_format($tb_hourly_rate, 'return')); ?></span>
                         </em>
-                        <a class="tk-btn-solid-lg" href="<?php echo esc_url( get_permalink($seller_id)); ?>"><?php esc_html_e('View profile', 'taskbot'); ?></a>
+                        <?php if(!$display_button):?>
+                            <a class="tk-btn-solid-lg" href="<?php echo esc_url( get_permalink($seller_id)); ?>"><?php esc_html_e('View profile', 'taskbot'); ?></a>
+                        <?php endif; ?>
                     </div>
                     <?php
                     echo ob_get_clean();
@@ -1119,7 +1132,7 @@ if (!class_exists('Taskbot_Template_Functions')) {
             ob_start();
             if (!empty($version) && $version == 'v1') { ?>
                 <li>
-                    <span class="tb-pinkbox"><i class="icon-shopping-cart"></i></span>
+                    <span class="tb-pinkbox"><i class="tb-icon-shopping-cart"></i></span>
                     <div class="tb-sales__title">
                         <em><?php esc_html_e('No. of sales', 'taskbot'); ?></em>
                         <h6><?php echo intval($sales); ?></h6>
@@ -1128,7 +1141,7 @@ if (!class_exists('Taskbot_Template_Functions')) {
             <?php } else if (!empty($version) && $version == 'v2') { ?>
                 <li>
                     <div class="tb-pkgresponse__content tb-purple">
-                        <i class="icon-shopping-cart"></i>
+                        <i class="tb-icon-shopping-cart"></i>
                         <h6><?php echo intval($sales); ?></h6>
                         <span><?php esc_html_e('No. of sales', 'taskbot'); ?></span>
                     </div>
@@ -1136,7 +1149,7 @@ if (!class_exists('Taskbot_Template_Functions')) {
             <?php }else if (!empty($version) && $version == 'v3') { ?>
                 <li>
                     <div class="tb-pkgresponse__content tb-purple">
-                        <i class="icon-shopping-cart"></i>
+                        <i class="tb-icon-shopping-cart"></i>
                         <h6><?php echo intval($sales); ?>&nbsp;<?php esc_html_e('sales', 'taskbot'); ?></h6>
                     </div>
                 </li>
@@ -1190,7 +1203,7 @@ if (!class_exists('Taskbot_Template_Functions')) {
             <?php } elseif (!empty($version) && $version == 'v2' && !empty($days)) { ?>
                 <li>
                     <div class="tb-pkgresponse__content tb-greenbox tb-change-timedays">
-                        <i class="icon-gift"></i>
+                        <i class="tb-icon-gift"></i>
                         <h6><?php echo sprintf(_n( '%s Day', '%s Days', $days, 'taskbot' ), $days); ?></h6>
                         <span><?php esc_html_e('Delivery', 'taskbot'); ?></span>
                     </div>
@@ -1218,7 +1231,7 @@ if (!class_exists('Taskbot_Template_Functions')) {
             ob_start();
             ?>
             <li>
-                <span class="bg-lightorange"><i class="icon-download-cloud"></i></span>
+                <span class="bg-lightorange"><i class="tb-icon-download-cloud"></i></span>
                 <div class="tb-sales__title">
                     <em><?php esc_html_e('Downloadable', 'taskbot'); ?></em>
                     <h6><?php echo esc_html($download_able); ?></h6>
@@ -1244,7 +1257,7 @@ if (!class_exists('Taskbot_Template_Functions')) {
             ?>
             <li>
                 <div class="tb-pkgresponse__content tb-orange">
-                    <i class="icon-trending-up"></i>
+                    <i class="tb-icon-trending-up"></i>
                     <h6><?php echo intval($average_rating); ?>%</h6>
                     <span><?php esc_html_e('User rating', 'taskbot'); ?></span>
                 </div>
@@ -1272,7 +1285,7 @@ if ( ! function_exists( 'taskbot_keyword_search' ) ) {
                 <div class="tk-placeholderholder">
                     <input type="text" name="keyword" value="<?php echo esc_attr($search_keyword); ?>" class="form-control" placeholder="<?php esc_attr_e('Start your search','taskbot');?>">
                 </div>
-                <a href="javascript:void(0);" class="tk-search-icon"><i class="icon-search"></i></a>
+                <a href="javascript:void(0);" class="tk-search-icon"><i class="tb-icon-search"></i></a>
             </div>
         </div>
 
@@ -1324,7 +1337,7 @@ if ( ! function_exists( 'taskbot_seller_status_filter' ) ) {
         ?>
             <div class="tk-aside-holder">
                 <div class="tb-sidebartitle">
-                    <h5><i class="icon-minus"></i> <?php esc_html_e('Seller type','taskbot');?></h5>
+                    <h5><i class="tb-icon-minus"></i> <?php esc_html_e('Seller type','taskbot');?></h5>
                 </div>
                 <div class="tb-sidebarcontent">
                     <div class="tb-checkboxholder">
@@ -1974,7 +1987,7 @@ if (!function_exists('taskbot_login_user_menu_details')) {
                     <?php if( (in_array('wp-guppy/wp-guppy.php', apply_filters('active_plugins', get_option('active_plugins'))) || in_array('wpguppy-lite/wpguppy-lite.php', apply_filters('active_plugins', get_option('active_plugins')))) ){ ?>
                         <li class="tk-headerchatbtn">
                             <a href="<?php Taskbot_Profile_Menu::taskbot_profile_menu_link('inbox', $user_identity, false);?>">
-                                <i class="icon-message-square"></i>
+                                <i class="tb-icon-message-square"></i>
                                 <?php if(!empty($messages_count) ){?><em class="tk-remaining-notification"><?php echo esc_html($messages_count);?></em><?php }?>
                                 <span><?php esc_html_e('Messages','taskbot');?></span>
                             </a>
@@ -2046,7 +2059,7 @@ if (!function_exists('taskbot_custom_user_menu')) {
                        $login       = 'javascript:;';
                        $login_class = 'tk-login-poup'; 
                     }
-                    $items      .= '<li class="tk-user-menu-wrapper"><div class="tk-navbarbtn"><a href="'.do_shortcode($login).'" class="tk-btn tk-login '.esc_attr($login_class).'">'.esc_html__('Sign in','taskbot').'</a><span data-type="post_task" id="tk_post_task" class="tk-btn-solid-lg">' . esc_html__('Post a task', 'taskbot') . '<i class="icon icon-plus"></i></span></div></li>';
+                    $items      .= '<li class="tk-user-menu-wrapper"><div class="tk-navbarbtn"><a href="'.do_shortcode($login).'" class="tk-btn tk-login '.esc_attr($login_class).'">'.esc_html__('Sign in','taskbot').'</a><span data-type="post_task" id="tk_post_task" class="tk-btn-solid-lg">' . esc_html__('Post a task', 'taskbot') . '<i class="tb-icon-plus"></i></span></div></li>';
                 }
             }
         }
@@ -2065,7 +2078,7 @@ if (!function_exists('taskbot_footer_custom_user_menu')) {
     function taskbot_footer_custom_user_menu() {
         if (is_user_logged_in()) {
             ob_start();?>
-                <div class="tb-user-menu d-xl-none d-xxl-none"><a href="javascript:;" class="tb-dbmenu tb_user_profile"><?php Taskbot_Profile_Menu::taskbot_get_avatar(); ?><i class="icon icon-x"></i></a><?php echo do_shortcode(taskbot_login_user_menu_details());?></div>
+                <div class="tb-user-menu d-xl-none d-xxl-none"><a href="javascript:;" class="tb-dbmenu tb_user_profile"><?php Taskbot_Profile_Menu::taskbot_get_avatar(); ?><i class="tb-icon-x"></i></a><?php echo do_shortcode(taskbot_login_user_menu_details());?></div>
             <?php
             echo ob_get_clean();
         }
@@ -2088,7 +2101,7 @@ if (!function_exists('taskbot_get_freelancer_views')) {
         ob_start();
         ?>
         <li>
-            <i class="icon-eye"></i> 
+            <i class="tb-icon-eye"></i> 
             <span> 
                 <?php  
                     if( !empty($taskbot_freelancer_views) ) {
@@ -2155,7 +2168,7 @@ if (!function_exists('taskbot_save_freelancer_html')) {
                 <a href="javascript:void(0);" class="tb-heart" data-action="<?php echo esc_attr($action); ?>"
                    data-post_id="<?php echo intval($seller_id); ?>" data-id="<?php echo intval($user_id); ?>"
                    data-type="<?php echo esc_attr($user_type); ?>">
-                    <span class="<?php echo esc_attr($saved_class); ?> icon-heart"></span><?php esc_html_e('Save', 'taskbot'); ?>
+                    <span class="<?php echo esc_attr($saved_class); ?> tb-icon-heart"></span><?php esc_html_e('Save', 'taskbot'); ?>
                 </a>
             </li>
         <?php } else if (!empty($type) && $type == 'v2') { ?>
@@ -2163,7 +2176,7 @@ if (!function_exists('taskbot_save_freelancer_html')) {
                    data-action="<?php echo esc_attr($action); ?>"
                    data-post_id="<?php echo intval($seller_id); ?>" data-id="<?php echo intval($user_id); ?>"
                    data-type="<?php echo esc_attr($saved_type); ?>">
-                    <span class="<?php echo esc_attr($saved_class); ?> icon-heart"></span>
+                    <span class="<?php echo esc_attr($saved_class); ?> tb-icon-heart"></span>
                 </a>
         <?php }else { ?>
             <li>
@@ -2171,7 +2184,7 @@ if (!function_exists('taskbot_save_freelancer_html')) {
                    data-action="<?php echo esc_attr($action); ?>"
                    data-post_id="<?php echo intval($seller_id); ?>" data-id="<?php echo intval($user_id); ?>"
                    data-type="<?php echo esc_attr($saved_type); ?>">
-                    <span class="<?php echo esc_attr($saved_class); ?> icon-heart"></span><?php esc_html_e('Save', 'taskbot'); ?>
+                    <span class="<?php echo esc_attr($saved_class); ?> tb-icon-heart"></span><?php esc_html_e('Save', 'taskbot'); ?>
                 </a>
             </li>
         <?php }
@@ -2186,24 +2199,61 @@ if (!function_exists('taskbot_save_freelancer_html')) {
 if (!function_exists('taskbot_render_price_filter_htmlv2')) {
     function taskbot_render_price_filter_htmlv2($price_text ='',$min_price='',$max_price='',$flag='')
     {
-        ?>
-        <?php if( !empty($price_text) ){?>
+        if( !empty($price_text) ){?>
             <h6><?php echo esc_html($price_text);?></h6>
         <?php } ?>
         <div class="tk-areasizebox">
-            <div class="form-group-wrap" id= "tk-range-wrapper" data-bs-target="#rangecollapse">
+            <div class="form-group-wrap" id="tk-range-wrapper" data-bs-target="#rangecollapse">
                 <div class="form-group form-group-half" >
-                    <input type="number" class="form-control" name="min_price" min="<?php echo esc_attr($min_price);?>" max="<?php echo esc_attr($max_price);?>" step="1" placeholder="<?php esc_attr_e('Min price','taskbot');?>" id="tk-min-value-<?php echo intval($flag);?>">
+                    <input type="number" class="form-control" value="<?php echo esc_attr($min_price); ?>" name="min_price" min="<?php echo esc_attr($min_price);?>" max="<?php echo esc_attr($max_price);?>" step="1" placeholder="<?php esc_attr_e('Min price','taskbot');?>" id="tb_amount_min">
                 </div>
                 <div class="form-group form-group-half">
-                    <input type="number" class="form-control" name="max_price" step="1" placeholder="<?php esc_attr_e('Max price','taskbot');?>" id="tk-max-value-<?php echo intval($flag);?>">
+                    <input type="number" class="form-control" value="<?php echo esc_attr($max_price); ?>" name="max_price" step="1" placeholder="<?php esc_attr_e('Max price','taskbot');?>" id="tb_amount_max">
                 </div>
             </div>
+            <div class="tb-distanceholder tb-distanceholder-v2">
             <div class="collapse tk-distance" id="rangecollapse">
-                <div id="tk-rangeslider-<?php echo intval($flag);?>" class="tk-tooltiparrow tk-rangeslider"></div>
+                <div id="slider-range" class="tk-tooltiparrow tk-rangeslider"></div>
+            </div>
             </div>
         </div>
         <?php
+        $script = "jQuery(document).on('ready', function ($) {
+                jQuery('#slider-range').slider({
+                    range: true,
+                    min: " . esc_attr($min_price) . ",
+                    max: " . esc_attr($max_price) . ",
+                    values: ['" . esc_attr($min_price) . "', '" .esc_attr( $max_price) . "'],
+                    slide: function(event, ui) {
+                    jQuery('#tb_amount_min').val(ui.values[0]);
+                    jQuery('#tb_amount_max').val(ui.values[1]);
+                    }
+                });
+
+                jQuery('#tb_amount_min').val(jQuery('#slider-range').slider('values', 0));
+                jQuery('#tb_amount_max').val(jQuery('#slider-range').slider('values', 1));
+                jQuery('#tb_amount_min').change(function() {
+                    jQuery('#slider-range').slider('values', 0, jQuery(this).val());
+                });
+
+                jQuery('#tb_amount_max').change(function() {
+                    jQuery('#slider-range').slider('values', 1, jQuery(this).val());
+                });
+
+                jQuery(document).on('click', '.tb-reset-price-range', function (e) {
+                    e.preventDefault();
+                    jQuery('#tb_amount_min').val(" . esc_attr($min_price) . ");
+                    jQuery('#tb_amount_max').val(" . esc_attr($max_price) . ");
+                });
+
+                jQuery(window).keydown(function(event){
+                    if(event.keyCode == 13) {
+                    event.preventDefault();
+                    return false;
+                    }
+                });
+            });";
+        wp_add_inline_script('taskbot', $script, 'after');
     }
     add_action('taskbot_render_price_filter_htmlv2', 'taskbot_render_price_filter_htmlv2', 10, 4);
 }
@@ -2259,7 +2309,7 @@ if (!function_exists('taskbot_render_seller_type_filter_html')) {
             ?>
             <div class="tk-aside-holder">
                 <div class="tb-sidebartitle collapsed" data-bs-toggle="collapse" data-bs-target="#seller-type" role="button" aria-expanded="false">
-                    <h5><i class="icon-minus"></i> <?php esc_html_e('Seller Type', 'taskbot'); ?></h5>
+                    <h5><i class="tb-icon-minus"></i> <?php esc_html_e('Seller Type', 'taskbot'); ?></h5>
                 </div>
                 <div class="tb-sidebarcontent collapse" id="seller-type">
                     <ul class="tb-categoriesfilter">
@@ -2302,7 +2352,7 @@ if (!function_exists('taskbot_render_english_level_filter_html')) {
             ?>
             <div class="tk-aside-holder">
                 <div class="tb-sidebartitle collapsed" data-bs-toggle="collapse" data-bs-target="#eng-level" role="button" aria-expanded="false">
-                    <h5><i class="icon-minus"></i> <?php esc_html_e('English Level', 'taskbot'); ?></h5>
+                    <h5><i class="tb-icon-minus"></i> <?php esc_html_e('English Level', 'taskbot'); ?></h5>
                 </div>
                 <div class="tb-sidebarcontent collapse" id="eng-level">
                     <ul class="tb-categoriesfilter">
@@ -2340,13 +2390,14 @@ if (!function_exists('taskbot_render_price_range_filter_html')) {
         $max_search_price       = !empty($taskbot_settings['max_search_price']) ? $taskbot_settings['max_search_price'] : 5000;
         $disable_range_slider   = !empty($taskbot_settings['disable_range_slider']) ? $taskbot_settings['disable_range_slider'] : false;
 
+        if( empty($min_price) ){
+            $min_price  = $min_search_price;
+        }
+
         if( empty($max_price) ){
             $max_price  = $max_search_price; 
         }
-        
-        if( empty($max_price) ){
-            $min_price  = $min_search_price;
-        }
+
         ob_start();
         ?>
         <div class="tk-aside-holder">
@@ -2431,7 +2482,7 @@ if (!function_exists('taskbot_render_location_filter_html')) {
             ?>
             <div class="tk-aside-holder">
                 <div class="tb-sidebartitle collapsed" data-bs-toggle="collapse" data-bs-target="#location" role="button" aria-expanded="false">
-                    <h5><i class="icon-minus"></i> <?php esc_html_e('Location', 'taskbot'); ?></h5>
+                    <h5><i class="tb-icon-minus"></i> <?php esc_html_e('Location', 'taskbot'); ?></h5>
                 </div>
                 <div class="tb-select collapse" id="location">
                     <select id="tb_country" name="location" class="form-control" data-placeholderinput="<?php esc_attr_e('Search country', 'taskbot'); ?>" data-placeholder="<?php esc_attr_e('Choose country', 'taskbot'); ?>">
@@ -2533,7 +2584,7 @@ if (!function_exists('taskbot_withdraw_search')) {
     {
         ?>
         <div class="form-group wo-inputicon wo-inputheight">
-            <i class="icon-search"></i>
+            <i class="tb-icon-search"></i>
             <input type="text" class="form-control" name="withdraw_id" value="<?php echo esc_attr($withdraw_id) ?>" placeholder="<?php esc_attr_e('Search withdrawn records here', 'taskbot'); ?>">
         </div>
         <?php
@@ -3073,7 +3124,7 @@ if (!function_exists('taskbot_keyword_search_filter_theme')) {
                 <div class="tk-placeholderholder">
                     <input type="text" name="keyword" placeholder="<?php esc_attr_e('Search with keyword', 'taskbot'); ?>" value="<?php echo esc_attr($search_keyword); ?>" class="form-control">
                 </div>
-                <a href="javascript:void(0);" class="tk-search-icon"><i class="icon-search"></i></a>
+                <a href="javascript:void(0);" class="tk-search-icon"><i class="tb-icon-search"></i></a>
             </div>
         </div>
         <?php
@@ -3215,11 +3266,13 @@ if (!function_exists('taskbot_search_clear_button_theme')) {
 if (!function_exists('taskbot_empty_records_html')) {
     function taskbot_empty_records_html($class = '', $text = '')
     {
+        global $taskbot_settings;
         ob_start();
+        $image_url = !empty($taskbot_settings['empty_listing_image']['url']) ? $taskbot_settings['empty_listing_image']['url'] : TASKBOT_DIRECTORY_URI . 'public/images/empty.png';
         ?>
         <div class="tb-submitreview tb-submitreviewv3">
             <figure>
-                <img src="<?php echo esc_url(TASKBOT_DIRECTORY_URI . 'public/images/empty.png'); ?>" alt="<?php esc_attr_e('add task', 'taskbot'); ?>">
+                <img src="<?php echo esc_url($image_url); ?>" alt="<?php esc_attr_e('add task', 'taskbot'); ?>">
             </figure>
             <h4><?php echo esc_html($text); ?></h4>
         </div>
@@ -3585,7 +3638,7 @@ if( !function_exists('taskbot_custom_dropdown_html')){
     function taskbot_custom_dropdown_html($list=array(),$name='',$class_name="",$selected_item='',$placeholderinput='') {
         ob_start();
         ?>
-        <select class="tb-select-cat <?php echo esc_attr($class_name);?>" name="<?php echo esc_attr($name);?>" >
+        <select id="tk_project_type" class="tb-select-cat <?php echo esc_attr($class_name);?>" name="<?php echo esc_attr($name);?>" >
             <option value="" selected hidden disabled><?php echo esc_attr($placeholderinput); ?></option>
             <?php if (!empty($list)) {
                 foreach ($list as $key => $item) {
@@ -3671,7 +3724,7 @@ if( !function_exists('taskbot_verification_tag_html')){
             if ( ! empty( $is_verified ) && $is_verified === 'yes'  ) {
                 ob_start();
                 ?>
-                <i class="icon-check-circle" <?php echo apply_filters('taskbot_tooltip_attributes', 'verified_user');?>></i>
+                <i class="tb-icon-check-circle" <?php echo apply_filters('taskbot_tooltip_attributes', 'verified_user');?>></i>
                 <?php
                 echo ob_get_clean();
             }
@@ -4001,7 +4054,7 @@ if (!function_exists('taskbot_listing_task_html_v2')) {
                     <figure class="tk-card__img">
                         <a href="<?php the_permalink();?>">
                             <img src="<?php echo esc_url($image[0])?>" alt="<?php echo esc_attr($product->get_name()); ?>">
-                            <i class="icon icon-plus"></i>
+                            <i class="tb-icon-plus"></i>
                         </a>
                     </figure>
                     <?php do_action('taskbot_service_featured_item_theme', $product);?>
@@ -4024,7 +4077,7 @@ if (!function_exists('taskbot_listing_task_html_v2')) {
                             <?php do_action('taskbot_service_rating_count_theme_v2', $product); ?>
                             <?php if( !empty($address) ){?>
                                 <address>
-                                    <i class="icon-map-pin"></i><?php echo esc_html($address) ?>
+                                    <i class="tb-icon-map-pin"></i><?php echo esc_html($address) ?>
                                 </address>
                             <?php } ?>
                         </div>
@@ -4144,7 +4197,7 @@ if (!function_exists('taskbot_project_grid_view')) {
                         <ul class="tk-blogviewdates tk-projectinfo-list">
                             <?php do_action( 'taskbot_posted_date_html', $product );?>
     						<?php do_action( 'taskbot_location_html', $product );?>
-                            <?php do_action( 'taskbot_texnomies_html_v2', $product->get_id(),'expertise_level','icon-briefcase' );?>
+                            <?php do_action( 'taskbot_texnomies_html_v2', $product->get_id(),'expertise_level','tb-icon-briefcase' );?>
                             <?php do_action( 'taskbot_hiring_freelancer_html', $product );?>
                         </ul>
                         <div class="tk-project-price tk-project-price-two">

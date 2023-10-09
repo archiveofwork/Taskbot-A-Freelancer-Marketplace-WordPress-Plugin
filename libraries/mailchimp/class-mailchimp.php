@@ -50,10 +50,10 @@ if (!class_exists('Taskbot_MailChimp')) {
             <form class="tb-formtheme tb-formnewslettervtwo">
                 <fieldset>
                     <div class="form-group tb-email">
-                        <i class="icon icon-mail"></i>
+                        <i class="tb-icon-mail"></i>
                         <input type="email" name="email" class="form-control" placeholder="<?php esc_attr_e('Add your email', 'taskbot'); ?>">
                     </div>
-                    <button type="submit" class="tb-btn subscribe_me" data-counter="<?php echo intval($counter); ?>"><?php esc_html_e('Signup now', 'taskbot'); ?><i class="icon icon-send"></i></button>
+                    <button type="submit" class="tb-btn subscribe_me" data-counter="<?php echo intval($counter); ?>"><?php esc_html_e('Signup now', 'taskbot'); ?><i class="tb-icon-send"></i></button>
                 </fieldset>
             </form>
             <?php

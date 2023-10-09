@@ -118,7 +118,7 @@ if( $tasks_result->have_posts() ){
                     <span class="tk-username">
                         <?php echo esc_html($user_name); ?>
                         <?php if( !empty($is_verified) && $is_verified === 'yes'){?>
-                            <i class="icon-check-circle" <?php echo apply_filters('taskbot_tooltip_attributes', 'verified_user');?>></i>
+                            <i class="tb-icon-check-circle" <?php echo apply_filters('taskbot_tooltip_attributes', 'verified_user');?>></i>
                         <?php } ?>
                     </span>
                     <h5><a href="<?php echo esc_url($order_url);?>"><?php echo esc_html($task_title); ?></a></h5>

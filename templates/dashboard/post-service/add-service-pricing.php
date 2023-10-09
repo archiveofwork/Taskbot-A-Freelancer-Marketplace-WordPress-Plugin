@@ -116,11 +116,11 @@ $taskbot_subtasks = wc_get_products( $args );?>
                         </ul>
                         <?php if($task_plans_allowed == 'no'){?>
                             <div class="tb-overleymodel">
-                                <span class="icon-bookmark"></span>
+                                <span class="tb-icon-bookmark"></span>
                                 <h5><?php esc_html_e('Need more slots?', 'taskbot');?></h5>
                                 <p><?php esc_html_e('Unlock to add more package option to your buyers and get hired instantly', 'taskbot');?></p>
                                 <div class="tb-lockbtn">
-                                    <a href="<?php echo esc_url($packages_listing_page);?>" class="btn-lock"><?php esc_html_e('Unlock', 'taskbot');?> <span class="icon-unlock"></span></a>
+                                    <a href="<?php echo esc_url($packages_listing_page);?>" class="btn-lock"><?php esc_html_e('Unlock', 'taskbot');?> <span class="tb-icon-unlock"></span></a>
                                 </div>
                             </div>
                         <?php }?>
@@ -132,7 +132,7 @@ $taskbot_subtasks = wc_get_products( $args );?>
                 <div class="form-group">
                     <div class="tb-postserviceholder">
                         <div class="tb-postservicetitle">
-                            <h4><?php esc_html_e('Add custom fields','taskbot');?></h4>
+                            <h4><?php esc_html_e('Add custom features','taskbot');?></h4>
                             <a href="javascript:void(0);" id="tb_add_customfields" data-heading="<?php esc_attr_e('Add more','taskbot');?>" title="<?php esc_attr_e('Add more','taskbot');?>"><?php esc_html_e('Add more','taskbot');?></a>
                         </div>
                         <div class="tb-pricing-items">
@@ -145,7 +145,7 @@ $taskbot_subtasks = wc_get_products( $args );?>
                                         <div class="tb-pricingitems__content">
                                             <div class="form-field tb-remove-field">
                                                 <div class="tb-trashlink">
-                                                    <i class="icon-trash-2"></i>
+                                                    <i class="tb-icon-trash-2"></i>
                                                 </div>
                                             </div>
                                             <div class="tb-pricingtitle form-field tb-pricing-input">
@@ -192,7 +192,7 @@ $taskbot_subtasks = wc_get_products( $args );?>
                                         </div>
                                         <h5><?php taskbot_price_format($subtask->get_price(),'',true); ?></h5>
                                     </div>
-                                    <a href="javascript:void(0);" class="tb-addon__right tb-subtask-edit" data-subtask_id="<?php echo (int)$subtask->get_id()?>" data-heading="<?php esc_attr_e('Edit task add-on', 'taskbot');?>"><i class="icon-edit-2"></i></a>
+                                    <a href="javascript:void(0);" class="tb-addon__right tb-subtask-edit" data-subtask_id="<?php echo (int)$subtask->get_id()?>" data-heading="<?php esc_attr_e('Edit task add-on', 'taskbot');?>"><i class="tb-icon-edit-2"></i></a>
                                 </li>
                                 <?php
                             }
@@ -221,7 +221,7 @@ $taskbot_subtasks = wc_get_products( $args );?>
                 </div>
                 <h5>{{data.price}}</h5>
             </div>
-            <a href="javascript:void(0);" class="tb-addon__right tb-subtask-edit"  data-heading="<?php esc_attr_e('Edit task add-on', 'taskbot');?>" data-subtask_id="{{data.id}}"><i class="icon-edit-2"></i></a>
+            <a href="javascript:void(0);" class="tb-addon__right tb-subtask-edit"  data-heading="<?php esc_attr_e('Edit task add-on', 'taskbot');?>" data-subtask_id="{{data.id}}"><i class="tb-icon-edit-2"></i></a>
         </li>
     </script>
     <script type="text/template" id="tmpl-load-service-add-subtask">
@@ -253,7 +253,7 @@ $taskbot_subtasks = wc_get_products( $args );?>
                 <div class="tb-pricingitems__content">
                     <div class="form-field tb-remove-field">
                         <div class="tb-trashlink">
-                            <i class="icon-trash-2"></i>
+                            <i class="tb-icon-trash-2"></i>
                         </div>
                     </div>
                     <div class="tb-pricingtitle form-field tb-pricing-input">

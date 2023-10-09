@@ -25,12 +25,12 @@ $identity_verification	= !empty($taskbot_settings['identity_verification']) ? $t
 				<div class="tb-asideholder">
 					<div class="tb-asidebox tb-settingtabholder">
 						<ul class="tb-settingtab">
-							<li class="<?php echo esc_attr( $reference == 'dashboard' && $mode == 'profile' ? 'active' : '' );?>"><a href="<?php echo esc_url(Taskbot_Profile_Menu::taskbot_profile_menu_link($reference, $user_identity, true, 'profile'));?>"><i class="icon-user"></i><?php esc_html_e('Profile settings','taskbot');?></a></li>
+							<li class="<?php echo esc_attr( $reference == 'dashboard' && $mode == 'profile' ? 'active' : '' );?>"><a href="<?php echo esc_url(Taskbot_Profile_Menu::taskbot_profile_menu_link($reference, $user_identity, true, 'profile'));?>"><i class="tb-icon-user"></i><?php esc_html_e('Profile settings','taskbot');?></a></li>
 							<?php if( !empty($identity_verification) ){?>
-								<li class="<?php echo esc_attr( $reference == 'dashboard' && $mode == 'verification' ? 'active' : '' );?>"><a href="<?php echo esc_url(Taskbot_Profile_Menu::taskbot_profile_menu_link($reference, $user_identity, true, 'verification'));?>"><i class="icon-check-square"></i><?php esc_html_e('Identity verification','taskbot');?></a></li>
+								<li class="<?php echo esc_attr( $reference == 'dashboard' && $mode == 'verification' ? 'active' : '' );?>"><a href="<?php echo esc_url(Taskbot_Profile_Menu::taskbot_profile_menu_link($reference, $user_identity, true, 'verification'));?>"><i class="tb-icon-check-square"></i><?php esc_html_e('Identity verification','taskbot');?></a></li>
 							<?php } ?>
-							<li class="<?php echo esc_attr( $reference == 'dashboard' && $mode == 'billing' ? 'active' : '' );?>"><a href="<?php echo esc_url(Taskbot_Profile_Menu::taskbot_profile_menu_link($reference, $user_identity, true, 'billing'));?>"><i class="icon-credit-card"></i><?php esc_html_e('Billing information','taskbot');?></a></li>
-							<li class="<?php echo esc_attr( $reference == 'dashboard' && $mode == 'account' ? 'active' : '' );?>"><a href="<?php echo esc_url(Taskbot_Profile_Menu::taskbot_profile_menu_link($reference, $user_identity, true, 'account'));?>"><i class="icon-settings"></i><?php esc_html_e('Account settings','taskbot');?></a></li>
+							<li class="<?php echo esc_attr( $reference == 'dashboard' && $mode == 'billing' ? 'active' : '' );?>"><a href="<?php echo esc_url(Taskbot_Profile_Menu::taskbot_profile_menu_link($reference, $user_identity, true, 'billing'));?>"><i class="tb-icon-credit-card"></i><?php esc_html_e('Billing information','taskbot');?></a></li>
+							<li class="<?php echo esc_attr( $reference == 'dashboard' && $mode == 'account' ? 'active' : '' );?>"><a href="<?php echo esc_url(Taskbot_Profile_Menu::taskbot_profile_menu_link($reference, $user_identity, true, 'account'));?>"><i class="tb-icon-settings"></i><?php esc_html_e('Account settings','taskbot');?></a></li>
 						</ul>
 					</div>
 				</div>

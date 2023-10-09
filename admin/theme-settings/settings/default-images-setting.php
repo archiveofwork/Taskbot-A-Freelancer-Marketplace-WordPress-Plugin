@@ -30,6 +30,11 @@ Redux::setSection( $opt_name, array(
 				'type'     => 'media',
 				'title'    => esc_html__('Dashboard logo image', 'taskbot'),
             ),
+            array(
+                'id'       => 'invoice_logo',
+                'type'     => 'media',
+                'title'    => esc_html__('Invoice logo image', 'taskbot'),
+            ),
 			array(
 				'id'       => 'empty_listing_image',
 				'type'     => 'media',

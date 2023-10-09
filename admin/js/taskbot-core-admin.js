@@ -10,9 +10,12 @@ var loader_html	= '<div class="tb-preloader-section"><div class="tb-preloader-ho
 
             if(jQuery('.tb-select select').length>0){
                 // Make drop-down select2
-                jQuery('.tb-select select').select2();        
+                jQuery('.tb-select select').select2({
+                    theme: "default tk-select2-dropdown",
+                });
                 // Make drop-down multiple  select2
                 jQuery('.tb-select select[multiple]').select2({
+                    theme: "default tk-select2-dropdown",
                     multiple: true,
                     placeholder: admin_scripts_vars.select_option
                 });
@@ -176,9 +179,6 @@ var loader_html	= '<div class="tb-preloader-section"><div class="tb-preloader-ho
                 boxWidth: '500px',
                 useBootstrap: false,
                 typeAnimated: true,
-                closeIcon: function(){
-                    return false; 
-                },
                 closeIcon: 'aRandomButton',
                 buttons: {
                 yes: {
@@ -316,9 +316,6 @@ var loader_html	= '<div class="tb-preloader-section"><div class="tb-preloader-ho
                 boxWidth: '500px',
                 useBootstrap: false,
                 typeAnimated: true,
-                closeIcon: function(){
-                    return false; 
-                },
                 closeIcon: 'aRandomButton',
                 onOpenBefore: function(data, status, xhr){
                     var jc	= this; 
@@ -380,9 +377,6 @@ var loader_html	= '<div class="tb-preloader-section"><div class="tb-preloader-ho
                 boxWidth: '500px',
                 useBootstrap: false,
                 typeAnimated: true,
-                closeIcon: function(){
-                    return false; 
-                },
                 closeIcon: 'aRandomButton',
                 onAction: function (btnName) {
                     var jc	= this; 
@@ -491,7 +485,6 @@ var loader_html	= '<div class="tb-preloader-section"><div class="tb-preloader-ho
 
             var _this 		= jQuery(this);
             var _type		= _this.data('type');
-            var _user_id		= _this.data('user_id');
             var _id			= _this.data('id');
             var _user_id	= _this.data('user_id');
             var dataString  = 'security='+admin_scripts_vars.ajax_nonce+'&type='+_type+'&id='+_id+'&user_id='+_user_id+'&action=taskbot_approve_profile';
@@ -512,9 +505,6 @@ var loader_html	= '<div class="tb-preloader-section"><div class="tb-preloader-ho
                 boxWidth: '500px',
                 useBootstrap: false,
                 typeAnimated: true,
-                closeIcon: function(){
-                    return false; 
-                },
                 closeIcon: 'aRandomButton',
                 buttons: {
                 yes: {
@@ -557,14 +547,14 @@ var loader_html	= '<div class="tb-preloader-section"><div class="tb-preloader-ho
 
     //Alert the notification
     function StickyAlert($title='',$message='',data){
-        var $icon	= 'icon-check';
+        var $icon	= 'tb-icon-check';
         var $class	= 'dark';
 
         if(data.classList === 'success'){
-            $icon	= 'icon-check';
+            $icon	= 'tb-icon-check';
             $class	= 'green';
         }else if(data.classList === 'danger'){
-            $icon	= 'icon-x';
+            $icon	= 'tb-icon-x';
             $class	= 'red';
         }
 

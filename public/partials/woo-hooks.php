@@ -104,42 +104,7 @@ if (class_exists('WooCommerce')) {
 			$wallet_post	= !empty($taskbot_funds[0]) ? $taskbot_funds[0] : '';
 			if(!empty($wallet_post)){
 				return (int)$wallet_post->get_id();
-			} else {
-
-				$item = array(
-					'name' 			=> esc_html__('Wallet','taskbot'),
-					'description' 	=> esc_html__('Buyer wallet','taskbot'),
-				);
-				$admin_user_id = taskbot_get_administrator_user_id();
-
-				$post_args = array(
-					'post_author' 	=> intval($admin_user_id),
-					'post_title' 	=> $item['name'],
-					'post_content' 	=> $item['description'],
-					'post_status' 	=> 'publish',
-					'post_type' 	=> "product",
-				);
-
-				$post_id = wp_insert_post( $post_args );
-
-				wp_set_object_terms( $post_id, 'funds', 'product_type' );
-				update_post_meta( $post_id, '_visibility', '' );
-				update_post_meta( $post_id, '_downloadable', 'no' );
-				update_post_meta( $post_id, '_virtual', 'yes' );
-				update_post_meta( $post_id, '_regular_price', '1' );
-				update_post_meta( $post_id, '_sale_price', '' );
-				update_post_meta( $post_id, '_purchase_note', '' );
-				update_post_meta( $post_id, '_featured', 'no' );
-				update_post_meta( $post_id, '_product_attributes', array() );
-				update_post_meta( $post_id, '_price', '1' );
-				update_post_meta( $post_id, '_sold_individually', '' );
-				update_post_meta( $post_id, '_manage_stock', 'no' );
-				update_post_meta( $post_id, '_backorders', 'no' );
-				update_post_meta( $post_id, '_stock', '' );
-
-				return $post_id;
 			}
-
 		}
 	}
 }
@@ -1019,7 +984,6 @@ if (!function_exists('taskbot_apply_wallet_amount')) {
 					if( isset( $value['cart_data']['wallet_price'] ) ){
 						WC()->cart->add_fee( esc_html__('Wallet amount','taskbot'), -($value['cart_data']['wallet_price']) );
 					}
-
 					$fee	= !empty($value['cart_data']['processing_fee']) ? $value['cart_data']['processing_fee'] : 0.0;
 				} else if( !empty( $value['payment_type'] ) && $value['payment_type'] == 'projects' ){
 					if( isset( $value['cart_data']['wallet_price'] ) ){
@@ -1038,7 +1002,7 @@ if (!function_exists('taskbot_apply_wallet_amount')) {
 
 			
 			if(!empty($fee)){
-				$fee = $item_count *  $fee;
+//				$fee = $item_count *  $fee;
 				WC()->cart->add_fee( $commission_text, $fee, false );
 			}
 
@@ -1408,6 +1372,15 @@ if (!function_exists('taskbot_place_order')) {
 					}
 				}
 			}
+
+            $processing_fee = WC()->cart->get_fees();
+
+			if(isset($processing_fee) && isset($processing_fee['processing-fee']) && isset($processing_fee['processing-fee']->total)){
+                $fee = new WC_Order_Item_Fee();
+                $fee->set_name($processing_fee['processing-fee']->name);
+                $fee->set_total($processing_fee['processing-fee']->total);
+                $order->add_item($fee);
+            }
 
 			$order->set_address( $address, 'billing' );
 			$order->set_address( $address, 'shipping' );

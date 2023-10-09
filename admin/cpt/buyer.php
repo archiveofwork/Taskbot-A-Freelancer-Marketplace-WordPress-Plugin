@@ -54,7 +54,6 @@ class Taskbot_Admin_CPT_Buyer {
 			'label'                 => esc_html__( 'Buyer', 'taskbot' ),
 			'description'           => esc_html__( 'All buyer.', 'taskbot' ),
 			'labels'                => apply_filters('taskbot_product_taxonomy_duration_labels', $labels),
-			'supports'              => array( 'title','editor','author','excerpt','thumbnail' ),
 			'taxonomies'            => array( 'product_cat'),
 			'public' 				=> true,
 			'supports' 				=> array('title','editor','author','excerpt','thumbnail'),

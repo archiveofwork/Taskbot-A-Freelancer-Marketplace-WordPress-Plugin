@@ -101,7 +101,7 @@
                 content: "\e92b";
                 font-size: 14px;
                 color: $theme-color;
-                font-family: icomoon;
+                font-family: taskbot-icons;
             }
         }
     }
@@ -246,16 +246,22 @@
     }
 }
 .tb-sidebartabs__pkgtitle{
+    margin: 0;
+    padding: 0;
     & > li{
         width: 100%;
         max-width: 33.33%;
         line-height: inherit;
         & > a{
             border: 0;
+            height: 100%;
+            display: flex;
             padding: 13px 20px;
             position: relative;
             text-align: center;
+            align-items: center;
             @extend %transition;
+            justify-content: center;
             color: $heading-font-color;
             background-color: transparent;
             border-bottom: 1px solid $lightest_2;
@@ -282,6 +288,7 @@
 }
 .tk-serviesbann{
     padding: 9px;
+    margin-bottom: 20px;
     background: #FFFFFF;
     border-radius: $radiusvtwo;
     border: 1px solid $lightest_2;
@@ -736,6 +743,7 @@
         justify-content: center;
         margin-bottom: 0;
         img{
+            width: 100%;
             min-height: 400px;
             object-fit: cover;
             max-height: 400px;
@@ -758,7 +766,7 @@
         @extend %transition;
         &::before{
             font-size: 20px;
-            font-family: "icomoon";
+            font-family: "taskbot-icons";
         }
         svg{display: none;}
     }
@@ -1013,8 +1021,27 @@
         display: inline-block;
         border-radius: $radius;
         margin-bottom: 15px;
-        img{border-radius: $radius;}
+        img{
+            height: 100%;
+            object-fit: cover;
+            border-radius: $radius;
+        }
     }
+}
+.tb-freeprostatus{
+    display: flex;
+    margin: 0 0 20px;
+    align-items: center;
+    justify-content: space-between;
+    .tb-asideprostatus figure {
+        border: 0;
+        margin: 0;
+        padding: 0;
+        width: 82px;
+        height: 82px;
+        border-radius: 4px;
+    }
+    & + .tk-title-wrapper{margin-top: 0;}
 }
 .tb-freelancersearch{
     .tb-pagination{padding-top: 40px;} 

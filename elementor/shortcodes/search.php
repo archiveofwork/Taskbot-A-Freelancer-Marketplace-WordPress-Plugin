@@ -153,11 +153,11 @@
                                     <div class = "tk-bannerinfo_search tk-appendinput">
                                         <form name="search_form" method="get" action="<?php echo esc_url($search_result); ?>" id="tk-header-form-<?php echo intval($flag);?>">
                                             <div class="tk-inputappend">
-                                                <i class="icon-search"></i>
+                                                <i class="tb-icon-search"></i>
                                                 <input type="text" name="keyword" class="form-control" placeholder="<?php echo esc_attr($placeholder_text); ?>">
                                                 <?php if( !empty($search_item) && empty( $type_one ) ){?>
                                                     <div class="tk-select">
-                                                        <i class="icon-layers"></i>
+                                                        <i class="tb-icon-layers"></i>
                                                         <select id="tk-list-type-<?php echo intval($flag);?>" data-placeholderinput="<?php esc_attr_e('Select list','taskbot');?>" data-placeholder="<?php esc_attr_e('Select list type','taskbot');?>" class="form-control">
                                                             <option label="<?php esc_attr_e('Select search type','taskbot');?>"></option>
                                                             <?php foreach($search_item as $key => $value){
@@ -194,6 +194,7 @@
             $script = '
                     jQuery(document).ready(function () {
                         jQuery("#tk-list-type-' . esc_js($flag) . '").select2({
+                            theme: "default tk-select2-dropdown",
                             minimumResultsForSearch: Infinity
                         });
                         jQuery(document).on("change","#tk-list-type-' . esc_js($flag) . '",function(e){

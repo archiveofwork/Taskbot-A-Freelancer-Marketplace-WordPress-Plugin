@@ -221,7 +221,7 @@ if (!class_exists('TaskbotProjectFunctions')) {
                         <?php } ?>
                     </ul>
                     <?php if (!empty($step_id) && $step_id == '4') { ?>
-                        <a href="<?php echo esc_url($dashboad_page); ?>" class="tk-btn-solid-lg-lefticon"><?php esc_html_e('Go to project listing', 'taskbot'); ?><i class="icon-chevron-right"></i></a>
+                        <a href="<?php echo esc_url($dashboad_page); ?>" class="tk-btn-solid-lg-lefticon"><?php esc_html_e('Go to project listing', 'taskbot'); ?><i class="tb-icon-chevron-right"></i></a>
                     <?php } ?>
                 </aside>
             </div>
@@ -247,7 +247,7 @@ if (!class_exists('TaskbotProjectFunctions')) {
         ?>
             <div class="tk-bidbtn">
                 <a href="<?php echo esc_url(get_permalink($profile_id)); ?>"><?php esc_html_e('View profile', 'taskbot'); ?></a>
-                <span class="tb-btn-bit <?php echo esc_attr($bid_class); ?>" data-profile_id="<?php echo intval($profile_id); ?>" data-project_id="<?php echo intval($project_id); ?>"><?php echo esc_html($bid_text); ?></a>
+                <span class="tb-btn-bit <?php echo esc_attr($bid_class); ?>" data-profile_id="<?php echo intval($profile_id); ?>" data-project_id="<?php echo intval($project_id); ?>"><?php echo esc_html($bid_text); ?></span>
             </div>
         <?php
             echo ob_get_clean();
@@ -331,7 +331,7 @@ if (!function_exists('taskbot_project_type')) {
             'fixed' => array(
                 'title'     => esc_html__('Fixed', 'taskbot'),
                 'details'   => esc_html__('Pay freelancer on fixed milestone rate', 'taskbot'),
-                'icon'      => 'icon-copy tk-red-icon'
+                'icon'      => 'tb-icon-copy tk-red-icon'
             )
         );
 
@@ -1339,7 +1339,7 @@ if (!function_exists('taskbotSaveProjectData')) {
                     $email_helper->post_project_buyer_email($emailData);
                 }
                 update_post_meta($project_id, '_requested_datetime', $gmt_time);
-                $json['message_desc']         = esc_html__('Project has been published.', 'taskbot');
+                $json['message_desc']         = esc_html__('Project has been submitted.', 'taskbot');
             } else if (!empty($post_status) && $post_status != 'draft' && !empty($service_status) && $service_status === 'pending') {
                 // admin email for resubmit request
                 $project_post = array(
@@ -1604,6 +1604,10 @@ if (!function_exists('taskbot_project_status_tag')) {
                 $label          = esc_html__('Ongoing', 'taskbot');
                 $status_class   = 'tk-project-tag tk-ongoing';
                 break;
+            case 'requested':
+                $label          = esc_html__('Under Review', 'taskbot');
+                $status_class   = 'tk-project-tag tk-requested';
+                break;
             default:
                 $label          = esc_html__('New', 'taskbot');
                 $status_class   = 'tk-project-tag';
@@ -1635,6 +1639,7 @@ if (!function_exists('taskbot_project_price_html')) {
             $project_price  = taskbot_price_format($min_price, 'return') . '-' . taskbot_price_format($max_price, 'return');
         } else {
             $project_price  = apply_filters('taskbot_project_price_text', $post_id);
+            $project_price  = taskbot_price_format($project_price,'return');
         }
 
         ob_start();
@@ -1663,6 +1668,7 @@ if (!function_exists('taskbot_project_price')) {
             $project_price  = taskbot_price_format($min_price, 'return') . '-' . taskbot_price_format($max_price, 'return');
         } else {
             $project_price  = apply_filters('taskbot_project_price_text', $post_id);
+            $project_price  = taskbot_price_format($project_price,'return');
         }
         return $project_price;
     }
@@ -1680,7 +1686,7 @@ if (!function_exists('taskbot_total_hiring_freelancer_html')) {
         ob_start();
     ?>
         <li>
-            <i class="icon-users tk-blue-icon"></i>
+            <i class="tb-icon-users tk-blue-icon"></i>
             <div class="tk-project-requirement_content">
                 <div class="tk-requirement-tags">
                     <span><?php echo sprintf(_n('%s freelancer', '%s freelancers', $no_of_freelancers, 'taskbot'), $no_of_freelancers); ?></span>
@@ -1844,7 +1850,7 @@ if (!function_exists('taskbot_project_seller_basic')) {
                                         <h5>
                                             <?php echo esc_html($user_name); ?>
                                             <?php if (!empty($is_verified) && $is_verified === 'yes') { ?>
-                                                <i class="icon-check-circle" <?php echo apply_filters('taskbot_tooltip_attributes', 'verified_user'); ?>></i>
+                                                <i class="tb-icon-check-circle" <?php echo apply_filters('taskbot_tooltip_attributes', 'verified_user'); ?>></i>
                                             <?php } ?>
                                         </h5>
                                     <?php } ?>
@@ -1870,7 +1876,7 @@ if (!function_exists('taskbot_project_seller_basic')) {
                             <?php if (isset($address)) { ?>
                                 <li>
                                     <div class="tk-total-title">
-                                        <i class="icon-map-pin"></i>
+                                        <i class="tb-icon-map-pin"></i>
                                         <em><?php esc_html_e('Located in', 'taskbot'); ?></em>
                                     </div>
                                     <span><?php echo esc_html($address); ?></span>
@@ -1879,7 +1885,7 @@ if (!function_exists('taskbot_project_seller_basic')) {
                             <?php if (isset($posted_project_count)) { ?>
                                 <li>
                                     <div class="tk-total-title">
-                                        <i class="icon-database"></i>
+                                        <i class="tb-icon-database"></i>
                                         <em><?php esc_html_e('Total posted projects', 'taskbot'); ?></em>
                                     </div>
                                     <span><?php echo intval($posted_project_count); ?></span>
@@ -1888,7 +1894,7 @@ if (!function_exists('taskbot_project_seller_basic')) {
                             <?php if (isset($hired_project_count)) { ?>
                                 <li>
                                     <div class="tk-total-title">
-                                        <i class="icon-shopping-bag"></i>
+                                        <i class="tb-icon-shopping-bag"></i>
                                         <em><?php esc_html_e('Ongoing projects', 'taskbot'); ?></em>
                                     </div>
                                     <span><?php echo intval($hired_project_count); ?></span>
@@ -1896,7 +1902,7 @@ if (!function_exists('taskbot_project_seller_basic')) {
                             <?php } ?>
                             <li>
                                 <div class="tk-total-title">
-                                    <a href="<?php echo esc_url($page_url); ?>" class="tb-btn"><?php esc_html_e('See all posted projects', 'taskbot'); ?><i class="icon-arrow-right"></i></a>
+                                    <a href="<?php echo esc_url($page_url); ?>" class="tb-btn"><?php esc_html_e('See all posted projects', 'taskbot'); ?><i class="tb-icon-arrow-right"></i></a>
                                 </div>
                             </li>
                         </ul>
@@ -2006,10 +2012,10 @@ if (!function_exists('taskbot_project_saved_item')) {
         ob_start();
         if (!empty($type) && $type == 'list') {
             $text           = !empty($saved_items) && in_array($post_id, $saved_items) ? esc_html__('Saved', 'taskbot') : esc_html__('Save', 'taskbot'); ?>
-            <span class="tb_saved_items  <?php echo esc_attr($saved_class); ?>" data-action="<?php echo esc_attr($action); ?>" data-post_id="<?php echo intval($post_id); ?>" data-id="<?php echo intval($current_user->ID); ?>" data-type="<?php echo esc_attr($post_type); ?>"><i class="icon-heart"></i><?php echo esc_html($text); ?></span>
+            <span class="tb_saved_items  <?php echo esc_attr($saved_class); ?>" data-action="<?php echo esc_attr($action); ?>" data-post_id="<?php echo intval($post_id); ?>" data-id="<?php echo intval($current_user->ID); ?>" data-type="<?php echo esc_attr($post_type); ?>"><i class="tb-icon-heart"></i><?php echo esc_html($text); ?></span>
         <?php } else {
             $text           = !empty($saved_items) && in_array($post_id, $saved_items) ? esc_html__('Saved', 'taskbot') : esc_html__('Add to saved items', 'taskbot'); ?>
-            <span class="tb_saved_items tk-btnline <?php echo esc_attr($saved_class); ?>" data-action="<?php echo esc_attr($action); ?>" data-post_id="<?php echo intval($post_id); ?>" data-id="<?php echo intval($current_user->ID); ?>" data-type="<?php echo esc_attr($post_type); ?>"><i class="icon-heart"></i>&nbsp;<?php echo esc_html($text); ?> </span>
+            <span class="tb_saved_items tk-btnline <?php echo esc_attr($saved_class); ?>" data-action="<?php echo esc_attr($action); ?>" data-post_id="<?php echo intval($post_id); ?>" data-id="<?php echo intval($current_user->ID); ?>" data-type="<?php echo esc_attr($post_type); ?>"><i class="tb-icon-heart"></i>&nbsp;<?php echo esc_html($text); ?> </span>
         <?php
         }
         echo ob_get_clean();

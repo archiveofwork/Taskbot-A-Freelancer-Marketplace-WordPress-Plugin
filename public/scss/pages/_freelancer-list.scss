@@ -1,10 +1,7 @@
 /** ====== Freelancer List components ====== **/
 .tk-tasks-listv1{
-    .tk-bestservice{
-        margin-bottom: 30px;
-    }
     .tb-pagination{
-        padding-top: 10px;
+        padding-top: 40px;
     }
 }
 .tk-sort{
@@ -29,7 +26,7 @@
             font-size: 16px;
             content: "\e9a3";
             position:absolute;
-            font-family: 'icomoon';
+            font-family: 'taskbot-icons';
         }
     }
     &[aria-expanded="false"]{
@@ -42,6 +39,16 @@
 }
 .tk-aside-content{
     padding-top: 10px;
+    .tk-placeholderholder{
+        input{
+            border-radius: 4px;
+            &:hover,
+            &:focus{
+                border: 1px solid $border-colorv2;
+                box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08);
+            }
+        }
+    }
 }
 .tk-aside-holder{
     .tk-placeholder {
@@ -210,19 +217,6 @@
 .noUi-horizontal .noUi-handle{
     right: -12px;
 }
-.tk-tooltiparrow:after {
-    content: " ";
-    position: absolute;
-    border: 1px solid $lightest_2 !important;
-    transform: rotate(135deg) !important;
-    height: 12px;
-    width: 12px;
-    border-top: 0 !important;
-    border-right: 0 !important;
-    background: #fff;
-    top: -6px;
-    left: 68px;
-}
 .tk-filterbtns{
     @extend %flex;
     margin-top: 30px;
@@ -289,7 +283,7 @@
     position: relative;
     &__content{
         margin: -31px 0 0;
-        padding: 0 20px 30px;
+        padding: 0 20px 20px;
         > figure{
             margin: 0;
             display: block;
@@ -304,6 +298,8 @@
             align-items: center;
             justify-content: center;
             > img{
+                height: 100%;
+                object-fit: cover;
                 border-radius: 50%;
                 border: 6px solid $clr-white;
                 background-color: $clr-white;
@@ -354,10 +350,10 @@
     border-radius: $radius $radius 0 0;
     img{
         width: 100%;
-        height: 200px;
         object-fit: cover;
         object-position: top;
         @extend %transition;
+        height: 200px !important;
         border-radius: $radius $radius 0 0 !important;
     }
     .venobox ~ img {
@@ -511,8 +507,17 @@
 .tk-actionselect{
     display: flex;
     align-items: center;
-    .select2-container--default .select2-selection--single .select2-selection__rendered{
-        line-height: 45px;
+    .select2-container{
+        &--default .select2-selection--single{
+            padding: 0;
+            border-color: #eee;
+            .select2-selection__rendered{
+                line-height: 45px;
+            }
+        }
+        .select2-selection--single .select2-selection__rendered{
+            padding-left: 20px;
+        }
     }
     .tk-select{width: auto;}
     > span{ 
@@ -526,7 +531,7 @@
         color:$text-light;
         height: 44px;
     }
-    .select2-container--default .select2-selection--single{border-color: $border-colorv2;}
+    
 }
 // taskbot styling
 .tb-sidebartitle{
@@ -572,11 +577,6 @@
             border-top: 0 !important;
             border-right: 0 !important;
         }
-    }
-    .ui-widget.ui-widget-content{
-        background: #ddd;
-        border-radius: 60px 0px 0px 60px;
-        height: 4px;
     }
     .ui-widget-header{
          background: $bright-green;
@@ -626,3 +626,317 @@
         line-height: inherit;
     }
 }
+//find project
+.tk-formsearchvtwo{
+    margin-bottom: 30px;
+    margin-top: 0 !important;
+}
+.tk-taskform {
+    gap: 10px;
+    width: 100%;
+    display: flex;
+}
+.tk-inputicon{
+    position: relative;
+    width: 100%;
+    align-items: center;
+    i {
+        font-size: 20px;
+        position: absolute;
+        line-height: 1;
+        color: #999999;
+    }
+}
+.tk-taskform .tk-inputicon {
+    flex: 1;
+    i{
+        left: 10px;
+    }
+}
+.tk-taskform .tk-aside-content {
+    padding: 0;
+    width: 100%;
+    .form-control{
+        &:focus{
+            border: 0 !important;
+            box-shadow: none !important;
+            background-color: transparent !important;
+        }
+    }
+}
+.tk-inputiconbtn {
+    position: relative;
+    width: 100%;
+    align-items: center;
+}
+.tk-taskform .tk-inputiconbtn {
+    flex-wrap: nowrap;
+}
+.tk-placeholderholder {
+    width: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #fff;
+}
+.tk-taskform .tk-inputicon .form-control {
+    height: 48px;
+    padding-left: 46px;
+    padding-right: 20px;
+}
+.tk-taskform .tk-inputicon .form-control {
+    height: 48px;
+    padding-left: 46px;
+    padding-right: 20px;
+}
+.tk-formsearch .tk-inputicon .form-control {
+    padding-left: 56px;
+}
+.tk-inputicon .tk-select select, .tk-inputicon .tk-select select, .tk-inputicon .form-control {
+    padding-left: 49px;
+}
+.tk-formsearch .form-control {
+    border: 0;
+    height: 36px;
+    font-weight: 600;
+    &:hover{
+        border: 0 !important;
+        box-shadow: none !important;
+    }
+}
+.tk-taskform .tk-search-icon {
+    right: auto;
+    display: none;
+    position: relative;
+}
+.tk-taskform .tk-inputicon {
+    flex: 1;
+}
+.tk-taskform .tk-select {
+    max-width: 300px;
+}
+.tk-select{
+    align-items: center;
+    position: relative;
+    width: 100%;
+    .select2-selection{
+        box-shadow: none !important;
+    }
+}
+.tk-taskform .tk-inputappend_right {
+    gap: 10px;
+    position: relative;
+}
+.tk-inputappend_right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+.tk-inputappend_right .tk-advancebtn {
+    min-width: 234px;
+}
+.tk-advancebtn {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    background: #F7F8FC;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+    color: #999;
+    &:hover,
+    &:focus{
+        color: #999;
+        background: #F7F8FC;
+    }
+}
+.tk-advancesearch {
+    border-top: 1px solid #EEEEEE;
+    border-radius: 0px 0px 10px 10px;
+}
+.tk-searchbar {
+    padding: 30px;
+    background-color: #ffffff;
+    .form-group-wrap {
+        gap: 20px;
+        width: 100%;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        .form-group {
+            padding: 0;
+        }
+    }
+}
+.tk-pricerange {
+    flex-direction: column;
+    align-items: flex-start;
+}
+.tk-areasizebox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.tk-pricerange{
+    .tk-areasizebox{
+         .form-group-wrap {
+            gap: 10px;
+            .form-control {
+                width: 100%;
+                height: 48px;
+                max-width: 100%;
+                border: 1.5px solid #eeeeee;
+                &:hover{
+                    border: 1.5px solid #eeeeee !important;
+                }
+            }
+        }
+    } 
+}
+.tk-searchbar .form-group-wrap {
+    gap: 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    .form-group {
+        padding: 0;
+    }
+}
+.tk-advancesearch .tk-searchbar ~ .tk-searchbar {
+    border-radius: 0 0 10px 10px;
+    border-top: 1px solid #EEEEEE;
+}
+.tk-btnarea {
+    gap: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+.tk-searchbar .tk-advancecheck ~ .tk-advancecheck {
+    margin: 30px 0 0;
+}
+.tk-btnarea {
+    button,a{
+        width: 100%;
+        max-width: 294px;
+    }
+}
+.tk-advancebtn {
+    background: #F7F8FC;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+    color: #999;
+}
+.tk-advancefilter{
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -8px -10px;
+    li{
+        width: 25%;
+        list-style: none;
+        padding: 8px 10px;
+    }
+}
+.tk-form-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+.form-check-input[type=checkbox] {
+    border-radius: 4px;
+}
+.form-check-input[type=checkbox] {
+    border-radius: 0.25em;
+}
+.form-check-input {
+    margin-top: 0;
+    border: 1.5px solid #DDDDDD;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+    width: 24px;
+    height: 24px;
+    &::after {
+        content: "";
+        position: absolute;
+        font-family: "Font Awesome 5 Free";
+        color: #fff;
+        font-weight: 900;
+        font-size: 14px;
+    }
+}
+.tk-form-check-input-sm {
+    width: 20px;
+    height: 20px;
+}
+.tk-form-check-input-sm::after {
+    font-size: 10px;
+}
+.tk-form-checkbox label {
+    margin-bottom: 0;
+    display: flex;
+}
+.tk-advancecheck{
+    margin-top: 20PX;
+}
+.tk-advancecheck.tk-make-fullwidth{
+    .tk-select{
+        display: flex;
+        margin: 20px 0 0 0;
+        flex-direction: column;
+        align-items: flex-start;
+        .select2-container{
+            width: 100%;
+        }
+        &::before{
+            top: 50px;
+        }
+    }
+}
+.tk-freelanlist{
+    height: 100%;
+    padding: 29px;
+    border-radius: 4px;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+}
+.tk-topservicetask__content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .tk-btnviewpro{
+        margin-top: auto;
+        padding-top: 20px;
+    }
+}
+.tk-pricerange .tk-distance {
+    width: 100%;
+}
+.tk-rangeslider {
+    margin: 17px 0 0;
+    box-shadow: none;
+    position: relative;
+    background: #ffffff;
+    padding: 31px 20px;
+    border: 1px solid #eeeeee;
+}
+.tk-searchbar{
+    & > .form-group-wrap {
+       margin-top: 20px;
+   }
+}
+.tk-login-content{
+    .tk-placeholderholder{
+        .form-control {
+            &:hover,
+            &:focus{
+                border: 1px solid #eee !important;
+            }
+        }
+    }
+} 

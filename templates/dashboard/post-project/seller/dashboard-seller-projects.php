@@ -9,7 +9,7 @@
  * @version     1.0
  * @since       1.0
  */
-global $current_user;
+global $current_user, $taskbot_settings;
 
 $show_posts		= get_option('posts_per_page') ? get_option('posts_per_page') : 10;
 $paged 			= ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
@@ -131,7 +131,7 @@ if ( $taskbot_query->have_posts() ) :
                     <ul class="tk-template-view"> 
                         <?php do_action( 'taskbot_posted_date_html', $product );?>
                         <?php do_action( 'taskbot_location_html', $product );?>
-                        <?php do_action( 'taskbot_texnomies_html_v2', $product->get_id(),'expertise_level','icon-briefcase' );?>
+                        <?php do_action( 'taskbot_texnomies_html_v2', $product->get_id(),'expertise_level','tb-icon-briefcase' );?>
                         <?php do_action( 'taskbot_hiring_freelancer_html', $product );?>
                     </ul>
                     <?php if( !empty($post_status) && $post_status === 'completed' ){ ?>
@@ -183,10 +183,10 @@ if ( $taskbot_query->have_posts() ) :
                         ?>
                         <div class="tk-statusview_alert tk-employerproject">
                             <span>
-                                <i class="icon-info"></i>
+                                <i class="tb-icon-info"></i>
                                 <?php esc_html_e("We’re sorry, but the employer has declined your proposal and left a comment for you.","taskbot");?>
                             </span>
-                            <button class="tk-alert-readbtn" data-bs-target="#tb-decline-content-<?php echo intval($post->ID);?>" data-bs-toggle="modal"><?php esc_html_e('Read comment','taskbot');?> <i class="icon-chevron-right"></i></button>
+                            <button class="tk-alert-readbtn" data-bs-target="#tb-decline-content-<?php echo intval($post->ID);?>" data-bs-toggle="modal"><?php esc_html_e('Read comment','taskbot');?> <i class="tb-icon-chevron-right"></i></button>
                         </div>
                         <div class="modal fade" id="tb-decline-content-<?php echo intval($post->ID);?>" tabindex="-1" aria-hidden="true">
                             <div class="modal-dialog tk-modal-dialog-sm">
@@ -194,12 +194,12 @@ if ( $taskbot_query->have_posts() ) :
                                     <div class="tk-popup_title">
                                         <h5><?php esc_html_e('Comment from employer','taskbot');?></h5>
                                         <a href="javascrcript:void(0)" data-bs-dismiss="modal">
-                                            <i class="icon-x"></i>
+                                            <i class="tb-icon-x"></i>
                                         </a>
                                     </div>
                                     <div class="modal-body tk-popup-content">
                                         <div class="tk-statusview_alert">
-                                            <span><i class="icon-info"></i><?php esc_html_e("We’re sorry, but the employer has declined your proposal","taskbot");?></span>
+                                            <span><i class="tb-icon-info"></i><?php esc_html_e("We’re sorry, but the employer has declined your proposal","taskbot");?></span>
                                         </div>
                                         <div class="tk-popup-info">
                                             <div class="tk-user-content">
@@ -234,11 +234,11 @@ if ( $taskbot_query->have_posts() ) :
         <?php taskbot_paginate($taskbot_query); ?>
     <?php endif;
 else:
-
+    $image_url = !empty($taskbot_settings['empty_listing_image']['url']) ? $taskbot_settings['empty_listing_image']['url'] : TASKBOT_DIRECTORY_URI . 'public/images/empty.png';
     ?>
     <div class="tb-submitreview tb-submitreviewv3">
         <figure>
-            <img src="<?php echo esc_url(TASKBOT_DIRECTORY_URI.'public/images/empty.png')?>" alt="<?php esc_attr_e('Explore all projects','taskbot');?>">
+            <img src="<?php echo esc_url($image_url)?>" alt="<?php esc_attr_e('Explore all projects','taskbot');?>">
         </figure>
         <h6><a href="<?php echo esc_url($find_project);?>"> <?php esc_html_e('Explore all projects', 'taskbot'); ?> </a></h6>
     </div>

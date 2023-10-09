@@ -70,7 +70,7 @@ if(!empty($currentuser_id)){
             <?php if( (!empty($user_type) && $user_type === 'buyers' || !is_user_logged_in()) && !empty($post_author) && $post_author != $currentuser_id && (in_array('wp-guppy/wp-guppy.php', apply_filters('active_plugins', get_option('active_plugins'))) || in_array('wpguppy-lite/wpguppy-lite.php', apply_filters('active_plugins', get_option('active_plugins'))))){?>
                 <div class="tb-sidebarcontent">
                     <div class="tb-sidebarinnertitle">
-                    <a href="javascript:;" class="tb-btn <?php echo esc_attr($login_user_class);?>" <?php echo do_shortcode( $tb_msgform );?>><i class="icon-message-square"></i><?php esc_html_e('Contact to this seller','taskbot');?></a>
+                    <a href="javascript:;" class="tb-btn <?php echo esc_attr($login_user_class);?>" <?php echo do_shortcode( $tb_msgform );?>><i class="tb-icon-message-square"></i><?php esc_html_e('Contact to this seller','taskbot');?></a>
                     </div>
                 </div>
             <?php } ?>
@@ -82,7 +82,7 @@ if(!empty($currentuser_id)){
         <div class="modal-content">
             <div class="tb-popuptitle">
                 <h4 id="tb_ratingtitle"><?php echo sprintf(esc_html__('Send a message to “%s“','taskbot'),$user_name);?></h4>
-                <a href="javascript:void(0);" class="close"><i class="icon-x" data-bs-dismiss="modal"></i></a>
+                <a href="javascript:void(0);" class="close"><i class="tb-icon-x" data-bs-dismiss="modal"></i></a>
             </div>
             <div class="modal-body" id="tb_startcaht_form">
                 <div class="tb-startchat-field">

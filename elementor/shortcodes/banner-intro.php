@@ -114,9 +114,6 @@ if (!class_exists('Taskbot_about_us_intro')) {
                 'type'        => Controls_Manager::MEDIA,
                 'label'       => esc_html__('Author image', 'taskbot'),
                 'description' => esc_html__('Add image.(60x60)', 'taskbot'),
-                'default' => [
-                    'url' => \Elementor\Utils::get_placeholder_image_src(),
-                ],
                 'label_block' => true,
             ]
         );

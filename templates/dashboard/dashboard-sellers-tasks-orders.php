@@ -155,7 +155,7 @@ $count_post         = $query->found_posts;
                     <fieldset>
                         <div class="tb-themeform__wrap ">
                             <div class="form-group wo-inputicon">
-                                <i class="icon-search"></i>
+                                <i class="tb-icon-search"></i>
                                 <input type="text" name="search_keyword" class="form-control"
                                     value="<?php echo esc_attr($search_keyword) ?>"
                                     placeholder="<?php esc_attr_e('Search orders here','taskbot');?>">
@@ -266,6 +266,7 @@ jQuery(document).on('ready', function(){
                 if (response.type === 'success') {
                     jQuery('#tb_tk_viewrating').html(response.html);
                     jQuery('#tb_excfreelancerpopup').modal('show');
+                    jQuery('#tb_excfreelancerpopup').removeClass('hidden');;
                 } else {
                     StickyAlert(response.message, response.message_desc, {classList: 'danger', autoclose: 5000});
                 }
@@ -292,6 +293,7 @@ jQuery(document).on('ready', function(){
                 if (response.type === 'success') {
                     jQuery('#tb_tk_viewrating').html(response.html);
                     jQuery('#tb_excfreelancerpopup').modal('show');
+                    jQuery('#tb_excfreelancerpopup').removeClass('hidden');
                 } else {
                     StickyAlert(response.message, response.message_desc, {classList: 'danger', autoclose: 5000});
                 }

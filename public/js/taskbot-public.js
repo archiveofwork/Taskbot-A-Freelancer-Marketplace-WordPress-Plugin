@@ -7,6 +7,22 @@ jQuery(document).ready(function($){
         $("#rangecollapse").collapse({toggle: false});
     });
 
+    // blog sort by
+    jQuery(document).on('change', '#blog-sort', function (e) {
+        let sort_val = jQuery(this).val();
+        if (sort_val) {
+            var url = window.location.href;
+            var url = removeParam("sort_by", url);
+            if (url.indexOf('?') > -1) {
+                url += '&sort_by=' + sort_val
+            } else {
+                url += '?sort_by=' + sort_val
+            }
+            window.location.href = url;
+        }
+        e.preventDefault();
+    });
+    
     // Loade More
     let classes = [
         '.tk-languagetermsfilter',
@@ -63,8 +79,9 @@ jQuery(document).ready(function($){
     }
     // Responsive menu
     function collapseMenu(){
-        jQuery('.tb-navbarnav:not(.tk-menu-navbarnav) li.menu-item-has-children > a').prepend('<span class="tk-dropdowarrow"><i class="icon-chevron-right"></i></span>');
-        jQuery('.tb-navbarnav:not(.tk-menu-navbarnav) li.menu-item-has-children span.tk-dropdowarrow').on('click', function() {
+        jQuery('.tb-navbarnav:not(.tk-menu-navbarnav) li.menu-item-has-children > a').prepend('<span class="tk-dropdowarrow"><i class="tb-icon-chevron-right"></i></span>');
+        jQuery('.tb-navbarnav:not(.tk-menu-navbarnav) li.menu-item-has-children span.tk-dropdowarrow').on('click', function(e) {
+            e.preventDefault();
             jQuery(this).parent().toggleClass('tk-menuopen');
             jQuery(this).parent().next().slideToggle(300);
         });
@@ -380,6 +397,7 @@ jQuery(document).ready(function($){
                         window.setTimeout(function () {
                             if(scripts_vars.view_type === 'popup' ){
                                 jQuery('#tk-signup-model').modal('show');
+                                jQuery('#tk-signup-model').removeClass('hidden');
                             } else {
                                 window.location.href = response.redirect;
                             }
@@ -417,6 +435,7 @@ jQuery(document).ready(function($){
                 if (response.type === 'success') {
                     if(scripts_vars.view_type === 'popup' ){
                         jQuery('#tk-signup-model').modal('show');
+                        jQuery('#tk-signup-model').removeClass('hidden');
                     } else {
                         window.location.href = response.redirect;
                     }
@@ -449,6 +468,7 @@ jQuery(document).ready(function($){
                     jQuery('#task_search_tb_category_level3').html('');
                     if ( $.isFunction($.fn.select2) ) {
                         jQuery('#tb-top-service-task-option-level-2').select2({
+                            theme: "default tk-select2-dropdown",
                             placeholder: {
                                 id: '', // the value of the option
                                 text: scripts_vars.select_sub_category
@@ -489,6 +509,7 @@ jQuery(document).ready(function($){
                     jQuery('#task_search_tb_category_level3').html('');
                     if ( $.isFunction($.fn.select2) ) {
                         jQuery('#tb-top-service-task-search-level-2').select2({
+                            theme: "default tk-select2-dropdown",
                             placeholder: {
                                 id: '', // the value of the option
                                 text: scripts_vars.select_sub_category
@@ -527,6 +548,7 @@ jQuery(document).ready(function($){
                 if (response.type === 'success') {
                     jQuery('#tb_tk_viewrating').html(response.html);
                     jQuery('#tb_excfreelancerpopup').modal('show');
+                    jQuery('#tb_excfreelancerpopup').removeClass('hidden');
                 } else {
                     StickyAlert(response.message, response.message_desc, {classList: 'danger', autoclose: 5000});
                 }
@@ -538,16 +560,19 @@ jQuery(document).ready(function($){
     jQuery(document).on('click', '.tk-login-poup', function (e) {
         taskbotHideRegModel();
         jQuery('#tk-login-model').modal('show');
+        jQuery('#tk-login-model').removeClass('hidden');
     });
 
     jQuery(document).on('click', '.tk-signup-poup-btn', function (e) {
         taskbotHideRegModel();
         jQuery('#tk-signup-model').modal('show');
+        jQuery('#tk-signup-model').removeClass('hidden');
     });
     
     jQuery(document).on('click', '.tk-pass-poup-btn', function (e) {
         taskbotHideRegModel();
         jQuery('#tk-pass-model').modal('show');
+        jQuery('#tk-pass-model').removeClass('hidden');
     });
     if(scripts_vars.enable_state){
         jQuery(document).on('change', '#tklocation #task_location', function (e) {
@@ -1197,13 +1222,18 @@ jQuery(document).ready(function($){
     // Make drop-down select2
     if ( $.isFunction($.fn.select2) ) {
 
-        jQuery('.tb-select select').select2();
+        jQuery('.tb-select select').select2({
+            theme: 'default tk-select2-dropdown'
+        });
 
         // Make dashboard country drop down select2
-        jQuery('.tb-select-country select').select2();
+        jQuery('.tb-select-country select').select2({
+            theme: 'default tk-select2-dropdown'
+        });
 
         // Make category drop-down select2
         jQuery('#tb_order_type').select2({
+            theme: "default tk-select2-dropdown",
             width:'200',
             minimumResultsForSearch: Infinity,
 
@@ -1216,10 +1246,13 @@ jQuery(document).ready(function($){
             }, 0);
         });
         // Make drop-down select2
-        jQuery('#tb_country', '#category', '#select_location').select2();
+        jQuery('#tb_country', '#category', '#select_location').select2({
+            theme: 'default tk-select2-dropdown'
+        });
 
         // Make sub category drop-down select2 on search
         jQuery('#tb-top-service-task-search-level-2').select2({
+            theme: "default tk-select2-dropdown",
             placeholder: {
                 id: '', // the value of the option
                 text: scripts_vars.select_sub_category
@@ -1234,6 +1267,7 @@ jQuery(document).ready(function($){
 
          // Make sub category drop-down select2 on search
          jQuery('#tb-top-service-task-option-level-2').select2({
+             theme: "default tk-select2-dropdown",
             placeholder: {
                 id: '', // the value of the option
                 text: scripts_vars.select_sub_category
@@ -1248,6 +1282,7 @@ jQuery(document).ready(function($){
 
         // Make category drop-down select2 on search task
         jQuery('#task_category').select2({
+            theme: "default tk-select2-dropdown",
             minimumResultsForSearch: Infinity,
             placeholder: {
                 id: '-1', // the value of the option
@@ -1256,6 +1291,16 @@ jQuery(document).ready(function($){
             allowClear: true
         });
         jQuery('#task_location').select2({
+            theme: "default tk-select2-dropdown",
+            placeholder: {
+                id: '-1', // the value of the option
+                text: scripts_vars.select_location
+            },
+            allowClear: true
+        });
+
+        jQuery('#tk_project_type').select2({
+            theme: "default tk-select2-dropdown",
             placeholder: {
                 id: '-1', // the value of the option
                 text: scripts_vars.select_location
@@ -1264,6 +1309,7 @@ jQuery(document).ready(function($){
         });
 
         jQuery('#tk-search-state').select2({
+            theme: "default tk-select2-dropdown",
             placeholder: {
                 id: '-1', // the value of the option
                 text: scripts_vars.select_state
@@ -1272,6 +1318,7 @@ jQuery(document).ready(function($){
         });
         // Make category drop-down select2 on add service
         jQuery('#tb-top-service').select2({
+            theme: "default tk-select2-dropdown",
             placeholder: {
                 id: '', // the value of the option
                 text: scripts_vars.choose_category
@@ -1286,6 +1333,7 @@ jQuery(document).ready(function($){
 
         // Make sub category drop-down select2 on add service
         jQuery('#tb-service-level2').select2({
+            theme: "default tk-select2-dropdown",
             placeholder: {
                 id: '', // the value of the option
                 text: scripts_vars.choose_sub_category
@@ -1300,18 +1348,21 @@ jQuery(document).ready(function($){
 
          // Make search sort drop-down select2
         $("#tb-sort").select2({
+            theme: "default tk-select2-dropdown",
             width: '196' ,
             minimumResultsForSearch: Infinity,
             dropdownAutoWidth:true,
         });
 
         jQuery('.tb-select select[multiple]').select2({
+            theme: "default tk-select2-dropdown",
             multiple: true,
             placeholder: scripts_vars.select_option
         });
 
         // Make invoice sort drop-down select2
         $("#tb-invoice-sort").select2({
+            theme: "default tk-select2-dropdown",
             width: '196' ,
             minimumResultsForSearch: Infinity,
             dropdownAutoWidth:true,
@@ -1319,6 +1370,7 @@ jQuery(document).ready(function($){
 
         // Make withdeaw sort drop-down select2
         $("#tb-withdraw-sort").select2({
+            theme: "default tk-select2-dropdown",
             width: '196' ,
             minimumResultsForSearch: Infinity,
             dropdownAutoWidth:true,
@@ -1497,14 +1549,14 @@ jQuery(document).ready(function($){
 
 // Alert the notification
 function StickyAlert($title = '', $message = '', data) {
-    var $icon = 'icon-check';
+    var $icon = 'tb-icon-check';
     var $class = 'dark';
 
     if (data.classList === 'success') {
-        $icon = 'icon-check';
+        $icon = 'tb-icon-check';
         $class = 'green';
     } else if (data.classList === 'danger') {
-        $icon = 'icon-x';
+        $icon = 'tb-icon-x';
         $class = 'red';
     }
 
@@ -1529,15 +1581,15 @@ function StickyAlert($title = '', $message = '', data) {
 
 // Alert the notification
 function StickyAlertBtn($title = '', $message = '', data) {
-    var $icon = 'icon-check';
+    var $icon = 'tb-icon-check';
     var $class = 'dark';
     var btntext;
     btntext = data.button.btntext;
     if (data.classList === 'success') {
-        $icon = 'icon-check';
+        $icon = 'tb-icon-check';
         $class = 'green';
     } else if (data.classList === 'danger') {
-        $icon = 'icon-x';
+        $icon = 'tb-icon-x';
         $class = 'red';
     }
     
@@ -1680,7 +1732,7 @@ function tooltipInit( selecter) {
 }
 //MOBILE MENU
 function collapseMenu(){
-    jQuery('.tb-navbar ul li.menu-item-has-children, .tb-navbar ul li.page_item_has_children, .tb-navdashboard ul li.menu-item-has-children, .tb-navbar ul li.menu-item-has-mega-menu').prepend('<span class="tb-dropdowarrow"><i class="icon-chevron-right"></i></span>');
+    jQuery('.tb-navbar ul li.menu-item-has-children, .tb-navbar ul li.page_item_has_children, .tb-navdashboard ul li.menu-item-has-children, .tb-navbar ul li.menu-item-has-mega-menu').prepend('<span class="tb-dropdowarrow"><i class="tb-icon-chevron-right"></i></span>');
     
     jQuery('.tb-navbar ul li.menu-item-has-children span,.tb-navbar ul li.page_item_has_children span').on('click', function(e) {
         jQuery(this).parent('li').toggleClass('tb-open');

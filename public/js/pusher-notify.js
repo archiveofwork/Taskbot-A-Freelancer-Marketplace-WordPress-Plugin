@@ -40,7 +40,7 @@ jQuery(document).ready(function($){
 
 });
  function pusherStickyAlert( $message = '', data) {
-     var $icon = 'icon-check';
+     var $icon = 'tb-icon-check';
      var $class = 'dark'; 
      jQuery.dialog({
          icon: $icon,

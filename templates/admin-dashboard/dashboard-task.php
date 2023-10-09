@@ -100,7 +100,7 @@ $date_format    = get_option( 'date_format' );
                 <fieldset>
                     <div class="tb-themeform__wrap">
                         <div class="form-group tb-inputicon tb-inputheight tb-dbholder border-0">
-                            <i class="icon-search"></i>
+                            <i class="tb-icon-search"></i>
                             <input type="text" name="search_keyword" class="form-control" value="<?php echo esc_attr($search_keyword) ?>"  placeholder="<?php esc_attr_e('Search service listing','taskbot');?>">
                         </div>
                         <div class="tb-actionselect">
@@ -179,13 +179,13 @@ $date_format    = get_option( 'date_format' );
                                 <ul class="tb-tabicon tb-invoicecon">
                                     <li>
                                         <?php if( !empty($post_status) && in_array($post_status,array('pending','publish'))){ ?>
-                                            <a href="javascript:void(0)" class="tb-canceled tb_rejected_task_model" data-id="<?php echo esc_attr(intval($post->ID)); ?>"><span class="icon-x"></span>&nbsp;<?php esc_attr_e('Reject task','taskbot');?></a>
+                                            <a href="javascript:void(0)" class="tb-canceled tb_rejected_task_model" data-id="<?php echo esc_attr(intval($post->ID)); ?>"><span class="tb-icon-x"></span>&nbsp;<?php esc_attr_e('Reject task','taskbot');?></a>
                                         <?php } if( !empty($post_status) && in_array($post_status,array('pending','rejected'))){ ?>
-                                            <a href="javascript:void(0);" class="tb-publish tb_publish_task" data-id="<?php echo intval($post->ID);?>"><span class="icon-check"></span>&nbsp;<?php esc_attr_e('Approve task','taskbot');?></a>
+                                            <a href="javascript:void(0);" class="tb-publish tb_publish_task" data-id="<?php echo intval($post->ID);?>"><span class="tb-icon-check"></span>&nbsp;<?php esc_attr_e('Approve task','taskbot');?></a>
                                         <?php } ?>
                                     </li>
-                                    <li class="tb-delete"><div href="javascript:void(0);" class="tb-red tb_remove_task" data-id="<?php echo intval($post->ID);?>"><span class="icon-trash"></span></div> </li>
-                                    <li> <a href="<?php echo get_the_permalink( $post );?>" target="_blank"><span class="icon-eye tb-gray"></span></a> </li>
+                                    <li class="tb-delete"><div href="javascript:void(0);" class="tb-red tb_remove_task" data-id="<?php echo intval($post->ID);?>"><span class="tb-icon-trash"></span></div> </li>
+                                    <li> <a href="<?php echo get_the_permalink( $post );?>" target="_blank"><span class="tb-icon-eye tb-gray"></span></a> </li>
                                 </ul>
                             </td>
                         </tr>

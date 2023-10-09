@@ -14,6 +14,7 @@ if( ! current_user_can('administrator') ){
     wp_redirect( $redirect_url );
     exit;
 }
+
 global $current_user, $taskbot_settings;
 $url_identity 	= !empty($_GET['identity']) ? intval($_GET['identity']) : '';
 $reference 		= !empty($_GET['ref'] ) ? $_GET['ref'] : '';
@@ -153,10 +154,10 @@ $avatar_url = get_avatar_url($current_user->ID,array('size',40));
     <div class="tb-sidebarwrapperholder">
         <aside id="tb-sidebarwrapper" class="tb-sidebarwrapper">
             <div id="tb-btnmenutogglev2" class="tb-btnmenutogglev2">
-                <a href="javascript:void(0);"><i class="icon-sliders"></i></a>
+                <a href="javascript:void(0);"><i class="tb-icon-sliders"></i></a>
             </div>
             <div id="tb-btnmenutoggle" class="tb-btnmenutoggle">
-                <a href="javascript:void(0);"><i class="icon-sliders"></i></a>
+                <a href="javascript:void(0);"><i class="tb-icon-sliders"></i></a>
             </div>
             <div class="tb-adminhead">
                 <?php if( !empty($avatar_url) ){?>
@@ -232,7 +233,7 @@ $avatar_url = get_avatar_url($current_user->ID,array('size',40));
         <div class="modal-content">
             <div class="tb-popuptitle">
                 <h4 id="tb_ratingtitle"><?php esc_html_e('Complete Task','taskbot');?></h4>
-                <a href="javascript:void(0);" class="close"><i class="icon-x" data-bs-dismiss="modal"></i></a>
+                <a href="javascript:void(0);" class="close"><i class="tb-icon-x" data-bs-dismiss="modal"></i></a>
             </div>
             <div class="modal-body" id="tb_taskcomplete_form"></div>
         </div>
@@ -253,19 +254,19 @@ $avatar_url = get_avatar_url($current_user->ID,array('size',40));
                         <div class="tb-my-ratingholder">
                             <ul id="tb_stars-{{data.order_id}}" class='tb-rating-stars tb_stars'>
                                 <li class='tb-star' data-value='1'  data-id="{{data.order_id}}">
-                                    <i class='icon-star fa-fw'></i>
+                                    <i class='tb-icon-star fa-fw'></i>
                                 </li>
                                 <li class='tb-star' data-value='2'  data-id="{{data.order_id}}">
-                                    <i class='icon-star fa-fw'></i>
+                                    <i class='tb-icon-star fa-fw'></i>
                                 </li>
                                 <li class='tb-star' data-value='3'  data-id="{{data.order_id}}">
-                                    <i class='icon-star fa-fw'></i>
+                                    <i class='tb-icon-star fa-fw'></i>
                                 </li>
                                 <li class='tb-star' data-value='4'  data-id="{{data.order_id}}">
-                                    <i class='icon-star fa-fw'></i>
+                                    <i class='tb-icon-star fa-fw'></i>
                                 </li>
                                 <li class='tb-star' data-value='5'  data-id="{{data.order_id}}">
-                                    <i class='icon-star fa-fw'></i>
+                                    <i class='tb-icon-star fa-fw'></i>
                                 </li>
                             </ul>
                             <span><?php esc_html_e('1','taskbot');?></span>
@@ -316,19 +317,19 @@ $avatar_url = get_avatar_url($current_user->ID,array('size',40));
                         <div class="tb-my-ratingholder">
                             <ul id="tb_stars-{{data.order_id}}" class='tb-rating-stars tb_stars'>
                                 <li class='tb-star' data-value='1'  data-id="{{data.order_id}}">
-                                    <i class='icon-star fa-fw'></i>
+                                    <i class='tb-icon-star fa-fw'></i>
                                 </li>
                                 <li class='tb-star' data-value='2'  data-id="{{data.order_id}}">
-                                    <i class='icon-star fa-fw'></i>
+                                    <i class='tb-icon-star fa-fw'></i>
                                 </li>
                                 <li class='tb-star' data-value='3'  data-id="{{data.order_id}}">
-                                    <i class='icon-star fa-fw'></i>
+                                    <i class='tb-icon-star fa-fw'></i>
                                 </li>
                                 <li class='tb-star' data-value='4'  data-id="{{data.order_id}}">
-                                    <i class='icon-star fa-fw'></i>
+                                    <i class='tb-icon-star fa-fw'></i>
                                 </li>
                                 <li class='tb-star' data-value='5'  data-id="{{data.order_id}}">
-                                    <i class='icon-star fa-fw'></i>
+                                    <i class='tb-icon-star fa-fw'></i>
                                 </li>
                             </ul>
                             <span><?php esc_html_e('1','taskbot');?></span>

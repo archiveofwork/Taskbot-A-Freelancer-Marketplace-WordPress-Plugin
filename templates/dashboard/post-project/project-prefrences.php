@@ -117,7 +117,7 @@ $selected_freelancers   = !empty($selected_freelancers) ? intval($selected_freel
                 <div class="tk-projectbtns">
                     <a href="javascript:void(0)" class="tk-btn-solid-lg-lefticon tb-save-project" data-step_id="3" data-project_id="<?php echo intval($post_id);?>">
                         <?php esc_html_e('Save & continue','taskbot');?>
-                        <i class="icon-chevron-right"></i>
+                        <i class="tb-icon-chevron-right"></i>
                     </a>
                 </div>
             </div>
@@ -132,10 +132,12 @@ jQuery(document).ready(function($){
     // Make category drop-down select2 on add service
 
     jQuery('.tb-num-freelancer').select2({
+        theme: 'default tk-select2-dropdown',
         allowClear: true,
         placeholder: scripts_vars.num_freelancer_option
     });
     jQuery('.tb-expertise-level').select2({
+        theme: 'default tk-select2-dropdown',
         allowClear: true,
         placeholder: scripts_vars.expertise_level_option
     });
@@ -144,12 +146,14 @@ jQuery(document).ready(function($){
 
     // Make category drop-down select2 on add service
     jQuery('.tb-select2-languages').select2({
+        theme: 'default tk-select2-dropdown',
         allowClear: true,
         multiple: true,
     });
 
     if ( $.isFunction($.fn.select2) ) {
         jQuery('.tb-select2-languages').select2({
+            theme: 'default tk-select2-dropdown',
             multiple: true,
             placeholder: scripts_vars.languages_option
         });
@@ -157,11 +161,13 @@ jQuery(document).ready(function($){
     jQuery('.tb-select2-languages').trigger('change');
     // Make category drop-down select2 on add service
     jQuery('.tb-select2-skills').select2({
+        theme: 'default tk-select2-dropdown',
         allowClear: true,
         multiple: true,
     });
     if ( $.isFunction($.fn.select2) ) {
         jQuery('.tb-select2-skills').select2({
+            theme: 'default tk-select2-dropdown',
             multiple: true,
             placeholder: scripts_vars.skills_option
         });

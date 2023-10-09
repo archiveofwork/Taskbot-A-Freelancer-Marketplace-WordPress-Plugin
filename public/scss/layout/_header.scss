@@ -1,3 +1,9 @@
+.tk-header-two ~ main{
+    > .elementor .elementor-section:first-child{
+        margin-top: -98px;
+    }
+}
+
 .tk-headerv2 .tk-navbarbtn .tk-btn-solid-lg{
     color: $clr-white;
     border-radius: $radius;
@@ -6,7 +12,6 @@
     i{
         color: $clr-white;
         @extend %transition;
-        
     }
     &:hover{
         color: $button-color;
@@ -28,11 +33,21 @@
         color: #353648;
     }
 }
-.tk-navbarbtn .tk-btn-solid-lg i{
-    &:before{
-        content: "\e9c0" !important;
+.tk-navbarbtn .tk-btn{
+    padding: 0;
+    color: #0A0F26;
+    &-solid-lg i{
+        &:before{
+            content: "\e9c0" !important;
+        }
     }
 }
+
+.tk-user-menu-wrapper{
+    display: flex;
+    align-items: center;
+}
+
 .tk-mainbodydark .tk-header,
 .tk-mainbodydark .tb-header{
     background:$heading-font-color;
@@ -48,11 +63,24 @@
     }
 }
 .tk-navbarbtn{
-    padding-left: 10px;
+    gap: 0 20px;
+    display: flex;
+    margin-left: auto;
+    align-items: center;
     .tk-login{
         @extend %h6;
-        padding: 0 30px 0 10px;
+        font-weight: 600;
         @extend %transition;
+    }
+    .tk-btn-solid-lg{
+        height: auto;
+        color: #0A0F26;
+        margin-left: 10px;
+        padding: 5px 21px;
+        border-radius: 4px;
+        background: $theme-color;
+        border: 1.5px solid $theme-color;
+        font: 700 16px/28px 'Urbanist', sans-serif;
     }
 }
 .tk-header,
@@ -66,6 +94,30 @@
         border-bottom: 1px solid $lightest_2;
     }
 }
+
+.tb-dashboard-header{
+    padding:10px 0;
+    background-color: #0A1833;
+    .tb-navbarnav > li > a{
+     color: #fff;
+        &:hover{
+            color: #fff;
+        }
+        &:focus{
+            color: #fff;
+        }
+    }
+    .tk-nav-icons{
+        color:#fff;
+        &:hover{
+            color:#fff;
+        }
+        &:focus{
+            color:#fff;
+        }
+    }
+}
+
 .tb-headerwrap{
 	@extend %flex;
 	align-items: center;
@@ -129,7 +181,9 @@
     }
 }
 .tk-main-notiwrap .sub-menu,
-.sub-menu{
+.tk-navbar .sub-menu,
+.tb-navbar .sub-menu,
+.sub-menu-holder .sub-menu{
     right: 0;
     margin: 0;
     top: 80px;
@@ -159,14 +213,10 @@
         & a{
             @extend %transition;
             width: 100%;
-            display: block;
-            padding: 10px 20px;
             color: $secondary-color;
-            font-size: rem(13);
             text-align: left;
-            
             i{
-                font-size: 13px;
+                font-size: 20px;
                 padding-right: 10px;
             }
             &:hover{
@@ -248,6 +298,7 @@ header{
     }
     .tk-dropdowarrow, .at-dropdowarrow{
         color: $button-color;
+        background-color: $theme-color;
     }
 }
 .tk-navbarbtn.sub-menu-holder{
@@ -272,7 +323,7 @@ header{
         }
     }
     &:hover{
-        & > .sub-menu{ 
+        & > .sub-menu{
             opacity: 1;
             visibility: visible;
             top: 100%;
@@ -284,12 +335,12 @@ ul.tb-navbarnav > .menu-item-has-children > a:after{
     content: "\e92e";
     margin-left: auto;
     padding-left: 5px;
-    font-family: 'icomoon';
+    font-family: 'taskbot-icons';
 }
-.sub-menu li.menu-item-has-children > a:after,
-.children li.menu-item-has-children > a:after,
-.sub-menu li.page_item_has_children > a:after,
-.children li.page_item_has_children > a:after{
+ul.tb-navbarnav .sub-menu li.menu-item-has-children > a:after,
+ul.tb-navbarnav .children li.menu-item-has-children > a:after,
+ul.tb-navbarnav .sub-menu li.page_item_has_children > a:after,
+ul.tb-navbarnav .children li.page_item_has_children > a:after{
     right: 0;
     width: auto;
     font-size: 16px;
@@ -298,7 +349,7 @@ ul.tb-navbarnav > .menu-item-has-children > a:after{
     padding-left: 5px;
     font-weight: 700;
     position: relative;
-    font-family: 'icomoon';
+    font-family: 'taskbot-icons';
 }
 .sub-menu li.page_item_has_children:hover .sub-menu {
     top: 0;
@@ -339,11 +390,13 @@ ul.tb-navbarnav > .menu-item-has-children > a:after{
     margin: 0 0 0 auto;
     + .tb-headerwrap__right{margin: 0;padding-left: 10px;}
     .navbar-toggler{
+        padding: 0;
+        outline: 0;
         width: 50px;
         height: 50px;
-        outline: 0;
         font-size: 24px;
         box-shadow: none;
+        place-items: center;
         color: $button-color;
         border-radius: $radius;
         background-color: $theme-color;
@@ -478,7 +531,7 @@ ul.tb-navbarnav > .menu-item-has-children > a:after{
         }
         &:after,
         &:before{
-            top: -9px;
+            top: -10px;
             right: 20px;
             width: 21px;
             content: "";
@@ -510,7 +563,9 @@ ul.tb-navbarnav > .menu-item-has-children > a:after{
 			margin-right: 20px;
 		}
 		& img{
-			max-width: 60px;
+			width: 50px;
+            height: 50px;
+            object-fit: cover;
 			border-radius:50%;
 		}
 	}
@@ -596,4 +651,96 @@ ul.tb-navbarnav > .menu-item-has-children > a:after{
 .tb-navbarnav:not(.tk-menu-navbarnav) li.menu-item-has-children span.tk-dropdowarrow{
     right: 20px;
     top: 15px;
+}
+
+.tk-dropdowarrow,
+.at-dropdowarrow{
+    display: none;
+}
+
+//Mega Menu
+.tb-vertical-menu-wrapper .tb-vertical-menu-nav{
+    margin: 0;
+    padding:0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    >  li{
+        display: block;
+        > a{
+            font-size: 18px;
+            color: #2b2b2b;
+            font-weight: 600;
+            display: inline-block;
+            max-width:100%;
+            transition: color .3s ease-in-out, background .3s ease-in-out, border-color 0.3s ease-in-out;
+        }
+    }
+}
+
+.tb-megamenu-holder .tb-vertical-menu-wrapper .tb-vertical-menu-nav > li{
+    margin: 0;
+}
+
+.tb-vertical-menu-nav .sub-menu{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    > li{
+        display: block;
+    }
+    > li a{
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        color: #7f7f7f;
+        display: inline-block;
+        max-width:100%;
+        transition: color .3s ease-in-out, background .3s ease-in-out, border-color 0.3s ease-in-out;
+    }
+}
+
+.taskbot-megamenu{
+    display: none;
+}
+
+@media only screen and (min-width: 1200px) {
+    .tb-megamenu-holder .taskbot-megamenu {
+        display: block;
+        left: 0;
+        top: 80px;
+        margin: 0;
+        padding: 0;
+        opacity: 0;
+        width: max-content;
+        z-index: 1051;
+        border-radius: 4px;
+        position: absolute;
+        background-color: #fff;
+        visibility: hidden;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        -webkit-box-shadow: 0px 2px 4px rgb(0 0 0 / 4%), 0px 8px 16px rgb(0 0 0 / 8%);
+        box-shadow: 0px 2px 4px rgb(0 0 0 / 4%), 0px 8px 16px rgb(0 0 0 / 8%);
+    }
+
+    .tb-megamenu-holder:hover .taskbot-megamenu {
+        opacity: 1;
+        visibility: visible;
+        top: 100%;
+    }
+
+    .tb-megamenu-holder > .sub-menu{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .tb-megamenu-on-responsive-show > .sub-menu{
+        display: none;
+    }
+    .tb-megamenu-on-responsive-hide > .taskbot-megamenu{
+        display: none;
+    }
 }

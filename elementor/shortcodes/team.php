@@ -116,9 +116,6 @@
                                 'type'          => Controls_Manager::MEDIA,
                                 'label'         => esc_html__('Upload image', 'taskbot'),
                                 'description'   => esc_html__('Upload image.(306x300)', 'taskbot'),
-                                'default' => [
-                                    'url' => \Elementor\Utils::get_placeholder_image_src(),
-                                ],
                             ],
                             [
                                 'name'          => 'name',

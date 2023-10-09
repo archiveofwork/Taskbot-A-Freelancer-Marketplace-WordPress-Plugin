@@ -15,7 +15,7 @@ global $current_user;
 <script type="text/template" id="tmpl-load-profile-avatar">
     <div class="tb-popuptitle">
         <h4><?php esc_html_e('Upload profile photo', 'taskbot'); ?></h4>
-        <a href="javascript:void(0);" class="close"><i class="icon-x" data-bs-dismiss="modal"></i></a>
+        <a href="javascript:void(0);" class="close"><i class="tb-icon-x" data-bs-dismiss="modal"></i></a>
     </div>
     <div class="modal-body">
         <form class="tb-dhb-orders-listing">

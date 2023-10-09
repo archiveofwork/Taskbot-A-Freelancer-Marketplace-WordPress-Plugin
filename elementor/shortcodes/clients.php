@@ -91,9 +91,6 @@ if (!class_exists('Taskbot_about_us_clients')) {
                             'type'          => Controls_Manager::MEDIA,
                             'label'         => esc_html__('Upload image', 'taskbot'),
                             'description'   => esc_html__('Upload image.(115x40)', 'taskbot'),
-                            'default' => [
-                                'url' => \Elementor\Utils::get_placeholder_image_src(),
-                            ],
                         ]
                     ]
                 ]

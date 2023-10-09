@@ -178,7 +178,7 @@ $current_page_link  = !empty($current_page_link) ? $current_page_link : '';
                                         </td>
                                         <td data-label="<?php esc_attr_e('Action','taskbot');?>">
                                             <ul class="tb-tabicon tb-invoicecon">
-                                                <li><a target="_blank" href="<?php echo esc_url($invoice_url); ?>"><span class="icon-eye tb-blue"></span>&nbsp;<?php esc_html_e('View','taskbot') ?></a></li>
+                                                <li><a target="_blank" href="<?php echo esc_url($invoice_url); ?>"><span class="tb-icon-eye tb-blue"></span>&nbsp;<?php esc_html_e('View','taskbot') ?></a></li>
                                             </ul>
                                         </td>
                                     </tr>

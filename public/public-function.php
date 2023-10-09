@@ -6050,3 +6050,34 @@ if (!function_exists('taskbot_seller_email')) {
 		return	$seller_email;
     }
 }
+
+if( !function_exists('taskbotPageTemplateRedirect') ){
+	add_action( 'template_redirect', 'taskbotPageTemplateRedirect' );
+	function taskbotPageTemplateRedirect(){
+		global $taskbot_settings;
+		$return_type	= true;
+		if(is_user_logged_in()){
+			$access_option	= !empty($taskbot_settings['user_restriction']) ? $taskbot_settings['user_restriction'] : false;
+			$user_identity	= get_current_user_id();
+			$user_type		= apply_filters('taskbot_get_user_type', $user_identity );
+			if( !empty($user_type) && in_array($user_type,array('sellers','buyers')) && !empty($access_option)){
+				if( !empty($user_type) && $user_type === 'buyers'){
+					$access_pages	= !empty($taskbot_settings['buyer_access_pages']) ? $taskbot_settings['buyer_access_pages'] : array();
+					if( !empty($access_pages) && is_page($access_pages) && !is_singular('sellers') && !is_singular( array( 'product' ))  ){
+						$return_type	= false;
+					}
+				} else if( !empty($user_type) && $user_type === 'sellers'){
+					$access_pages	= !empty($taskbot_settings['seller_access_pages']) ? $taskbot_settings['seller_access_pages'] : array();
+					if(  !empty($access_pages) && is_page($access_pages)  && !is_singular( array( 'product' )) ){
+						$return_type	= false;
+					}
+				}
+			}
+		}
+
+		if( empty($return_type) ){
+			wp_redirect(taskbot_get_page_uri('dashboard'));
+			exit;
+		}
+	}
+}

@@ -75,7 +75,7 @@ class Taskbot_Admin_Dashboard {
 		    wp_enqueue_style('taskbot-fonts-enqueue' , esc_url_raw($theme_fonts), array () , null);
 			
 			wp_enqueue_style( 'bootstrap', plugin_dir_url( __FILE__ ) . 'css/bootstrap.min.css', array(), $this->version, 'all' );
-			wp_enqueue_style( 'feather-icons', plugin_dir_url( __FILE__ ) . 'css/feather-icons.css', array(), $this->version, 'all' );
+			wp_enqueue_style( 'taskbot-icons', plugin_dir_url( __FILE__ ) . 'css/taskbot-icons.css', array(), $this->version, 'all' );
 			wp_enqueue_style( 'jquery-confirm', plugin_dir_url( __FILE__ ) . 'css/jquery-confirm.min.css', array(), $this->version, 'all' );
 			wp_enqueue_style( 'mCustomScrollbar', plugin_dir_url( __FILE__ ) . 'css/jquery.mCustomScrollbar.min.css', array(), $this->version, 'all' );
 			wp_enqueue_style( 'select2', plugin_dir_url( __FILE__ ) . 'css/select2.min.css', array(), $this->version, 'all' );

@@ -155,9 +155,9 @@ if ( $taskbot_query->have_posts() ) :
                             </div>
                         <?php } ?>
                         <ul class="tb-tabicon">
-                            <li><a href="<?php echo esc_url($taskbot_add_service_page_edit_url);?>"><span class="icon-edit-2"></span></a> </li>
-                            <li class="tb-delete"> <a href="javascript:void(0);" class="taskbot-service-delete" data-id="<?php echo (int)$post->ID;?>"><span class="icon-trash-2 bg-redheart"></span></a> </li>
-                            <li><a href="<?php echo esc_url( $task_order_url );?>"><span class="icon-external-link bg-gray"></span></a></li>
+                            <li data-class="tb-tooltip-data" id="tb-tooltip-10<?php echo esc_attr($post->ID) ?>" data-tippy-interactive="true" data-tippy-placement="top" data-tippy-content="<?php esc_html_e('Edit','taskbot'); ?>"><a href="<?php echo esc_url($taskbot_add_service_page_edit_url);?>"><span class="tb-icon-edit-2"></span></a> </li>
+                            <li data-class="tb-tooltip-data" id="tb-tooltip-20<?php echo esc_attr($post->ID) ?>" data-tippy-interactive="true" data-tippy-placement="top" data-tippy-content="<?php esc_html_e('Delete','taskbot'); ?>" class="tb-delete"> <a href="javascript:void(0);"  class="taskbot-service-delete" data-id="<?php echo (int)$post->ID;?>"><span class="tb-icon-trash-2 bg-redheart"></span></a> </li>
+                            <li data-class="tb-tooltip-data" id="tb-tooltip-30<?php echo esc_attr($post->ID) ?>" data-tippy-interactive="true" data-tippy-placement="top" data-tippy-content="<?php esc_html_e('View','taskbot'); ?>"><a href="<?php echo esc_url( $task_order_url );?>"><span class="tb-icon-external-link bg-gray"></span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -170,10 +170,12 @@ if ( $taskbot_query->have_posts() ) :
     </ul>
     <?php
     taskbot_paginate($taskbot_query);
-else: ?>
+else:
+    $image_url = !empty($taskbot_settings['empty_listing_image']['url']) ? $taskbot_settings['empty_listing_image']['url'] : TASKBOT_DIRECTORY_URI . 'public/images/empty.png';
+    ?>
     <div class="tb-submitreview tb-submitreviewv3">
         <figure>
-            <img src="<?php echo esc_url(TASKBOT_DIRECTORY_URI.'public/images/empty.png')?>" alt="<?php esc_attr_e('add task','taskbot');?>">
+            <img src="<?php echo esc_url($image_url)?>" alt="<?php esc_attr_e('add task','taskbot');?>">
         </figure>
         <h4><?php esc_html_e( 'Add your new Task and start getting orders', 'taskbot'); ?></h4>
         <h6><a href="<?php echo esc_url($taskbot_add_service_page_url);?>"> <?php esc_html_e('Add new task', 'taskbot'); ?> </a></h6>

@@ -30,12 +30,139 @@ class Taskbot_Admin_Hooks {
 		add_action( 'wp_ajax_taskbot_update_admin_notification', array(&$this,'taskbot_update_admin_notification'));		
 		add_filter( 'fw_ext_backups_demo_dirs', array(&$this, 'taskbot_filter_theme_fw_ext_backups_demos'));
 		add_action( 'admin_notices', array(&$this, 'taskbot_wp_uppy_pro_admin_notices_list') );
+
+        //Mega Menu
+        $theme_version 		= wp_get_theme();
+        if(!empty($theme_version->get( 'TextDomain' )) && ( $theme_version->get( 'TextDomain' ) === 'taskup' || $theme_version->get( 'TextDomain' ) === 'taskup-child' )){
+            add_action('wp_nav_menu_item_custom_fields', array($this, 'taskbot_menu_item_custom_fields'), 10, 4);
+            add_action('wp_update_nav_menu_item', array($this, 'taskbot_menu_save_custom_fields'), 10, 2);
+            add_filter('nav_menu_link_attributes', array($this, 'taskbot_menu_item_content'), 10, 3);
+            add_filter('nav_menu_css_class', array($this, 'taskbot_menu_item_classes'), 1, 3);
+        }
+
 	}
+
+
+    /**
+     * Add custom field to menu item
+     *
+     * @param $item_id
+     * @param $item
+     * @param $depth
+     * @param $args
+     */
+    public function taskbot_menu_item_custom_fields($item_id, $item, $depth, $args){
+
+	    if($depth !== 0){
+	        return;
+        }
+
+        $post_args = array(
+            'post_type'      => 'elementor_library',
+            'posts_per_page' => -1,
+            'tabs_group' => 'library',
+            'elementor_library_type' => 'section',
+        );
+
+        $elementor_posts = get_posts($post_args);
+
+        $template = get_post_meta( $item_id, '_taskbot_megamenu_item_template', true );
+        $responsive = get_post_meta( $item_id, '_taskbot_megamenu_item_responsive', true );
+
+        ?>
+        <div style="clear: both;">
+            <input type="hidden" class="nav-menu-id" value="<?php echo $item_id ;?>" />
+            <label for="taskbot-megamenu-item-template-<?php echo $item_id ;?>" class="taskbot-megamenu-item-template"><?php _e( "Megamenu Template", 'Taskbot' ); ?></label><br />
+            <div class="logged-input-holder">
+                <select style="width:100%;" name="taskbot-megamenu-item-template[<?php echo $item_id ;?>]" id="taskbot-megamenu-item-template-<?php echo $item_id ;?>">
+                    <option value="none"><?php echo esc_html__('None', 'taskbot') ?></option>
+                   <?php
+                   foreach ($elementor_posts as $post) { ?>
+                       <option<?php echo $post->ID == $template ? ' selected="selected"' : '' ?> value="<?php echo esc_attr($post->ID); ?>"><?php echo esc_html($post->post_title) ?></option>
+                   <?php } ?>
+                </select>
+            </div>
+            <label for="taskbot-megamenu-item-responsive-<?php echo $item_id ;?>" class="taskbot-megamenu-item-responsive"><?php _e( "Megamenu on Mobile", 'Taskbot' ); ?></label><br />
+            <div class="logged-input-holder">
+                <select style="width:100%;" name="taskbot-megamenu-item-responsive[<?php echo $item_id ;?>]" id="taskbot-megamenu-item-responsive-<?php echo $item_id ;?>">
+                    <option value="hide" selected="selected"><?php echo esc_html__('Hide', 'taskbot') ?></option>
+                    <option value="show" <?php echo $responsive === 'show' ? 'selected=" selected"' : '' ?>><?php echo esc_html__('Show', 'taskbot') ?></option>
+                </select>
+            </div>
+        </div>
+
+        <?php
+    }
+
+
+    /**
+     * Save custom field data
+     *
+     * @param $item_id
+     * @param $item
+     */
+    public function taskbot_menu_save_custom_fields($item_id, $item){
+        if ( isset( $_POST['taskbot-megamenu-item-template'][$item]  ) ) {
+            $sanitized_data = sanitize_text_field( $_POST['taskbot-megamenu-item-template'][$item] );
+            update_post_meta( $item, '_taskbot_megamenu_item_template', $sanitized_data );
+        } else {
+            delete_post_meta( $item, '_taskbot_megamenu_item_template' );
+        }
+        if ( isset( $_POST['taskbot-megamenu-item-responsive'][$item]  ) ) {
+            $sanitized_data = sanitize_text_field( $_POST['taskbot-megamenu-item-responsive'][$item] );
+            update_post_meta( $item, '_taskbot_megamenu_item_responsive', $sanitized_data );
+        } else {
+            delete_post_meta( $item, '_taskbot_megamenu_item_responsive' );
+        }
+    }
+
+
+    /**
+     * Add custom field to menu item
+     *
+     * @param $atts
+     * @param $item
+     * @param $args
+     * @return mixed
+     */
+    public function taskbot_menu_item_content($atts, $item, $args){
+
+        $id = (int) $item->ID;
+        $template = get_post_meta( $id, '_taskbot_megamenu_item_template', true );
+        if( $args->theme_location === 'primary-menu' && !empty($template) && $template !== 'none' ){
+            $atts['class'] = 'taskbot-megamenu-link';
+            $args->after  = '<div class="taskbot-megamenu">' . \Elementor\Plugin::instance()->frontend->get_builder_content($template) . '</div>';
+        }
+
+        return $atts;
+    }
+
+
+    /**
+     * Add nav item classes
+     *
+     * @param $classes
+     * @param $item
+     * @param $args
+     * @return mixed
+     */
+    public function taskbot_menu_item_classes($classes, $item, $args){
+
+	    $id = $item->ID;
+        $template = get_post_meta( $id, '_taskbot_megamenu_item_template', true );
+        $responsive = get_post_meta( $id, '_taskbot_megamenu_item_responsive', true );
+        if( $args->theme_location === 'primary-menu' && !empty($template) && $template !== 'none' ){
+            $classes[] = 'tb-megamenu-holder';
+        }
+        if( $args->theme_location === 'primary-menu' && isset($responsive) ){
+            $classes[] = 'tb-megamenu-on-responsive-' . $responsive;
+        }
+	    return $classes;
+    }
 	
 
 	/**
 	 * @Get WP Guppy Pro
-	 * @type load
 	 */
 	function taskbot_wp_uppy_pro_admin_notices_list() {
 
@@ -61,20 +188,12 @@ class Taskbot_Admin_Hooks {
 	*/
 	public function taskbot_filter_theme_fw_ext_backups_demos($demo_path	= array()){
 		if (!defined('FW')) return $demo_path;
-		$theme_version 		= wp_get_theme();
-		if(!empty($theme_version->get( 'TextDomain' )) && ( $theme_version->get( 'TextDomain' ) === 'taskup' || $theme_version->get( 'TextDomain' ) === 'taskup-child' )){
-			$demo_path	= array(
-				fw_fix_path(get_template_directory()) .'/demo-content'
-				=>
-				get_template_directory_uri() .'/demo-content',
-			);
-		} else {
-			$demo_path	= array(
-				fw_fix_path(TASKBOT_DIRECTORY) .'/demo-content'
-				=>
-				TASKBOT_DIRECTORY_URI .'demo-content',
-			);
-		}
+		
+		$demo_path	= array(
+			fw_fix_path(TASKBOT_DIRECTORY) .'/demo-content'
+			=>
+			TASKBOT_DIRECTORY_URI .'demo-content',
+		);
 		
 		return $demo_path;
 	}

@@ -32,6 +32,7 @@ if(!empty($order_id) && class_exists('WooCommerce')){ ?>
 				$order_data    			= get_post_meta( $order_id, 'package_details',true );
 
 				$package_details		= !empty($package_details) ? $package_details : array();
+
 				$task_count       		= taskbot_get_user_tasks($current_user->ID, array('publish'));
 				$featured_task       	= taskbot_get_user_tasks($current_user->ID, array('publish'),true);
 				$package_create_date	= !empty($package_details['package_create_date']) ? $package_details['package_create_date'] : 0;

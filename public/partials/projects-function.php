@@ -365,7 +365,7 @@ if( !function_exists('taskbot_posted_date_html') ){
         if( !empty($publish_date) ){
             ob_start();
             ?>
-                <li><i class="icon-calendar"></i><?php echo sprintf( _x( 'Posted %s ago', '%s = human-readable time difference', 'taskbot' ), human_time_diff( $publish_date, current_time( 'timestamp' ) ) ); ?></li>
+                <li><i class="tb-icon-calendar"></i><?php echo sprintf( _x( 'Posted %s ago', '%s = human-readable time difference', 'taskbot' ), human_time_diff( $publish_date, current_time( 'timestamp' ) ) ); ?></li>
             <?php
             echo ob_get_clean();
         }
@@ -392,7 +392,7 @@ if( !function_exists('taskbot_location_html') ){
         if( !empty($location_text) ){
             ob_start();
             ?>
-                <li><i class="icon-map-pin"></i><?php echo esc_html($location_text); ?></li>
+                <li><i class="tb-icon-map-pin"></i><?php echo esc_html($location_text); ?></li>
             <?php
             echo ob_get_clean();
         }
@@ -442,7 +442,7 @@ if( !function_exists('taskbot_hiring_freelancer_html') ){
         if( !empty($no_of_freelancers) ){
             ob_start();
             ?>
-                <li><i class="icon-users"></i><?php echo sprintf(_n('%s freelancer','%s freelancers',$no_of_freelancers,'taskbot'),$no_of_freelancers); ?></li>
+                <li><i class="tb-icon-users"></i><?php echo sprintf(_n('%s freelancer','%s freelancers',$no_of_freelancers,'taskbot'),$no_of_freelancers); ?></li>
             <?php
             echo ob_get_clean();
         }

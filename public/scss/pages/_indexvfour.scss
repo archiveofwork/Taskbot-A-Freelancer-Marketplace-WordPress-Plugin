@@ -94,10 +94,8 @@
             overflow: hidden;       
             width: 100%;
             display: flex;
-            align-items: center;
             .tk-darkbtn{
                 height: auto;
-                line-height: 48px;
                 color: $button-color;
                 background: $theme-color;
                 border-radius: 0 $radius $radius 0;
@@ -108,6 +106,8 @@
         }
         .select2-container--default .select2-selection--single{
             border-radius: 0;
+            text-align: left;
+            padding-left: 30px;
             .select2-selection__rendered{
                 line-height: 48px;
             }
@@ -244,7 +244,7 @@
     }
 }
 .tk-section-bg{
-    background: $dark;
+    background: #0a0f26 !important;
     position: relative;
 }
 .tk-hirring-section{
@@ -337,6 +337,29 @@
         }
     }
 }
+
+.tk-appendinput {
+    .tk-select {
+        > i {
+            position: absolute;
+            left: 15px;
+            font-size: 20px;
+            color: #999999;
+            z-index: 1;
+            pointer-events: none;
+        }
+    }
+    .tk-inputicon{
+        input{
+            &:hover,
+            &:focus{
+                border: 0 !important;
+                box-shadow: none !important;
+            }
+        }
+    }
+}
+
 .tk-bannerinfo .tk-appendinput{
     .form-control{
         border: 0;
@@ -365,11 +388,17 @@
         box-shadow: none;}
     .tk-inputicon{
         flex: auto;
+        position: relative;
         a{
             left: 20px;
             right: auto;
             font-size: 20px;
             pointer-events: none;
+        }
+        span{
+            top: 14px;
+            left: 20px;
+            position: absolute;
         }
     }
     .tk-select{

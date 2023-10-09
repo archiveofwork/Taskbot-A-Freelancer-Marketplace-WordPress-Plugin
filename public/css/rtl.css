@@ -1,3 +1,4 @@
+/** ====== RTL Styling components ====== **/
 .tk-easyinfotitle i {
   margin-right: 0;
   margin-left: 30px;
@@ -40,11 +41,6 @@
 .tk-trendingserviceslider_title h5 i {
   margin-left: 0;
   margin-right: 15px;
-}
-
-.tk-trendingserviceslider_title .tk-featureRating {
-  flex-direction: row-reverse;
-  justify-content: flex-end;
 }
 
 .tk-trendingserviceslider_title .tk-featureRating__stars span::after {
@@ -108,14 +104,6 @@
 .tk-appcompat i {
   padding-left: 10px;
   padding-right: 0;
-}
-
-.tk-sliderarrow .splide__arrow--next::before {
-  transform: rotate(-180deg);
-}
-
-.tk-sliderarrow .splide__arrow--prev::before {
-  transform: rotate(-180deg);
 }
 
 .tk-mainlink a span {
@@ -513,10 +501,6 @@
   padding-left: 30px;
 }
 
-.tb-dhb-box-wrapper .tb-profileform__holder .tb-dhbbtnarea {
-  justify-content: space-between;
-}
-
 .tb-onoff label span {
   padding-right: 10px;
   padding-left: 0;
@@ -542,10 +526,6 @@
 .tb-profileform__title--rightarea {
   margin-right: auto;
   margin-left: 0;
-}
-
-.tb-pkgresponse {
-  flex-direction: row-reverse;
 }
 
 .tb-sidebartabholder .tb-sidebartabs__pkgtitle .nav-link {
@@ -1313,6 +1293,655 @@
   text-align: left;
 }
 
+.tk-themenav ul.menu .menu-item-has-children .menu-item-has-children > a:after {
+  margin-left: 0;
+  margin-right: auto;
+  transform: scale(-1);
+}
+
+.tk-exploretalent {
+  gap: 20px;
+}
+
+.tk-popularservices .splide__track,
+.tk-exploreslidervtwo .splide__track {
+  direction: ltr;
+}
+
+.tk-sliderarrow-two .splide__arrow::before,
+.tk-exploreslidervtwo .splide__arrow::before {
+  font-size: 25px;
+  transform: scale(-1);
+}
+
+.tk-sliderarrow .splide__arrow--next::before {
+  transform: rotate(0);
+}
+
+.tk-sliderarrow .splide__arrow--prev::before {
+  transform: rotate(0);
+}
+
+.tk-faqsslider .splide__arrow--next::before,
+.tk-professionolslider .splide__arrow--next::before {
+  transform: rotate(180deg);
+}
+.tk-faqsslider .splide__arrow--prev::before,
+.tk-professionolslider .splide__arrow--prev::before {
+  transform: rotate(180deg);
+}
+
+.tk-btn-line-lg i {
+  transform: scale(-1);
+}
+
+.tk-bannerinfo_search .tk-searcbar .tk-darkbtn {
+  border-radius: 4px 0 0 4px;
+}
+
+.tk-inputicon input[type=text] {
+  border-radius: 0 4px 4px 0 !important;
+}
+
+.tk-select:before {
+  left: 20px;
+  right: auto;
+}
+
+.tk-select > i {
+  right: 20px;
+}
+
+.tk-playbtn h6 {
+  margin-left: 0;
+  padding-right: 10px;
+}
+
+.tk-main-title-holder .tk-btn2-wrapper {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.tk-project-img {
+  margin-right: 0;
+  margin-left: 20px;
+}
+
+.tk-fc-wrap .tk-select > i {
+  right: 0px;
+}
+
+.tk-inputicon input[type=text]:hover {
+  border: 1px solid #eee !important;
+}
+
+.tk-bannerinfo .tk-appendinput .select2-container {
+  padding-right: 25px;
+}
+
+.tk-bannerinfo .tk-appendinput .select2-container--default .select2-selection--single {
+  padding-right: 30px;
+}
+
+.tk-featured-listing .tk-price {
+  text-align: left;
+}
+
+.tk-author a {
+  margin-left: 0px;
+  margin-right: 10px;
+}
+
+.tu-joinnow_field .tb-formtheme .tb-btn {
+  margin-left: 0px;
+  margin-right: 10px;
+}
+
+.tk-sectionbtn i {
+  margin-left: 0px;
+  margin-right: 10px;
+}
+
+.tk-themenav ul.menu .menu-item-has-children > a:after {
+  padding-left: 0px;
+  padding-right: 5px;
+}
+
+.select2-container[dir=rtl] .select2-selection--single .select2-selection__rendered {
+  padding-right: 50px;
+}
+
+.tk-epxerts-banner {
+  left: 0;
+  right: auto;
+}
+
+.tk-partical-shape {
+  left: auto;
+  right: -12%;
+}
+
+.tk-bannersix .tk-bannerv3_title {
+  text-align: right;
+}
+
+.tk-banneruser-info > img {
+  margin-right: 0;
+  margin-left: 16px;
+}
+
+.tk-exprt-banner-shape {
+  clip-path: unset;
+  border-radius: 0 0 40px 0;
+}
+
+.tk-epxerts-banner img {
+  left: 0;
+  position: absolute;
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+}
+
+.tk-logo {
+  margin-right: 0 !important;
+  margin-left: 30px;
+}
+
+.tk-formsearch .tk-inputicon .form-control:hover, .tk-formsearch .tk-inputicon .form-control:focus {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.tb-rateviews .tk-featureRating__stars {
+  padding: 0;
+}
+.tb-rateviews .tk-featureRating__stars > span {
+  padding: 0;
+}
+
+.tb-rateviews3 li a span {
+  padding: 0 0 0 10px;
+}
+
+.tk-mainlist li {
+  padding-right: 0;
+  padding-left: 30px;
+}
+
+.tk-delivery-time i {
+  margin-left: 14px;
+  margin-right: 0px;
+}
+
+.tk-delivery-time span {
+  margin-left: 0;
+  margin-right: 6px;
+}
+
+.tb-singleservice-tile .tb-blogtags .tb-tagtittle > i {
+  margin-left: 8px;
+  margin-right: 0px;
+}
+
+.tb-blogimg figure {
+  margin: 0 0 0 20px;
+}
+
+.tk-blogiteminfo li i {
+  margin-right: 0px;
+  margin-left: 10px;
+}
+
+.tk-theme-box > .taskup-cat-links > .post-categories {
+  margin: -5px 25px -5px -5px !important;
+}
+
+.tk-theme-box > .taskup-cat-links > i {
+  margin-left: 8px;
+  margin-right: 0px !important;
+}
+
+.taskup-comments .tk-blogimg > figure {
+  margin-left: 20px !important;
+  margin-right: 0px !important;
+}
+
+.taskup-comments .taskup-reply {
+  margin: 0 auto 0 0 !important;
+}
+
+.tk-themenav .menu-header-menu-container .tk-user-menu-wrapper {
+  margin-right: auto;
+  margin-left: 0 !important;
+}
+
+.tk-main-notiwrap .sub-menu li a i, .sub-menu li a i {
+  padding-right: 0px;
+  padding-left: 10px;
+}
+
+.tk-main-notiwrap .sub-menu-holder .sub-menu, .sub-menu-holder .sub-menu {
+  left: 0;
+  right: auto;
+}
+
+header .tk-main-notiwrap .sub-menu:before {
+  left: 20px;
+  right: auto;
+}
+
+header .tk-main-notiwrap .sub-menu:after {
+  left: 18px;
+  right: auto;
+}
+
+.tk-formsearch .tk-themeform_title {
+  padding-left: 0px;
+  padding-right: 20px;
+}
+
+.tk-bannerinfo_tag > span {
+  margin: 2px 0px 2px 10px;
+}
+
+.tk-price {
+  padding-right: 0;
+}
+
+.tb-freelancersearch .tb-bestservicedetail .tb-rateviews .tb_saved_items span {
+  padding-left: 6px;
+  padding-right: 0;
+}
+
+.tb-rateviews a > span {
+  padding: 0 0px 0 10px;
+}
+
+.tb-tags_links {
+  padding-right: 0;
+}
+
+.tk-maintitle:after {
+  left: auto;
+}
+
+.tk-card-title > i {
+  padding: 0 10px;
+}
+
+.tk-featureRating address i {
+  padding-right: 0;
+  padding-left: 10px;
+}
+
+.tk-contenthasfig .tb-pkgresponse__content i {
+  margin-left: 10px;
+  margin-right: 0px;
+}
+
+.tk-servicedetailtitle .tk-blogviewdates li > i {
+  margin: 0 0 0 10px;
+}
+
+.taskup-entry-meta > span i {
+  margin: 0 0 0 10px !important;
+}
+
+.tk-errorpage .tu-searchgbtn {
+  left: 0;
+  right: auto !important;
+  border-radius: 4px 0 0 4px;
+}
+
+.tk-slider-user img + .tk-slideruser-info {
+  margin-left: 0px;
+  margin-right: 14px;
+}
+
+.tb-btn i, .tb-btnvtwo i {
+  margin-left: 0px;
+  margin-right: 10px;
+}
+
+.tb-tasksitem_head .tb-startingprice,
+.tb-bestservicedetail__user .tk-price-holder .tb-startingprice {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.tb-icon-watermark i {
+  left: -50px;
+  right: auto;
+}
+
+.tb-seller-counter-list li:hover .tb-icon-watermark i {
+  left: -20px;
+  right: auto;
+}
+
+.tb-radiobox label span {
+  margin: 0 10px 0 0;
+}
+
+.tb-radioholder > a {
+  left: 0;
+  right: auto;
+}
+
+.tb-radioholder.tb-packages__days {
+  padding: 0 20px 0 0px;
+}
+
+.tb-actionselect > span {
+  padding-right: 10px;
+}
+
+.tk-mainlist li {
+  padding-left: 0;
+  padding-right: 30px;
+}
+.tk-mainlist li::before {
+  right: 0;
+  left: auto;
+}
+
+.tk-distance .noUi-horizontal .noUi-handle {
+  right: auto;
+}
+
+.tk-bannerv5 .tk-bannerv3_title {
+  text-align: right;
+}
+
+.tb-areasizebox .tb-rangevalue {
+  gap: 10px;
+}
+
+.tk-jobdescription > ul li {
+  padding-left: 0px;
+  padding-right: 28px;
+}
+.tk-jobdescription > ul li::before {
+  right: 0;
+  left: auto;
+}
+
+.tb-sidebartabholder .tb-sidebartabs__pkgtitle .nav-link {
+  border-left: 0;
+  border-right: 0;
+}
+
+.tk-bannerv3.tk-bannerv4 .tk-bannerv3_title {
+  text-align: right;
+}
+
+.tb-rateviews .tk-likev2 span i {
+  margin-right: 0;
+  margin-left: 6px;
+}
+
+.tk-select .select2-container--default .select2-selection--multiple .select2-selection__rendered {
+  padding: 0 20px 0 40px;
+}
+
+.tk-btn-solid-lg {
+  border-radius: 4px;
+}
+
+.tk-search-btn .tk-btn-yellow {
+  border-radius: 4px 0 0 4px !important;
+}
+
+.tb-savebtn span + .tb-btn, .tb-savebtn em + .tb-btn {
+  margin-left: 0px;
+  margin-right: 20px;
+}
+
+.tk-footer-two_copyright .wk-fcopyright_list {
+  margin-right: auto;
+  margin-left: 0 !important;
+}
+
+.tb-tablelist li::after {
+  display: none;
+}
+
+.tb-dhb-mainheading.tb-dhb-mainheadingv2 .tb-themeform__wrap {
+  flex-wrap: nowrap;
+}
+
+.tk-fwidget_contact_list > li {
+  padding-left: 0px;
+  padding-right: 34px;
+}
+.tk-fwidget_contact_list > li > i {
+  right: 0;
+  left: auto;
+}
+
+.tk-blogviewdatessm li i {
+  margin-left: 6px;
+  margin-right: 0px;
+}
+.tk-blogviewdatessm li em {
+  margin-left: 5px;
+  margin-right: 0px;
+}
+
+.tk-hirring-img li .tk-img-content a {
+  display: flex;
+  align-items: center;
+}
+.tk-hirring-img li .tk-img-content a i {
+  display: inline-block;
+  transform: rotate(180deg);
+}
+
+.tk-bannervthree .tk-appendinput .tk-inputicon .form-control {
+  padding: 0 56px 0 20px;
+}
+.tk-bannervthree .tk-appendinput .tk-inputicon .form-control:hover {
+  border: 0 !important;
+  box-shadow: 0 !important;
+}
+
+.tk-bannervthree .tk-appendinput .tk-inputicon span {
+  right: 20px;
+  left: auto;
+}
+
+.tk-bannerinfo .tk-appendinput .select2-container--default .select2-selection--single .select2-selection__rendered {
+  padding-right: 0;
+  padding-left: 50px;
+}
+
+.tk-card-title .tk-like {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.tk-btn-solid-lg i {
+  padding: 0 10px 0 0;
+}
+
+.tk-inputicon .form-control {
+  padding-left: 40px;
+  padding-right: 49px;
+}
+
+.tk-inputicon i {
+  left: auto;
+  right: 20px;
+}
+
+.tk-formsearch .tk-inputicon .form-control {
+  padding-left: 20px;
+  padding-right: 56px;
+}
+
+.tk-searcbar .tk-inputicon i {
+  left: auto;
+  right: 0;
+}
+
+.tb-sidebarpkg__btn a i {
+  display: inline-block;
+  transform: rotate(180deg);
+}
+
+.tu-blogfeatures > .tu-featurelist ul li,
+.tb-singleservice-tile .tk-text-wrapper ul li {
+  padding-left: 0;
+  padding-right: 28px;
+}
+.tu-blogfeatures > .tu-featurelist ul li::before,
+.tb-singleservice-tile .tk-text-wrapper ul li::before {
+  right: 0;
+  left: auto;
+}
+
+.tu-recentposts_info figure .date-and-month {
+  left: 10px;
+  right: auto !important;
+}
+
+.tu-sidebar-newsletter .form-group i + .form-control {
+  padding-left: 20px !important;
+  padding-right: 50px !important;
+}
+
+.tu-sidebar-newsletter .form-group i {
+  left: auto;
+  right: 20px;
+}
+
+.tk-slider-content::after {
+  left: 0;
+  right: auto;
+}
+
+.tk-ratting strong + .tk-ratingstars {
+  margin-right: 10px;
+}
+
+.tk-category_childlist li:hover > a i {
+  display: inline-block;
+  transform: rotate(180deg);
+}
+
+.tk-counter li:not(:last-child) {
+  border-right: 0;
+  padding-right: 0;
+  padding-left: 24px;
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.tk-categories_title h4, h6 {
+  text-align: right;
+}
+
+.tk-featureditem {
+  right: 0;
+  left: auto;
+  border-radius: 0px 0px 0px 20px;
+}
+
+.tb-bestservicedetail__title h6 a + i {
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+.tu-joinnow_field .tb-formtheme fieldset .form-group i + input {
+  padding-left: 20px;
+  padding-right: 56px;
+}
+
+.tu-joinnow_field .tb-formtheme fieldset .form-group i {
+  left: auto;
+  right: 20px;
+}
+
+.tk-total-title .tb-btn i {
+  margin: 0 10px 0 0px;
+  transform: rotate(180deg);
+}
+
+.wp-block-search__inside-wrapper button.has-icon {
+  border-radius: 4px 0px 0px 4px !important;
+}
+
+.wp-block-search .wp-block-search__input {
+  border-left: 0 !important;
+  border-right: 1.5px solid #eee !important;
+  border-radius: 0 4px 4px 0 !important;
+}
+.wp-block-search .wp-block-search__input:hover {
+  border: 0;
+  outline: 0;
+  box-shadow: 0 !important;
+}
+
+.tb-select-country:before {
+  left: 16px;
+  right: auto;
+}
+
+.tb-select:before {
+  left: 16px;
+  right: auto;
+}
+
+.tb-identity-approved > a:after {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.sub-menu-holder .sub-menu li a i {
+  padding-right: 0px !important;
+}
+
+.sub-menu li.tb-wallet > a {
+  margin-right: auto;
+  margin-left: 0 !important;
+}
+
+.tb-tasksitem_head .tb-cards__title > a i {
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+.tb-seller-profile-two .tb-seller-details h4 i {
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+.tk-themeaccordion_title:after {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.tk-username i {
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+.tb-sectiontitlev2 img {
+  margin-right: 0px;
+}
+
+.tk-delivery-time {
+  margin: 20px -20px 0 0px;
+  border-radius: 100px 0px 0px 100px;
+}
+
+.tk-blogiteminfo li i {
+  margin-right: 0px !important;
+}
+
+.depth-2 {
+  padding-right: 80px;
+  padding-left: 0px !important;
+}
+
 @media (max-width: 1680px) {
   .tk-feedbackslider {
     margin-right: 192px;
@@ -1334,17 +1963,14 @@
 .tk-trendingserviceslider.splide--rtl > .splide__track > .splide__arrows .splide__arrow--next {
     left: 20px;
   }
-
   .tk-trendingserviceslider.splide--rtl > .splide__arrows .splide__arrow--prev,
 .tk-trendingserviceslider.splide--rtl > .splide__slider > .splide__track > .splide__arrows .splide__arrow--prev,
 .tk-trendingserviceslider.splide--rtl > .splide__track > .splide__arrows .splide__arrow--prev {
     right: 20px;
   }
-
   .tk-sliderarrow.splide--rtl > .splide__arrows .splide__arrow--next {
     left: 20px;
   }
-
   .tk-sliderarrow.splide--rtl > .splide__arrows .splide__arrow--prev {
     right: 20px;
   }
@@ -1363,39 +1989,52 @@
   .tk-feedbackslider {
     margin-right: 42px;
   }
+  .tb-navbar {
+    margin-left: 0;
+    margin-right: auto;
+  }
+  .tk-headerchatbtn span, .tb-inbox span, .tk-nav-icons span {
+    margin-left: 0px;
+    margin-right: 20px;
+  }
 }
 @media (max-width: 1199px) {
   .tk-headerchatbtn a .tk-remaining-notification {
     left: auto;
     right: 44px;
   }
-
+  .tk-themenav ul.menu .menu-item-has-children > a:after,
+.tk-themenav ul.menu .menu-item-has-children .menu-item-has-children > a:after {
+    display: none;
+  }
+  .tk-bannervideo span {
+    padding: 0 20px 0 0;
+  }
+  .tk-dropdowarrow {
+    left: 20px;
+    right: auto !important;
+  }
   .tk-main-notiwrap .tk-notidropdowns li + li {
     padding: 0;
   }
-
   .tb-navbarnav .tk-remaining-notification {
     left: auto;
     right: 32px;
     margin-right: 0;
   }
-
   .tb-dropdowarrow {
     display: inline-block;
     left: 15px;
     right: auto;
     transform: rotate(180deg);
   }
-
   .tb-open .tb-dropdowarrow i {
     transform: rotate(-90deg);
   }
-
   .tb-packages__text .tb-packages__title span,
 .tb-packages__text .tb-packages__check {
     padding: 0 5px;
   }
-
   .tk-feedbackslider {
     margin-right: 50px;
   }
@@ -1405,11 +2044,9 @@
     margin-left: auto;
     margin-right: 0;
   }
-
   .tb-table td:before {
     text-align: right;
   }
-
   .tk-feedbackslider {
     margin: -30px 154px -30px 0;
   }
@@ -1419,49 +2056,278 @@
     padding-left: 30px;
     padding-top: 40px;
   }
-
+  .tk-project-wrapper-two .tk-projectsstatus_option {
+    left: 0;
+    right: auto;
+  }
+  .text-center .tk-maintitle:after {
+    right: 0;
+    left: auto;
+  }
+  .tk-testimonial .tk-maintitle h2, .tk-testimonial h3,
+.tk-intro-wrapper .tk-maintitle h2,
+.tk-intro-wrapper h3,
+.tk-hiring-process .tk-maintitle h2,
+.tk-hiring-process h3,
+.sc-services-slider .tk-maintitle h2,
+.sc-services-slider h3,
+.tk-main-section-two .tk-maintitle h2,
+.tk-main-section-two h3,
+.tk-popular-services .tk-maintitle h2,
+.tk-popular-services h3,
+.tk-main-section-three .tk-maintitle h2,
+.tk-main-section-three h3,
+.tk-popular-categories .tk-maintitle h2,
+.tk-popular-categories h3,
+.tk-startedtoday-section .tk-maintitle h2,
+.tk-startedtoday-section h3 {
+    text-align: right !important;
+  }
+  .tk-main-title-holder .tk-maintitle h2, h3, h5, .tk-orange {
+    text-align: right !important;
+  }
+  .tk-intro-wrapper .tk-main-title-holder .tk-maintitle h5 {
+    text-align: right !important;
+  }
+  .tk-subtitle h4,
+.tk-rightareainfo h5,
+.tk-bannerv2_title h1,
+.tk-bannerv2_title h2,
+.tk-servicesabout h5,
+.tk-servicesabout span,
+.tk-bannerv5 .tk-bannerv3_title,
+.tk-featured-listing .tk-price h4, span {
+    text-align: right !important;
+  }
+  .tk-featured-listing .tk-price .tk-btn-solid-lg-lefticon {
+    text-align: center !important;
+  }
+  .tk-maintitle:after {
+    right: 0;
+    left: auto;
+  }
+  .tk-layout-v1 .row .tk-maintitle::after {
+    left: 50%;
+    right: auto;
+    margin-left: -50px;
+  }
+  .tk-title-wrapper h5,
+.tk-maintitle h2, h3 {
+    text-align: right !important;
+  }
+  .tk-postproject-title p,
+.tk-main-details p, .tk-main-description p,
+.tk-maintitle h3 {
+    text-align: right !important;
+  }
+  .tk-verified-info h5 {
+    text-align: right;
+  }
+  .tk-theme-box > .taskup-cat-links > .post-categories {
+    margin: 10px 0px 0px 0px !important;
+  }
+  .tk-bannerv3_title p, .tk-bannerv3_title h1, .tk-bannerv3_title strong {
+    text-align: right;
+  }
+  .tk-maintitle h3 {
+    text-align: right;
+  }
+  .tk-price-holder {
+    flex-direction: column;
+  }
+  .navbar-toggler span {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    height: 42px;
+    width: 42px;
+  }
+  .select2-container--default .select2-selection--multiple .select2-selection__rendered {
+    padding: 0;
+  }
+  .tk-bannerform .tk-formsearch .select2-container--default .select2-selection--single .select2-selection__placeholder {
+    padding-right: 20px;
+  }
   .tb-savelisting .tb-itemlinks .tb-startingprice {
     padding-right: 0;
   }
-
+  .tk-fc-wrap .tk-select > i {
+    right: 20px;
+  }
   .tb-tabbitem__list .tb-itemlinks .tb-switchservice, .tb-tabbitem__list .tb-itemlinks .tb-tabicon {
     border-right: 0;
     padding-right: 0;
   }
-
-  .tb-bestservicedetail__user .tb-startingprice {
-    position: absolute;
-    left: 30px;
-    right: 0;
-  }
-
   .tb-main-bg .tb-addcommentblogv2.tb-addcommentblog .tb-addcomment {
     padding-right: 35px;
     padding-top: 30px;
   }
-
   .tk-feedbackslider {
     margin-right: 30px;
+  }
+  .tb-pagination span, .tb-pagination a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 @media (max-width: 575px) {
   .tk-feedbackslider {
     margin-right: 12px;
   }
+  .tk-talents-search_content,
+.tu-quototitle .text-center,
+.tb-bestservicedetail__user,
+.tk-talents-search_title {
+    padding: 15px;
+  }
+  .tk-layout-v1 .row .tk-maintitle::after {
+    right: 0;
+    left: auto;
+    margin-right: 0;
+  }
+  .tk-themeform__wrap .form-group-half {
+    width: 100% !important;
+  }
+  .tk-faqsslider .splide__pagination {
+    display: none;
+  }
+  .tk-blog-main,
+.tk-description .tk-theme-box {
+    padding: 0px !important;
+  }
 }
 @media (max-width: 480px) {
   .tb-desclinks {
     margin-right: 0;
   }
-
+  .tk-bannerinfo_title h4 {
+    margin: 40px 0 0 0;
+  }
+  .tk-select:before {
+    display: none;
+  }
   .tb-payoutmethodpopup .tb-radio .payoutlists {
     padding-left: 20px;
     padding-right: 20px;
   }
-
   .tb-dhb-mainheading__rightarea em {
     padding: 0;
   }
+  .tk-themebanner_list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .tb-pkgresponse__content span {
+    margin: 0 10px;
+  }
+  .tb-payoutmethod .payoutlists {
+    gap: 10px;
+    flex-direction: column;
+  }
+  .tb-payoutmethod .payoutlists > span {
+    margin: 0;
+  }
+}
+.tk-bannervideo span img {
+  right: -60px;
+}
+
+.tk-topservice__content .tk-featureRating__stars {
+  margin-right: 0px;
+}
+
+.tb-singleservice-tile .tb-blogtags .tb-tagtittle {
+  padding: 1px 0px 1px 20px;
+}
+
+.tk-sliderarrow .splide__arrow--next::before {
+  transform: rotate(-180deg);
+}
+
+.tk-sliderarrow .splide__arrow--prev::before {
+  transform: rotate(-180deg);
+}
+
+.tk-btnviewpro .tk-btn-solid-lg i {
+  padding: 0 0px 0 10px;
+}
+
+.tk-trendingserviceslider_title .tk-btn-solid-lg i {
+  transform: rotate(180deg);
+}
+
+.tk-checkout-info li > span {
+  padding-left: 0px;
+  padding-right: 20px;
+}
+
+.tk-project-option .tk-btn-solid-lg-lefticon {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.tk-ourexperience .tk-sectionapptitle .tk-maintitle h2 span {
+  display: inline-block;
+}
+
+.tk-select2-dropdown.select2-container--default .select2-search--dropdown .select2-search__field {
+  padding: 0 53px 0 20px;
+}
+
+.select2-container--default .select2-search--dropdown:after {
+  left: auto;
+  right: 15px;
+}
+
+.tk-actionselect .select2-container[dir=rtl] .select2-selection--single .select2-selection__rendered,
+.tb-actionselect .select2-container[dir=rtl] .select2-selection--single .select2-selection__rendered {
+  padding-right: 20px !important;
+}
+
+.tb-additonoltitle h5 i {
+  display: inline-block;
+}
+
+.tb-additonoltitle > i {
+  margin-right: 6px;
+  display: inline-block;
+}
+
+.tb-taskuploadtitle h6 span {
+  display: inline-block;
+}
+
+.tb-statustag span i {
+  padding-right: 0px;
+  margin-left: 10px;
+}
+
+.tk-themenav .menu-item-has-children > .sub-menu {
+  right: 0;
+  left: auto !important;
+}
+
+.tk-main-notiwrap .tk-notidropdowns li + li {
+  padding-left: 22px;
+  padding-right: 3px;
+}
+
+.tk-main-notiwrap .tk-notidropdowns li {
+  padding: 0 10px 0 22px;
+}
+
+.tb-noti-status a {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.tk-faqsslider .splide__arrows .splide__arrow--next {
+  right: auto;
+}
+
+.tk-themenav ul.menu .sub-menu .menu-item-has-children:hover > .sub-menu {
+  right: -100%;
 }
 
 /*# sourceMappingURL=rtl.css.map */

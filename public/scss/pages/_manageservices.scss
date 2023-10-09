@@ -100,6 +100,9 @@
 .tb-filedesciption{
     z-index: 1;
     display: contents;
+    .tb-preview + .tb-remove{
+        margin-left: 10px;
+    }
 }
 .taskbot-list{
     .progress {
@@ -141,17 +144,21 @@
     margin-left: auto;
     .form-control{font-size: rem(14);}
     .tb-actionselect2{
-        .select2-container--default .select2-selection--single .select2-selection__rendered{line-height: 42px;}
-        .select2-container {
+        .tk-select2-dropdown.select2-container--default .select2-selection--single .select2-selection__rendered{line-height: 42px;}
+        .tk-select2-dropdown.select2-container {
             min-height: 44px;
             min-width: 220px;
+        }
+        .select2-container .select2-selection--single{
+            height: auto;
+            border: 1px solid #eee;
         }
     }
 }
 .tb-dhbheading__rightarea{
     .tb-actionselect2{
-        .select2-container--default .select2-selection--single .select2-selection__rendered{line-height: 42px;}
-        .select2-container {min-height: 44px;}
+        .tk-select2-dropdown.select2-container--default .select2-selection--single .select2-selection__rendered{line-height: 42px;}
+        .tk-select2-dropdown.select2-container {min-height: 44px;}
     }
 }
 .tb-displistform{

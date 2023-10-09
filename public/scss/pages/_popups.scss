@@ -6,6 +6,7 @@
 	padding:30px;
 }
 .tb-popuptitle{
+	gap: 0 20px;
 	display: flex;
 	align-items: center;
 	padding: 20px 30px;
@@ -346,7 +347,14 @@
 	}
 	.tb-themeform{padding-top: 20px;}
 }
-.tb-btn.tb-signup-now{width: 100%;}
+.tb-btn.tb-signup-now{
+	width: 100%;
+	&:focus,
+	&:hover{
+		color: $button-color;
+		background-color: $theme-color_20_light;
+	}
+}
 .tk-popup-terms{
 	width: 100%;
 	p{

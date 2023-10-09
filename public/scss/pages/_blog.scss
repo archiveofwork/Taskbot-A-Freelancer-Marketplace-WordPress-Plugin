@@ -28,7 +28,9 @@
     a{display: block;}
     img{ 
         width: 100%;
+        object-fit: cover;
         @extend %transition;
+        height: 300px !important;
         border-radius: $radius !important;
     }
     &:hover{
@@ -68,7 +70,7 @@
 .tk-tags{
     padding: 0;
     list-style: none;
-    margin-bottom: 0;
+    margin: 0;
     li{
         list-style: none;
         display: inline-block;

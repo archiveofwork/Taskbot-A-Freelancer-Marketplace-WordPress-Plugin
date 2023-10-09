@@ -1093,13 +1093,30 @@ class Taskbot_Dashboard_Shortcodes_Service {
             $category_level3            = is_array($category_level3) ? $category_level3 : array($category_level3);
             $validation_fields  = array(
                 'post_title'    => esc_html__('Please enter task title.','taskbot'),
-                'category'   => esc_html__('Please select task category.','taskbot')
+                'category'      => esc_html__('Please select task category.','taskbot'),
+                'post_content'  => esc_html__('Please enter task content.','taskbot'),
             );
+
             foreach($validation_fields as $key => $validation_field ){
 
                 if( empty($post_data[$key]) ){
                     $json['type']           = 'error';
                     $json['message_desc']   = $validation_field;
+                    wp_send_json($json);
+                }
+            }
+
+            if(isset($post_data['post_content']) && $taskbot_settings['task_description_length_option'] && isset($taskbot_settings['task_description_length'])){
+                $min_task_description_length = isset($taskbot_settings['task_description_length'][1]) ? $taskbot_settings['task_description_length'][1] : 50;
+                $max_task_description_length = isset($taskbot_settings['task_description_length'][2]) ? $taskbot_settings['task_description_length'][2] : 500;
+                $post_content_length = str_word_count($post_data['post_content']);
+                if(isset($post_content_length) && ($post_content_length < $min_task_description_length || $post_content_length > $max_task_description_length) ){
+                    $json['type']           = 'error';
+                    $json['message_desc']   = sprintf(
+                        __('The description should be between %s to %s words in length.', 'taskbot'),
+                        $min_task_description_length,
+                        $max_task_description_length,
+                    );
                     wp_send_json($json);
                 }
             }

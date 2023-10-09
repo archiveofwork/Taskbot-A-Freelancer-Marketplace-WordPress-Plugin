@@ -15,7 +15,7 @@
         <div class="modal-content">
             <div class="tb-popuptitle">
                 <h4><?php esc_html_e('Add new FAQ', 'taskbot'); ?></h4>
-                <span class="close"><i class="icon-x" data-bs-dismiss="modal"></i></span>
+                <span class="close"><i class="tb-icon-x" data-bs-dismiss="modal"></i></span>
             </div>
             <div class="modal-body">
                 <form class="tb-themeform tb-formlogin" id="tb-faq-form">

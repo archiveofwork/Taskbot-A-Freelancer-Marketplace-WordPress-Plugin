@@ -50,6 +50,7 @@
     }
 }
 .tk-faqsslider {
+    margin-top: 20px;
     .splide__pagination{bottom: 0;}
     filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.04)) drop-shadow(0px 3px 16px rgba(0, 0, 0, 0.04));
     .splide__arrows {
@@ -147,7 +148,7 @@
             @extend %transition;
             align-self:flex-start;
             line-height: em(26,24);
-            font-family: 'icomoon' !important;
+            font-family: 'taskbot-icons' !important;
         }
         h5{
             margin-bottom: 0;

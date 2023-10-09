@@ -46,7 +46,7 @@ $avatar	= apply_filters(
 								</a>
 							<?php } ?>
 							<div class="tb-profilebtnarea-wrapper">
-								<a id="profile-avatar-btn" class="tb-btn" href="javascript:void(0);"><span class="icon-edit-2"></span><?php esc_html_e('Change avatar','taskbot');?></a>
+								<a id="profile-avatar-btn" class="tb-btn" href="javascript:void(0);"><span class="tb-icon-edit-2"></span><?php esc_html_e('Change avatar','taskbot');?></a>
 							</div>
 						</div>
 						<div class="tb-icondetails">

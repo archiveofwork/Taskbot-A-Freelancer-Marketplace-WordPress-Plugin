@@ -174,7 +174,7 @@
                                         <?php } ?>
                                     </div>
                                     <?php if (!empty($question_form_id) || !empty($question_form_shortcode)) { ?>
-                                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#submitquestion" class="tk-btn-solid-lg tk-btn-yellow"><?php echo esc_html($btn_title); ?><i class="icon-edit-3"></i></a>
+                                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#submitquestion" class="tk-btn-solid-lg tk-btn-yellow"><?php echo esc_html($btn_title); ?><i class="tb-icon-edit-3"></i></a>
                                     <?php } ?>
                                 </div>
                             </div>
@@ -190,7 +190,7 @@
                             <div class="modal-content">
                                 <div class="tb-popuptitle">
                                     <h4><?php echo esc_html($form_title); ?></h4>
-                                    <a href="javascript:void(0);" class="close"><i class="icon-x" data-bs-dismiss="modal"></i></a>
+                                    <a href="javascript:void(0);" class="close"><i class="tb-icon-x" data-bs-dismiss="modal"></i></a>
                                 </div>
                                 <div class="modal-body">
                                     <?php 

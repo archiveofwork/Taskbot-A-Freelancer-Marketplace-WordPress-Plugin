@@ -99,6 +99,14 @@ $tb_custom_fields       = !empty($tb_custom_fields) ? $tb_custom_fields : array(
                                     <?php if (!empty($description)) { ?>
                                         <p><?php echo esc_html($description); ?></p>
                                     <?php } ?>
+                                    <?php if (!empty($description)) { ?>
+                                        <p><?php echo esc_html($description); ?></p>
+                                    <?php } ?>
+                                </div>
+                                <?php if (!empty($featured_package) && $featured_package === 'yes'){ ?>
+                                    <div class="tb-populartag"  <?php echo apply_filters('taskbot_tooltip_attributes', 'featured_package');?>>
+                                        <i class="fas fa-bolt"></i>
+                                    </div>
                                 </div>
                                 <?php if (!empty($featured_package) && $featured_package === 'yes'){ ?>
                                     <div class="tb-populartag"  <?php echo apply_filters('taskbot_tooltip_attributes', 'featured_package');?>>
