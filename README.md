@@ -23,6 +23,49 @@ Users accessing and using the code in this repository agree to do so at their ow
 
 Change log:
 
+Release 6.0 – 07 October 2023
+
+**Fixes:**
+1. Resolved the issue with profile picture uploads when switching profiles.
+2. Fixed the problem where paid projects redirected to the project add page, now correctly redirects to price plans.
+3. Corrected the English level required issue.
+4. Addressed the display problem of commission percentages on the task order page.
+5. Fixed the placeholder text issue in the select2 on the seller dashboard.
+6. Rectified the issue where BuddyBoss third-party plugin registration did not update first names and last names.
+
+**New Features and Additions:**
+7. Added 4 new homepage layouts.
+8. Introduced a new variant for task listings.
+9. Added a new variant for project listings.
+10. Included a new variant for freelancer listings.
+11. Implemented an option for admin commission from buyers.
+12. Enabled user access restriction to front pages.
+13. Added new sub-menu tabs in the dashboard.
+14. Introduced an option to set task description length conditions.
+15. Added the ability to change the invoice logo image.
+16. Added compatibility with the Taskup theme.
+17. Implemented an Elementor-based mega menu.
+18. Added Elementor shortcodes.
+19. Included a vertical menu widget.
+20. Provided the option to choose between the theme header or Taskbot header after logging in.
+
+**Tweaks and Improvements:**
+21. Enabled editing of submitted projects before approval.
+22. Replaced the label tag "new" with "under review" for submitted projects.
+23. Enhanced profile view by opening it in a new tab.
+24. Added tooltips for clarity on task listing actions.
+25. Added a prefix to icons in the library.
+26. Restricted users to submitting one proposal per project.
+27. Resolved minor CSS, JS, and theme compatibility issues.
+28. Fixed incorrect commission calculations when users paid from their wallet.
+29. Ensured that range slider values dynamically update as intended.
+30. Corrected sorting and filtering issues for projects.
+31. Prevented content from breaking in the sub-tasks area on the task detail page.
+32. Addressed submenu styling conflicts with third-party plugins.
+33. Resolved the "Elementor section template the_content() not found" issue.
+34. New Taskon theme compatibility added
+
+
 Release 5.9 – 30 April 2023
 
 -- The Menu color display issue has been resolved
