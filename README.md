@@ -65,7 +65,6 @@ Release 6.0 – 07 October 2023
 33. Resolved the "Elementor section template the_content() not found" issue.
 34. New Taskon theme compatibility added
 
-
 Release 5.9 – 30 April 2023
 
 -- The Menu color display issue has been resolved
